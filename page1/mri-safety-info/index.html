@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRI Safety Information Center - Comprehensive Safety Resource</title>
+    <meta name="description" content="Complete MRI safety resource for patients and healthcare professionals covering contraindications, precautions, emergency procedures, and safety protocols.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header and Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar container" aria-label="Main navigation">
+            <div class="navbar__brand">
+                <div class="navbar__icon">🧲</div>
+                <h1 class="navbar__title">MRI Safety Information Center</h1>
+            </div>
+            <ul class="navbar__menu" role="menubar">
+                <li role="none"><a href="#no-radiation" class="navbar__link" role="menuitem">No Radiation</a></li>
+                <li role="none"><a href="#magnetic-safety" class="navbar__link" role="menuitem">Magnetic Safety</a></li>
+                <li role="none"><a href="#contrast-safety" class="navbar__link" role="menuitem">Contrast</a></li>
+                <li role="none"><a href="#devices" class="navbar__link" role="menuitem">Devices</a></li>
+                <li role="none"><a href="#populations" class="navbar__link" role="menuitem">Populations</a></li>
+                <li role="none"><a href="#claustrophobia" class="navbar__link" role="menuitem">Claustrophobia</a></li>
+                <li role="none"><a href="#emergency" class="navbar__link" role="menuitem">Emergency</a></li>
+                <li role="none"><a href="#screening" class="navbar__link" role="menuitem">Screening</a></li>
+            </ul>
+            <button class="navbar__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__icon">🧲</div>
+                    <h1 class="hero__title">MRI Safety Information Center</h1>
+                    <p class="hero__subtitle">Comprehensive safety resource for MRI procedures - protecting patients and ensuring safe imaging</p>
+                    
+                    <div class="hero__stats">
+                        <div class="safety-stat-card">
+                            <div class="safety-stat__value">0 mSv</div>
+                            <div class="safety-stat__label">Radiation Exposure</div>
+                            <div class="safety-stat__status safety-status--safe">✓ Safe</div>
+                        </div>
+                        <div class="safety-stat-card">
+                            <div class="safety-stat__value">40+ years</div>
+                            <div class="safety-stat__label">Safety Record</div>
+                            <div class="safety-stat__status safety-status--safe">✓ Proven</div>
+                        </div>
+                        <div class="safety-stat-card">
+                            <div class="safety-stat__value">Millions</div>
+                            <div class="safety-stat__label">Scans Performed</div>
+                            <div class="safety-stat__status safety-status--safe">✓ Annually</div>
+                        </div>
+                        <div class="safety-stat-card emergency-contact">
+                            <div class="safety-stat__value">📞 911</div>
+                            <div class="safety-stat__label">Emergency Contact</div>
+                            <div class="safety-stat__status safety-status--emergency">! Emergency</div>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('magnetic-safety')">🛡️ Safety Guidelines</button>
+                        <button class="btn btn--secondary btn--lg" onclick="startSafetyScreening()">📋 Safety Screening</button>
+                        <button class="btn btn--emergency btn--lg" onclick="scrollToSection('emergency')">🚨 Emergency Info</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- No Radiation Safety Section -->
+        <section id="no-radiation" class="no-radiation-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">☢️</span>
+                    Zero Ionizing Radiation - Primary Safety Advantage
+                </h2>
+                
+                <div class="radiation-comparison">
+                    <div class="comparison-card comparison-card--safe">
+                        <div class="comparison-header">
+                            <h3>MRI Imaging</h3>
+                            <div class="safety-badge safety-badge--safe">✓ No Radiation</div>
+                        </div>
+                        <div class="radiation-info">
+                            <div class="radiation-level">
+                                <span class="radiation-value">0 mSv</span>
+                                <span class="radiation-label">Radiation Dose</span>
+                            </div>
+                            <ul class="safety-benefits">
+                                <li>No X-rays or radioactive materials used</li>
+                                <li>No cumulative radiation risk</li>
+                                <li>No increased cancer risk</li>
+                                <li>Safe for multiple repeated scans</li>
+                                <li>Preferred for children and young adults</li>
+                                <li>Safe during pregnancy when medically necessary</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="comparison-card comparison-card--caution">
+                        <div class="comparison-header">
+                            <h3>Other Imaging Methods</h3>
+                            <div class="safety-badge safety-badge--caution">⚠️ Radiation Exposure</div>
+                        </div>
+                        <div class="radiation-info">
+                            <div class="radiation-comparison-list">
+                                <div class="radiation-item">
+                                    <span class="radiation-type">CT Scan:</span>
+                                    <span class="radiation-dose">1-20 mSv</span>
+                                </div>
+                                <div class="radiation-item">
+                                    <span class="radiation-type">X-Ray:</span>
+                                    <span class="radiation-dose">0.01-10 mSv</span>
+                                </div>
+                                <div class="radiation-item">
+                                    <span class="radiation-type">Nuclear Medicine:</span>
+                                    <span class="radiation-dose">0.3-30 mSv</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="safety-statistics">
+                    <h3>MRI Safety Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">40+ years</div>
+                            <div class="stat-description">of safe clinical use worldwide</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Millions</div>
+                            <div class="stat-description">of scans performed safely annually</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">0 mSv</div>
+                            <div class="stat-description">ionizing radiation exposure ever</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">&gt;95%</div>
+                            <div class="stat-description">of patients complete exams successfully</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Magnetic Field Safety -->
+        <section id="magnetic-safety" class="magnetic-safety-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🧲</span>
+                    Magnetic Field Safety & Contraindications
+                </h2>
+
+                <div class="safety-categories">
+                    <!-- Absolute Contraindications -->
+                    <div class="safety-category">
+                        <div class="category-header category-header--danger">
+                            <h3>🚫 Absolute Contraindications</h3>
+                            <div class="safety-badge safety-badge--danger">Cannot Have MRI</div>
+                        </div>
+                        
+                        <div class="contraindication-list">
+                            <div class="contraindication-item">
+                                <div class="contraindication-device">Older Pacemakers</div>
+                                <div class="contraindication-reason">Non-MRI conditional devices (pre-2008)</div>
+                                <div class="contraindication-risk">Risk: Device malfunction, heating, movement</div>
+                                <div class="contraindication-alternative">Alternative: CT or ultrasound imaging</div>
+                            </div>
+                            
+                            <div class="contraindication-item">
+                                <div class="contraindication-device">Older Cochlear Implants</div>
+                                <div class="contraindication-reason">Non-MRI conditional implants</div>
+                                <div class="contraindication-risk">Risk: Device damage, magnet displacement</div>
+                                <div class="contraindication-alternative">Alternative: CT imaging when appropriate</div>
+                            </div>
+                            
+                            <div class="contraindication-item">
+                                <div class="contraindication-device">Metallic Eye Foreign Bodies</div>
+                                <div class="contraindication-reason">Metal shavings or fragments in eyes</div>
+                                <div class="contraindication-risk">Risk: Movement causing eye injury</div>
+                                <div class="contraindication-alternative">Screening: Orbital X-rays if history of metalwork</div>
+                            </div>
+                            
+                            <div class="contraindication-item">
+                                <div class="contraindication-device">Some Aneurysm Clips</div>
+                                <div class="contraindication-reason">Ferromagnetic materials (older clips)</div>
+                                <div class="contraindication-risk">Risk: Clip movement, vessel rupture</div>
+                                <div class="contraindication-alternative">Verification: Surgical records required</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Relative Contraindications -->
+                    <div class="safety-category">
+                        <div class="category-header category-header--caution">
+                            <h3>⚠️ Relative Contraindications</h3>
+                            <div class="safety-badge safety-badge--caution">Requires Evaluation</div>
+                        </div>
+                        
+                        <div class="relative-contraindications">
+                            <div class="relative-item">
+                                <h4>Modern Pacemakers/ICDs</h4>
+                                <p class="relative-consideration">MRI-conditional devices</p>
+                                <div class="relative-requirements">
+                                    <strong>Requirements:</strong>
+                                    <ul>
+                                        <li>Cardiology clearance and device programming</li>
+                                        <li>Special protocols and monitoring required</li>
+                                        <li>Specialized MRI centers only</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="relative-item">
+                                <h4>First Trimester Pregnancy</h4>
+                                <p class="relative-consideration">Generally avoided unless critical</p>
+                                <div class="relative-requirements">
+                                    <strong>Alternatives:</strong>
+                                    <ul>
+                                        <li>Ultrasound preferred when adequate</li>
+                                        <li>Risk-benefit analysis required</li>
+                                        <li>Later trimesters considered safe</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="relative-item">
+                                <h4>Severe Claustrophobia</h4>
+                                <p class="relative-consideration">May require management</p>
+                                <div class="relative-requirements">
+                                    <strong>Options:</strong>
+                                    <ul>
+                                        <li>Open-bore scanners available</li>
+                                        <li>Anti-anxiety medication</li>
+                                        <li>Counseling and gradual exposure</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="relative-item">
+                                <h4>Severe Kidney Disease</h4>
+                                <p class="relative-consideration">If gadolinium contrast needed</p>
+                                <div class="relative-requirements">
+                                    <strong>Screening:</strong>
+                                    <ul>
+                                        <li>eGFR &lt;30 ml/min/1.73m² concern</li>
+                                        <li>Risk: Nephrogenic Systemic Fibrosis (very rare)</li>
+                                        <li>Modern agents much safer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generally Safe -->
+                    <div class="safety-category">
+                        <div class="category-header category-header--safe">
+                            <h3>✅ Generally Safe</h3>
+                            <div class="safety-badge safety-badge--safe">MRI Compatible</div>
+                        </div>
+                        
+                        <div class="safe-items-grid">
+                            <div class="safe-item">
+                                <h4>Orthopedic Hardware</h4>
+                                <div class="safe-details">
+                                    <p><strong>Materials:</strong> Titanium, stainless steel</p>
+                                    <p><strong>Timing:</strong> After 6 weeks healing</p>
+                                    <p><strong>Note:</strong> May cause image artifacts but safe</p>
+                                </div>
+                            </div>
+                            
+                            <div class="safe-item">
+                                <h4>Dental Fillings/Crowns</h4>
+                                <div class="safe-details">
+                                    <p><strong>Materials:</strong> Modern dental materials</p>
+                                    <p><strong>Safety:</strong> MRI-safe</p>
+                                    <p><strong>Artifact:</strong> Minimal image distortion</p>
+                                </div>
+                            </div>
+                            
+                            <div class="safe-item">
+                                <h4>Breast Implants</h4>
+                                <div class="safe-details">
+                                    <p><strong>Types:</strong> Silicone and saline</p>
+                                    <p><strong>Safety:</strong> Completely MRI-safe</p>
+                                    <p><strong>Benefit:</strong> MRI excellent for evaluation</p>
+                                </div>
+                            </div>
+                            
+                            <div class="safe-item">
+                                <h4>IUD Contraceptives</h4>
+                                <div class="safe-details">
+                                    <p><strong>Types:</strong> Copper and hormonal IUDs</p>
+                                    <p><strong>Safety:</strong> MRI-safe</p>
+                                    <p><strong>Verification:</strong> No special precautions needed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Safety Checker -->
+                <div class="safety-checker">
+                    <h3>Interactive Device Safety Checker</h3>
+                    <div class="checker-interface">
+                        <div class="checker-input">
+                            <label for="device-search">Search for your device or implant:</label>
+                            <input type="text" id="device-search" class="form-control" placeholder="e.g., pacemaker, metal implant, dental work">
+                            <button class="btn btn--primary" onclick="checkDeviceSafety()">Check Safety</button>
+                        </div>
+                        <div id="safety-result" class="safety-result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contrast Safety -->
+        <section id="contrast-safety" class="contrast-safety-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">💉</span>
+                    Contrast Agent Safety - Gadolinium
+                </h2>
+                
+                <div class="contrast-overview">
+                    <div class="contrast-card">
+                        <div class="contrast-header">
+                            <h3>MRI Contrast (Gadolinium)</h3>
+                            <div class="safety-badge safety-badge--safe">Much Safer</div>
+                        </div>
+                        <div class="contrast-stats">
+                            <div class="contrast-stat">
+                                <span class="stat-label">Mild Reactions:</span>
+                                <span class="stat-value">&lt;0.1%</span>
+                            </div>
+                            <div class="contrast-stat">
+                                <span class="stat-label">Severe Reactions:</span>
+                                <span class="stat-value">&lt;0.01%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contrast-card">
+                        <div class="contrast-header">
+                            <h3>CT Contrast (Iodine)</h3>
+                            <div class="safety-badge safety-badge--caution">Higher Risk</div>
+                        </div>
+                        <div class="contrast-stats">
+                            <div class="contrast-stat">
+                                <span class="stat-label">Allergic Reactions:</span>
+                                <span class="stat-value">1-3%</span>
+                            </div>
+                            <div class="contrast-stat">
+                                <span class="stat-label">Severe Reactions:</span>
+                                <span class="stat-value">0.1-0.3%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contrast-details">
+                    <div class="contrast-section">
+                        <h3>Gadolinium Safety Profile</h3>
+                        <div class="safety-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">✅</div>
+                                <div class="feature-content">
+                                    <h4>Low Allergic Reaction Rate</h4>
+                                    <p>Severe allergic reactions occur in less than 0.01% of patients, compared to 0.1-0.3% with CT iodine contrast.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">✅</div>
+                                <div class="feature-content">
+                                    <h4>No Iodine Content</h4>
+                                    <p>Safe for patients with iodine allergies or shellfish allergies. No cross-reactivity with iodine-based contrast agents.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">✅</div>
+                                <div class="feature-content">
+                                    <h4>Kidney Friendly</h4>
+                                    <p>Modern gadolinium agents have much lower nephrotoxicity risk compared to CT contrast agents.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contrast-section">
+                        <h3>Kidney Considerations</h3>
+                        <div class="kidney-safety">
+                            <div class="kidney-info">
+                                <h4>Risk Assessment</h4>
+                                <ul>
+                                    <li><strong>Low Risk:</strong> eGFR &gt;30 ml/min/1.73m²</li>
+                                    <li><strong>Moderate Risk:</strong> eGFR 15-30 ml/min/1.73m²</li>
+                                    <li><strong>High Risk:</strong> eGFR &lt;15 ml/min/1.73m²</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="kidney-prevention">
+                                <h4>NSF Prevention</h4>
+                                <ul>
+                                    <li>Kidney function testing before contrast</li>
+                                    <li>Modern, more stable gadolinium agents</li>
+                                    <li>Adequate hydration protocols</li>
+                                    <li>Risk-benefit analysis for high-risk patients</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contrast-section">
+                        <h3>Pregnancy & Breastfeeding</h3>
+                        <div class="pregnancy-guidelines">
+                            <div class="pregnancy-item">
+                                <h4>During Pregnancy</h4>
+                                <p>Gadolinium contrast is generally avoided, especially in the first trimester. Used only when critical for maternal health assessment.</p>
+                            </div>
+                            
+                            <div class="pregnancy-item">
+                                <h4>Breastfeeding</h4>
+                                <p>Safe to continue nursing after gadolinium injection. Less than 0.04% of the dose reaches breast milk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Device-Specific Safety -->
+        <section id="devices" class="devices-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">⚙️</span>
+                    Device-Specific Safety Protocols
+                </h2>
+
+                <div class="device-categories">
+                    <div class="device-category">
+                        <h3>Cardiac Devices</h3>
+                        <div class="device-items">
+                            <div class="device-item">
+                                <div class="device-header">
+                                    <h4>MRI-Conditional Pacemakers/ICDs</h4>
+                                    <div class="device-status device-status--conditional">Conditional</div>
+                                </div>
+                                <div class="device-requirements">
+                                    <h5>Required Procedures:</h5>
+                                    <ul>
+                                        <li>Device manufacturer documentation</li>
+                                        <li>Cardiology clearance and evaluation</li>
+                                        <li>Pre-scan device programming</li>
+                                        <li>Continuous cardiac monitoring during scan</li>
+                                        <li>Post-scan device interrogation</li>
+                                    </ul>
+                                    
+                                    <h5>Restrictions:</h5>
+                                    <ul>
+                                        <li>Specific magnetic field strengths only</li>
+                                        <li>Limited scan time protocols</li>
+                                        <li>Certain body regions may be excluded</li>
+                                        <li>Specialized MRI centers required</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="device-item">
+                                <div class="device-header">
+                                    <h4>Older Cardiac Devices</h4>
+                                    <div class="device-status device-status--contraindicated">Contraindicated</div>
+                                </div>
+                                <div class="device-info">
+                                    <p><strong>Risk:</strong> Device malfunction, heating, movement</p>
+                                    <p><strong>Policy:</strong> Absolute contraindication for non-conditional devices</p>
+                                    <p><strong>Alternatives:</strong> CT, ultrasound, or other imaging modalities</p>
+                                    <p><strong>Emergency:</strong> Life-saving MRI may be considered with full risk disclosure</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="device-category">
+                        <h3>Neurological Devices</h3>
+                        <div class="device-items">
+                            <div class="device-item">
+                                <div class="device-header">
+                                    <h4>Deep Brain Stimulators (DBS)</h4>
+                                    <div class="device-status device-status--conditional">Most Modern Models</div>
+                                </div>
+                                <div class="device-info">
+                                    <p><strong>Modern Systems:</strong> Most newer models are MRI-conditional</p>
+                                    <p><strong>Requirements:</strong> Specific protocols and restrictions apply</p>
+                                    <p><strong>Programming:</strong> Device settings adjustment required</p>
+                                </div>
+                            </div>
+
+                            <div class="device-item">
+                                <div class="device-header">
+                                    <h4>Cochlear Implants</h4>
+                                    <div class="device-status device-status--mixed">Varies by Model</div>
+                                </div>
+                                <div class="device-info">
+                                    <p><strong>Newer Models:</strong> Some are MRI-conditional with restrictions</p>
+                                    <p><strong>Older Models:</strong> Absolute contraindication</p>
+                                    <p><strong>Verification:</strong> Manufacturer documentation required</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="device-category">
+                        <h3>Other Implants & Devices</h3>
+                        <div class="device-items">
+                            <div class="device-item">
+                                <div class="device-header">
+                                    <h4>Insulin Pumps</h4>
+                                    <div class="device-status device-status--remove">Must Remove</div>
+                                </div>
+                                <div class="device-info">
+                                    <p><strong>Safety:</strong> Must be removed (not MRI-safe)</p>
+                                    <p><strong>Management:</strong> Alternative insulin protocol during scan</p>
+                                    <p><strong>Monitoring:</strong> Blood glucose management required</p>
+                                </div>
+                            </div>
+
+                            <div class="device-item">
+                                <div class="device-header">
+                                    <h4>Orthopedic Hardware</h4>
+                                    <div class="device-status device-status--safe">Generally Safe</div>
+                                </div>
+                                <div class="device-info">
+                                    <p><strong>Safety:</strong> Generally safe after healing period</p>
+                                    <p><strong>Artifacts:</strong> May cause image distortion</p>
+                                    <p><strong>Timing:</strong> 6 weeks post-surgery minimum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Populations -->
+        <section id="populations" class="populations-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">👥</span>
+                    Special Populations & Considerations
+                </h2>
+
+                <div class="population-groups">
+                    <div class="population-group">
+                        <div class="group-header">
+                            <h3>Children & Adolescents</h3>
+                            <div class="safety-badge safety-badge--safe">Preferred Imaging</div>
+                        </div>
+                        
+                        <div class="population-content">
+                            <div class="advantages">
+                                <h4>Safety Advantages</h4>
+                                <ul>
+                                    <li>No radiation exposure concerns</li>
+                                    <li>Preferred over CT when appropriate</li>
+                                    <li>Safe for growth and development</li>
+                                    <li>No long-term radiation effects</li>
+                                    <li>Can be repeated safely as needed</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="considerations">
+                                <h4>Special Considerations</h4>
+                                <ul>
+                                    <li>May require sedation for cooperation</li>
+                                    <li>Same metal screening restrictions apply</li>
+                                    <li>Family presence often allowed for comfort</li>
+                                    <li>Child-friendly environment and staff</li>
+                                    <li>Age-appropriate preparation and communication</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="sedation-info">
+                                <h4>Sedation Protocols</h4>
+                                <p><strong>Indications:</strong> Young children, anxiety, inability to hold still</p>
+                                <p><strong>Monitoring:</strong> Continuous vital sign monitoring required</p>
+                                <p><strong>Recovery:</strong> Post-sedation observation and discharge criteria</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="population-group">
+                        <div class="group-header">
+                            <h3>Elderly Patients</h3>
+                            <div class="safety-badge safety-badge--caution">Extra Precautions</div>
+                        </div>
+                        
+                        <div class="population-content">
+                            <div class="considerations">
+                                <h4>Age-Related Considerations</h4>
+                                <ul>
+                                    <li>Increased prevalence of kidney disease</li>
+                                    <li>Multiple medications and potential interactions</li>
+                                    <li>Mobility and positioning challenges</li>
+                                    <li>Cognitive impairment considerations</li>
+                                    <li>Higher likelihood of implanted devices</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="precautions">
+                                <h4>Safety Precautions</h4>
+                                <ul>
+                                    <li>Careful contrast agent screening</li>
+                                    <li>Fall prevention during transfers</li>
+                                    <li>Family involvement in consent process</li>
+                                    <li>Comprehensive medication review</li>
+                                    <li>Extended screening for devices/implants</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="population-group">
+                        <div class="group-header">
+                            <h3>Pregnancy</h3>
+                            <div class="safety-badge safety-badge--conditional">Gestational Considerations</div>
+                        </div>
+                        
+                        <div class="population-content">
+                            <div class="trimester-guidelines">
+                                <div class="trimester-item">
+                                    <h4>First Trimester</h4>
+                                    <p>Generally avoided unless critical for maternal health. Risk-benefit analysis required.</p>
+                                </div>
+                                
+                                <div class="trimester-item">
+                                    <h4>Later Trimesters</h4>
+                                    <p>Considered safe when medically necessary. No known adverse effects.</p>
+                                </div>
+                                
+                                <div class="trimester-item">
+                                    <h4>Major Advantage</h4>
+                                    <p>No radiation exposure - major safety advantage over CT and X-ray imaging.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pregnancy-protocols">
+                                <h4>Safety Protocols</h4>
+                                <ul>
+                                    <li>Contrast agents generally avoided</li>
+                                    <li>Ultrasound preferred when adequate</li>
+                                    <li>Clear medical indication required</li>
+                                    <li>Informed consent process</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Claustrophobia Management -->
+        <section id="claustrophobia" class="claustrophobia-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🤗</span>
+                    Claustrophobia Management & Support
+                </h2>
+                
+                <div class="claustrophobia-overview">
+                    <div class="overview-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">5-10%</div>
+                            <div class="stat-description">of MRI patients experience claustrophobia</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">&gt;95%</div>
+                            <div class="stat-description">successfully complete their exam with support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comfort-measures">
+                    <h3>Comfort Measures & Options</h3>
+                    <div class="measures-grid">
+                        <div class="measure-card">
+                            <div class="measure-icon">🔄</div>
+                            <h4>Open-Bore MRI Scanners</h4>
+                            <div class="measure-details">
+                                <p><strong>Description:</strong> Larger opening, less confined feeling</p>
+                                <p><strong>Availability:</strong> Available at many facilities</p>
+                                <p><strong>Benefit:</strong> Significantly reduces claustrophobic sensation</p>
+                            </div>
+                        </div>
+
+                        <div class="measure-card">
+                            <div class="measure-icon">🎵</div>
+                            <h4>Music & Communication</h4>
+                            <div class="measure-details">
+                                <p><strong>Description:</strong> Headphones and constant intercom contact</p>
+                                <p><strong>Benefit:</strong> Reduces anxiety and feeling of isolation</p>
+                                <p><strong>Options:</strong> Personal music or relaxation sounds</p>
+                            </div>
+                        </div>
+
+                        <div class="measure-card">
+                            <div class="measure-icon">🚨</div>
+                            <h4>Panic Button</h4>
+                            <div class="measure-details">
+                                <p><strong>Description:</strong> Immediately accessible emergency stop</p>
+                                <p><strong>Assurance:</strong> Patient always in complete control</p>
+                                <p><strong>Use:</strong> Can stop scan instantly at any time</p>
+                            </div>
+                        </div>
+
+                        <div class="measure-card">
+                            <div class="measure-icon">👨‍👩‍👧‍👦</div>
+                            <h4>Family Presence</h4>
+                            <div class="measure-details">
+                                <p><strong>Description:</strong> Support person in room when possible</p>
+                                <p><strong>Screening:</strong> Family member must be MRI-screened</p>
+                                <p><strong>Comfort:</strong> Familiar voice and presence nearby</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sedation-options">
+                    <h3>Sedation Options</h3>
+                    <div class="sedation-types">
+                        <div class="sedation-card">
+                            <h4>Mild Oral Sedation</h4>
+                            <div class="sedation-details">
+                                <p><strong>Description:</strong> Anti-anxiety medication taken before exam</p>
+                                <p><strong>Monitoring:</strong> Basic vital sign monitoring</p>
+                                <p><strong>Recovery:</strong> Short observation period required</p>
+                                <p><strong>Transport:</strong> Cannot drive after medication</p>
+                            </div>
+                        </div>
+
+                        <div class="sedation-card">
+                            <h4>IV Conscious Sedation</h4>
+                            <div class="sedation-details">
+                                <p><strong>Description:</strong> Deeper relaxation with continuous monitoring</p>
+                                <p><strong>Requirements:</strong> Advanced monitoring and recovery area</p>
+                                <p><strong>Staff:</strong> Trained sedation personnel present</p>
+                                <p><strong>Recovery:</strong> Extended observation period</p>
+                            </div>
+                        </div>
+
+                        <div class="sedation-card">
+                            <h4>General Anesthesia</h4>
+                            <div class="sedation-details">
+                                <p><strong>Description:</strong> Rarely needed for severe cases</p>
+                                <p><strong>Setting:</strong> Operating room environment required</p>
+                                <p><strong>Team:</strong> Anesthesiologist and full monitoring</p>
+                                <p><strong>Recovery:</strong> Post-anesthesia care unit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preparation-tips">
+                    <h3>Preparation Tips for Anxious Patients</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4>Before the Exam</h4>
+                            <ul>
+                                <li>Visit the facility beforehand if possible</li>
+                                <li>Practice relaxation techniques</li>
+                                <li>Discuss concerns with your doctor</li>
+                                <li>Consider bringing personal music</li>
+                                <li>Arrange for a support person</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4>During the Exam</h4>
+                            <ul>
+                                <li>Use breathing exercises</li>
+                                <li>Keep eyes closed or use eye covering</li>
+                                <li>Focus on the sounds as temporary</li>
+                                <li>Remember the staff is always available</li>
+                                <li>Think about the health benefits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Procedures -->
+        <section id="emergency" class="emergency-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🚨</span>
+                    Emergency Safety Procedures
+                </h2>
+
+                <div class="emergency-contact">
+                    <div class="emergency-banner">
+                        <div class="emergency-icon">🚨</div>
+                        <div class="emergency-info">
+                            <h3>Emergency Contact</h3>
+                            <div class="emergency-number">📞 911</div>
+                            <p>For immediate medical emergencies during or after MRI</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mri-zones">
+                    <h3>MRI Suite Safety Zones</h3>
+                    <div class="zones-grid">
+                        <div class="zone-card zone-1">
+                            <div class="zone-header">
+                                <h4>Zone I</h4>
+                                <div class="zone-status">General Public</div>
+                            </div>
+                            <div class="zone-details">
+                                <p><strong>Description:</strong> General public area</p>
+                                <p><strong>Restrictions:</strong> No restrictions</p>
+                                <p><strong>Access:</strong> Open to all visitors and patients</p>
+                            </div>
+                        </div>
+
+                        <div class="zone-card zone-2">
+                            <div class="zone-header">
+                                <h4>Zone II</h4>
+                                <div class="zone-status">Controlled Access</div>
+                            </div>
+                            <div class="zone-details">
+                                <p><strong>Description:</strong> Patient reception and preparation</p>
+                                <p><strong>Restrictions:</strong> Controlled access</p>
+                                <p><strong>Screening:</strong> Basic safety screening required</p>
+                            </div>
+                        </div>
+
+                        <div class="zone-card zone-3">
+                            <div class="zone-header">
+                                <h4>Zone III</h4>
+                                <div class="zone-status">Personnel Only</div>
+                            </div>
+                            <div class="zone-details">
+                                <p><strong>Description:</strong> Control room and preparation areas</p>
+                                <p><strong>Restrictions:</strong> MRI personnel only</p>
+                                <p><strong>Screening:</strong> Complete metal screening required</p>
+                            </div>
+                        </div>
+
+                        <div class="zone-card zone-4">
+                            <div class="zone-header">
+                                <h4>Zone IV</h4>
+                                <div class="zone-status">Strict Control</div>
+                            </div>
+                            <div class="zone-details">
+                                <p><strong>Description:</strong> MRI scanner room</p>
+                                <p><strong>Restrictions:</strong> Strict access control</p>
+                                <p><strong>Screening:</strong> Comprehensive safety protocols</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emergency-procedures">
+                    <h3>Emergency Response Protocols</h3>
+                    <div class="procedures-list">
+                        <div class="procedure-item">
+                            <div class="procedure-header">
+                                <h4>🫀 Cardiac Emergency in Scanner</h4>
+                                <div class="procedure-priority priority-critical">Critical</div>
+                            </div>
+                            <div class="procedure-steps">
+                                <h5>Immediate Actions:</h5>
+                                <ol>
+                                    <li>Remove patient from Zone IV immediately</li>
+                                    <li>Use non-ferromagnetic resuscitation equipment</li>
+                                    <li>Activate MRI-trained emergency team</li>
+                                    <li>Continue resuscitation in safe zone</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="procedure-item">
+                            <div class="procedure-header">
+                                <h4>💉 Severe Contrast Reaction</h4>
+                                <div class="procedure-priority priority-urgent">Urgent</div>
+                            </div>
+                            <div class="procedure-steps">
+                                <h5>Recognition:</h5>
+                                <p>Difficulty breathing, widespread hives, hypotension</p>
+                                <h5>Treatment:</h5>
+                                <ol>
+                                    <li>Administer epinephrine immediately</li>
+                                    <li>Give antihistamines and steroids</li>
+                                    <li>Maintain continuous vital sign monitoring</li>
+                                    <li>Ensure IV access for medications</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="procedure-item">
+                            <div class="procedure-header">
+                                <h4>🚀 Projectile Accident</h4>
+                                <div class="procedure-priority priority-critical">Critical</div>
+                            </div>
+                            <div class="procedure-steps">
+                                <h5>Prevention:</h5>
+                                <p>Strict metal screening and access control</p>
+                                <h5>Response:</h5>
+                                <ol>
+                                    <li>Provide immediate medical attention</li>
+                                    <li>Document incident thoroughly</li>
+                                    <li>Conduct root cause analysis</li>
+                                    <li>Implement prevention measures</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-exam-monitoring">
+                    <h3>Post-Exam Emergency Symptoms</h3>
+                    <div class="symptoms-categories">
+                        <div class="symptoms-card symptoms-immediate">
+                            <h4>🚨 Seek Immediate Emergency Care</h4>
+                            <ul>
+                                <li>Severe allergic reaction (difficulty breathing, swelling)</li>
+                                <li>Cardiac symptoms (chest pain, severe palpitations)</li>
+                                <li>Neurological symptoms (severe headache, vision changes)</li>
+                                <li>Device malfunction (pacemaker problems)</li>
+                            </ul>
+                        </div>
+
+                        <div class="symptoms-card symptoms-contact">
+                            <h4>📞 Contact Healthcare Provider</h4>
+                            <ul>
+                                <li>Mild allergic symptoms (localized rash)</li>
+                                <li>Delayed reactions (hours after exam)</li>
+                                <li>Device concerns or questions</li>
+                                <li>General health questions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pre-Scan Safety Screening -->
+        <section id="screening" class="screening-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">📋</span>
+                    Pre-Scan Safety Screening
+                </h2>
+
+                <div class="screening-overview">
+                    <h3>Mandatory Safety Screening Process</h3>
+                    <p>Comprehensive screening is essential for patient safety and is required for all MRI examinations.</p>
+                </div>
+
+                <div class="screening-components">
+                    <div class="screening-category">
+                        <h3>Safety Questionnaire</h3>
+                        <div class="questionnaire-items">
+                            <div class="questionnaire-section">
+                                <h4>Medical History</h4>
+                                <ul>
+                                    <li>Previous surgeries and surgical implants</li>
+                                    <li>Cardiac devices and neurostimulators</li>
+                                    <li>Metallic foreign bodies or fragments</li>
+                                    <li>Current pregnancy status</li>
+                                    <li>Kidney disease history and function</li>
+                                    <li>Previous allergic reactions</li>
+                                </ul>
+                            </div>
+
+                            <div class="questionnaire-section">
+                                <h4>Psychological Factors</h4>
+                                <ul>
+                                    <li>Claustrophobia or anxiety disorders</li>
+                                    <li>Previous MRI experiences</li>
+                                    <li>Comfort with confined spaces</li>
+                                    <li>Need for sedation or support</li>
+                                </ul>
+                            </div>
+
+                            <div class="questionnaire-section">
+                                <h4>Occupational History</h4>
+                                <ul>
+                                    <li>Metalworking or welding exposure</li>
+                                    <li>Eye injury with metal fragments</li>
+                                    <li>Military service with explosive exposure</li>
+                                    <li>Machine shop or construction work</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="screening-category">
+                        <h3>Physical Screening Procedures</h3>
+                        <div class="physical-screening">
+                            <div class="screening-method">
+                                <div class="method-header">
+                                    <h4>Metal Detection</h4>
+                                    <div class="method-importance">Critical</div>
+                                </div>
+                                <div class="method-details">
+                                    <p><strong>Method:</strong> Hand-held metal detectors</p>
+                                    <p><strong>Coverage:</strong> All body areas and clothing</p>
+                                    <p><strong>Purpose:</strong> Detect any missed metallic items</p>
+                                </div>
+                            </div>
+
+                            <div class="screening-method">
+                                <div class="method-header">
+                                    <h4>Visual Inspection</h4>
+                                    <div class="method-importance">Important</div>
+                                </div>
+                                <div class="method-details">
+                                    <p><strong>Check for:</strong> Tattoos, makeup, medication patches</p>
+                                    <p><strong>Concern:</strong> Some tattoos contain metallic particles</p>
+                                    <p><strong>Action:</strong> Remove metallic makeup and patches</p>
+                                </div>
+                            </div>
+
+                            <div class="screening-method">
+                                <div class="method-header">
+                                    <h4>Vital Signs</h4>
+                                    <div class="method-importance">Baseline</div>
+                                </div>
+                                <div class="method-details">
+                                    <p><strong>Measurements:</strong> Blood pressure, heart rate, temperature</p>
+                                    <p><strong>Importance:</strong> Baseline for contrast administration</p>
+                                    <p><strong>Documentation:</strong> Required for safety records</p>
+                                </div>
+                            </div>
+
+                            <div class="screening-method">
+                                <div class="method-header">
+                                    <h4>Pregnancy Testing</h4>
+                                    <div class="method-importance">When Indicated</div>
+                                </div>
+                                <div class="method-details">
+                                    <p><strong>Population:</strong> Women of childbearing age</p>
+                                    <p><strong>Policy:</strong> Facility-specific protocols</p>
+                                    <p><strong>Timing:</strong> Before contrast administration</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Safety Screening Tool -->
+                <div class="interactive-screening">
+                    <h3>Interactive Safety Screening Tool</h3>
+                    <div id="safety-screening-tool" class="screening-tool">
+                        <div class="screening-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="screening-progress"></div>
+                            </div>
+                            <div class="progress-text">Question <span id="current-question">1</span> of <span id="total-questions">10</span></div>
+                        </div>
+                        
+                        <div class="screening-question" id="screening-question">
+                            <h4 id="question-text">Do you have any metallic implants or devices in your body?</h4>
+                            <div class="question-options">
+                                <button class="option-btn" data-value="yes">Yes</button>
+                                <button class="option-btn" data-value="no">No</button>
+                                <button class="option-btn" data-value="unsure">Not Sure</button>
+                            </div>
+                        </div>
+                        
+                        <div class="screening-results hidden" id="screening-results">
+                            <h4>Screening Results</h4>
+                            <div id="results-content"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="screening-disclaimer">
+                        <p><strong>Disclaimer:</strong> This interactive tool is for educational purposes only. It does not replace professional medical screening. Always complete the official MRI safety screening with qualified medical personnel before your examination.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scanner Safety Features -->
+        <section id="scanner-features" class="scanner-features-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🛡️</span>
+                    Built-in Scanner Safety Features
+                </h2>
+
+                <div class="safety-features">
+                    <div class="feature-category">
+                        <h3>Patient Monitoring Systems</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">👁️</div>
+                                <h4>Continuous Visual Monitoring</h4>
+                                <div class="feature-details">
+                                    <p><strong>Equipment:</strong> Camera systems with clear view of patient</p>
+                                    <p><strong>Monitoring:</strong> Real-time observation during entire scan</p>
+                                    <p><strong>Response:</strong> Immediate intervention if needed</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">🎧</div>
+                                <h4>Two-Way Communication</h4>
+                                <div class="feature-details">
+                                    <p><strong>System:</strong> Intercom system for constant contact</p>
+                                    <p><strong>Function:</strong> Patient can speak to technologist anytime</p>
+                                    <p><strong>Comfort:</strong> Reduces isolation and anxiety</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">📊</div>
+                                <h4>Physiological Monitoring</h4>
+                                <div class="feature-details">
+                                    <p><strong>Parameters:</strong> Heart rate, oxygen saturation, blood pressure</p>
+                                    <p><strong>Indications:</strong> Sedated patients and high-risk cases</p>
+                                    <p><strong>Equipment:</strong> MRI-compatible monitoring devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-category">
+                        <h3>Emergency Control Systems</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">🚨</div>
+                                <h4>Patient Panic Button</h4>
+                                <div class="feature-details">
+                                    <p><strong>Location:</strong> Accessible to patient's hand</p>
+                                    <p><strong>Function:</strong> Immediately stops the scan</p>
+                                    <p><strong>Response:</strong> Technologist comes to patient immediately</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">🛑</div>
+                                <h4>Emergency Stop Buttons</h4>
+                                <div class="feature-details">
+                                    <p><strong>Locations:</strong> Multiple positions throughout suite</p>
+                                    <p><strong>Access:</strong> Available to all staff members</p>
+                                    <p><strong>Function:</strong> Immediate scan termination</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">⏰</div>
+                                <h4>Automatic Safety Timers</h4>
+                                <div class="feature-details">
+                                    <p><strong>Function:</strong> Automatic shutdown after set time</p>
+                                    <p><strong>Prevention:</strong> Prevents overexposure to magnetic field</p>
+                                    <p><strong>Override:</strong> Requires active technologist confirmation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-category">
+                        <h3>System Safety Checks</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">🌡️</div>
+                                <h4>Temperature Monitoring</h4>
+                                <div class="feature-details">
+                                    <p><strong>Monitoring:</strong> Continuous system temperature checks</p>
+                                    <p><strong>Protection:</strong> Prevents overheating of components</p>
+                                    <p><strong>Alerts:</strong> Automatic warnings for temperature issues</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">⚡</div>
+                                <h4>RF Power Monitoring</h4>
+                                <div class="feature-details">
+                                    <p><strong>Function:</strong> Monitors radiofrequency power levels</p>
+                                    <p><strong>Limits:</strong> Automatic power limiting for safety</p>
+                                    <p><strong>Prevention:</strong> Prevents tissue heating</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">🔧</div>
+                                <h4>System Self-Diagnostics</h4>
+                                <div class="feature-details">
+                                    <p><strong>Frequency:</strong> Continuous system monitoring</p>
+                                    <p><strong>Detection:</strong> Early problem identification</p>
+                                    <p><strong>Prevention:</strong> Prevents unsafe operation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quality-assurance">
+                    <h3>Quality Assurance Programs</h3>
+                    <div class="qa-programs">
+                        <div class="qa-item">
+                            <h4>Daily Safety System Verification</h4>
+                            <div class="qa-details">
+                                <p><strong>Responsible:</strong> MRI technologists and medical physicists</p>
+                                <p><strong>Documentation:</strong> Required safety logs and checklists</p>
+                                <p><strong>Verification:</strong> All safety systems tested daily</p>
+                            </div>
+                        </div>
+
+                        <div class="qa-item">
+                            <h4>Regular Maintenance Programs</h4>
+                            <div class="qa-details">
+                                <p><strong>Frequency:</strong> Manufacturer-specified intervals</p>
+                                <p><strong>Certification:</strong> Service engineer documentation required</p>
+                                <p><strong>Records:</strong> Complete maintenance history maintained</p>
+                            </div>
+                        </div>
+
+                        <div class="qa-item">
+                            <h4>Staff Training & Certification</h4>
+                            <div class="qa-details">
+                                <p><strong>Requirement:</strong> Ongoing MRI safety education</p>
+                                <p><strong>Competency:</strong> Regular safety assessment and updates</p>
+                                <p><strong>Standards:</strong> Professional certification maintenance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__disclaimer">
+                    <h3>MRI Safety Resource Disclaimer</h3>
+                    <p>This comprehensive safety resource is intended for educational purposes and general guidance only. It does not replace professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals and follow your facility's specific safety protocols. MRI safety requirements may vary by facility, equipment, and individual patient circumstances.</p>
+                </div>
+                <div class="footer__actions">
+                    <button class="btn btn--outline" onclick="printSafetyGuide()">📄 Print Safety Guide</button>
+                    <button class="btn btn--secondary" onclick="downloadSafetyChecklist()">📋 Download Checklist</button>
+                    <button class="btn btn--emergency" onclick="showEmergencyContacts()">🚨 Emergency Contacts</button>
+                </div>
+                <div class="footer__info">
+                    <p>&copy; 2025 MRI Safety Information Center - Comprehensive safety resource for patients and healthcare professionals.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Safety Results Modal -->
+    <div id="safetyModal" class="modal hidden" role="dialog" aria-labelledby="safetyModalTitle" aria-hidden="true">
+        <div class="modal-overlay" onclick="closeSafetyModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="safetyModalTitle">Safety Assessment Results</h3>
+                <button class="modal-close" onclick="closeSafetyModal()" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="safetyModalBody">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Processing safety information...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

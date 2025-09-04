@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Healthcare Dashboard - Ancient Wisdom Systems</title>
+    <meta name="description" content="Explore Ayurveda, Traditional Chinese Medicine, herbal remedies, constitutional diagnosis, and holistic wellness practices.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header and Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar container" aria-label="Main navigation">
+            <div class="navbar__brand">
+                <h1 class="navbar__title">Traditional Healthcare Dashboard</h1>
+            </div>
+            <ul class="navbar__menu" role="menubar">
+                <li role="none"><a href="#dashboard" class="navbar__link" role="menuitem">Dashboard</a></li>
+                <li role="none"><a href="#constitution" class="navbar__link" role="menuitem">Constitution</a></li>
+                <li role="none"><a href="#remedies" class="navbar__link" role="menuitem">Herbal Remedies</a></li>
+                <li role="none"><a href="#wisdom" class="navbar__link" role="menuitem">Ancient Wisdom</a></li>
+                <li role="none"><a href="#wellness" class="navbar__link" role="menuitem">Holistic Wellness</a></li>
+                <li role="none"><a href="#ayush" class="navbar__link" role="menuitem">AYUSH Programs</a></li>
+            </ul>
+            <button class="navbar__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Dashboard Overview Section -->
+        <section id="dashboard" class="dashboard-hero">
+            <div class="container">
+                <div class="dashboard-hero__content">
+                    <h1 class="dashboard-hero__title">Traditional Healthcare Dashboard</h1>
+                    <p class="dashboard-hero__subtitle">Explore Ancient Wisdom: Ayurveda, TCM, and Holistic Wellness Systems</p>
+                    
+                    <div class="dashboard-hero__stats">
+                        <div class="stat-card">
+                            <div class="stat-card__number">3000+</div>
+                            <div class="stat-card__text">Years of Ayurveda</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">2500+</div>
+                            <div class="stat-card__text">Years of TCM</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">1000+</div>
+                            <div class="stat-card__text">Herbal Remedies</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">500+</div>
+                            <div class="stat-card__text">Yoga Asanas</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-hero__actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('constitution')">🧘 Start Dosha Assessment</button>
+                        <button class="btn btn--secondary btn--lg" onclick="scrollToSection('remedies')">🌿 Explore Herbal Guide</button>
+                        <button class="btn btn--outline btn--lg" onclick="scrollToSection('wisdom')">📜 Ancient Wisdom</button>
+                        <button class="btn btn--info btn--lg" onclick="findPractitioner()">👨‍⚕️ Find Practitioner</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Constitutional Diagnosis Explorer -->
+        <section id="constitution" class="constitution-explorer">
+            <div class="container">
+                <h2 class="section-title">Constitutional Diagnosis Explorer</h2>
+                <div class="constitution-grid">
+                    <div class="constitution-card" data-system="ayurveda">
+                        <div class="constitution-card__header">
+                            <div class="constitution-card__icon">🕉️</div>
+                            <h3 class="constitution-card__title">Ayurveda Dosha Assessment</h3>
+                        </div>
+                        <div class="constitution-card__content">
+                            <p>Discover your unique constitution through Vata, Pitta, Kapha analysis</p>
+                            <div class="constitution-buttons">
+                                <button class="btn btn--sm btn--primary" onclick="startDoshaAssessment()">Take Assessment</button>
+                                <button class="btn btn--sm btn--success" onclick="showDoshaDetails()">Learn About Doshas</button>
+                                <button class="btn btn--sm btn--outline" onclick="bookConsultation('ayurveda')">Book Consultation</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="constitution-card" data-system="tcm">
+                        <div class="constitution-card__header">
+                            <div class="constitution-card__icon">☯️</div>
+                            <h3 class="constitution-card__title">TCM Pattern Recognition</h3>
+                        </div>
+                        <div class="constitution-card__content">
+                            <p>Yin/Yang balance and Five Elements constitutional assessment</p>
+                            <div class="constitution-buttons">
+                                <button class="btn btn--sm btn--primary" onclick="startTCMAssessment()">Take Assessment</button>
+                                <button class="btn btn--sm btn--warning" onclick="showTCMPatterns()">Learn TCM Patterns</button>
+                                <button class="btn btn--sm btn--outline" onclick="bookConsultation('tcm')">Book Consultation</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="constitution-card" data-system="pulse">
+                        <div class="constitution-card__header">
+                            <div class="constitution-card__icon">👤</div>
+                            <h3 class="constitution-card__title">Traditional Pulse Diagnosis</h3>
+                        </div>
+                        <div class="constitution-card__content">
+                            <p>Ancient radial pulse reading techniques and interpretation</p>
+                            <div class="constitution-buttons">
+                                <button class="btn btn--sm btn--primary" onclick="learnPulseDiagnosis()">Learn Technique</button>
+                                <button class="btn btn--sm btn--info" onclick="showPulseTypes()">Pulse Types</button>
+                                <button class="btn btn--sm btn--outline" onclick="findPulseExpert()">Find Expert</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="constitution-card" data-system="observation">
+                        <div class="constitution-card__header">
+                            <div class="constitution-card__icon">👁️</div>
+                            <h3 class="constitution-card__title">Tongue & Eye Examination</h3>
+                        </div>
+                        <div class="constitution-card__content">
+                            <p>Traditional diagnostic methods through physical observation</p>
+                            <div class="constitution-buttons">
+                                <button class="btn btn--sm btn--primary" onclick="learnObservation()">Learn Method</button>
+                                <button class="btn btn--sm btn--success" onclick="showObservationGuide()">Observation Guide</button>
+                                <button class="btn btn--sm btn--outline" onclick="practiceObservation()">Practice Tool</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="constitution-comparison">
+                    <h3>Compare Constitutional Systems</h3>
+                    <div class="comparison-buttons">
+                        <button class="btn btn--outline" onclick="compareSystemsAnalysis('ayurveda', 'tcm')">Ayurveda vs TCM</button>
+                        <button class="btn btn--outline" onclick="showConstitutionChart()">Constitution Chart</button>
+                        <button class="btn btn--outline" onclick="integratedAssessment()">Integrated Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herbal Remedies Center -->
+        <section id="remedies" class="remedies-center">
+            <div class="container">
+                <h2 class="section-title">Herbal Remedies Center</h2>
+                <div class="condition-selector">
+                    <div class="condition-tabs">
+                        <button class="condition-tab active" onclick="selectCondition('digestive')">Digestive Health</button>
+                        <button class="condition-tab" onclick="selectCondition('respiratory')">Respiratory Issues</button>
+                        <button class="condition-tab" onclick="selectCondition('joint')">Joint & Muscle Pain</button>
+                    </div>
+                </div>
+
+                <div class="treatment-content">
+                    <div class="treatment-panel active" id="digestive-panel">
+                        <h3>Digestive Health Treatment Pathway</h3>
+                        <div class="treatment-timeline">
+                            <div class="timeline-step active" data-step="1">
+                                <div class="timeline-number">1</div>
+                                <div class="timeline-content">
+                                    <h4>Dietary Modifications</h4>
+                                    <p>Eat according to constitution, mindful eating practices</p>
+                                    <button class="btn btn--sm btn--success" onclick="showDietaryGuidance(1)">View Details</button>
+                                </div>
+                            </div>
+                            <div class="timeline-step" data-step="2">
+                                <div class="timeline-number">2</div>
+                                <div class="timeline-content">
+                                    <h4>Herbal Formulations</h4>
+                                    <p>Ginger, Triphala, Ajwain for digestive strength</p>
+                                    <button class="btn btn--sm btn--primary" onclick="showHerbalFormulas(2)">View Details</button>
+                                </div>
+                            </div>
+                            <div class="timeline-step" data-step="3">
+                                <div class="timeline-number">3</div>
+                                <div class="timeline-content">
+                                    <h4>Body Therapies</h4>
+                                    <p>Abhyanga massage, acupuncture, panchakarma</p>
+                                    <button class="btn btn--sm btn--warning" onclick="showBodyTherapies(3)">View Details</button>
+                                </div>
+                            </div>
+                            <div class="timeline-step" data-step="4">
+                                <div class="timeline-number">4</div>
+                                <div class="timeline-content">
+                                    <h4>Mind-Body Practices</h4>
+                                    <p>Meditation, yoga, pranayama, stress reduction</p>
+                                    <button class="btn btn--sm btn--info" onclick="showMindBodyPractices(4)">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="treatment-panel" id="respiratory-panel">
+                        <h3>Respiratory Health Treatment Options</h3>
+                        <div class="treatment-options">
+                            <div class="treatment-option">
+                                <h4>Herbal Steam Therapy</h4>
+                                <p>Tulsi, eucalyptus, ginger steam inhalation for respiratory clarity</p>
+                                <div class="option-buttons">
+                                    <button class="btn btn--success" onclick="selectTreatment('steam')">Try Steam Therapy</button>
+                                    <button class="btn btn--outline" onclick="showSteamGuide()">Steam Guide</button>
+                                </div>
+                            </div>
+                            <div class="treatment-option">
+                                <h4>Breathing Practices</h4>
+                                <p>Pranayama, Qi Gong breathing for lung strengthening</p>
+                                <div class="option-buttons">
+                                    <button class="btn btn--primary" onclick="selectTreatment('breathing')">Learn Techniques</button>
+                                    <button class="btn btn--outline" onclick="showBreathingGuide()">Breathing Guide</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="treatment-panel" id="joint-panel">
+                        <h3>Joint & Muscle Health Options</h3>
+                        <div class="treatment-grid">
+                            <div class="treatment-card" onclick="selectHerbalTreatment('turmeric')">
+                                <h4>Turmeric Therapy</h4>
+                                <p>Anti-inflammatory golden milk</p>
+                                <button class="btn btn--sm btn--primary">Select</button>
+                            </div>
+                            <div class="treatment-card" onclick="selectHerbalTreatment('ashwagandha')">
+                                <h4>Ashwagandha</h4>
+                                <p>Strengthen joints and muscles</p>
+                                <button class="btn btn--sm btn--warning">Select</button>
+                            </div>
+                            <div class="treatment-card" onclick="selectHerbalTreatment('massage')">
+                                <h4>Oil Massage</h4>
+                                <p>Warm oil therapy for joints</p>
+                                <button class="btn btn--sm btn--success">Select</button>
+                            </div>
+                            <div class="treatment-card" onclick="selectHerbalTreatment('acupuncture')">
+                                <h4>Acupuncture</h4>
+                                <p>Traditional meridian therapy</p>
+                                <button class="btn btn--sm btn--info">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="treatment-actions">
+                    <button class="btn btn--outline" onclick="showHerbalDatabase()">🌿 Herbal Database</button>
+                    <button class="btn btn--outline" onclick="safetyChecker()">⚠️ Safety Checker</button>
+                    <button class="btn btn--outline" onclick="findHerbalist()">👨‍⚕️ Find Herbalist</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ancient Wisdom Showcase -->
+        <section id="wisdom" class="wisdom-showcase">
+            <div class="container">
+                <h2 class="section-title">Ancient Wisdom Showcase</h2>
+                <div class="wisdom-categories">
+                    <div class="wisdom-card" data-wisdom="texts">
+                        <div class="wisdom-header">
+                            <div class="wisdom-icon">📚</div>
+                            <h3>Classical Texts & Knowledge</h3>
+                            <div class="wisdom-age">2000+ years old</div>
+                        </div>
+                        <div class="wisdom-content">
+                            <p>Charaka Samhita, Huang Di Nei Jing - foundational medical texts</p>
+                            <div class="wisdom-buttons">
+                                <button class="btn btn--primary" onclick="exploreClassicalTexts()">Explore Texts</button>
+                                <button class="btn btn--outline" onclick="showTextPrinciples()">📖 Key Principles</button>
+                                <button class="btn btn--secondary" onclick="findTraining('texts')">Find Training</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wisdom-card" data-wisdom="panchakarma">
+                        <div class="wisdom-header">
+                            <div class="wisdom-icon">🌊</div>
+                            <h3>Panchakarma Therapies</h3>
+                            <div class="wisdom-age">5 purification procedures</div>
+                        </div>
+                        <div class="wisdom-content">
+                            <p>Vamana, Virechana, Basti, Nasya, Raktamokshana detoxification</p>
+                            <div class="wisdom-buttons">
+                                <button class="btn btn--primary" onclick="learnPanchakarma()">Learn Procedures</button>
+                                <button class="btn btn--outline" onclick="showPanchakarmaBenefits()">📈 Benefits</button>
+                                <button class="btn btn--secondary" onclick="findPanchakarmaCenter()">Find Centers</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wisdom-card" data-wisdom="acupuncture">
+                        <div class="wisdom-header">
+                            <div class="wisdom-icon">🎯</div>
+                            <h3>Acupuncture & Acupressure</h3>
+                            <div class="wisdom-age">365 classical points</div>
+                        </div>
+                        <div class="wisdom-content">
+                            <p>Traditional meridian-based healing on 14 energy pathways</p>
+                            <div class="wisdom-buttons">
+                                <button class="btn btn--primary" onclick="exploreAcupuncture()">Learn Technique</button>
+                                <button class="btn btn--outline" onclick="showMeridianMap()">📍 Meridian Map</button>
+                                <button class="btn btn--secondary" onclick="findAcupuncturist()">Find Practitioner</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wisdom-card" data-wisdom="yoga">
+                        <div class="wisdom-header">
+                            <div class="wisdom-icon">🧘</div>
+                            <h3>Yoga & Meditation Systems</h3>
+                            <div class="wisdom-age">8-limbed path</div>
+                        </div>
+                        <div class="wisdom-content">
+                            <p>Classical yoga, pranayama, meditation for mind-body wellness</p>
+                            <div class="wisdom-buttons">
+                                <button class="btn btn--primary" onclick="exploreYogaSystem()">Explore System</button>
+                                <button class="btn btn--outline" onclick="showYogaPractices()">🧘‍♀️ Practices</button>
+                                <button class="btn btn--secondary" onclick="findYogaTeacher()">Find Teacher</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wisdom-timeline">
+                    <h3>Ancient Wisdom Timeline</h3>
+                    <div class="timeline-controls">
+                        <button class="btn btn--outline" onclick="showWisdomTimeline('3000bc')">3000 BCE</button>
+                        <button class="btn btn--outline" onclick="showWisdomTimeline('1500bc')">1500 BCE</button>
+                        <button class="btn btn--outline" onclick="showWisdomTimeline('500bc')">500 BCE</button>
+                        <button class="btn btn--primary" onclick="showWisdomTimeline('today')">Today</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Holistic Wellness Tracker -->
+        <section id="wellness" class="wellness-section">
+            <div class="container">
+                <h2 class="section-title">Holistic Wellness Tracker</h2>
+                
+                <div class="wellness-dashboard">
+                    <div class="daily-rituals">
+                        <h3>Daily Ritual Tracker</h3>
+                        <div class="ritual-checklist">
+                            <div class="ritual-category">
+                                <h4>Morning Practices</h4>
+                                <div class="ritual-item">
+                                    <div class="ritual-info">
+                                        <div class="ritual-icon">🛡️</div>
+                                        <div class="ritual-details">
+                                            <h5>Oil Pulling</h5>
+                                            <p>Swish sesame oil for 10-15 minutes</p>
+                                        </div>
+                                    </div>
+                                    <div class="ritual-actions">
+                                        <button class="ritual-checkbox" onclick="toggleRitual('oilpulling')" aria-label="Mark oil pulling complete">
+                                            <span class="checkmark">✓</span>
+                                        </button>
+                                        <button class="btn btn--sm btn--outline" onclick="learnOilPulling()">Learn More</button>
+                                    </div>
+                                </div>
+
+                                <div class="ritual-item">
+                                    <div class="ritual-info">
+                                        <div class="ritual-icon">👅</div>
+                                        <div class="ritual-details">
+                                            <h5>Tongue Cleaning</h5>
+                                            <p>Scrape tongue with copper scraper</p>
+                                        </div>
+                                    </div>
+                                    <div class="ritual-actions">
+                                        <button class="ritual-checkbox" onclick="toggleRitual('tongue')" aria-label="Mark tongue cleaning complete">
+                                            <span class="checkmark">✓</span>
+                                        </button>
+                                        <button class="btn btn--sm btn--outline" onclick="learnTongueCleaning()">Learn More</button>
+                                    </div>
+                                </div>
+
+                                <div class="ritual-item">
+                                    <div class="ritual-info">
+                                        <div class="ritual-icon">🌅</div>
+                                        <div class="ritual-details">
+                                            <h5>Sunrise Meditation</h5>
+                                            <p>10-30 minutes mindful sitting</p>
+                                        </div>
+                                    </div>
+                                    <div class="ritual-actions">
+                                        <button class="ritual-checkbox" onclick="toggleRitual('meditation')" aria-label="Mark meditation complete">
+                                            <span class="checkmark">✓</span>
+                                        </button>
+                                        <button class="btn btn--sm btn--primary" onclick="startMeditation()">Start Now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ritual-category">
+                                <h4>Evening Practices</h4>
+                                <div class="ritual-item">
+                                    <div class="ritual-info">
+                                        <div class="ritual-icon">💆</div>
+                                        <div class="ritual-details">
+                                            <h5>Self-Massage (Abhyanga)</h5>
+                                            <p>Warm oil massage before bath</p>
+                                        </div>
+                                    </div>
+                                    <div class="ritual-actions">
+                                        <button class="ritual-checkbox" onclick="toggleRitual('abhyanga')" aria-label="Mark abhyanga complete">
+                                            <span class="checkmark">✓</span>
+                                        </button>
+                                        <button class="btn btn--sm btn--success" onclick="learnAbhyanga()">Learn Technique</button>
+                                    </div>
+                                </div>
+
+                                <div class="ritual-item">
+                                    <div class="ritual-info">
+                                        <div class="ritual-icon">🫁</div>
+                                        <div class="ritual-details">
+                                            <h5>Breathing Exercises</h5>
+                                            <p>Pranayama or Qi Gong breathing</p>
+                                        </div>
+                                    </div>
+                                    <div class="ritual-actions">
+                                        <button class="ritual-checkbox" onclick="toggleRitual('breathing')" aria-label="Mark breathing exercises complete">
+                                            <span class="checkmark">✓</span>
+                                        </button>
+                                        <button class="btn btn--sm btn--info" onclick="startBreathingExercise()">Start Practice</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="constitutional-balance">
+                        <h3>Constitutional Balance Tracker</h3>
+                        <div class="balance-grid">
+                            <div class="balance-card">
+                                <h4>Current Season</h4>
+                                <p>Autumn - Vata Season</p>
+                                <div class="balance-buttons">
+                                    <button class="btn btn--primary" onclick="getSeasonalGuidance()">Get Guidance</button>
+                                    <button class="btn btn--outline" onclick="viewSeasonalChart()">Seasonal Chart</button>
+                                </div>
+                            </div>
+                            
+                            <div class="balance-card">
+                                <h4>Dosha Recommendations</h4>
+                                <p>Warm foods, oil massage, regular routine</p>
+                                <div class="balance-buttons">
+                                    <button class="btn btn--success" onclick="viewDoshaRecommendations()">View All</button>
+                                    <button class="btn btn--outline" onclick="customizeRecommendations()">Customize</button>
+                                </div>
+                            </div>
+
+                            <div class="balance-card">
+                                <h4>Energy Level</h4>
+                                <p>Monitor daily energy patterns</p>
+                                <div class="balance-buttons">
+                                    <button class="btn btn--info" onclick="logEnergyLevel()">Log Energy</button>
+                                    <button class="btn btn--outline" onclick="viewEnergyTrends()">View Trends</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wellness-progress">
+                    <h3>Practice Progress</h3>
+                    <div class="progress-buttons">
+                        <button class="btn btn--outline" onclick="viewProgress('daily')">Daily View</button>
+                        <button class="btn btn--primary" onclick="viewProgress('weekly')">Weekly View</button>
+                        <button class="btn btn--outline" onclick="viewProgress('seasonal')">Seasonal View</button>
+                        <button class="btn btn--success" onclick="exportWellnessData()">Export Data</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AYUSH & Traditional Programs -->
+        <section id="ayush" class="ayush-programs">
+            <div class="container">
+                <h2 class="section-title">AYUSH & Traditional Wellness Programs</h2>
+                
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3>National AYUSH Mission</h3>
+                            <div class="program-budget">₹4,607 crores (2021-26)</div>
+                        </div>
+                        <div class="program-content">
+                            <div class="program-stats">
+                                <div class="stat">
+                                    <span class="stat-number">12,500+</span>
+                                    <span class="stat-label">AYUSH centers</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">3 components</span>
+                                    <span class="stat-label">education, research, healthcare</span>
+                                </div>
+                            </div>
+                            <div class="program-buttons">
+                                <button class="btn btn--primary" onclick="exploreAYUSHMission()">Explore Mission</button>
+                                <button class="btn btn--success" onclick="findAYUSHCenter()">Find Centers</button>
+                                <button class="btn btn--outline" onclick="applyAYUSHScheme()">Apply for Benefits</button>
+                                <button class="btn btn--info" onclick="viewAYUSHProgress()">View Progress</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3>Traditional Wellness Centers</h3>
+                            <div class="program-budget">Integrated healthcare delivery</div>
+                        </div>
+                        <div class="program-content">
+                            <p>Yoga centers, Ayurveda hospitals, Panchakarma facilities, and traditional therapy centers nationwide</p>
+                            <div class="program-buttons">
+                                <button class="btn btn--primary" onclick="findWellnessCenter()">Find Centers</button>
+                                <button class="btn btn--outline" onclick="viewWellnessServices()">View Services</button>
+                                <button class="btn btn--secondary" onclick="bookWellnessAppointment()">Book Session</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3>Certification Programs</h3>
+                            <div class="program-budget">Government recognized qualifications</div>
+                        </div>
+                        <div class="program-content">
+                            <p>Certified Ayurveda practitioners, Yoga teacher training, TCM certification, authentic traditional training programs</p>
+                            <div class="program-buttons">
+                                <button class="btn btn--primary" onclick="viewCertificationPrograms()">View Programs</button>
+                                <button class="btn btn--outline" onclick="checkCertificationStatus()">Check Status</button>
+                                <button class="btn btn--info" onclick="findTrainingInstitute()">Find Institute</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3>Community Wellness Initiatives</h3>
+                            <div class="program-budget">Village-level programs</div>
+                        </div>
+                        <div class="program-content">
+                            <p>Village herbal gardens, community yoga programs, traditional medicine awareness campaigns</p>
+                            <div class="program-buttons">
+                                <button class="btn btn--primary" onclick="joinCommunityProgram()">Join Program</button>
+                                <button class="btn btn--outline" onclick="startHerbalGarden()">Start Garden</button>
+                                <button class="btn btn--success" onclick="organizeYogaGroup()">Organize Group</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-comparison">
+                    <h3>Compare Traditional Programs</h3>
+                    <div class="comparison-tools">
+                        <button class="btn btn--outline" onclick="compareAllPrograms()">Compare All Programs</button>
+                        <button class="btn btn--outline" onclick="eligibilityChecker()">Check Eligibility</button>
+                        <button class="btn btn--primary" onclick="getTraditionalRecommendations()">Get Recommendations</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__disclaimer">
+                    <h3>Important Traditional Medicine Disclaimer</h3>
+                    <p>This traditional healthcare dashboard is for educational and informational purposes only. Traditional medicine practices should complement, not replace, modern medical care. Always consult with qualified traditional medicine practitioners and modern healthcare professionals. The wisdom and practices presented are based on ancient texts and traditional knowledge systems.</p>
+                </div>
+                <div class="footer__actions">
+                    <button class="btn btn--outline" onclick="contactTraditionalSupport()">📞 Traditional Medicine Support</button>
+                    <button class="btn btn--secondary" onclick="provideWisdomFeedback()">💬 Share Wisdom</button>
+                    <button class="btn btn--info" onclick="reportTraditionalIssue()">⚠️ Report Issue</button>
+                </div>
+                <div class="footer__info">
+                    <p>&copy; 2025 Traditional Healthcare Dashboard. Ancient wisdom for modern wellness.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading traditional wisdom...</p>
+        </div>
+    </div>
+
+    <!-- Notification System -->
+    <div id="notification-system" class="notification-system">
+        <!-- Notifications will be dynamically inserted here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

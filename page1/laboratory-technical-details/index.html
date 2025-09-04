@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory Testing Technical Details Center</title>
+    <meta name="description" content="Comprehensive technical resource for laboratory testing covering analytical methods, instrumentation, quality control, and regulatory standards for healthcare professionals.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Technical Header -->
+    <header class="tech-header" role="banner">
+        <nav class="container">
+            <div class="header-brand">
+                <div class="tech-logo">
+                    <span class="tech-logo__icon">🧪</span>
+                    <div class="tech-logo__text">
+                        <h1 class="header-title">Laboratory Testing Technical Details Center</h1>
+                        <p class="header-subtitle">Analytical Excellence & Technical Precision</p>
+                    </div>
+                </div>
+                
+                <div class="tech-stats-display">
+                    <div class="stat-item">
+                        <span class="stat-value">50+</span>
+                        <span class="stat-label">Analytical Methods</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">9,000</span>
+                        <span class="stat-label">Tests/Hour Capacity</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">&lt;0.5%</span>
+                        <span class="stat-label">Error Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">95%</span>
+                        <span class="stat-label">&lt;4hr Turnaround</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">85%</span>
+                        <span class="stat-label">Automation Level</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Technical Navigation -->
+    <nav class="tech-nav" role="navigation" aria-label="Technical navigation">
+        <div class="container">
+            <div class="nav-sections">
+                <a href="#analytical-techniques" class="nav-section">🔬 Analytical Techniques</a>
+                <a href="#instrumentation" class="nav-section">⚙️ Instrumentation</a>
+                <a href="#quality-control" class="nav-section">🎯 Quality Control</a>
+                <a href="#reference-intervals" class="nav-section">📊 Reference Intervals</a>
+                <a href="#lis-systems" class="nav-section">💻 LIS Systems</a>
+                <a href="#sample-processing" class="nav-section">🧫 Sample Processing</a>
+                <a href="#analytical-performance" class="nav-section">📈 Performance</a>
+                <a href="#regulatory-standards" class="nav-section">📋 Regulatory</a>
+                <a href="#turnaround-time" class="nav-section">⏱️ Turnaround</a>
+                <a href="#digital-pathology" class="nav-section">🤖 Digital/Automation</a>
+                <a href="#maintenance" class="nav-section">🔧 Maintenance</a>
+                <a href="#documentation" class="nav-section">📄 Documentation</a>
+            </div>
+            
+            <div class="nav-tools">
+                <button class="btn btn--outline btn--sm" onclick="showTechnicalTools()">🧮 Technical Tools</button>
+                <button class="btn btn--primary btn--sm" onclick="showMethodSelector()">🔍 Method Selector</button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="tech-hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Laboratory Testing Technical Details Center</h1>
+                        <p class="hero-description">Comprehensive technical resource for laboratory professionals, covering advanced analytical methods, instrumentation specifications, quality control procedures, and regulatory compliance for healthcare technicians, scientists, and students.</p>
+                        
+                        <div class="tech-capabilities">
+                            <div class="capability-card">
+                                <span class="capability-icon">⚗️</span>
+                                <div class="capability-content">
+                                    <h3>Advanced Analytics</h3>
+                                    <p>State-of-the-art analytical techniques with precision and accuracy</p>
+                                </div>
+                            </div>
+                            <div class="capability-card">
+                                <span class="capability-icon">🎯</span>
+                                <div class="capability-content">
+                                    <h3>Quality Assurance</h3>
+                                    <p>Comprehensive QC programs and regulatory compliance</p>
+                                </div>
+                            </div>
+                            <div class="capability-card">
+                                <span class="capability-icon">🔧</span>
+                                <div class="capability-content">
+                                    <h3>Automation Systems</h3>
+                                    <p>Real-time monitoring and optimization workflows</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('analytical-techniques')">Explore Methods</button>
+                        <button class="btn btn--outline btn--lg" onclick="showTechnicalTools()">Technical Tools</button>
+                        <button class="btn btn--secondary btn--lg" onclick="showMethodSelector()">Method Selector</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytical Techniques Section -->
+        <section id="analytical-techniques" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Analytical Techniques & Methodologies</h2>
+                    <p class="section-description">Advanced analytical methods for quantitative and qualitative analysis</p>
+                </div>
+
+                <div class="technique-tabs">
+                    <div class="tab-navigation">
+                        <button class="tab-btn active" onclick="showTechnique('spectrophotometry')">🌈 Spectrophotometry</button>
+                        <button class="tab-btn" onclick="showTechnique('chromatography')">📊 Chromatography</button>
+                        <button class="tab-btn" onclick="showTechnique('immunoassays')">🧬 Immunoassays</button>
+                        <button class="tab-btn" onclick="showTechnique('electrochemical')">⚡ Electrochemical</button>
+                    </div>
+
+                    <div id="spectrophotometry-tech" class="technique-category active">
+                        <h3>Spectrophotometry & Photometry Methods</h3>
+                        <p>Light-based analytical methods for quantitative analysis</p>
+                        
+                        <div class="methods-grid">
+                            <div class="method-card">
+                                <h4>UV-Visible Spectrophotometry</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Measures light absorption at specific wavelengths (200-800 nm)</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Enzyme assays, Protein quantification, Drug levels</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">μg/mL to mg/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Precision:</span>
+                                        <span class="spec-value">CV &lt;2%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Fluorescence Spectroscopy</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Detects fluorescent emissions for enhanced sensitivity</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Immunoassays, Nucleic acid detection, Enzyme activity</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">ng/mL to μg/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Precision:</span>
+                                        <span class="spec-value">CV &lt;3%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Atomic Absorption Spectroscopy</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Quantifies trace metals and elements</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Trace metals, Toxicology, Nutritional assessment</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">ng/mL to μg/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Precision:</span>
+                                        <span class="spec-value">CV &lt;5%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Nephelometry/Turbidimetry</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Measures light scattering for protein analysis</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Immunoglobulins, Complement, CRP</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">mg/L range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Precision:</span>
+                                        <span class="spec-value">CV &lt;4%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="chromatography-tech" class="technique-category">
+                        <h3>Chromatographic Techniques</h3>
+                        <p>Separation-based analytical methods for complex mixtures</p>
+                        
+                        <div class="methods-grid">
+                            <div class="method-card">
+                                <h4>High-Performance Liquid Chromatography (HPLC)</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Separates compounds based on chemical properties</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Drug monitoring, Vitamin analysis, Hormone quantification</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">ng/mL to μg/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">5-30 minutes per sample</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Mass Spectrometry (LC-MS/MS, GC-MS)</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Molecular identification and quantification</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Therapeutic drug monitoring, Toxicology, Endocrinology</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">pg/mL to ng/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">2-15 minutes per sample</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Gas Chromatography (GC)</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Volatile compound separation and analysis</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Fatty acids, Organic acids, Drug screening</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">ng/mL to μg/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">10-60 minutes per sample</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Ion Chromatography</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Ionic compound separation</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Organic acids, Amino acids, Carbohydrates</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">mg/L range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">15-45 minutes per sample</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="immunoassays-tech" class="technique-category">
+                        <h3>Immunoassay Technologies</h3>
+                        <p>Antigen-antibody binding-based analytical methods</p>
+                        
+                        <div class="methods-grid">
+                            <div class="method-card">
+                                <h4>Chemiluminescent Immunoassays (CLIA)</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Light-based signal detection from immune complexes</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Cardiac markers, Thyroid function, Fertility hormones</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">pg/mL to ng/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">18-30 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Enzyme-Linked Immunosorbent Assay (ELISA)</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Antigen-antibody binding with enzymatic detection</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Infectious disease markers, Hormones, Tumor markers</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">pg/mL to ng/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">2-4 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Fluorescence Polarization Immunoassay (FPIA)</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Competitive binding with fluorescence detection</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Therapeutic drug monitoring, Drugs of abuse</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">ng/mL to μg/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">1-5 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Radioimmunoassay (RIA)</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Radioactive tracer-based quantification</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Hormones, Vitamins, Specialized proteins</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">pg/mL range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">24-48 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="electrochemical-tech" class="technique-category">
+                        <h3>Electrochemical Methods</h3>
+                        <p>Electrical signal-based analytical techniques</p>
+                        
+                        <div class="methods-grid">
+                            <div class="method-card">
+                                <h4>Ion-Selective Electrodes (ISE)</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Direct ion measurement through selective membranes</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Electrolytes (Na, K, Cl), pH, Blood gases</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">mmol/L range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">1-2 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Potentiometry</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Voltage-based concentration determination</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Blood gases, Electrolytes, pH measurement</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">mmol/L range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">30 seconds - 2 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Amperometry</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Current measurement for analyte detection</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Glucose, Lactate, Oxygen electrodes</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">mg/dL to g/L range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">30 seconds - 1 minute</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <h4>Coulometry</h4>
+                                <div class="method-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Principle:</span>
+                                        <span class="spec-value">Charge-based quantification</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Applications:</span>
+                                        <span class="spec-value">Chloride, Specialized electrolytes</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">mmol/L range</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Runtime:</span>
+                                        <span class="spec-value">1-3 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-selector">
+                    <h3>Interactive Method Selector</h3>
+                    <div class="selector-tool">
+                        <div class="selector-inputs">
+                            <div class="input-group">
+                                <label for="analyte-select">Analyte Type:</label>
+                                <select id="analyte-select" class="form-control" onchange="updateMethodRecommendations()">
+                                    <option value="">Select analyte...</option>
+                                    <option value="proteins">Proteins</option>
+                                    <option value="enzymes">Enzymes</option>
+                                    <option value="hormones">Hormones</option>
+                                    <option value="drugs">Drugs</option>
+                                    <option value="electrolytes">Electrolytes</option>
+                                    <option value="glucose">Glucose</option>
+                                    <option value="lipids">Lipids</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="sensitivity-select">Required Sensitivity:</label>
+                                <select id="sensitivity-select" class="form-control" onchange="updateMethodRecommendations()">
+                                    <option value="">Select sensitivity...</option>
+                                    <option value="high">High (pg/mL - ng/mL)</option>
+                                    <option value="medium">Medium (ng/mL - μg/mL)</option>
+                                    <option value="low">Low (μg/mL - mg/mL)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="method-recommendations" class="method-recommendations">
+                            <p>Select analyte type and sensitivity to see recommended methods</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Laboratory Instrumentation Section -->
+        <section id="instrumentation" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Laboratory Instrumentation</h2>
+                    <p class="section-description">Advanced analytical instrumentation and specifications</p>
+                </div>
+
+                <div class="instruments-grid">
+                    <div class="instrument-card">
+                        <h3>Automated Chemistry Analyzers</h3>
+                        <div class="instrument-specs">
+                            <div class="spec-category">
+                                <h4>Specifications</h4>
+                                <div class="spec-list">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Throughput:</span>
+                                        <span class="spec-value">200-9,000 tests per hour depending on configuration</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sample Volume:</span>
+                                        <span class="spec-value">2-500 μL per test</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Reagent Management:</span>
+                                        <span class="spec-value">Refrigerated storage, automatic preparation</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Quality Control:</span>
+                                        <span class="spec-value">Built-in controls, calibration verification</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Connectivity:</span>
+                                        <span class="spec-value">Laboratory Information System (LIS) integration</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spec-category">
+                                <h4>Key Features</h4>
+                                <ul class="feature-list">
+                                    <li>Random access capability for multiple test types</li>
+                                    <li>Automated dilution and repeat functionality</li>
+                                    <li>Integrated quality control monitoring</li>
+                                    <li>Reagent inventory management</li>
+                                    <li>Statistical quality control</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="instrument-card">
+                        <h3>Hematology Analyzers</h3>
+                        <div class="instrument-specs">
+                            <div class="spec-category">
+                                <h4>Specifications</h4>
+                                <div class="spec-list">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Technology:</span>
+                                        <span class="spec-value">Flow cytometry and impedance methods</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Throughput:</span>
+                                        <span class="spec-value">60-150 samples per hour</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sample Volume:</span>
+                                        <span class="spec-value">20-200 μL whole blood</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Parameters:</span>
+                                        <span class="spec-value">Complete Blood Count (CBC), differential, reticulocyte count</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Detection:</span>
+                                        <span class="spec-value">Optical and electrical impedance</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spec-category">
+                                <h4>Capabilities</h4>
+                                <ul class="feature-list">
+                                    <li>19-parameter CBC with differential</li>
+                                    <li>Reticulocyte analysis</li>
+                                    <li>Nucleated red blood cell counting</li>
+                                    <li>Platelet aggregation detection</li>
+                                    <li>Automated morphology flagging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="instrument-card">
+                        <h3>Mass Spectrometry Platforms</h3>
+                        <div class="instrument-specs">
+                            <div class="spec-category">
+                                <h4>Specifications</h4>
+                                <div class="spec-list">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Platforms:</span>
+                                        <span class="spec-value">Triple Quadrupole (QqQ), Time-of-Flight (TOF), Ion Trap</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sensitivity:</span>
+                                        <span class="spec-value">pg/mL to ng/mL detection limits</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Selectivity:</span>
+                                        <span class="spec-value">High specificity with MS/MS confirmation</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Throughput:</span>
+                                        <span class="spec-value">50-500 samples per day</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sample Prep:</span>
+                                        <span class="spec-value">Liquid-liquid extraction, solid-phase extraction</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spec-category">
+                                <h4>Applications</h4>
+                                <ul class="feature-list">
+                                    <li>Therapeutic drug monitoring with high specificity</li>
+                                    <li>Comprehensive toxicology screening and confirmation</li>
+                                    <li>Endocrine testing for complex hormones</li>
+                                    <li>Vitamin and metabolite quantification</li>
+                                    <li>Biomarker discovery and validation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="instrument-card">
+                        <h3>Coagulation Analyzers</h3>
+                        <div class="instrument-specs">
+                            <div class="spec-category">
+                                <h4>Specifications</h4>
+                                <div class="spec-list">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Detection Method:</span>
+                                        <span class="spec-value">Mechanical and optical clot detection</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Sample Type:</span>
+                                        <span class="spec-value">Citrated plasma</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Throughput:</span>
+                                        <span class="spec-value">60-200 tests per hour</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Test Menu:</span>
+                                        <span class="spec-value">PT/INR, aPTT, fibrinogen, D-dimer, factor assays</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Automation:</span>
+                                        <span class="spec-value">Sample handling and result reporting</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spec-category">
+                                <h4>Test Capabilities</h4>
+                                <ul class="feature-list">
+                                    <li>Prothrombin Time (PT) and INR</li>
+                                    <li>Activated Partial Thromboplastin Time (aPTT)</li>
+                                    <li>Fibrinogen quantification</li>
+                                    <li>D-dimer and fibrin degradation products</li>
+                                    <li>Factor assays and specialized coagulation tests</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Control Section -->
+        <section id="quality-control" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Quality Control & Assurance</h2>
+                    <p class="section-description">Comprehensive quality management systems and procedures</p>
+                </div>
+
+                <div class="qc-tabs">
+                    <div class="tab-navigation">
+                        <button class="tab-btn active" onclick="showQCCategory('internal')">🎯 Internal QC</button>
+                        <button class="tab-btn" onclick="showQCCategory('external')">🌐 External QA</button>
+                        <button class="tab-btn" onclick="showQCCategory('validation')">✅ Method Validation</button>
+                        <button class="tab-btn" onclick="showQCCategory('calibration')">🔧 Calibration</button>
+                    </div>
+
+                    <div id="internal-qc" class="qc-category active">
+                        <h3>Internal Quality Control</h3>
+                        <div class="qc-grid">
+                            <div class="qc-card">
+                                <h4>Control Materials</h4>
+                                <p>Known concentration samples run with patient specimens</p>
+                                <ul>
+                                    <li>Multi-level controls (normal, abnormal levels)</li>
+                                    <li>Matrix-matched control materials</li>
+                                    <li>Commercially prepared and validated</li>
+                                    <li>Lot-to-lot consistency verification</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Frequency & Scheduling</h4>
+                                <p>Multiple levels run daily, between batches, and with calibrations</p>
+                                <ul>
+                                    <li>Minimum daily QC for all active methods</li>
+                                    <li>QC with each batch of patient samples</li>
+                                    <li>QC after calibration and maintenance</li>
+                                    <li>Additional QC for critical results</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Statistical Analysis</h4>
+                                <p>Levey-Jennings charts, Westgard rules application</p>
+                                <ul>
+                                    <li>Real-time statistical monitoring</li>
+                                    <li>Multi-rule quality control systems</li>
+                                    <li>Trend analysis and drift detection</li>
+                                    <li>Automated QC failure alerts</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Documentation</h4>
+                                <p>Complete records of all QC activities and investigations</p>
+                                <ul>
+                                    <li>Electronic QC data management</li>
+                                    <li>Corrective action documentation</li>
+                                    <li>QC failure investigations</li>
+                                    <li>Regulatory compliance records</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="external-qc" class="qc-category">
+                        <h3>External Quality Assurance</h3>
+                        <div class="qc-grid">
+                            <div class="qc-card">
+                                <h4>Proficiency Testing</h4>
+                                <p>Participation in external programs (CAP, ARUP)</p>
+                                <ul>
+                                    <li>Regulatory required PT participation</li>
+                                    <li>Peer laboratory comparison</li>
+                                    <li>Method-specific challenges</li>
+                                    <li>Grading and feedback systems</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Performance Evaluation</h4>
+                                <p>Comparison with peer laboratories</p>
+                                <ul>
+                                    <li>Statistical peer group analysis</li>
+                                    <li>Method performance benchmarking</li>
+                                    <li>Bias and precision assessment</li>
+                                    <li>Continuous improvement tracking</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Corrective Actions</h4>
+                                <p>Investigation and resolution of unacceptable results</p>
+                                <ul>
+                                    <li>Root cause analysis procedures</li>
+                                    <li>Systematic investigation protocols</li>
+                                    <li>Preventive action implementation</li>
+                                    <li>Follow-up verification testing</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Regulatory Requirements</h4>
+                                <p>CLIA mandated for regulated analytes</p>
+                                <ul>
+                                    <li>CLIA compliance requirements</li>
+                                    <li>CAP inspection preparation</li>
+                                    <li>Proficiency testing schedules</li>
+                                    <li>Regulatory reporting obligations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="validation-qc" class="qc-category">
+                        <h3>Method Validation</h3>
+                        <div class="qc-grid">
+                            <div class="qc-card">
+                                <h4>Accuracy Assessment</h4>
+                                <p>Comparison with reference methods or certified materials</p>
+                                <ul>
+                                    <li>Reference method comparison studies</li>
+                                    <li>Recovery studies with spiked samples</li>
+                                    <li>Certified reference material testing</li>
+                                    <li>Bias evaluation and acceptability</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Precision Studies</h4>
+                                <p>Repeatability and reproducibility assessment</p>
+                                <ul>
+                                    <li>Within-run precision (repeatability)</li>
+                                    <li>Between-run precision (reproducibility)</li>
+                                    <li>Total precision calculations</li>
+                                    <li>Coefficient of variation analysis</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Analytical Range</h4>
+                                <p>Linear range verification</p>
+                                <ul>
+                                    <li>Linearity studies across range</li>
+                                    <li>Limit of detection determination</li>
+                                    <li>Limit of quantification establishment</li>
+                                    <li>Reportable range verification</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Interference Studies</h4>
+                                <p>Hemolysis, lipemia, icterus effects evaluation</p>
+                                <ul>
+                                    <li>Hemolysis interference testing</li>
+                                    <li>Lipemia interference assessment</li>
+                                    <li>Bilirubin (icterus) interference</li>
+                                    <li>Drug interference studies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="calibration-qc" class="qc-category">
+                        <h3>Calibration Management</h3>
+                        <div class="qc-grid">
+                            <div class="qc-card">
+                                <h4>Calibrator Materials</h4>
+                                <p>Traceable to reference standards (NIST, WHO)</p>
+                                <ul>
+                                    <li>Certified reference material traceability</li>
+                                    <li>Multi-point calibration curves</li>
+                                    <li>Matrix-matched calibrators</li>
+                                    <li>Stability and storage requirements</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Calibration Frequency</h4>
+                                <p>Daily, weekly, or as method requires</p>
+                                <ul>
+                                    <li>Method-specific calibration schedules</li>
+                                    <li>Drift monitoring and recalibration</li>
+                                    <li>Post-maintenance calibration</li>
+                                    <li>Automated calibration scheduling</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Verification Procedures</h4>
+                                <p>Independent material verification</p>
+                                <ul>
+                                    <li>Calibration verification materials</li>
+                                    <li>Acceptance criteria establishment</li>
+                                    <li>Verification frequency protocols</li>
+                                    <li>Failure investigation procedures</li>
+                                </ul>
+                            </div>
+                            <div class="qc-card">
+                                <h4>Traceability Documentation</h4>
+                                <p>Reference material linkage documentation</p>
+                                <ul>
+                                    <li>Metrological traceability chains</li>
+                                    <li>Calibration certificates</li>
+                                    <li>Uncertainty budget calculations</li>
+                                    <li>Measurement traceability records</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Tools Modal -->
+        <div id="technical-tools-modal" class="modal hidden" role="dialog" aria-labelledby="tech-tools-title">
+            <div class="modal-backdrop" onclick="closeModal('technical-tools-modal')"></div>
+            <div class="modal-content modal-content--large">
+                <div class="modal-header">
+                    <h3 id="tech-tools-title">Technical Laboratory Tools</h3>
+                    <button class="modal-close" onclick="closeModal('technical-tools-modal')" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="tech-tools-grid">
+                        <div class="tool-card">
+                            <h4>Performance Calculator</h4>
+                            <p>Calculate method precision, accuracy, and measurement uncertainty</p>
+                            <button class="btn btn--primary" onclick="showPerformanceCalculator()">Open Calculator</button>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>QC Rule Evaluator</h4>
+                            <p>Evaluate quality control results using Westgard rules</p>
+                            <button class="btn btn--primary" onclick="showQCEvaluator()">Evaluate QC</button>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>Reference Interval Tool</h4>
+                            <p>Calculate and establish reference intervals for populations</p>
+                            <button class="btn btn--primary" onclick="showReferenceIntervalTool()">Calculate Intervals</button>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>Method Comparison</h4>
+                            <p>Compare analytical methods and performance characteristics</p>
+                            <button class="btn btn--primary" onclick="showMethodComparison()">Compare Methods</button>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>Validation Protocol</h4>
+                            <p>Generate method validation protocols and checklists</p>
+                            <button class="btn btn--primary" onclick="showValidationProtocol()">Generate Protocol</button>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>Troubleshooting Guide</h4>
+                            <p>Interactive troubleshooting for common analytical issues</p>
+                            <button class="btn btn--primary" onclick="showTroubleshootingGuide()">Start Troubleshooting</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Method Selector Modal -->
+        <div id="method-selector-modal" class="modal hidden" role="dialog" aria-labelledby="method-selector-title">
+            <div class="modal-backdrop" onclick="closeModal('method-selector-modal')"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="method-selector-title">Analytical Method Selector</h3>
+                    <button class="modal-close" onclick="closeModal('method-selector-modal')" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="method-selector-tool">
+                        <h4>Find the Best Analytical Method</h4>
+                        
+                        <div class="selector-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="analyte-type">Analyte Type:</label>
+                                    <select id="analyte-type" class="form-control">
+                                        <option value="">Select analyte type...</option>
+                                        <option value="proteins">Proteins</option>
+                                        <option value="enzymes">Enzymes</option>
+                                        <option value="hormones">Hormones</option>
+                                        <option value="drugs">Therapeutic Drugs</option>
+                                        <option value="electrolytes">Electrolytes</option>
+                                        <option value="metabolites">Metabolites</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="concentration-range">Expected Concentration:</label>
+                                    <select id="concentration-range" class="form-control">
+                                        <option value="">Select concentration range...</option>
+                                        <option value="pg-ng">pg/mL - ng/mL</option>
+                                        <option value="ng-ug">ng/mL - μg/mL</option>
+                                        <option value="ug-mg">μg/mL - mg/mL</option>
+                                        <option value="mg-g">mg/mL - g/L</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sample-type">Sample Type:</label>
+                                    <select id="sample-type" class="form-control">
+                                        <option value="">Select sample type...</option>
+                                        <option value="serum">Serum</option>
+                                        <option value="plasma">Plasma</option>
+                                        <option value="whole-blood">Whole Blood</option>
+                                        <option value="urine">Urine</option>
+                                        <option value="csf">CSF</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="turnaround">Required Turnaround:</label>
+                                    <select id="turnaround" class="form-control">
+                                        <option value="">Select turnaround time...</option>
+                                        <option value="stat">STAT (&lt;1 hour)</option>
+                                        <option value="routine">Routine (2-4 hours)</option>
+                                        <option value="batch">Batch (24 hours)</option>
+                                        <option value="send-out">Send-out (&gt;24 hours)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn--primary btn--full-width" onclick="findRecommendedMethods()">Find Recommended Methods</button>
+                        </div>
+                        
+                        <div id="method-results" class="method-results">
+                            <p>Complete the form above to see method recommendations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Technical Details Center</h4>
+                    <p>Comprehensive technical resource for laboratory testing professionals. Advanced analytical methods, instrumentation, and quality systems for healthcare excellence.</p>
+                    <div class="footer-stats">
+                        <span>50+ analytical techniques documented</span><br>
+                        <span>Complete instrumentation specifications</span><br>
+                        <span>Comprehensive quality management</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Analytical Methods</h4>
+                    <ul class="footer-links">
+                        <li><a href="#analytical-techniques">Spectrophotometry</a></li>
+                        <li><a href="#analytical-techniques">Chromatography</a></li>
+                        <li><a href="#analytical-techniques">Immunoassays</a></li>
+                        <li><a href="#analytical-techniques">Electrochemical</a></li>
+                        <li><a href="#instrumentation">Mass Spectrometry</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quality & Performance</h4>
+                    <ul class="footer-links">
+                        <li><a href="#quality-control">Internal QC</a></li>
+                        <li><a href="#quality-control">External QA</a></li>
+                        <li><a href="#quality-control">Method Validation</a></li>
+                        <li><a href="#analytical-performance">Performance Metrics</a></li>
+                        <li><a href="#regulatory-standards">Regulatory Standards</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Technical Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:showTechnicalTools()">Performance Calculator</a></li>
+                        <li><a href="javascript:showTechnicalTools()">QC Rule Evaluator</a></li>
+                        <li><a href="javascript:showTechnicalTools()">Reference Intervals</a></li>
+                        <li><a href="javascript:showMethodSelector()">Method Selector</a></li>
+                        <li><a href="javascript:showTechnicalTools()">Validation Protocol</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Laboratory Testing Technical Details Center. Professional resource for analytical excellence and technical precision. Always follow current regulatory guidelines and institutional protocols.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

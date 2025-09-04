@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrasound Technical Details Center - Professional Engineering Resource</title>
+    <meta name="description" content="Comprehensive technical resource for ultrasound imaging systems covering physics, specifications, electronics, and implementation details for biomedical engineers and technical professionals.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header and Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar container" aria-label="Main technical navigation">
+            <div class="navbar__brand">
+                <div class="navbar__icon">🩻</div>
+                <h1 class="navbar__title">Ultrasound Technical Details Center</h1>
+            </div>
+            <ul class="navbar__menu" role="menubar">
+                <li role="none"><a href="#physics" class="navbar__link" role="menuitem">Physics</a></li>
+                <li role="none"><a href="#transducers" class="navbar__link" role="menuitem">Transducers</a></li>
+                <li role="none"><a href="#electronics" class="navbar__link" role="menuitem">Electronics</a></li>
+                <li role="none"><a href="#imaging" class="navbar__link" role="menuitem">Imaging</a></li>
+                <li role="none"><a href="#doppler" class="navbar__link" role="menuitem">Doppler</a></li>
+                <li role="none"><a href="#3d-imaging" class="navbar__link" role="menuitem">3D/4D</a></li>
+                <li role="none"><a href="#safety" class="navbar__link" role="menuitem">Safety</a></li>
+                <li role="none"><a href="#architecture" class="navbar__link" role="menuitem">Architecture</a></li>
+                <li role="none"><a href="#specifications" class="navbar__link" role="menuitem">Specs</a></li>
+                <li role="none"><a href="#qa" class="navbar__link" role="menuitem">QA</a></li>
+                <li role="none"><a href="#calculators" class="navbar__link" role="menuitem">Calculators</a></li>
+            </ul>
+            <button class="navbar__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__icon">🩻</div>
+                    <h1 class="hero__title">Ultrasound Technical Details Center</h1>
+                    <p class="hero__subtitle">Comprehensive technical resource for ultrasound imaging systems - serving biomedical engineers, medical physicists, service technicians, and technical professionals</p>
+                    
+                    <div class="hero__stats">
+                        <div class="tech-stat-card">
+                            <div class="tech-stat__value">2-18 MHz</div>
+                            <div class="tech-stat__label">Frequency Range</div>
+                            <div class="tech-stat__detail">Diagnostic Imaging</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat__value">1540 m/s</div>
+                            <div class="tech-stat__label">Sound Velocity</div>
+                            <div class="tech-stat__detail">Soft Tissue Average</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat__value">60-80 dB</div>
+                            <div class="tech-stat__label">Dynamic Range</div>
+                            <div class="tech-stat__detail">System Performance</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat__value">±2%</div>
+                            <div class="tech-stat__label">Measurement Accuracy</div>
+                            <div class="tech-stat__detail">Distance Calibration</div>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('physics')">🔬 Wave Physics</button>
+                        <button class="btn btn--secondary btn--lg" onclick="scrollToSection('specifications')">📊 Specifications</button>
+                        <button class="btn btn--outline btn--lg" onclick="scrollToSection('calculators')">🧮 Calculators</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sound Wave Physics Section -->
+        <section id="physics" class="physics-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🔬</span>
+                    Sound Wave Physics & Acoustic Properties
+                </h2>
+                
+                <div class="physics-grid">
+                    <div class="physics-card">
+                        <div class="physics-card__header">
+                            <h3>Acoustic Properties</h3>
+                            <div class="physics-category">Fundamental Parameters</div>
+                        </div>
+                        <div class="physics-card__content">
+                            <div class="spec-table">
+                                <div class="spec-row">
+                                    <div class="spec-label">Frequency Range</div>
+                                    <div class="spec-value">2-18 MHz</div>
+                                    <div class="spec-unit">diagnostic imaging</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">Wavelength</div>
+                                    <div class="spec-value">0.08-0.77 mm</div>
+                                    <div class="spec-unit">in soft tissue (λ = c/f)</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">Sound Velocity</div>
+                                    <div class="spec-value">1540 m/s</div>
+                                    <div class="spec-unit">average in soft tissue</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">Acoustic Impedance</div>
+                                    <div class="spec-value">1.38-1.81 MRayls</div>
+                                    <div class="spec-unit">tissue-dependent</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">Attenuation</div>
+                                    <div class="spec-value">0.5-0.7 dB/cm/MHz</div>
+                                    <div class="spec-unit">in soft tissue</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="physics-card">
+                        <div class="physics-card__header">
+                            <h3>Wave Propagation</h3>
+                            <div class="physics-category">Beam Characteristics</div>
+                        </div>
+                        <div class="physics-card__content">
+                            <div class="spec-table">
+                                <div class="spec-row">
+                                    <div class="spec-label">Wave Type</div>
+                                    <div class="spec-value" colspan="2">Longitudinal waves - compression and rarefaction</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">Beam Regions</div>
+                                    <div class="spec-value" colspan="2">Near field (Fresnel), far field (Fraunhofer)</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">Beam Width</div>
+                                    <div class="spec-value" colspan="2">Determined by transducer diameter and frequency</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">Focal Zone</div>
+                                    <div class="spec-value" colspan="2">Narrowest beam width region for optimal resolution</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">Scattering</div>
+                                    <div class="spec-value" colspan="2">Rayleigh (small), geometric (large structures)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="physics-card formula-card">
+                        <div class="physics-card__header">
+                            <h3>Essential Physics Formulas</h3>
+                            <div class="physics-category">Mathematical Relationships</div>
+                        </div>
+                        <div class="physics-card__content">
+                            <div class="formula-list">
+                                <div class="formula-item">
+                                    <div class="formula-name">Wavelength</div>
+                                    <div class="formula-equation">λ = c/f</div>
+                                </div>
+                                <div class="formula-item">
+                                    <div class="formula-name">Acoustic Impedance</div>
+                                    <div class="formula-equation">Z = ρc</div>
+                                </div>
+                                <div class="formula-item">
+                                    <div class="formula-name">Reflection Coefficient</div>
+                                    <div class="formula-equation">R = (Z₂-Z₁)/(Z₂+Z₁)</div>
+                                </div>
+                                <div class="formula-item">
+                                    <div class="formula-name">Attenuation Coefficient</div>
+                                    <div class="formula-equation">α = 0.5-0.7 dB/cm/MHz</div>
+                                </div>
+                                <div class="formula-item">
+                                    <div class="formula-name">Near Field Length</div>
+                                    <div class="formula-equation">N = D²f/4c</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transducer Technology Section -->
+        <section id="transducers" class="transducers-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🔌</span>
+                    Transducer Technology & Performance
+                </h2>
+                
+                <div class="transducer-tabs">
+                    <button class="tab-btn active" data-tab="elements">Piezoelectric Elements</button>
+                    <button class="tab-btn" data-tab="types">Transducer Types</button>
+                    <button class="tab-btn" data-tab="performance">Performance Parameters</button>
+                </div>
+
+                <div class="transducer-content">
+                    <div class="tab-panel active" data-panel="elements">
+                        <div class="transducer-grid">
+                            <div class="transducer-card">
+                                <h3>Piezoelectric Materials</h3>
+                                <div class="spec-table">
+                                    <div class="spec-row">
+                                        <div class="spec-label">Primary Material</div>
+                                        <div class="spec-value">Lead zirconate titanate (PZT)</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Advanced Material</div>
+                                        <div class="spec-value">Single crystals</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Element Thickness</div>
+                                        <div class="spec-value">λ/2 for optimal efficiency</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Backing Material</div>
+                                        <div class="spec-value">Tungsten-loaded epoxy for damping</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Matching Layers</div>
+                                        <div class="spec-value">λ/4 thickness for impedance matching</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Operating Bandwidth</div>
+                                        <div class="spec-value">40-80% of center frequency</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-panel="types">
+                        <div class="transducer-types-grid">
+                            <div class="transducer-type-card">
+                                <div class="type-header">
+                                    <h3>Linear Array</h3>
+                                    <div class="type-icon">📏</div>
+                                </div>
+                                <div class="spec-table">
+                                    <div class="spec-row">
+                                        <div class="spec-label">Elements</div>
+                                        <div class="spec-value">128-512 elements</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Frequency</div>
+                                        <div class="spec-value">5-15 MHz</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Application</div>
+                                        <div class="spec-value">High resolution imaging</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Footprint</div>
+                                        <div class="spec-value">Rectangular, parallel scan lines</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="transducer-type-card">
+                                <div class="type-header">
+                                    <h3>Curved Array</h3>
+                                    <div class="type-icon">🌙</div>
+                                </div>
+                                <div class="spec-table">
+                                    <div class="spec-row">
+                                        <div class="spec-label">Elements</div>
+                                        <div class="spec-value">128-256 elements</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Frequency</div>
+                                        <div class="spec-value">2-8 MHz</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Application</div>
+                                        <div class="spec-value">Wide field of view</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Footprint</div>
+                                        <div class="spec-value">Convex, sector scan format</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="transducer-type-card">
+                                <div class="type-header">
+                                    <h3>Phased Array</h3>
+                                    <div class="type-icon">📡</div>
+                                </div>
+                                <div class="spec-table">
+                                    <div class="spec-row">
+                                        <div class="spec-label">Elements</div>
+                                        <div class="spec-value">64-128 elements</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Frequency</div>
+                                        <div class="spec-value">2-5 MHz</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Application</div>
+                                        <div class="spec-value">Cardiac imaging</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Footprint</div>
+                                        <div class="spec-value">Small, sector steering capability</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="transducer-type-card">
+                                <div class="type-header">
+                                    <h3>Matrix Array</h3>
+                                    <div class="type-icon">⚡</div>
+                                </div>
+                                <div class="spec-table">
+                                    <div class="spec-row">
+                                        <div class="spec-label">Elements</div>
+                                        <div class="spec-value">2500+ elements</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Frequency</div>
+                                        <div class="spec-value">2-4 MHz</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Application</div>
+                                        <div class="spec-value">3D/4D imaging</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Footprint</div>
+                                        <div class="spec-value">2D array, volume scanning</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-panel="performance">
+                        <div class="performance-grid">
+                            <div class="performance-card">
+                                <h3>Resolution Specifications</h3>
+                                <div class="spec-table">
+                                    <div class="spec-row">
+                                        <div class="spec-label">Axial Resolution</div>
+                                        <div class="spec-value">0.2-1.5 mm</div>
+                                        <div class="spec-unit">(λ/2 theoretical limit)</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Lateral Resolution</div>
+                                        <div class="spec-value">0.5-3.0 mm</div>
+                                        <div class="spec-unit">(beam width dependent)</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Elevation Resolution</div>
+                                        <div class="spec-value">1-8 mm</div>
+                                        <div class="spec-unit">(slice thickness)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="performance-card">
+                                <h3>Sensitivity & Dynamic Range</h3>
+                                <div class="spec-table">
+                                    <div class="spec-row">
+                                        <div class="spec-label">Sensitivity</div>
+                                        <div class="spec-value">-40 to -60 dB</div>
+                                        <div class="spec-unit">typical</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-label">Dynamic Range</div>
+                                        <div class="spec-value">60-80 dB</div>
+                                        <div class="spec-unit">typical</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Electronics Section -->
+        <section id="electronics" class="electronics-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🔌</span>
+                    System Electronics & Signal Processing
+                </h2>
+                
+                <div class="electronics-grid">
+                    <div class="electronics-card">
+                        <div class="electronics-card__header">
+                            <h3>Transmit System</h3>
+                            <div class="electronics-category">High-Voltage Generation</div>
+                        </div>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Pulser Circuits</div>
+                                <div class="spec-value">±100-200V</div>
+                                <div class="spec-unit">high-voltage pulsers</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Pulse Repetition Freq</div>
+                                <div class="spec-value">1-20 kHz</div>
+                                <div class="spec-unit">depending on depth</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Beamforming</div>
+                                <div class="spec-value" colspan="2">Digital delay control for focusing</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Transmit Focusing</div>
+                                <div class="spec-value" colspan="2">Multiple focal zones capability</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Power Control</div>
+                                <div class="spec-value" colspan="2">Adjustable acoustic output (ISPTA, ISPPA)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="electronics-card">
+                        <div class="electronics-card__header">
+                            <h3>Receive System</h3>
+                            <div class="electronics-category">Signal Acquisition</div>
+                        </div>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Pre-amplification</div>
+                                <div class="spec-value" colspan="2">Low-noise amplifiers (LNA)</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Time Gain Compensation</div>
+                                <div class="spec-value" colspan="2">Depth-dependent gain adjustment</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Dynamic Receive Focusing</div>
+                                <div class="spec-value" colspan="2">Continuous focal point tracking</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">A/D Conversion</div>
+                                <div class="spec-value">12-16 bit</div>
+                                <div class="spec-unit">resolution</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Sampling Rate</div>
+                                <div class="spec-value">20-80 MHz</div>
+                                <div class="spec-unit">Nyquist sampling</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="electronics-card">
+                        <div class="electronics-card__header">
+                            <h3>Digital Signal Processing</h3>
+                            <div class="electronics-category">Advanced Processing</div>
+                        </div>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Quadrature Demodulation</div>
+                                <div class="spec-value" colspan="2">I/Q signal extraction</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Wall Filters</div>
+                                <div class="spec-value" colspan="2">High-pass filtering for Doppler</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Autocorrelation</div>
+                                <div class="spec-value" colspan="2">Doppler frequency estimation</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Beamforming Algorithms</div>
+                                <div class="spec-value" colspan="2">Synthetic aperture, compound imaging</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Image Enhancement</div>
+                                <div class="spec-value" colspan="2">Speckle reduction, edge enhancement</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Formation Section -->
+        <section id="imaging" class="imaging-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🖼️</span>
+                    Image Formation & Processing
+                </h2>
+                
+                <div class="imaging-grid">
+                    <div class="imaging-card">
+                        <h3>Scan Conversion</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Raw Data Format</div>
+                                <div class="spec-value" colspan="2">Polar/sector coordinates (curved/phased arrays)</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Interpolation</div>
+                                <div class="spec-value" colspan="2">Bilinear, bicubic for smooth display</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Display Resolution</div>
+                                <div class="spec-value">640×480 to 1920×1080</div>
+                                <div class="spec-unit">pixels</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Frame Rate</div>
+                                <div class="spec-value">15-100 Hz</div>
+                                <div class="spec-unit">depth and mode dependent</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Cine Memory</div>
+                                <div class="spec-value">500-2000 frames</div>
+                                <div class="spec-unit">typical storage</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="imaging-card">
+                        <h3>Image Processing</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Dynamic Range</div>
+                                <div class="spec-value">40-80 dB</div>
+                                <div class="spec-unit">display range</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Compression Curves</div>
+                                <div class="spec-value" colspan="2">Logarithmic, power law compression</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Gray Scale Maps</div>
+                                <div class="spec-value">256 levels</div>
+                                <div class="spec-unit">user-selectable curves</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Persistence</div>
+                                <div class="spec-value" colspan="2">Frame averaging for speckle reduction</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Edge Enhancement</div>
+                                <div class="spec-value" colspan="2">High-frequency emphasis filters</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="imaging-card">
+                        <h3>Measurement Capabilities</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Distance</div>
+                                <div class="spec-value">±2% accuracy</div>
+                                <div class="spec-unit">caliper measurements</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Area</div>
+                                <div class="spec-value" colspan="2">Planimetry, ellipse approximation</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Volume</div>
+                                <div class="spec-value" colspan="2">3D reconstruction algorithms</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Velocity</div>
+                                <div class="spec-value">±5% accuracy</div>
+                                <div class="spec-unit">Doppler shift analysis</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Flow</div>
+                                <div class="spec-value" colspan="2">Volume flow calculations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doppler Technology Section -->
+        <section id="doppler" class="doppler-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🌊</span>
+                    Doppler Technology & Flow Analysis
+                </h2>
+                
+                <div class="doppler-physics-card">
+                    <h3>Doppler Physics</h3>
+                    <div class="doppler-equation">
+                        <div class="equation-label">Doppler Equation:</div>
+                        <div class="equation-formula">fd = 2f₀v cos(θ)/c</div>
+                    </div>
+                    <div class="doppler-params">
+                        <div class="param-item">
+                            <span class="param-symbol">fd</span>
+                            <span class="param-desc">Doppler frequency shift</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-symbol">f₀</span>
+                            <span class="param-desc">Transmit frequency</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-symbol">v</span>
+                            <span class="param-desc">Velocity of reflector</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-symbol">θ</span>
+                            <span class="param-desc">Angle between beam and motion</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-symbol">c</span>
+                            <span class="param-desc">Speed of sound</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doppler-modes-grid">
+                    <div class="doppler-mode-card">
+                        <div class="mode-header">
+                            <h3>Continuous Wave (CW)</h3>
+                            <div class="mode-icon">〰️</div>
+                        </div>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Depth Resolution</div>
+                                <div class="spec-value">None</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Velocity Range</div>
+                                <div class="spec-value">±10 m/s</div>
+                                <div class="spec-unit">maximum</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Application</div>
+                                <div class="spec-value" colspan="2">High-velocity stenotic jets</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doppler-mode-card">
+                        <div class="mode-header">
+                            <h3>Pulsed Wave (PW)</h3>
+                            <div class="mode-icon">📡</div>
+                        </div>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Depth Resolution</div>
+                                <div class="spec-value">Yes</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Velocity Range</div>
+                                <div class="spec-value">±0.1-5 m/s</div>
+                                <div class="spec-unit">PRF dependent</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Application</div>
+                                <div class="spec-value" colspan="2">Specific vessel interrogation</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doppler-mode-card">
+                        <div class="mode-header">
+                            <h3>Color Doppler</h3>
+                            <div class="mode-icon">🌈</div>
+                        </div>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Processing</div>
+                                <div class="spec-value">2D velocity mapping</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Velocity Range</div>
+                                <div class="spec-value">±0.1-2 m/s</div>
+                                <div class="spec-unit">typical</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Application</div>
+                                <div class="spec-value" colspan="2">Flow visualization and mapping</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doppler-mode-card">
+                        <div class="mode-header">
+                            <h3>Power Doppler</h3>
+                            <div class="mode-icon">⚡</div>
+                        </div>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Processing</div>
+                                <div class="spec-value">Amplitude-based</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Sensitivity</div>
+                                <div class="spec-value">3-5× more sensitive</div>
+                                <div class="spec-unit">than color</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Application</div>
+                                <div class="spec-value" colspan="2">Low-velocity, small vessel detection</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D/4D Imaging Section -->
+        <section id="3d-imaging" class="3d-imaging-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">📦</span>
+                    3D/4D Imaging Technology
+                </h2>
+                
+                <div class="imaging-3d-grid">
+                    <div class="imaging-3d-card">
+                        <h3>Volume Acquisition</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Mechanical Scanning</div>
+                                <div class="spec-value" colspan="2">Motor-driven transducer movement</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Electronic Scanning</div>
+                                <div class="spec-value" colspan="2">Phased array beam steering</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Matrix Array</div>
+                                <div class="spec-value" colspan="2">Real-time 3D imaging capability</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Freehand 3D</div>
+                                <div class="spec-value" colspan="2">Position sensor-guided acquisition</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Acquisition Time</div>
+                                <div class="spec-value">5-30 seconds</div>
+                                <div class="spec-unit">mechanical, real-time matrix</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="imaging-3d-card">
+                        <h3>3D Processing</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Volume Rendering</div>
+                                <div class="spec-value" colspan="2">Maximum intensity projection (MIP)</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Surface Rendering</div>
+                                <div class="spec-value" colspan="2">Gradient-based surface extraction</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Multiplanar Reconstruction</div>
+                                <div class="spec-value" colspan="2">Orthogonal plane display</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Volume Calculations</div>
+                                <div class="spec-value" colspan="2">Voxel counting, integration methods</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">4D Processing</div>
+                                <div class="spec-value" colspan="2">Real-time 3D with temporal dimension</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety & Bioeffects Section -->
+        <section id="safety" class="safety-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🛡️</span>
+                    Safety Parameters & Bioeffects
+                </h2>
+                
+                <div class="safety-grid">
+                    <div class="safety-card">
+                        <h3>Acoustic Output Parameters</h3>
+                        <div class="spec-table">
+                            <div class="spec-row critical">
+                                <div class="spec-label">SPTA</div>
+                                <div class="spec-value">&lt;720 mW/cm²</div>
+                                <div class="spec-unit">limit</div>
+                            </div>
+                            <div class="spec-row critical">
+                                <div class="spec-label">SPPA</div>
+                                <div class="spec-value">&lt;190 W/cm²</div>
+                                <div class="spec-unit">limit</div>
+                            </div>
+                            <div class="spec-row critical">
+                                <div class="spec-label">Mechanical Index</div>
+                                <div class="spec-value">&lt;1.9</div>
+                                <div class="spec-unit">diagnostic imaging</div>
+                            </div>
+                            <div class="spec-row critical">
+                                <div class="spec-label">Thermal Index</div>
+                                <div class="spec-value">&lt;6.0</div>
+                                <div class="spec-unit">with time limitations</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Output Display</div>
+                                <div class="spec-value" colspan="2">Real-time MI and TI display required</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="safety-card">
+                        <h3>Safety Mechanisms</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">ALARA Principle</div>
+                                <div class="spec-value" colspan="2">As Low As Reasonably Achievable</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Automatic Power Reduction</div>
+                                <div class="spec-value" colspan="2">Time-based output limiting</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">User Controls</div>
+                                <div class="spec-value" colspan="2">Output power adjustment capabilities</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Safety Interlocks</div>
+                                <div class="spec-value" colspan="2">Prevent excessive exposure</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Temperature Monitoring</div>
+                                <div class="spec-value" colspan="2">Transducer heating protection</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture Section -->
+        <section id="architecture" class="architecture-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🏗️</span>
+                    System Architecture & Platform
+                </h2>
+                
+                <div class="architecture-grid">
+                    <div class="architecture-card">
+                        <h3>Hardware Platform</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">CPU</div>
+                                <div class="spec-value" colspan="2">Multi-core processors (Intel/AMD x86-64)</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Memory</div>
+                                <div class="spec-value">8-32 GB RAM</div>
+                                <div class="spec-unit">for image processing</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Storage</div>
+                                <div class="spec-value" colspan="2">SSD arrays for fast image access</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Graphics</div>
+                                <div class="spec-value" colspan="2">Dedicated GPU for real-time processing</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Connectivity</div>
+                                <div class="spec-value" colspan="2">USB 3.0, Ethernet, WiFi, Bluetooth</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="architecture-card">
+                        <h3>Software Architecture</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Operating System</div>
+                                <div class="spec-value" colspan="2">Linux, Windows, or embedded RTOS</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Real-time Processing</div>
+                                <div class="spec-value" colspan="2">Dedicated DSP or FPGA cores</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">User Interface</div>
+                                <div class="spec-value" colspan="2">Touch screen, trackball, keyboard controls</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Image Management</div>
+                                <div class="spec-value" colspan="2">DICOM-compliant storage and transmission</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Quality Control</div>
+                                <div class="spec-value" colspan="2">Built-in test patterns and phantoms</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Specifications Section -->
+        <section id="specifications" class="specifications-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">📊</span>
+                    Performance Specifications
+                </h2>
+                
+                <div class="specifications-grid">
+                    <div class="specification-card">
+                        <h3>Imaging Performance</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Penetration Depth</div>
+                                <div class="spec-value">30 cm</div>
+                                <div class="spec-unit">maximum (frequency dependent)</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Frame Rate</div>
+                                <div class="spec-value">15-1000 Hz</div>
+                                <div class="spec-unit">mode and depth dependent</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Line Density</div>
+                                <div class="spec-value">100-500</div>
+                                <div class="spec-unit">scan lines per image</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Dynamic Range</div>
+                                <div class="spec-value">100-120 dB</div>
+                                <div class="spec-unit">system dynamic range</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">SNR</div>
+                                <div class="spec-value">&gt;50 dB</div>
+                                <div class="spec-unit">for diagnostic quality</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="specification-card">
+                        <h3>Frequency Specifications</h3>
+                        <div class="freq-table">
+                            <div class="freq-row">
+                                <div class="freq-range">2-5 MHz</div>
+                                <div class="freq-desc">Deep penetration, abdominal imaging</div>
+                            </div>
+                            <div class="freq-row">
+                                <div class="freq-range">5-10 MHz</div>
+                                <div class="freq-desc">General purpose, moderate penetration</div>
+                            </div>
+                            <div class="freq-row">
+                                <div class="freq-range">10-15 MHz</div>
+                                <div class="freq-desc">Superficial structures, high resolution</div>
+                            </div>
+                            <div class="freq-row">
+                                <div class="freq-range">15-50 MHz</div>
+                                <div class="freq-desc">Dermatology, ophthalmology applications</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="specification-card">
+                        <h3>Measurement Accuracy</h3>
+                        <div class="spec-table">
+                            <div class="spec-row">
+                                <div class="spec-label">Distance Measurements</div>
+                                <div class="spec-value">±1-2%</div>
+                                <div class="spec-unit">or ±0.1 mm</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Area Calculations</div>
+                                <div class="spec-value">±3-5%</div>
+                                <div class="spec-unit">depending on method</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Volume Estimates</div>
+                                <div class="spec-value">±5-10%</div>
+                                <div class="spec-unit">for regular shapes</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">Doppler Velocities</div>
+                                <div class="spec-value">±5-10%</div>
+                                <div class="spec-unit">angle-dependent accuracy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Assurance Section -->
+        <section id="qa" class="qa-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">✅</span>
+                    Quality Assurance Protocols
+                </h2>
+                
+                <div class="qa-tabs">
+                    <button class="qa-tab-btn active" data-qa-tab="daily">Daily QA</button>
+                    <button class="qa-tab-btn" data-qa-tab="weekly">Weekly QA</button>
+                    <button class="qa-tab-btn" data-qa-tab="monthly">Monthly QA</button>
+                    <button class="qa-tab-btn" data-qa-tab="annual">Annual QA</button>
+                </div>
+
+                <div class="qa-content">
+                    <div class="qa-panel active" data-qa-panel="daily">
+                        <div class="qa-grid">
+                            <div class="qa-card">
+                                <h3>System Sensitivity</h3>
+                                <p>Test object imaging verification</p>
+                                <div class="qa-frequency">Daily</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Uniformity Assessment</h3>
+                                <p>Phantom scanning evaluation</p>
+                                <div class="qa-frequency">Daily</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Distance Accuracy</h3>
+                                <p>Measurement verification protocol</p>
+                                <div class="qa-frequency">Daily</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Display Quality</h3>
+                                <p>Monitor brightness and contrast check</p>
+                                <div class="qa-frequency">Daily</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Safety Parameter Check</h3>
+                                <p>MI/TI display verification</p>
+                                <div class="qa-frequency">Daily</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qa-panel" data-qa-panel="weekly">
+                        <div class="qa-grid">
+                            <div class="qa-card">
+                                <h3>Transducer Performance</h3>
+                                <p>Sensitivity and uniformity testing</p>
+                                <div class="qa-frequency">Weekly</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Doppler Accuracy</h3>
+                                <p>Flow phantom verification</p>
+                                <div class="qa-frequency">Weekly</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Image Quality Metrics</h3>
+                                <p>Resolution and contrast assessment</p>
+                                <div class="qa-frequency">Weekly</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qa-panel" data-qa-panel="monthly">
+                        <div class="qa-grid">
+                            <div class="qa-card">
+                                <h3>Safety Output Testing</h3>
+                                <p>Acoustic power measurements</p>
+                                <div class="qa-frequency">Monthly</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Electronic Noise</h3>
+                                <p>System noise floor measurement</p>
+                                <div class="qa-frequency">Monthly</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Calibration Verification</h3>
+                                <p>System calibration confirmation</p>
+                                <div class="qa-frequency">Monthly</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qa-panel" data-qa-panel="annual">
+                        <div class="qa-grid">
+                            <div class="qa-card">
+                                <h3>Comprehensive Performance</h3>
+                                <p>All parameters verification</p>
+                                <div class="qa-frequency">Annual</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Professional Inspection</h3>
+                                <p>Medical physicist review</p>
+                                <div class="qa-frequency">Annual</div>
+                            </div>
+                            <div class="qa-card">
+                                <h3>Regulatory Compliance</h3>
+                                <p>FDA and state requirements</p>
+                                <div class="qa-frequency">Annual</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Calculators Section -->
+        <section id="calculators" class="calculators-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-icon">🧮</span>
+                    Technical Calculators & Tools
+                </h2>
+                
+                <div class="calculators-grid">
+                    <div class="calculator-card">
+                        <h3>Wavelength Calculator</h3>
+                        <div class="calculator-inputs">
+                            <div class="input-group">
+                                <label for="freq-input">Frequency (MHz):</label>
+                                <input type="number" id="freq-input" class="form-control" placeholder="5.0" step="0.1" min="1" max="50">
+                            </div>
+                            <div class="input-group">
+                                <label for="velocity-input">Sound Velocity (m/s):</label>
+                                <input type="number" id="velocity-input" class="form-control" value="1540" step="10">
+                            </div>
+                            <button class="btn btn--primary" onclick="calculateWavelength()">Calculate</button>
+                        </div>
+                        <div class="calculator-result" id="wavelength-result">
+                            <div class="result-label">Wavelength:</div>
+                            <div class="result-value">-</div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-card">
+                        <h3>Doppler Frequency Calculator</h3>
+                        <div class="calculator-inputs">
+                            <div class="input-group">
+                                <label for="doppler-freq">Transmit Frequency (MHz):</label>
+                                <input type="number" id="doppler-freq" class="form-control" placeholder="5.0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label for="doppler-velocity">Velocity (m/s):</label>
+                                <input type="number" id="doppler-velocity" class="form-control" placeholder="1.0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label for="doppler-angle">Angle (degrees):</label>
+                                <input type="number" id="doppler-angle" class="form-control" placeholder="60" step="1" min="0" max="90">
+                            </div>
+                            <button class="btn btn--primary" onclick="calculateDoppler()">Calculate</button>
+                        </div>
+                        <div class="calculator-result" id="doppler-result">
+                            <div class="result-label">Doppler Shift:</div>
+                            <div class="result-value">-</div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-card">
+                        <h3>Near Field Calculator</h3>
+                        <div class="calculator-inputs">
+                            <div class="input-group">
+                                <label for="diameter-input">Transducer Diameter (mm):</label>
+                                <input type="number" id="diameter-input" class="form-control" placeholder="10" step="0.1" min="1">
+                            </div>
+                            <div class="input-group">
+                                <label for="nf-freq">Frequency (MHz):</label>
+                                <input type="number" id="nf-freq" class="form-control" placeholder="5.0" step="0.1">
+                            </div>
+                            <button class="btn btn--primary" onclick="calculateNearField()">Calculate</button>
+                        </div>
+                        <div class="calculator-result" id="nearfield-result">
+                            <div class="result-label">Near Field Length:</div>
+                            <div class="result-value">-</div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-card">
+                        <h3>Attenuation Calculator</h3>
+                        <div class="calculator-inputs">
+                            <div class="input-group">
+                                <label for="atten-freq">Frequency (MHz):</label>
+                                <input type="number" id="atten-freq" class="form-control" placeholder="5.0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label for="atten-depth">Depth (cm):</label>
+                                <input type="number" id="atten-depth" class="form-control" placeholder="10" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label for="atten-coeff">Attenuation Coefficient (dB/cm/MHz):</label>
+                                <input type="number" id="atten-coeff" class="form-control" value="0.6" step="0.1">
+                            </div>
+                            <button class="btn btn--primary" onclick="calculateAttenuation()">Calculate</button>
+                        </div>
+                        <div class="calculator-result" id="attenuation-result">
+                            <div class="result-label">Total Attenuation:</div>
+                            <div class="result-value">-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-reference">
+                    <h3>Formula Reference</h3>
+                    <div class="formula-grid">
+                        <div class="formula-ref-card">
+                            <div class="formula-name">Wavelength</div>
+                            <div class="formula-equation">λ = c / f</div>
+                        </div>
+                        <div class="formula-ref-card">
+                            <div class="formula-name">Doppler Shift</div>
+                            <div class="formula-equation">fd = 2f₀v cos(θ) / c</div>
+                        </div>
+                        <div class="formula-ref-card">
+                            <div class="formula-name">Near Field</div>
+                            <div class="formula-equation">N = D²f / 4c</div>
+                        </div>
+                        <div class="formula-ref-card">
+                            <div class="formula-name">Attenuation</div>
+                            <div class="formula-equation">A = α × f × d</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__disclaimer">
+                    <h3>Technical Resource Disclaimer</h3>
+                    <p>This technical resource is provided for educational and professional reference purposes. All specifications and technical details are based on industry standards and typical system configurations. Always consult manufacturer documentation and regulatory guidelines for specific system requirements and compliance standards.</p>
+                </div>
+                <div class="footer__actions">
+                    <button class="btn btn--outline" onclick="exportTechnicalData()">📄 Export Technical Data</button>
+                    <button class="btn btn--secondary" onclick="printSpecifications()">🖨️ Print Specifications</button>
+                    <button class="btn btn--primary" onclick="downloadCalculators()">🧮 Download Calculator Tools</button>
+                </div>
+                <div class="footer__info">
+                    <p>&copy; 2025 Ultrasound Technical Details Center - Professional engineering resource for ultrasound imaging systems.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

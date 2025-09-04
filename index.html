@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Portal - Login & Authentication</title>
+    <meta name="description" content="Secure login portal for Modern and Traditional Healthcare systems. Access your healthcare dashboard with professional authentication.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 class="logo-title">Healthcare Portal</h1>
+                    <p class="logo-subtitle">Modern & Traditional Medicine</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn--outline" id="emergency-btn" onclick="showEmergencyAccess()">🚨 Emergency Access</button>
+                    <select id="language-selector" class="form-control" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="te">తెలుగు</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="welcome-screen">
+            <div class="container">
+                <div class="welcome-content">
+                    <div class="welcome-header">
+                        <h2 class="welcome-title">Welcome to Healthcare Portal</h2>
+                        <p class="welcome-subtitle">Choose your healthcare system to access personalized medical services</p>
+                    </div>
+
+                    <div class="system-selection">
+                        <div class="system-card modern-system" data-system="modern" onclick="selectSystem('modern')">
+                            <div class="system-header">
+                                <div class="system-icon">🏥</div>
+                                <h3 class="system-title">Modern Healthcare</h3>
+                                <div class="system-badge">Evidence-Based Medicine</div>
+                            </div>
+                            <div class="system-content">
+                                <p class="system-description">Advanced diagnostics, AI-powered treatments, and cutting-edge medical technology</p>
+                                <div class="system-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-value">90%</span>
+                                        <span class="stat-label">hospitals use AI tools</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">340M</span>
+                                        <span class="stat-label">telemedicine consultations</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">FDA</span>
+                                        <span class="stat-label">approved devices</span>
+                                    </div>
+                                </div>
+                                <button onclick="window.location.href='page1/index.html'">Access Modern Healthcare</button>
+                            </div>
+                        </div>
+
+                        <div class="system-card traditional-system" data-system="traditional" onclick="selectSystem('traditional')">
+                            <div class="system-header">
+                                <div class="system-icon">🕉️</div>
+                                <h3 class="system-title">Traditional Healthcare</h3>
+                                <div class="system-badge">Ancient Wisdom Systems</div>
+                            </div>
+                            <div class="system-content">
+                                <p class="system-description">Holistic mind-body healing with Ayurveda, TCM, and traditional medicine practices</p>
+                                <div class="system-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-value">3000+</span>
+                                        <span class="stat-label">years of Ayurveda</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">2500+</span>
+                                        <span class="stat-label">years of TCM</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">1000+</span>
+                                        <span class="stat-label">herbal remedies</span>
+                                    </div>
+                                </div>
+                                <button onclick="window.location.href='page2/index.html'">Access Traditional Healthcare</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-access">
+                        <h3>Quick Access</h3>
+                        <div class="quick-actions">
+                            <button class="btn btn--outline" onclick="showLogin()">🔑 Login</button>
+                            <button class="btn btn--secondary" onclick="showRegistration()">👤 New User Registration</button>
+                            <button class="btn btn--info" onclick="showHelp()">❓ Help & Support</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Form -->
+        <section id="login-section" class="login-section hidden">
+            <div class="container">
+                <div class="login-container">
+                    <div class="login-header">
+                        <button class="back-btn" onclick="showWelcome()">← Back to Welcome</button>
+                        <div class="system-indicator" id="system-indicator">
+                            <div class="system-icon-small" id="login-system-icon">🏥</div>
+                            <span id="login-system-name">Modern Healthcare</span>
+                        </div>
+                    </div>
+
+                    <div class="login-form-container">
+                        <h2 class="login-title">Sign In to Your Account</h2>
+                        <p class="login-subtitle">Access your healthcare dashboard and medical services</p>
+
+                        <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address or Username</label>
+                                <input type="email" id="email" name="email" class="form-control" required 
+                                       placeholder="Enter your email or username" autocomplete="username">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="password" name="password" class="form-control" required 
+                                           placeholder="Enter your password" autocomplete="current-password">
+                                    <button type="button" class="password-toggle" onclick="togglePassword('password')" 
+                                            aria-label="Toggle password visibility">
+                                        <span class="password-icon">👁️</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="user-role" class="form-label">Select Your Role</label>
+                                <select id="user-role" name="userRole" class="form-control" required onchange="updateRoleSpecificOptions()">
+                                    <option value="">Choose your role</option>
+                                    <option value="patient">Patient/Individual</option>
+                                    <option value="doctor">Medical Doctor</option>
+                                    <option value="nurse">Registered Nurse</option>
+                                    <option value="practitioner">Traditional Practitioner</option>
+                                    <option value="researcher">Healthcare Researcher</option>
+                                    <option value="administrator">Healthcare Administrator</option>
+                                </select>
+                            </div>
+
+                            <div class="specialization-group hidden" id="specialization-group">
+                                <label for="specialization" class="form-label">Specialization</label>
+                                <select id="specialization" name="specialization" class="form-control">
+                                    <option value="">Select your specialization</option>
+                                </select>
+                            </div>
+
+                            <div class="form-options">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="remember-me" name="rememberMe">
+                                    <label for="remember-me">Remember me for 30 days</label>
+                                </div>
+                                <a href="#" onclick="showForgotPassword()" class="forgot-password">Forgot password?</a>
+                            </div>
+
+                            <div class="two-factor-group hidden" id="two-factor-group">
+                                <label for="two-factor-code" class="form-label">Two-Factor Authentication Code</label>
+                                <input type="text" id="two-factor-code" name="twoFactorCode" class="form-control" 
+                                       placeholder="Enter 6-digit code" maxlength="6" pattern="[0-9]{6}">
+                                <p class="form-help">Check your authenticator app or SMS for the verification code</p>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--full-width login-btn">
+                                <span class="btn-text">Sign In</span>
+                                <span class="btn-loading hidden">Authenticating...</span>
+                            </button>
+
+                            <div class="social-login">
+                                <p class="social-login-label">Or continue with</p>
+                                <div class="social-buttons">
+                                    <button type="button" class="btn btn--outline social-btn" onclick="socialLogin('google')">
+                                        📧 Google
+                                    </button>
+                                    <button type="button" class="btn btn--outline social-btn" onclick="socialLogin('linkedin')">
+                                        💼 LinkedIn
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="login-footer">
+                                <p>Don't have an account? <a href="#" onclick="showRegistration()">Create new account</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section id="registration-section" class="registration-section hidden">
+            <div class="container">
+                <div class="registration-container">
+                    <div class="registration-header">
+                        <button class="back-btn" onclick="showWelcome()">← Back to Welcome</button>
+                        <div class="progress-indicator">
+                            <div class="progress-step active" data-step="1">1</div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="2">2</div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="3">3</div>
+                        </div>
+                    </div>
+
+                    <div class="registration-content">
+                        <!-- Step 1: Basic Information -->
+                        <div id="registration-step-1" class="registration-step active">
+                            <h2 class="registration-title">Create Your Account</h2>
+                            <p class="registration-subtitle">Step 1 of 3: Basic Information</p>
+
+                            <form id="registration-form-1" class="registration-form" onsubmit="nextRegistrationStep(event, 2)">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="regEmail" class="form-label">Email Address *</label>
+                                    <input type="email" id="regEmail" name="email" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dateOfBirth" class="form-label">Date of Birth *</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="gender" class="form-label">Gender</label>
+                                    <select id="gender" name="gender" class="form-control">
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                        <option value="prefer-not-to-say">Prefer not to say</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" class="btn btn--primary btn--full-width">Continue to Role Selection</button>
+                            </form>
+                        </div>
+
+                        <!-- Step 2: Role Selection -->
+                        <div id="registration-step-2" class="registration-step">
+                            <h2 class="registration-title">Select Your Role</h2>
+                            <p class="registration-subtitle">Step 2 of 3: User Type & Healthcare System</p>
+
+                            <form id="registration-form-2" class="registration-form" onsubmit="nextRegistrationStep(event, 3)">
+                                <div class="user-type-selection">
+                                    <div class="user-type-card" onclick="selectUserType('patient')">
+                                        <div class="user-type-header">
+                                            <input type="radio" name="userType" value="patient" id="type-patient">
+                                            <label for="type-patient" class="user-type-label">
+                                                <div class="user-type-icon">👤</div>
+                                                <h3>Patient/Individual</h3>
+                                            </label>
+                                        </div>
+                                        <p>Access healthcare services and wellness resources</p>
+                                    </div>
+
+                                    <div class="user-type-card" onclick="selectUserType('healthcare-provider')">
+                                        <div class="user-type-header">
+                                            <input type="radio" name="userType" value="healthcare-provider" id="type-provider">
+                                            <label for="type-provider" class="user-type-label">
+                                                <div class="user-type-icon">👩‍⚕️</div>
+                                                <h3>Healthcare Provider</h3>
+                                            </label>
+                                        </div>
+                                        <p>Licensed medical professionals and practitioners</p>
+                                    </div>
+
+                                    <div class="user-type-card" onclick="selectUserType('researcher')">
+                                        <div class="user-type-header">
+                                            <input type="radio" name="userType" value="researcher" id="type-researcher">
+                                            <label for="type-researcher" class="user-type-label">
+                                                <div class="user-type-icon">🔬</div>
+                                                <h3>Healthcare Researcher</h3>
+                                            </label>
+                                        </div>
+                                        <p>Academic and clinical research professionals</p>
+                                    </div>
+
+                                    <div class="user-type-card" onclick="selectUserType('administrator')">
+                                        <div class="user-type-header">
+                                            <input type="radio" name="userType" value="administrator" id="type-admin">
+                                            <label for="type-admin" class="user-type-label">
+                                                <div class="user-type-icon">⚙️</div>
+                                                <h3>Healthcare Administrator</h3>
+                                            </label>
+                                        </div>
+                                        <p>Healthcare facility and system administrators</p>
+                                    </div>
+                                </div>
+
+                                <div class="healthcare-system-preference">
+                                    <h3>Healthcare System Preference</h3>
+                                    <div class="system-toggles">
+                                        <div class="toggle-group">
+                                            <input type="checkbox" id="prefer-modern" name="systemPreference" value="modern">
+                                            <label for="prefer-modern" class="toggle-label">
+                                                <span class="toggle-icon">🏥</span>
+                                                Modern Healthcare
+                                            </label>
+                                        </div>
+                                        <div class="toggle-group">
+                                            <input type="checkbox" id="prefer-traditional" name="systemPreference" value="traditional">
+                                            <label for="prefer-traditional" class="toggle-label">
+                                                <span class="toggle-icon">🕉️</span>
+                                                Traditional Healthcare
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn--outline" onclick="previousRegistrationStep(1)">Previous</button>
+                                    <button type="submit" class="btn btn--primary">Continue to Verification</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Step 3: Verification & Security -->
+                        <div id="registration-step-3" class="registration-step">
+                            <h2 class="registration-title">Security & Verification</h2>
+                            <p class="registration-subtitle">Step 3 of 3: Complete Your Registration</p>
+
+                            <form id="registration-form-3" class="registration-form" onsubmit="completeRegistration(event)">
+                                <div class="form-group">
+                                    <label for="newPassword" class="form-label">Create Password *</label>
+                                    <div class="password-input">
+                                        <input type="password" id="newPassword" name="password" class="form-control" required
+                                               placeholder="Create a strong password" oninput="checkPasswordStrength()">
+                                        <button type="button" class="password-toggle" onclick="togglePassword('newPassword')"
+                                                aria-label="Toggle password visibility">
+                                            <span class="password-icon">👁️</span>
+                                        </button>
+                                    </div>
+                                    <div class="password-strength" id="password-strength">
+                                        <div class="strength-bar">
+                                            <div class="strength-fill"></div>
+                                        </div>
+                                        <div class="strength-requirements">
+                                            <div class="requirement" id="req-length">❌ At least 8 characters</div>
+                                            <div class="requirement" id="req-uppercase">❌ One uppercase letter</div>
+                                            <div class="requirement" id="req-lowercase">❌ One lowercase letter</div>
+                                            <div class="requirement" id="req-number">❌ One number</div>
+                                            <div class="requirement" id="req-special">❌ One special character</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword" class="form-label">Confirm Password *</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required
+                                           placeholder="Confirm your password" oninput="checkPasswordMatch()">
+                                    <div id="password-match" class="password-match"></div>
+                                </div>
+
+                                <div class="professional-credentials hidden" id="professional-credentials">
+                                    <h3>Professional Credentials</h3>
+                                    
+                                    <div class="form-group">
+                                        <label for="licenseNumber" class="form-label">License Number</label>
+                                        <input type="text" id="licenseNumber" name="licenseNumber" class="form-control"
+                                               placeholder="Enter your professional license number">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="institution" class="form-label">Institution/Hospital Affiliation</label>
+                                        <input type="text" id="institution" name="institution" class="form-control"
+                                               placeholder="Enter your workplace or institution">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="specialization-reg" class="form-label">Specialization</label>
+                                        <select id="specialization-reg" name="specialization" class="form-control">
+                                            <option value="">Select your specialization</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Upload Credentials</label>
+                                        <div class="file-upload">
+                                            <input type="file" id="credentials" name="credentials" accept=".pdf,.jpg,.png" multiple>
+                                            <label for="credentials" class="file-upload-label">
+                                                📎 Upload License, Degree, and Certificates
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="two-factor-setup">
+                                    <h3>Two-Factor Authentication</h3>
+                                    <p>Enhance your account security with 2FA</p>
+                                    <div class="two-factor-methods">
+                                        <div class="method-option">
+                                            <input type="radio" id="2fa-sms" name="twoFactorMethod" value="sms">
+                                            <label for="2fa-sms">📱 SMS Verification</label>
+                                        </div>
+                                        <div class="method-option">
+                                            <input type="radio" id="2fa-email" name="twoFactorMethod" value="email">
+                                            <label for="2fa-email">📧 Email Verification</label>
+                                        </div>
+                                        <div class="method-option">
+                                            <input type="radio" id="2fa-app" name="twoFactorMethod" value="app">
+                                            <label for="2fa-app">🔐 Authenticator App</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="terms-acceptance">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="terms-privacy" name="termsPrivacy" required>
+                                        <label for="terms-privacy">
+                                            I agree to the <a href="#" onclick="showTerms()">Terms of Service</a> and 
+                                            <a href="#" onclick="showPrivacy()">Privacy Policy</a> *
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="hipaa-consent" name="hipaaConsent">
+                                        <label for="hipaa-consent">
+                                            I consent to HIPAA-compliant processing of my health information
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="marketing-consent" name="marketingConsent">
+                                        <label for="marketing-consent">
+                                            I would like to receive health tips and updates (optional)
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn--outline" onclick="previousRegistrationStep(2)">Previous</button>
+                                    <button type="submit" class="btn btn--primary registration-submit-btn">
+                                        <span class="btn-text">Complete Registration</span>
+                                        <span class="btn-loading hidden">Creating Account...</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forgot Password -->
+        <section id="forgot-password-section" class="forgot-password-section hidden">
+            <div class="container">
+                <div class="forgot-password-container">
+                    <div class="forgot-password-header">
+                        <button class="back-btn" onclick="showLogin()">← Back to Login</button>
+                    </div>
+
+                    <div class="forgot-password-content">
+                        <h2 class="forgot-password-title">Reset Your Password</h2>
+                        <p class="forgot-password-subtitle">Enter your email address and we'll send you a link to reset your password</p>
+
+                        <form id="forgot-password-form" class="forgot-password-form" onsubmit="handleForgotPassword(event)">
+                            <div class="form-group">
+                                <label for="reset-email" class="form-label">Email Address</label>
+                                <input type="email" id="reset-email" name="email" class="form-control" required
+                                       placeholder="Enter your registered email address">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="security-question" class="form-label">Security Question (Optional)</label>
+                                <select id="security-question" name="securityQuestion" class="form-control">
+                                    <option value="">Select a security question</option>
+                                    <option value="pet">What was your first pet's name?</option>
+                                    <option value="school">What was your first school's name?</option>
+                                    <option value="city">In which city were you born?</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group hidden" id="security-answer-group">
+                                <label for="security-answer" class="form-label">Your Answer</label>
+                                <input type="text" id="security-answer" name="securityAnswer" class="form-control"
+                                       placeholder="Enter your answer">
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--full-width reset-btn">
+                                <span class="btn-text">Send Reset Link</span>
+                                <span class="btn-loading hidden">Sending...</span>
+                            </button>
+
+                            <div class="alternative-recovery">
+                                <p>Can't access your email? <a href="#" onclick="showSMSRecovery()">Try SMS recovery</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Access -->
+        <section id="emergency-section" class="emergency-section hidden">
+            <div class="container">
+                <div class="emergency-container">
+                    <div class="emergency-header">
+                        <button class="back-btn" onclick="showWelcome()">← Back to Welcome</button>
+                        <div class="emergency-indicator">
+                            <span class="emergency-icon">🚨</span>
+                            <span class="emergency-text">Emergency Access</span>
+                        </div>
+                    </div>
+
+                    <div class="emergency-content">
+                        <h2 class="emergency-title">Emergency Healthcare Resources</h2>
+                        <p class="emergency-subtitle">Immediate access to critical healthcare information and services</p>
+
+                        <div class="emergency-grid">
+                            <div class="emergency-card">
+                                <div class="emergency-card-header">
+                                    <div class="emergency-card-icon">🚑</div>
+                                    <h3>Emergency Services</h3>
+                                </div>
+                                <div class="emergency-card-content">
+                                    <div class="emergency-contact">
+                                        <strong>National Emergency: 112</strong>
+                                    </div>
+                                    <div class="emergency-contact">
+                                        <strong>Ambulance: 108/1298</strong>
+                                    </div>
+                                    <button class="btn btn--danger btn--sm" onclick="callEmergency('108')">📞 Call Now</button>
+                                </div>
+                            </div>
+
+                            <div class="emergency-card">
+                                <div class="emergency-card-header">
+                                    <div class="emergency-card-icon">☢️</div>
+                                    <h3>Poison Control</h3>
+                                </div>
+                                <div class="emergency-card-content">
+                                    <div class="emergency-contact">
+                                        <strong>Poison Helpline: 1066</strong>
+                                    </div>
+                                    <button class="btn btn--warning btn--sm" onclick="callEmergency('1066')">📞 Call Poison Control</button>
+                                    <button class="btn btn--outline btn--sm" onclick="showPoisonInfo()">ℹ️ First Aid Guide</button>
+                                </div>
+                            </div>
+
+                            <div class="emergency-card">
+                                <div class="emergency-card-header">
+                                    <div class="emergency-card-icon">🏥</div>
+                                    <h3>Nearest Hospital</h3>
+                                </div>
+                                <div class="emergency-card-content">
+                                    <button class="btn btn--primary btn--sm" onclick="findNearestHospital()">📍 Find Hospital</button>
+                                    <button class="btn btn--outline btn--sm" onclick="showHospitalList()">📋 Hospital List</button>
+                                </div>
+                            </div>
+
+                            <div class="emergency-card">
+                                <div class="emergency-card-header">
+                                    <div class="emergency-card-icon">💊</div>
+                                    <h3>Crisis Helplines</h3>
+                                </div>
+                                <div class="emergency-card-content">
+                                    <div class="emergency-contact">
+                                        <strong>Mental Health: 9152987821</strong>
+                                    </div>
+                                    <button class="btn btn--info btn--sm" onclick="callEmergency('9152987821')">📞 Mental Health Support</button>
+                                </div>
+                            </div>
+
+                            <div class="emergency-card">
+                                <div class="emergency-card-header">
+                                    <div class="emergency-card-icon">📋</div>
+                                    <h3>First Aid Guide</h3>
+                                </div>
+                                <div class="emergency-card-content">
+                                    <button class="btn btn--success btn--sm" onclick="showFirstAid()">📖 View Guide</button>
+                                    <button class="btn btn--outline btn--sm" onclick="downloadFirstAid()">📥 Download PDF</button>
+                                </div>
+                            </div>
+
+                            <div class="emergency-card">
+                                <div class="emergency-card-header">
+                                    <div class="emergency-card-icon">🩹</div>
+                                    <h3>Emergency Medicine</h3>
+                                </div>
+                                <div class="emergency-card-content">
+                                    <button class="btn btn--secondary btn--sm" onclick="findPharmacy()">🏪 Find 24/7 Pharmacy</button>
+                                    <button class="btn btn--outline btn--sm" onclick="showBasicMeds()">💊 Basic Medicine Info</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="emergency-disclaimer">
+                            <p><strong>⚠️ Important:</strong> This is for informational purposes only. In case of a medical emergency, call 112 or visit the nearest emergency room immediately.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Healthcare Portal</h3>
+                    <p>Connecting Modern and Traditional Medicine for comprehensive healthcare solutions</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#" onclick="showHelp()">Help Center</a></li>
+                            <li><a href="#" onclick="contactSupport()">Contact Support</a></li>
+                            <li><a href="#" onclick="showAccessibility()">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#" onclick="showTerms()">Terms of Service</a></li>
+                            <li><a href="#" onclick="showPrivacy()">Privacy Policy</a></li>
+                            <li><a href="#" onclick="showHIPAA()">HIPAA Compliance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#" onclick="showEmergencyAccess()">Emergency Access</a></li>
+                            <li><a href="#" onclick="showLogin()">Healthcare Provider Login</a></li>
+                            <li><a href="#" onclick="showSystemInfo()">System Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Healthcare Portal. Secure authentication for healthcare professionals and patients.</p>
+                <div class="security-badges">
+                    <span class="security-badge">🔒 SSL Secured</span>
+                    <span class="security-badge">🛡️ HIPAA Compliant</span>
+                    <span class="security-badge">⚡ 24/7 Available</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Processing your request...</p>
+        </div>
+    </div>
+
+    <!-- Notification System -->
+    <div id="notification-system" class="notification-system">
+        <!-- Notifications will be dynamically inserted here -->
+    </div>
+
+    <!-- Modal for Terms, Privacy, etc. -->
+    <div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modal-title">Modal Title</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

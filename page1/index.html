@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Healthcare Dashboard - India</title>
+    <meta name="description" content="Explore diagnostic tools, treatment options, healthcare innovations, government schemes, and wellness tracking for Modern healthcare management.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header and Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar container" aria-label="Main navigation">
+            <div class="navbar__brand">
+                <h1 class="navbar__title">Healthcare Dashboard</h1>
+            </div>
+            <ul class="navbar__menu" role="menubar">
+                <li role="none"><a href="#dashboard" class="navbar__link" role="menuitem">Dashboard</a></li>
+                <li role="none"><a href="#diagnostics" class="navbar__link" role="menuitem">Diagnostics</a></li>
+                <li role="none"><a href="#treatments" class="navbar__link" role="menuitem">Treatments</a></li>
+                <li role="none"><a href="#innovations" class="navbar__link" role="menuitem">Innovations</a></li>
+                <li role="none"><a href="#wellness" class="navbar__link" role="menuitem">Wellness</a></li>
+                <li role="none"><a href="#schemes" class="navbar__link" role="menuitem">Gov Schemes</a></li>
+            </ul>
+            <button class="navbar__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Dashboard Overview Section -->
+        <section id="dashboard" class="dashboard-hero">
+            <div class="container">
+                <div class="dashboard-hero__content">
+                    <h1 class="dashboard-hero__title">Modern Healthcare Dashboard</h1>
+                    <p class="dashboard-hero__subtitle">Explore India's healthcare landscape with interactive tools, government schemes, and wellness tracking.</p>
+                    
+                    <div class="dashboard-hero__stats">
+                        <div class="stat-card">
+                            <div class="stat-card__number">340M</div>
+                            <div class="stat-card__text">eSanjeevani consultations</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">90%</div>
+                            <div class="stat-card__text">hospitals use AI imaging</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">55 Cr</div>
+                            <div class="stat-card__text">covered by Ayushman Bharat</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-hero__actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('diagnostics')">🩻 Explore Diagnostics</button>
+                        <button class="btn btn--secondary btn--lg" onclick="scrollToSection('treatments')">⚕️ Treatment Options</button>
+                        <button class="btn btn--outline btn--lg" onclick="scrollToSection('innovations')">🤖 AI Innovations</button>
+                        <button class="btn btn--info btn--lg" onclick="scrollToSection('wellness')">💪 Wellness Tracker</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diagnostic Tools Explorer -->
+        <section id="diagnostics" class="diagnostics-explorer">
+            <div class="container">
+                <h2 class="section-title">Diagnostic Tools Explorer</h2>
+                <div class="diagnostic-grid">
+                    <div class="diagnostic-card" data-tool="xray">
+                        <div class="diagnostic-card__header">
+                            <div class="diagnostic-card__icon">🩻</div>
+                            <h3 class="diagnostic-card__title">X-Ray & CT Scan</h3>
+                        </div>
+                        <div class="diagnostic-card__content">
+                            <p>Use ionizing radiation to image bones and internal structures</p>
+                            <div class="diagnostic-buttons">
+                                <button class="btn btn--sm btn--primary" onclick="window.location.href='xray-ct-learn-more/index.html'">Learn More</button>
+                                <button class="btn btn--sm btn--warning" onclick="window.location.href='xray-ct-safety-info/index.html'">⚠️ Safety Info</button>
+                                <button class="btn btn--sm btn--outline" onclick="window.location.href='xray-ct-technical-details/index.html'">Technical Details</button>
+                            </div>
+                        </div>
+                        <div class="diagnostic-details hidden" id="xray-details">
+                            <p><strong>Applications:</strong> Quickly revealing fractures or tumors</p>
+                            <p><strong>Safety:</strong> Uses radiation - minimal exposure</p>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-card" data-tool="mri">
+                        <div class="diagnostic-card__header">
+                            <div class="diagnostic-card__icon">🧲</div>
+                            <h3 class="diagnostic-card__title">MRI</h3>
+                        </div>
+                        <div class="diagnostic-card__content">
+                            <p>Magnetic fields and radio waves for detailed soft tissue images</p>
+                            <div class="diagnostic-buttons">
+                                <button class="btn btn--sm btn--primary" onclick="window.location.href='mri-learn-more/index.html'">Learn More</button>
+                                <button class="btn btn--sm btn--success" onclick="window.location.href='mri-safety-info/index.html'">✓ Safety Info</button>
+                                <button class="btn btn--sm btn--outline" onclick="window.location.href='mri-technical-details/index.html'">Technical Details</button>
+                            </div>
+                        </div>
+                        <div class="diagnostic-details hidden" id="mri-details">
+                            <p><strong>Applications:</strong> Brain, joints imaging without radiation</p>
+                            <p><strong>Safety:</strong> No radiation exposure</p>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-card" data-tool="ultrasound">
+                        <div class="diagnostic-card__header">
+                            <div class="diagnostic-card__icon">📡</div>
+                            <h3 class="diagnostic-card__title">Ultrasound</h3>
+                        </div>
+                        <div class="diagnostic-card__content">
+                            <p>Safe, non-invasive imaging method</p>
+                            <div class="diagnostic-buttons">
+                                <button class="btn btn--sm btn--primary" onclick="window.location.href='ultrasound-learn-more/index.html'">Learn More</button>
+                                <button class="btn btn--sm btn--success" onclick="window.location.href='ultrasound-safety-info/index.html'">✓ Safety Info</button>
+                                <button class="btn btn--sm btn--outline" onclick="window.location.href='ultrasound-technical-details/index.html'">Technical Details</button>
+                            </div>
+                        </div>
+                        <div class="diagnostic-details hidden" id="ultrasound-details">
+                            <p><strong>Applications:</strong> Organs and pregnancy monitoring</p>
+                            <p><strong>Safety:</strong> Completely safe, no radiation</p>
+                        </div>
+                    </div>
+
+                    <div class="diagnostic-card" data-tool="lab">
+                        <div class="diagnostic-card__header">
+                            <div class="diagnostic-card__icon">🧪</div>
+                            <h3 class="diagnostic-card__title">Laboratory Tests</h3>
+                        </div>
+                        <div class="diagnostic-card__content">
+                            <p>Blood, urine, or other body fluids analysis</p>
+                            <div class="diagnostic-buttons">
+                                <button class="btn btn--sm btn--primary" onclick="window.location.href='laboratory-tests-learn-more/index.html'">Learn More</button>
+                                <button class="btn btn--sm btn--info" onclick="window.location.href='laboratory-safety-info/index.html'">ℹ️ Safety Info</button>
+                                <button class="btn btn--sm btn--outline" onclick="window.location.href='laboratory-technical-details/index.html'">Technical Details</button>
+                            </div>
+                        </div>
+                        <div class="diagnostic-details hidden" id="lab-details">
+                            <p><strong>Applications:</strong> Measure hemoglobin, glucose, liver enzymes</p>
+                            <p><strong>Safety:</strong> Minimal invasive procedures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diagnostic-comparison">
+                    <h3>Compare Diagnostic Methods</h3>
+                    <div class="comparison-buttons">
+                        <button class="btn btn--outline" onclick="compareDiagnostics('xray', 'mri')">X-Ray vs MRI</button>
+                        <button class="btn btn--outline" onclick="compareDiagnostics('ultrasound', 'lab')">Ultrasound vs Lab Tests</button>
+                        <button class="btn btn--outline" onclick="showAllComparison()">View All Comparison</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatment Conditions Center -->
+        <section id="treatments" class="treatments-center">
+            <div class="container">
+                <h2 class="section-title">Treatment Conditions Center</h2>
+                <div class="condition-selector">
+                    <div class="condition-tabs">
+                        <button class="condition-tab active" onclick="selectCondition('diabetes')">Type 2 Diabetes</button>
+                        <button class="condition-tab" onclick="selectCondition('hypertension')">Hypertension</button>
+                        <button class="condition-tab" onclick="selectCondition('cancer')">Cancer Treatment</button>
+                    </div>
+                </div>
+
+                <div class="treatment-content">
+                    <div class="treatment-panel active" id="diabetes-panel">
+                        <h3>Type 2 Diabetes Treatment Pathway</h3>
+                        <div class="treatment-timeline">
+                            <div class="timeline-step active" data-step="1">
+                                <div class="timeline-number">1</div>
+                                <div class="timeline-content">
+                                    <h4>Lifestyle Changes</h4>
+                                    <p>Diet, exercise and weight control first</p>
+                                    <button class="btn btn--sm btn--success" onclick="showStepDetails(1)">View Details</button>
+                                </div>
+                            </div>
+                            <div class="timeline-step" data-step="2">
+                                <div class="timeline-number">2</div>
+                                <div class="timeline-content">
+                                    <h4>Medications</h4>
+                                    <p>Metformin prescribed to lower glucose</p>
+                                    <button class="btn btn--sm btn--primary" onclick="showStepDetails(2)">View Details</button>
+                                </div>
+                            </div>
+                            <div class="timeline-step" data-step="3">
+                                <div class="timeline-number">3</div>
+                                <div class="timeline-content">
+                                    <h4>Insulin Therapy</h4>
+                                    <p>Started if drugs alone do not achieve control</p>
+                                    <button class="btn btn--sm btn--warning" onclick="showStepDetails(3)">View Details</button>
+                                </div>
+                            </div>
+                            <div class="timeline-step" data-step="4">
+                                <div class="timeline-number">4</div>
+                                <div class="timeline-content">
+                                    <h4>Surgery</h4>
+                                    <p>Bariatric (weight-loss) surgery for severe cases</p>
+                                    <button class="btn btn--sm btn--danger" onclick="showStepDetails(4)">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="treatment-panel" id="hypertension-panel">
+                        <h3>Hypertension Treatment Options</h3>
+                        <div class="treatment-options">
+                            <div class="treatment-option">
+                                <h4>Lifestyle Modifications</h4>
+                                <p>Low-salt diet, 150 minutes moderate activity/week, healthy weight, limited alcohol, no smoking</p>
+                                <div class="option-buttons">
+                                    <button class="btn btn--success" onclick="selectTreatment('lifestyle')">Choose Lifestyle</button>
+                                    <button class="btn btn--outline" onclick="showTreatmentDetails('lifestyle')">Learn More</button>
+                                </div>
+                            </div>
+                            <div class="treatment-option">
+                                <h4>Medications</h4>
+                                <p>Diuretics and other medicines if blood pressure remains high</p>
+                                <div class="option-buttons">
+                                    <button class="btn btn--primary" onclick="selectTreatment('medication')">Medication Route</button>
+                                    <button class="btn btn--outline" onclick="showTreatmentDetails('medication')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="treatment-panel" id="cancer-panel">
+                        <h3>Cancer Treatment Options</h3>
+                        <div class="treatment-grid">
+                            <div class="treatment-card" onclick="selectCancerTreatment('surgery')">
+                                <h4>Surgery</h4>
+                                <p>Remove tumors</p>
+                                <button class="btn btn--sm btn--primary">Select</button>
+                            </div>
+                            <div class="treatment-card" onclick="selectCancerTreatment('chemo')">
+                                <h4>Chemotherapy</h4>
+                                <p>Powerful anti-cancer drugs</p>
+                                <button class="btn btn--sm btn--warning">Select</button>
+                            </div>
+                            <div class="treatment-card" onclick="selectCancerTreatment('radiation')">
+                                <h4>Radiation Therapy</h4>
+                                <p>High-energy rays to kill cancer cells</p>
+                                <button class="btn btn--sm btn--danger">Select</button>
+                            </div>
+                            <div class="treatment-card" onclick="selectCancerTreatment('immunotherapy')">
+                                <h4>Immunotherapy</h4>
+                                <p>Boost immune system</p>
+                                <button class="btn btn--sm btn--success">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="treatment-actions">
+                    <button class="btn btn--outline" onclick="showSuccessRates()">📊 View Success Rates</button>
+                    <button class="btn btn--outline" onclick="compareCosts()">💰 Cost Comparison</button>
+                    <button class="btn btn--outline" onclick="findProviders()">🏥 Find Providers</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Healthcare Innovations Showcase -->
+        <section id="innovations" class="innovations-showcase">
+            <div class="container">
+                <h2 class="section-title">Healthcare Innovations Showcase</h2>
+                <div class="innovation-categories">
+                    <div class="innovation-card" data-innovation="ai">
+                        <div class="innovation-header">
+                            <div class="innovation-icon">🤖</div>
+                            <h3>AI & Machine Learning</h3>
+                            <div class="adoption-rate">90% hospital adoption</div>
+                        </div>
+                        <div class="innovation-content">
+                            <p>Hundreds of AI-enabled devices FDA-approved</p>
+                            <div class="innovation-buttons">
+                                <button class="btn btn--primary" onclick="showInnovationDetails('ai')">View Details</button>
+                                <button class="btn btn--outline" onclick="showStats('ai')">📈 Statistics</button>
+                                <button class="btn btn--secondary" onclick="tryDemo('ai')">Try Demo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="innovation-card" data-innovation="robotics">
+                        <div class="innovation-header">
+                            <div class="innovation-icon">🦾</div>
+                            <h3>Robotic Surgery</h3>
+                            <div class="adoption-rate">25% shorter surgeries</div>
+                        </div>
+                        <div class="innovation-content">
+                            <p>30% fewer complications with AI-augmented systems</p>
+                            <div class="innovation-buttons">
+                                <button class="btn btn--primary" onclick="showInnovationDetails('robotics')">View Details</button>
+                                <button class="btn btn--outline" onclick="showStats('robotics')">📈 Benefits</button>
+                                <button class="btn btn--secondary" onclick="watchDemo('robotics')">Watch Demo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="innovation-card" data-innovation="telemedicine">
+                        <div class="innovation-header">
+                            <div class="innovation-icon">📱</div>
+                            <h3>Telemedicine</h3>
+                            <div class="adoption-rate">340M consultations</div>
+                        </div>
+                        <div class="innovation-content">
+                            <p>India's eSanjeevani dramatically expanded access</p>
+                            <div class="innovation-buttons">
+                                <button class="btn btn--primary" onclick="showInnovationDetails('telemedicine')">View Details</button>
+                                <button class="btn btn--outline" onclick="showStats('telemedicine')">📈 Impact</button>
+                                <button class="btn btn--secondary" onclick="bookConsultation()">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="innovation-card" data-innovation="wearables">
+                        <div class="innovation-header">
+                            <div class="innovation-icon">⌚</div>
+                            <h3>Wearable Devices</h3>
+                            <div class="adoption-rate">Rapid adoption</div>
+                        </div>
+                        <div class="innovation-content">
+                            <p>Advanced diagnostics and continuous monitoring</p>
+                            <div class="innovation-buttons">
+                                <button class="btn btn--primary" onclick="showInnovationDetails('wearables')">View Details</button>
+                                <button class="btn btn--outline" onclick="showDevices()">📱 Devices</button>
+                                <button class="btn btn--secondary" onclick="connectDevice()">Connect Device</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="innovation-timeline">
+                    <h3>Innovation Adoption Timeline</h3>
+                    <div class="timeline-controls">
+                        <button class="btn btn--outline" onclick="showTimeline('2020')">2020</button>
+                        <button class="btn btn--outline" onclick="showTimeline('2021')">2021</button>
+                        <button class="btn btn--outline" onclick="showTimeline('2022')">2022</button>
+                        <button class="btn btn--outline" onclick="showTimeline('2023')">2023</button>
+                        <button class="btn btn--primary" onclick="showTimeline('2024')">2024</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Tips & Wellness Section -->
+        <section id="wellness" class="wellness-section">
+            <div class="container">
+                <h2 class="section-title">Health Tips & Wellness Tracker</h2>
+                
+                <div class="wellness-dashboard">
+                    <div class="daily-habits">
+                        <h3>Daily Habits Tracker</h3>
+                        <div class="habit-checklist">
+                            <div class="habit-item">
+                                <div class="habit-info">
+                                    <div class="habit-icon">🥗</div>
+                                    <div class="habit-details">
+                                        <h4>Balanced Diet</h4>
+                                        <p>≥5 portions of fruits/vegetables daily</p>
+                                    </div>
+                                </div>
+                                <div class="habit-actions">
+                                    <button class="habit-checkbox" onclick="toggleHabit('nutrition')" aria-label="Mark nutrition goal complete">
+                                        <span class="checkmark">✓</span>
+                                    </button>
+                                    <button class="btn btn--sm btn--outline" onclick="setNutritionGoal()">Set Goal</button>
+                                    <button class="btn btn--sm btn--success" onclick="logNutrition()">Log Food</button>
+                                </div>
+                            </div>
+
+                            <div class="habit-item">
+                                <div class="habit-info">
+                                    <div class="habit-icon">🏃</div>
+                                    <div class="habit-details">
+                                        <h4>Exercise</h4>
+                                        <p>150 minutes moderate activity/week</p>
+                                    </div>
+                                </div>
+                                <div class="habit-actions">
+                                    <button class="habit-checkbox" onclick="toggleHabit('exercise')" aria-label="Mark exercise goal complete">
+                                        <span class="checkmark">✓</span>
+                                    </button>
+                                    <button class="btn btn--sm btn--outline" onclick="setExerciseGoal()">Set Goal</button>
+                                    <button class="btn btn--sm btn--primary" onclick="startWorkout()">Start Workout</button>
+                                </div>
+                            </div>
+
+                            <div class="habit-item">
+                                <div class="habit-info">
+                                    <div class="habit-icon">😴</div>
+                                    <div class="habit-details">
+                                        <h4>Sleep</h4>
+                                        <p>7-9 hours nightly</p>
+                                    </div>
+                                </div>
+                                <div class="habit-actions">
+                                    <button class="habit-checkbox" onclick="toggleHabit('sleep')" aria-label="Mark sleep goal complete">
+                                        <span class="checkmark">✓</span>
+                                    </button>
+                                    <button class="btn btn--sm btn--outline" onclick="setSleepGoal()">Set Goal</button>
+                                    <button class="btn btn--sm btn--info" onclick="trackSleep()">Track Sleep</button>
+                                </div>
+                            </div>
+
+                            <div class="habit-item">
+                                <div class="habit-info">
+                                    <div class="habit-icon">💧</div>
+                                    <div class="habit-details">
+                                        <h4>Hydration</h4>
+                                        <p>Stay well-hydrated daily</p>
+                                    </div>
+                                </div>
+                                <div class="habit-actions">
+                                    <button class="habit-checkbox" onclick="toggleHabit('hydration')" aria-label="Mark hydration goal complete">
+                                        <span class="checkmark">✓</span>
+                                    </button>
+                                    <button class="btn btn--sm btn--outline" onclick="setHydrationGoal()">Set Goal</button>
+                                    <button class="btn btn--sm btn--secondary" onclick="logWater()">Log Water</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="preventive-measures">
+                        <h3>Preventive Health Measures</h3>
+                        <div class="preventive-grid">
+                            <div class="preventive-card">
+                                <h4>Health Screenings</h4>
+                                <p>Blood pressure, blood sugar, cholesterol, cancer screening</p>
+                                <div class="preventive-buttons">
+                                    <button class="btn btn--primary" onclick="scheduleScreening()">Schedule Now</button>
+                                    <button class="btn btn--outline" onclick="viewHistory('screening')">View History</button>
+                                </div>
+                            </div>
+                            
+                            <div class="preventive-card">
+                                <h4>Vaccinations</h4>
+                                <p>Stay current on flu, COVID-19 boosters</p>
+                                <div class="preventive-buttons">
+                                    <button class="btn btn--success" onclick="checkVaccinations()">Check Status</button>
+                                    <button class="btn btn--outline" onclick="findVaccines()">Find Centers</button>
+                                </div>
+                            </div>
+
+                            <div class="preventive-card">
+                                <h4>Hygiene Practices</h4>
+                                <p>Handwashing, dental care</p>
+                                <div class="preventive-buttons">
+                                    <button class="btn btn--info" onclick="hygieneReminders()">Set Reminders</button>
+                                    <button class="btn btn--outline" onclick="hygieneTips()">Get Tips</button>
+                                </div>
+                            </div>
+
+                            <div class="preventive-card">
+                                <h4>Stress Management</h4>
+                                <p>Relaxation and social support</p>
+                                <div class="preventive-buttons">
+                                    <button class="btn btn--secondary" onclick="stressAssessment()">Assess Stress</button>
+                                    <button class="btn btn--outline" onclick="relaxationTechniques()">Learn Techniques</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wellness-progress">
+                    <h3>Weekly Progress</h3>
+                    <div class="progress-buttons">
+                        <button class="btn btn--outline" onclick="viewProgress('daily')">Daily View</button>
+                        <button class="btn btn--primary" onclick="viewProgress('weekly')">Weekly View</button>
+                        <button class="btn btn--outline" onclick="viewProgress('monthly')">Monthly View</button>
+                        <button class="btn btn--success" onclick="exportProgress()">Export Data</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Government Health Schemes -->
+        <section id="schemes" class="government-schemes">
+            <div class="container">
+                <h2 class="section-title">Government Health Schemes (India)</h2>
+                
+                <div class="schemes-grid">
+                    <div class="scheme-card">
+                        <div class="scheme-header">
+                            <h3>Ayushman Bharat (PM-JAY)</h3>
+                            <div class="scheme-coverage">₹5 lakh per family per year</div>
+                        </div>
+                        <div class="scheme-content">
+                            <div class="scheme-stats">
+                                <div class="stat">
+                                    <span class="stat-number">55 Cr</span>
+                                    <span class="stat-label">people covered</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">6 Cr</span>
+                                    <span class="stat-label">protected from poverty</span>
+                                </div>
+                            </div>
+                            <div class="scheme-buttons">
+                                <button class="btn btn--primary" onclick="checkEligibility('ayushman')">Check Eligibility</button>
+                                <button class="btn btn--success" onclick="calculateBenefits('ayushman')">Calculate Benefits</button>
+                                <button class="btn btn--outline" onclick="applyScheme('ayushman')">Apply Online</button>
+                                <button class="btn btn--info" onclick="findHospitals('ayushman')">Find Hospitals</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scheme-card">
+                        <div class="scheme-header">
+                            <h3>Health & Wellness Centres</h3>
+                            <div class="scheme-coverage">150,000+ upgraded centers</div>
+                        </div>
+                        <div class="scheme-content">
+                            <p>Modern primary care, maternal/child health, chronic disease check-ups with free essential medicines and diagnostics</p>
+                            <div class="scheme-buttons">
+                                <button class="btn btn--primary" onclick="findCenter()">Find Nearest Center</button>
+                                <button class="btn btn--outline" onclick="viewServices('hwc')">View Services</button>
+                                <button class="btn btn--secondary" onclick="bookAppointment('hwc')">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scheme-card">
+                        <div class="scheme-header">
+                            <h3>National Digital Health Mission</h3>
+                            <div class="scheme-coverage">Unified digital infrastructure</div>
+                        </div>
+                        <div class="scheme-content">
+                            <p>Health IDs, electronic health records nationwide, integrated with CoWIN and eSanjeevani</p>
+                            <div class="scheme-buttons">
+                                <button class="btn btn--primary" onclick="createHealthID()">Create Health ID</button>
+                                <button class="btn btn--outline" onclick="accessRecords()">Access Records</button>
+                                <button class="btn btn--info" onclick="linkRecords()">Link Records</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scheme-card">
+                        <div class="scheme-header">
+                            <h3>eSanjeevani Telemedicine</h3>
+                            <div class="scheme-coverage">340M teleconsultations</div>
+                        </div>
+                        <div class="scheme-content">
+                            <p>Free medical advice to rural patients via video consultations since 2019</p>
+                            <div class="scheme-buttons">
+                                <button class="btn btn--primary" onclick="bookTeleconsultation()">Book Consultation</button>
+                                <button class="btn btn--outline" onclick="downloadApp('esanjeevani')">Download App</button>
+                                <button class="btn btn--success" onclick="viewDoctors()">View Doctors</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scheme-comparison">
+                    <h3>Compare Schemes</h3>
+                    <div class="comparison-tools">
+                        <button class="btn btn--outline" onclick="compareSchemes('all')">Compare All Schemes</button>
+                        <button class="btn btn--outline" onclick="eligibilityChecker()">Multi-Scheme Eligibility</button>
+                        <button class="btn btn--primary" onclick="schemeRecommendation()">Get Recommendations</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics & Analytics Dashboard -->
+        <section id="statistics" class="statistics-dashboard">
+            <div class="container">
+                <h2 class="section-title">Healthcare Statistics & Analytics</h2>
+                
+                <div class="stats-controls">
+                    <div class="chart-type-selector">
+                        <button class="btn btn--outline active" onclick="changeChartType('pie')">📊 Pie Chart</button>
+                        <button class="btn btn--outline" onclick="changeChartType('bar')">📊 Bar Chart</button>
+                        <button class="btn btn--outline" onclick="changeChartType('line')">📈 Line Chart</button>
+                    </div>
+                    
+                    <div class="data-filters">
+                        <button class="btn btn--secondary" onclick="filterData('spending')">Healthcare Spending</button>
+                        <button class="btn btn--secondary" onclick="filterData('insurance')">Insurance Coverage</button>
+                        <button class="btn btn--secondary" onclick="filterData('digital')">Digital Adoption</button>
+                        <button class="btn btn--secondary" onclick="filterData('diseases')">Disease Burden</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-block">
+                        <h4>Healthcare Spending</h4>
+                        <div class="stat-comparison">
+                            <div class="stat-item">
+                                <span class="stat-value">3.3%</span>
+                                <span class="stat-desc">India's GDP on healthcare</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">5-6%</span>
+                                <span class="stat-desc">WHO recommended</span>
+                            </div>
+                        </div>
+                        <div class="stat-buttons">
+                            <button class="btn btn--sm btn--primary" onclick="showSpendingDetails()">View Details</button>
+                            <button class="btn btn--sm btn--outline" onclick="compareGlobal('spending')">Global Compare</button>
+                        </div>
+                    </div>
+
+                    <div class="stat-block">
+                        <h4>Out-of-Pocket Expenses</h4>
+                        <div class="stat-highlight">
+                            <span class="stat-value large">62-63%</span>
+                            <span class="stat-desc">of health expenditures</span>
+                        </div>
+                        <div class="stat-buttons">
+                            <button class="btn btn--sm btn--warning" onclick="showCostBreakdown()">Cost Breakdown</button>
+                            <button class="btn btn--sm btn--outline" onclick="reductionStrategies()">Reduction Tips</button>
+                        </div>
+                    </div>
+
+                    <div class="stat-block">
+                        <h4>Insurance Coverage</h4>
+                        <div class="stat-comparison">
+                            <div class="stat-item">
+                                <span class="stat-value">40%</span>
+                                <span class="stat-desc">Indians covered</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">55 Cr</span>
+                                <span class="stat-desc">government insured</span>
+                            </div>
+                        </div>
+                        <div class="stat-buttons">
+                            <button class="btn btn--sm btn--success" onclick="checkCoverage()">Check Coverage</button>
+                            <button class="btn btn--sm btn--outline" onclick="findInsurance()">Find Insurance</button>
+                        </div>
+                    </div>
+
+                    <div class="stat-block">
+                        <h4>Digital Health Adoption</h4>
+                        <div class="stat-comparison">
+                            <div class="stat-item">
+                                <span class="stat-value">90%</span>
+                                <span class="stat-desc">hospitals use AI imaging</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">66%</span>
+                                <span class="stat-desc">physicians use AI (2024)</span>
+                            </div>
+                        </div>
+                        <div class="stat-buttons">
+                            <button class="btn btn--sm btn--info" onclick="digitalTrends()">View Trends</button>
+                            <button class="btn btn--sm btn--outline" onclick="adoptionTimeline()">Timeline</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-export">
+                    <h3>Export & Share Data</h3>
+                    <div class="export-buttons">
+                        <button class="btn btn--outline" onclick="exportData('pdf')">📄 Export PDF</button>
+                        <button class="btn btn--outline" onclick="exportData('excel')">📊 Export Excel</button>
+                        <button class="btn btn--secondary" onclick="shareData()">🔗 Share Link</button>
+                        <button class="btn btn--info" onclick="printReport()">🖨️ Print Report</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Panel -->
+        <section id="case-studies" class="case-studies">
+            <div class="container">
+                <h2 class="section-title">Case Studies & Success Stories</h2>
+                
+                <div class="case-study-selector">
+                    <button class="case-study-tab active" onclick="selectCaseStudy('tb-ai')">AI in TB Detection</button>
+                    <button class="case-study-tab" onclick="selectCaseStudy('smartphone')">Smartphone Health Tools</button>
+                    <button class="case-study-tab" onclick="selectCaseStudy('apollo')">Digital Health Providers</button>
+                </div>
+
+                <div class="case-study-content">
+                    <div class="case-study-panel active" id="tb-ai-panel">
+                        <h3>AI in TB Detection (India)</h3>
+                        <div class="case-study-details">
+                            <p><strong>Innovation:</strong> Nikshay database uses AI to flag high-risk patients</p>
+                            <p><strong>Impact:</strong> AI models catch almost twice as many at-risk patients</p>
+                            <p><strong>Process:</strong> Analyzes patient data to predict treatment interruption</p>
+                        </div>
+                        <div class="case-study-buttons">
+                            <button class="btn btn--primary" onclick="showProcessDiagram('tb-ai')">View Process</button>
+                            <button class="btn btn--success" onclick="showImpactMetrics('tb-ai')">Impact Metrics</button>
+                            <button class="btn btn--outline" onclick="compareBeforeAfter('tb-ai')">Before/After</button>
+                        </div>
+                    </div>
+
+                    <div class="case-study-panel" id="smartphone-panel">
+                        <h3>Smartphone Health Tools</h3>
+                        <div class="case-study-details">
+                            <p><strong>Innovation:</strong> AI-powered app estimates infant weight from video</p>
+                            <p><strong>Benefit:</strong> Contactless tool for accurate weights in remote areas</p>
+                            <p><strong>Application:</strong> Improves early growth monitoring where scales unavailable</p>
+                        </div>
+                        <div class="case-study-buttons">
+                            <button class="btn btn--primary" onclick="demoApp('smartphone')">Try App Demo</button>
+                            <button class="btn btn--info" onclick="showAccuracy('smartphone')">Accuracy Data</button>
+                            <button class="btn btn--outline" onclick="downloadApp('smartphone')">Download App</button>
+                        </div>
+                    </div>
+
+                    <div class="case-study-panel" id="apollo-panel">
+                        <h3>Digital Health Providers</h3>
+                        <div class="case-study-details">
+                            <p><strong>Example:</strong> Apollo Hospitals digital dispensaries</p>
+                            <p><strong>Innovation:</strong> AI-assisted diagnostics in rural areas</p>
+                            <p><strong>Model:</strong> Telemedicine + on-site tech-enabled clinics</p>
+                        </div>
+                        <div class="case-study-buttons">
+                            <button class="btn btn--primary" onclick="exploreModel('apollo')">Explore Model</button>
+                            <button class="btn btn--success" onclick="showSuccessStory('apollo')">Success Stories</button>
+                            <button class="btn btn--outline" onclick="findLocations('apollo')">Find Locations</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__disclaimer">
+                    <h3>Important Medical Disclaimer</h3>
+                    <p>This healthcare dashboard is for educational and informational purposes only. The content provided should not be considered as medical advice, diagnosis, or treatment recommendations. Always consult with qualified healthcare professionals for medical guidance. The statistics and data presented are based on available research and government sources as of 2024-2025.</p>
+                </div>
+                <div class="footer__actions">
+                    <button class="btn btn--outline" onclick="contactSupport()">📞 Contact Support</button>
+                    <button class="btn btn--secondary" onclick="provideFeedback()">💬 Feedback</button>
+                    <button class="btn btn--info" onclick="reportIssue()">⚠️ Report Issue</button>
+                </div>
+                <div class="footer__info">
+                    <p>&copy; 2025 Healthcare Dashboard India. Modern healthcare information and government scheme access.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading healthcare data...</p>
+        </div>
+    </div>
+
+    <!-- Notification System -->
+    <div id="notification-system" class="notification-system">
+        <!-- Notifications will be dynamically inserted here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

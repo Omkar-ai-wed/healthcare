@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRI Technical Details Center - Comprehensive Engineering Resource</title>
+    <meta name="description" content="Professional technical resource for MRI system specifications, engineering details, and technical documentation for medical physicists and biomedical engineers.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Technical Header -->
+    <header class="mri-tech-header" role="banner">
+        <nav class="container">
+            <div class="header-brand">
+                <div class="mri-logo">
+                    <span class="mri-logo__icon">🧲</span>
+                    <div class="mri-logo__text">
+                        <h1 class="header-title">MRI Technical Details Center</h1>
+                        <p class="header-subtitle">Comprehensive Engineering Resource</p>
+                    </div>
+                </div>
+                
+                <div class="tech-specs-display">
+                    <div class="spec-item">
+                        <span class="spec-value">1.5T - 7T+</span>
+                        <span class="spec-label">Field Strength</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-value">63.9 - 298 MHz</span>
+                        <span class="spec-label">RF Frequency</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-value">20-80 mT/m</span>
+                        <span class="spec-label">Gradient Amplitude</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-value"><0.1%</span>
+                        <span class="spec-label">Severe Reactions</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Technical Navigation -->
+    <nav class="tech-nav" role="navigation" aria-label="Technical navigation">
+        <div class="container">
+            <div class="nav-sections">
+                <a href="#magnetic-field" class="nav-section">🧲 Magnetic Field</a>
+                <a href="#rf-systems" class="nav-section">📡 RF Systems</a>
+                <a href="#gradient-systems" class="nav-section">⚡ Gradients</a>
+                <a href="#image-acquisition" class="nav-section">🖼️ Imaging</a>
+                <a href="#pulse-sequences" class="nav-section">📊 Sequences</a>
+                <a href="#system-architecture" class="nav-section">🖥️ Architecture</a>
+                <a href="#quality-assurance" class="nav-section">✅ QA</a>
+                <a href="#safety-systems" class="nav-section">🛡️ Safety</a>
+                <a href="#network-integration" class="nav-section">🌐 Network</a>
+                <a href="#advanced-techniques" class="nav-section">🔬 Advanced</a>
+                <a href="#performance-specs" class="nav-section">📈 Performance</a>
+                <a href="#maintenance" class="nav-section">🔧 Maintenance</a>
+            </div>
+            
+            <div class="nav-tools">
+                <button class="btn btn--outline btn--sm" onclick="showTechnicalCalculator()">🧮 Calculators</button>
+                <button class="btn btn--primary btn--sm" onclick="showSpecificationComparison()">📊 Compare Specs</button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="tech-hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">MRI Technical Details Center</h1>
+                        <p class="hero-description">Comprehensive technical resource for MRI system specifications, engineering details, and professional documentation. Essential reference for medical physicists, biomedical engineers, and service technicians.</p>
+                        
+                        <div class="tech-highlights">
+                            <div class="highlight-card">
+                                <span class="highlight-icon">🎯</span>
+                                <div class="highlight-content">
+                                    <h3>Precise Engineering</h3>
+                                    <p>Detailed technical specifications and performance parameters</p>
+                                </div>
+                            </div>
+                            <div class="highlight-card">
+                                <span class="highlight-icon">⚙️</span>
+                                <div class="highlight-content">
+                                    <h3>System Integration</h3>
+                                    <p>Complete architecture and component interaction details</p>
+                                </div>
+                            </div>
+                            <div class="highlight-card">
+                                <span class="highlight-icon">📐</span>
+                                <div class="highlight-content">
+                                    <h3>Technical Calculators</h3>
+                                    <p>Interactive tools for SAR, SNR, and performance calculations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('magnetic-field')">Explore Technical Specs</button>
+                        <button class="btn btn--outline btn--lg" onclick="showTechnicalCalculator()">Use Technical Calculators</button>
+                        <button class="btn btn--secondary btn--lg" onclick="showSystemDiagram()">View System Diagrams</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Magnetic Field Technology Section -->
+        <section id="magnetic-field" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Magnetic Field Technology</h2>
+                    <p class="section-description">Main magnetic field specifications and magnet technology details</p>
+                </div>
+
+                <div class="field-strength-grid">
+                    <div class="field-strength-card" data-strength="1.5T">
+                        <div class="field-header">
+                            <h3>1.5 Tesla Standard Field</h3>
+                            <span class="field-frequency">63.9 MHz</span>
+                        </div>
+                        <div class="field-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Homogeneity:</span>
+                                <span class="spec-value">&lt;10 ppm over 40 cm DSV</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Stability:</span>
+                                <span class="spec-value">&lt;0.1 ppm/hour</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Helium Capacity:</span>
+                                <span class="spec-value">1500-2000 liters</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Applications:</span>
+                                <span class="spec-value">Clinical imaging standard</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-strength-card" data-strength="3.0T">
+                        <div class="field-header">
+                            <h3>3.0 Tesla High Field</h3>
+                            <span class="field-frequency">127.8 MHz</span>
+                        </div>
+                        <div class="field-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Homogeneity:</span>
+                                <span class="spec-value">&lt;5 ppm over 40 cm DSV</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Stability:</span>
+                                <span class="spec-value">&lt;0.05 ppm/hour</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Helium Capacity:</span>
+                                <span class="spec-value">2000-2500 liters</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Applications:</span>
+                                <span class="spec-value">Advanced clinical, research</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-strength-card" data-strength="7.0T">
+                        <div class="field-header">
+                            <h3>7.0+ Tesla Ultra-High Field</h3>
+                            <span class="field-frequency">298+ MHz</span>
+                        </div>
+                        <div class="field-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Homogeneity:</span>
+                                <span class="spec-value">&lt;1 ppm over 20 cm DSV</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Stability:</span>
+                                <span class="spec-value">&lt;0.01 ppm/hour</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Helium Capacity:</span>
+                                <span class="spec-value">3000+ liters</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Applications:</span>
+                                <span class="spec-value">Research applications</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="magnet-types-section">
+                    <h3>Magnet Technology Types</h3>
+                    <div class="magnet-types-grid">
+                        <div class="magnet-type-card">
+                            <h4>Superconducting Magnets</h4>
+                            <div class="magnet-details">
+                                <p><strong>Technology:</strong> Niobium-titanium coils in liquid helium</p>
+                                <p><strong>Boil-off Rate:</strong> &lt;0.1% per day</p>
+                                <p><strong>Advantages:</strong> Stable field, high homogeneity</p>
+                                <p><strong>Requirements:</strong> Cryogenic cooling, quench protection</p>
+                            </div>
+                        </div>
+
+                        <div class="magnet-type-card">
+                            <h4>Permanent Magnets</h4>
+                            <div class="magnet-details">
+                                <p><strong>Technology:</strong> Rare earth magnet materials</p>
+                                <p><strong>Field Strength:</strong> 0.2-0.4 Tesla maximum</p>
+                                <p><strong>Advantages:</strong> No power required, no quench risk</p>
+                                <p><strong>Limitations:</strong> Limited to low field strength</p>
+                            </div>
+                        </div>
+
+                        <div class="magnet-type-card">
+                            <h4>Electromagnets</h4>
+                            <div class="magnet-details">
+                                <p><strong>Technology:</strong> Resistive coils with power supply</p>
+                                <p><strong>Applications:</strong> Rarely used clinically</p>
+                                <p><strong>Advantages:</strong> Adjustable field strength</p>
+                                <p><strong>Limitations:</strong> High power consumption, heating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RF Systems Section -->
+        <section id="rf-systems" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">RF Systems</h2>
+                    <p class="section-description">Radio frequency hardware, coils, and safety specifications</p>
+                </div>
+
+                <div class="rf-systems-grid">
+                    <div class="rf-component-card">
+                        <h3>Transmit Systems</h3>
+                        <div class="component-specs">
+                            <div class="spec-group">
+                                <h4>Body Coil</h4>
+                                <ul>
+                                    <li>Integrated cylindrical coil</li>
+                                    <li>10-35 kW peak power</li>
+                                    <li>85-95% power efficiency</li>
+                                </ul>
+                            </div>
+                            <div class="spec-group">
+                                <h4>Volume Coils</h4>
+                                <ul>
+                                    <li>Head, knee, extremity coils</li>
+                                    <li>Optimized B1 field distribution</li>
+                                    <li>Reduced SAR deposition</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rf-component-card">
+                        <h3>Receive Systems</h3>
+                        <div class="component-specs">
+                            <div class="spec-group">
+                                <h4>Phased Array Coils</h4>
+                                <ul>
+                                    <li>8-32 channel coil arrays</li>
+                                    <li>2-6× acceleration capability</li>
+                                    <li>2-10× SNR enhancement</li>
+                                </ul>
+                            </div>
+                            <div class="spec-group">
+                                <h4>Surface Coils</h4>
+                                <ul>
+                                    <li>Single-channel receiver coils</li>
+                                    <li>High sensitivity, limited FOV</li>
+                                    <li>Specialized applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rf-component-card">
+                        <h3>Power Amplifiers</h3>
+                        <div class="component-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Peak Power:</span>
+                                <span class="spec-value">10-35 kW</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Average Power:</span>
+                                <span class="spec-value">1-10 kW continuous</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Efficiency:</span>
+                                <span class="spec-value">&gt;90%</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Bandwidth:</span>
+                                <span class="spec-value">±100 kHz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rf-safety-section">
+                    <h3>RF Safety & SAR Limits</h3>
+                    <div class="safety-limits-grid">
+                        <div class="safety-card">
+                            <h4>Whole Body SAR</h4>
+                            <div class="limit-value">2 W/kg</div>
+                            <p>Average over entire body mass</p>
+                        </div>
+                        <div class="safety-card">
+                            <h4>Head/Neck SAR</h4>
+                            <div class="limit-value">3.2 W/kg</div>
+                            <p>Average over head and neck</p>
+                        </div>
+                        <div class="safety-card">
+                            <h4>Local SAR</h4>
+                            <div class="limit-value">10 W/kg</div>
+                            <p>Any 10g of tissue</p>
+                        </div>
+                        <div class="safety-card">
+                            <h4>Temperature Rise</h4>
+                            <div class="limit-value">&lt;1°C</div>
+                            <p>Core body temperature</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gradient Systems Section -->
+        <section id="gradient-systems" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Gradient Systems</h2>
+                    <p class="section-description">Three-axis gradient specifications and performance parameters</p>
+                </div>
+
+                <div class="gradient-specs-chart">
+                    <div class="chart-container" style="position: relative; height: 400px;">
+                        <canvas id="gradientChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="gradient-axes-grid">
+                    <div class="axis-card">
+                        <h3>X-Axis (Readout)</h3>
+                        <div class="axis-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Max Amplitude:</span>
+                                <span class="spec-value">20-80 mT/m</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Slew Rate:</span>
+                                <span class="spec-value">100-200 mT/m/ms</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Rise Time:</span>
+                                <span class="spec-value">0.1-0.5 ms</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Linearity:</span>
+                                <span class="spec-value">&lt;5% over 40 cm DSV</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="axis-card">
+                        <h3>Y-Axis (Phase)</h3>
+                        <div class="axis-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Max Amplitude:</span>
+                                <span class="spec-value">20-80 mT/m</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Slew Rate:</span>
+                                <span class="spec-value">100-200 mT/m/ms</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Rise Time:</span>
+                                <span class="spec-value">0.1-0.5 ms</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Duty Cycle:</span>
+                                <span class="spec-value">100% continuous</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="axis-card">
+                        <h3>Z-Axis (Slice)</h3>
+                        <div class="axis-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Max Amplitude:</span>
+                                <span class="spec-value">20-80 mT/m</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Slew Rate:</span>
+                                <span class="spec-value">100-200 mT/m/ms</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Acoustic Noise:</span>
+                                <span class="spec-value">95-110 dB peak</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Power Requirement:</span>
+                                <span class="spec-value">50-100 kVA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gradient-applications">
+                    <h3>Gradient Applications</h3>
+                    <div class="applications-grid">
+                        <div class="application-item">
+                            <h4>Spatial Encoding</h4>
+                            <p>Slice, phase, and frequency encoding for image formation</p>
+                        </div>
+                        <div class="application-item">
+                            <h4>Diffusion Imaging</h4>
+                            <p>b-values up to 4000 s/mm² for tissue microstructure</p>
+                        </div>
+                        <div class="application-item">
+                            <h4>Flow Encoding</h4>
+                            <p>Velocity quantification and flow measurements</p>
+                        </div>
+                        <div class="application-item">
+                            <h4>B₀ Shimming</h4>
+                            <p>Field homogeneity optimization and correction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Acquisition Section -->
+        <section id="image-acquisition" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Image Acquisition & Processing</h2>
+                    <p class="section-description">Data acquisition parameters and image reconstruction specifications</p>
+                </div>
+
+                <div class="acquisition-components">
+                    <div class="component-section">
+                        <h3>Data Acquisition</h3>
+                        <div class="specs-table">
+                            <div class="table-row">
+                                <span class="param-name">ADC Resolution</span>
+                                <span class="param-value">16-24 bit conversion</span>
+                                <span class="param-note">High dynamic range</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="param-name">Sampling Rate</span>
+                                <span class="param-value">Up to 1 MHz</span>
+                                <span class="param-note">Nyquist compliant</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="param-name">Matrix Sizes</span>
+                                <span class="param-value">64×64 to 1024×1024</span>
+                                <span class="param-note">Variable resolution</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="param-name">Slice Thickness</span>
+                                <span class="param-value">0.5-10 mm</span>
+                                <span class="param-note">Adjustable thickness</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="param-name">Field of View</span>
+                                <span class="param-value">10-50 cm</span>
+                                <span class="param-note">Selectable FOV</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="component-section">
+                        <h3>Image Reconstruction</h3>
+                        <div class="reconstruction-methods">
+                            <div class="method-card">
+                                <h4>FFT Algorithms</h4>
+                                <p>Fast Fourier Transform for k-space to image domain conversion</p>
+                                <div class="performance-metric">
+                                    <span class="metric-label">Processing Time:</span>
+                                    <span class="metric-value">&lt;1 second per image</span>
+                                </div>
+                            </div>
+                            
+                            <div class="method-card">
+                                <h4>Parallel Imaging</h4>
+                                <p>Coil sensitivity-based acceleration techniques</p>
+                                <div class="performance-metric">
+                                    <span class="metric-label">Acceleration Factor:</span>
+                                    <span class="metric-value">2-6× using SENSE/GRAPPA</span>
+                                </div>
+                            </div>
+                            
+                            <div class="method-card">
+                                <h4>Compressed Sensing</h4>
+                                <p>Sparse sampling and iterative reconstruction</p>
+                                <div class="performance-metric">
+                                    <span class="metric-label">Acceleration:</span>
+                                    <span class="metric-value">Up to 10× with CS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-quality-metrics">
+                    <h3>Image Quality Specifications</h3>
+                    <div class="quality-grid">
+                        <div class="quality-metric">
+                            <div class="metric-icon">📏</div>
+                            <h4>Spatial Resolution</h4>
+                            <div class="metric-value">0.5-2.0 mm</div>
+                            <p>In-plane resolution capability</p>
+                        </div>
+                        
+                        <div class="quality-metric">
+                            <div class="metric-icon">⏱️</div>
+                            <h4>Temporal Resolution</h4>
+                            <div class="metric-value">50-500 ms</div>
+                            <p>Dynamic imaging capability</p>
+                        </div>
+                        
+                        <div class="quality-metric">
+                            <div class="metric-icon">🎯</div>
+                            <h4>Contrast Resolution</h4>
+                            <div class="metric-value">1-2%</div>
+                            <p>Signal difference detection</p>
+                        </div>
+                        
+                        <div class="quality-metric">
+                            <div class="metric-icon">📊</div>
+                            <h4>SNR Ratio</h4>
+                            <div class="metric-value">&gt;100:1</div>
+                            <p>Diagnostic quality threshold</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pulse Sequences Section -->
+        <section id="pulse-sequences" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Pulse Sequences</h2>
+                    <p class="section-description">Basic and advanced pulse sequence specifications and parameters</p>
+                </div>
+
+                <div class="sequence-categories">
+                    <div class="sequence-category">
+                        <h3>Basic Sequences</h3>
+                        <div class="sequence-grid">
+                            <div class="sequence-card">
+                                <h4>Spin Echo (SE)</h4>
+                                <div class="sequence-params">
+                                    <div class="param-row">
+                                        <span class="param-label">Description:</span>
+                                        <span class="param-value">90°-180° RF pulse sequence</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Typical TR:</span>
+                                        <span class="param-value">400-6000 ms</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Typical TE:</span>
+                                        <span class="param-value">10-120 ms</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Weighting:</span>
+                                        <span class="param-value">T1 and T2 contrast</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sequence-card">
+                                <h4>Gradient Echo (GRE)</h4>
+                                <div class="sequence-params">
+                                    <div class="param-row">
+                                        <span class="param-label">Description:</span>
+                                        <span class="param-value">RF pulse with gradient reversal</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Typical TR:</span>
+                                        <span class="param-value">5-50 ms</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Typical TE:</span>
+                                        <span class="param-value">2-25 ms</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Weighting:</span>
+                                        <span class="param-value">T2* contrast, fast imaging</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sequence-card">
+                                <h4>Inversion Recovery (IR)</h4>
+                                <div class="sequence-params">
+                                    <div class="param-row">
+                                        <span class="param-label">Description:</span>
+                                        <span class="param-value">180°-90°-180° sequence</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Typical TI:</span>
+                                        <span class="param-value">150-2500 ms</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Applications:</span>
+                                        <span class="param-value">FLAIR, STIR imaging</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Weighting:</span>
+                                        <span class="param-value">T1 contrast, tissue suppression</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sequence-category">
+                        <h3>Advanced Sequences</h3>
+                        <div class="sequence-grid">
+                            <div class="sequence-card">
+                                <h4>Turbo Spin Echo (TSE)</h4>
+                                <div class="sequence-params">
+                                    <div class="param-row">
+                                        <span class="param-label">Description:</span>
+                                        <span class="param-value">Multiple 180° refocusing pulses</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Echo Train Length:</span>
+                                        <span class="param-value">8-32 echoes</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Acceleration:</span>
+                                        <span class="param-value">4-16× faster than SE</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Applications:</span>
+                                        <span class="param-value">Fast T2 imaging</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sequence-card">
+                                <h4>Balanced SSFP</h4>
+                                <div class="sequence-params">
+                                    <div class="param-row">
+                                        <span class="param-label">Description:</span>
+                                        <span class="param-value">Steady-state free precession</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Contrast:</span>
+                                        <span class="param-value">T2/T1 weighted</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Applications:</span>
+                                        <span class="param-value">Cardiac, joint imaging</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Advantages:</span>
+                                        <span class="param-value">High SNR, fast imaging</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sequence-card">
+                                <h4>Echo Planar (EPI)</h4>
+                                <div class="sequence-params">
+                                    <div class="param-row">
+                                        <span class="param-label">Description:</span>
+                                        <span class="param-value">Single-shot rapid imaging</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Speed:</span>
+                                        <span class="param-value">50-100 ms per image</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Applications:</span>
+                                        <span class="param-value">fMRI, diffusion</span>
+                                    </div>
+                                    <div class="param-row">
+                                        <span class="param-label">Limitations:</span>
+                                        <span class="param-value">Susceptibility artifacts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture Section -->
+        <section id="system-architecture" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">System Architecture</h2>
+                    <p class="section-description">Computing hardware, software architecture, and data management systems</p>
+                </div>
+
+                <div class="architecture-components">
+                    <div class="component-category">
+                        <h3>Computing Hardware</h3>
+                        <div class="hardware-grid">
+                            <div class="hardware-card">
+                                <h4>CPU Systems</h4>
+                                <ul>
+                                    <li>Multi-core processors</li>
+                                    <li>Parallel processing capability</li>
+                                    <li>Real-time performance requirements</li>
+                                    <li>Dedicated image reconstruction engines</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="hardware-card">
+                                <h4>Memory Systems</h4>
+                                <ul>
+                                    <li>32-128 GB RAM capacity</li>
+                                    <li>High-speed DDR4/DDR5 modules</li>
+                                    <li>ECC memory for reliability</li>
+                                    <li>Buffer memory for data acquisition</li>
+                                </ul>
+                            </div>
+
+                            <div class="hardware-card">
+                                <h4>Storage Systems</h4>
+                                <ul>
+                                    <li>SSD arrays for performance</li>
+                                    <li>&gt;1 GB/s throughput</li>
+                                    <li>RAID configurations for reliability</li>
+                                    <li>Long-term archival solutions</li>
+                                </ul>
+                            </div>
+
+                            <div class="hardware-card">
+                                <h4>Graphics Processing</h4>
+                                <ul>
+                                    <li>GPU acceleration for reconstruction</li>
+                                    <li>Parallel computing capabilities</li>
+                                    <li>Real-time image processing</li>
+                                    <li>CUDA/OpenCL support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="component-category">
+                        <h3>Software Architecture</h3>
+                        <div class="software-specs">
+                            <div class="software-item">
+                                <h4>Operating System</h4>
+                                <p>Real-time Linux or proprietary RTOS for deterministic performance</p>
+                            </div>
+                            <div class="software-item">
+                                <h4>Database Management</h4>
+                                <p>Patient and exam data management with DICOM compliance</p>
+                            </div>
+                            <div class="software-item">
+                                <h4>Image Processing</h4>
+                                <p>Advanced algorithms, filters, and reconstruction software</p>
+                            </div>
+                            <div class="software-item">
+                                <h4>User Interface</h4>
+                                <p>Touchscreen interfaces, voice recognition, workflow optimization</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="component-category">
+                        <h3>Network Architecture</h3>
+                        <div class="network-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Network Speed:</span>
+                                <span class="spec-value">Gigabit Ethernet, fiber optic</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Protocols:</span>
+                                <span class="spec-value">TCP/IP, DICOM, HL7</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Security:</span>
+                                <span class="spec-value">VPN, encryption, access control</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Redundancy:</span>
+                                <span class="spec-value">Dual network paths, failover</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Assurance Section -->
+        <section id="quality-assurance" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Quality Assurance</h2>
+                    <p class="section-description">Daily, periodic, and comprehensive QA testing protocols and procedures</p>
+                </div>
+
+                <div class="qa-protocols">
+                    <div class="qa-category">
+                        <h3>Daily QA Testing</h3>
+                        <div class="qa-tests">
+                            <div class="qa-test-card">
+                                <h4>Image Quality Assessment</h4>
+                                <ul>
+                                    <li>SNR measurement and trending</li>
+                                    <li>Image uniformity evaluation</li>
+                                    <li>Ghosting and artifact detection</li>
+                                    <li>Geometric accuracy verification</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="qa-test-card">
+                                <h4>RF System Testing</h4>
+                                <ul>
+                                    <li>Transmit and receive gain calibration</li>
+                                    <li>Center frequency verification</li>
+                                    <li>RF coil performance check</li>
+                                    <li>SAR calculation validation</li>
+                                </ul>
+                            </div>
+
+                            <div class="qa-test-card">
+                                <h4>Gradient Performance</h4>
+                                <ul>
+                                    <li>Slew rate verification</li>
+                                    <li>Maximum amplitude testing</li>
+                                    <li>Linearity assessment</li>
+                                    <li>Eddy current evaluation</li>
+                                </ul>
+                            </div>
+
+                            <div class="qa-test-card">
+                                <h4>Safety Systems</h4>
+                                <ul>
+                                    <li>Emergency stop function test</li>
+                                    <li>Quench detection system</li>
+                                    <li>Patient monitoring systems</li>
+                                    <li>Access control verification</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qa-category">
+                        <h3>Periodic QA Testing</h3>
+                        <div class="qa-schedule">
+                            <div class="qa-period">
+                                <h4>Weekly Testing</h4>
+                                <ul>
+                                    <li>B₀ homogeneity field mapping</li>
+                                    <li>Coil sensitivity profiles</li>
+                                    <li>System stability monitoring</li>
+                                    <li>Temperature drift assessment</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="qa-period">
+                                <h4>Monthly Testing</h4>
+                                <ul>
+                                    <li>RF SAR validation studies</li>
+                                    <li>Gradient calibration verification</li>
+                                    <li>ACR phantom testing protocol</li>
+                                    <li>Software backup verification</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="qa-period">
+                                <h4>Annual Testing</h4>
+                                <ul>
+                                    <li>Comprehensive performance evaluation</li>
+                                    <li>Complete safety system testing</li>
+                                    <li>Regulatory compliance verification</li>
+                                    <li>FDA requirement validation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Systems Section -->
+        <section id="safety-systems" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Safety Systems</h2>
+                    <p class="section-description">Comprehensive safety monitoring and protection systems</p>
+                </div>
+
+                <div class="safety-categories">
+                    <div class="safety-category">
+                        <h3>Magnetic Safety</h3>
+                        <div class="safety-systems-grid">
+                            <div class="safety-system-card">
+                                <h4>Zone Control System</h4>
+                                <ul>
+                                    <li>Four-zone access control model</li>
+                                    <li>Automated access restriction</li>
+                                    <li>Personnel tracking and monitoring</li>
+                                    <li>Emergency evacuation protocols</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="safety-system-card">
+                                <h4>Metal Detection</h4>
+                                <ul>
+                                    <li>Hand-held metal detectors</li>
+                                    <li>Portal screening systems</li>
+                                    <li>Ferromagnetic detection systems</li>
+                                    <li>Projectile prevention measures</li>
+                                </ul>
+                            </div>
+
+                            <div class="safety-system-card">
+                                <h4>Access Control</h4>
+                                <ul>
+                                    <li>Keycard authentication systems</li>
+                                    <li>Biometric access control</li>
+                                    <li>Training verification database</li>
+                                    <li>Visitor escort requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="safety-category">
+                        <h3>RF Safety Systems</h3>
+                        <div class="rf-safety-specs">
+                            <div class="safety-spec-card">
+                                <h4>SAR Monitoring</h4>
+                                <div class="spec-details">
+                                    <p><strong>Real-time Calculation:</strong> Continuous SAR monitoring during scanning</p>
+                                    <p><strong>Temperature Modeling:</strong> Tissue heating prediction algorithms</p>
+                                    <p><strong>Power Limiting:</strong> Automatic RF power reduction</p>
+                                    <p><strong>Emergency Stops:</strong> Immediate RF termination capability</p>
+                                </div>
+                            </div>
+                            
+                            <div class="safety-spec-card">
+                                <h4>Temperature Monitoring</h4>
+                                <div class="spec-details">
+                                    <p><strong>RF Coil Sensors:</strong> Integrated temperature monitoring</p>
+                                    <p><strong>Patient Monitoring:</strong> Core body temperature tracking</p>
+                                    <p><strong>Thermal Limits:</strong> &lt;1°C temperature rise limit</p>
+                                    <p><strong>Cooling Systems:</strong> Active and passive cooling</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="safety-category">
+                        <h3>Cryogenic Safety</h3>
+                        <div class="cryo-safety-grid">
+                            <div class="cryo-safety-card">
+                                <h4>Oxygen Monitoring</h4>
+                                <p>Helium leak detection and oxygen displacement monitoring</p>
+                            </div>
+                            <div class="cryo-safety-card">
+                                <h4>Ventilation Systems</h4>
+                                <p>Emergency ventilation activation and air quality management</p>
+                            </div>
+                            <div class="cryo-safety-card">
+                                <h4>Pressure Relief</h4>
+                                <p>Quench pipe venting and pressure management systems</p>
+                            </div>
+                            <div class="cryo-safety-card">
+                                <h4>Personnel Protection</h4>
+                                <p>Evacuation procedures and safety training requirements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Network Integration Section -->
+        <section id="network-integration" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Network Integration</h2>
+                    <p class="section-description">PACS integration, clinical workflow, and remote monitoring capabilities</p>
+                </div>
+
+                <div class="network-components">
+                    <div class="network-category">
+                        <h3>PACS Integration</h3>
+                        <div class="pacs-specs">
+                            <div class="pacs-spec-item">
+                                <h4>DICOM Services</h4>
+                                <ul>
+                                    <li>Store, Query/Retrieve functionality</li>
+                                    <li>Worklist management integration</li>
+                                    <li>Modality Performed Procedure Step</li>
+                                    <li>Storage commitment protocols</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="pacs-spec-item">
+                                <h4>Network Protocols</h4>
+                                <ul>
+                                    <li>TCP/IP networking infrastructure</li>
+                                    <li>DICOM 3.0 compliance</li>
+                                    <li>HL7 messaging standards</li>
+                                    <li>HTTPS secure communications</li>
+                                </ul>
+                            </div>
+
+                            <div class="pacs-spec-item">
+                                <h4>Data Compression</h4>
+                                <ul>
+                                    <li>JPEG 2000 lossless compression</li>
+                                    <li>Variable compression ratios</li>
+                                    <li>Bandwidth optimization</li>
+                                    <li>Quality preservation settings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="network-category">
+                        <h3>Clinical Workflow Integration</h3>
+                        <div class="workflow-components">
+                            <div class="workflow-component">
+                                <h4>HIS/RIS Integration</h4>
+                                <p>Seamless integration with Hospital Information Systems and Radiology Information Systems for complete patient workflow management.</p>
+                            </div>
+                            
+                            <div class="workflow-component">
+                                <h4>Patient Scheduling</h4>
+                                <p>Automated worklist generation, appointment scheduling, and resource optimization.</p>
+                            </div>
+
+                            <div class="workflow-component">
+                                <h4>Report Generation</h4>
+                                <p>Structured reporting templates, voice recognition, and automated distribution systems.</p>
+                            </div>
+
+                            <div class="workflow-component">
+                                <h4>Quality Metrics</h4>
+                                <p>Outcome tracking, performance analytics, and continuous improvement monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="network-category">
+                        <h3>Remote Capabilities</h3>
+                        <div class="remote-capabilities-grid">
+                            <div class="remote-capability">
+                                <h4>24/7 Remote Monitoring</h4>
+                                <p>Continuous system status monitoring, predictive maintenance, and proactive support.</p>
+                            </div>
+                            
+                            <div class="remote-capability">
+                                <h4>Teleradiology</h4>
+                                <p>Secure image transmission, remote interpretation, and global consultation capabilities.</p>
+                            </div>
+
+                            <div class="remote-capability">
+                                <h4>Remote Service</h4>
+                                <p>Diagnostic capabilities, software updates, and technical support access.</p>
+                            </div>
+
+                            <div class="remote-capability">
+                                <h4>Cloud Integration</h4>
+                                <p>Cloud processing, storage solutions, and scalable computing resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Techniques Section -->
+        <section id="advanced-techniques" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Advanced Techniques</h2>
+                    <p class="section-description">Functional MRI, DTI, cardiac MRI, and specialized imaging techniques</p>
+                </div>
+
+                <div class="advanced-techniques-grid">
+                    <div class="technique-card">
+                        <h3>Functional MRI (fMRI)</h3>
+                        <div class="technique-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">BOLD Contrast:</span>
+                                <span class="spec-value">Blood oxygen level dependent imaging</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Temporal Resolution:</span>
+                                <span class="spec-value">1-3 second acquisitions</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Statistical Analysis:</span>
+                                <span class="spec-value">Real-time activation mapping</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Applications:</span>
+                                <span class="spec-value">Brain activation, connectivity analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <h3>Diffusion Tensor Imaging (DTI)</h3>
+                        <div class="technique-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">b-Values:</span>
+                                <span class="spec-value">0-4000 s/mm² gradients</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Directions:</span>
+                                <span class="spec-value">6-64 gradient directions</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Analysis:</span>
+                                <span class="spec-value">Fractional anisotropy, tractography</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Applications:</span>
+                                <span class="spec-value">White matter integrity, fiber tracking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <h3>Cardiac MRI</h3>
+                        <div class="technique-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">ECG Gating:</span>
+                                <span class="spec-value">R-wave synchronization</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Breath Hold:</span>
+                                <span class="spec-value">15-25 second acquisitions</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Cine Imaging:</span>
+                                <span class="spec-value">Heart function assessment</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Applications:</span>
+                                <span class="spec-value">Perfusion, viability, function</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="technique-card">
+                        <h3>MR Angiography (MRA)</h3>
+                        <div class="technique-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Time of Flight:</span>
+                                <span class="spec-value">Non-contrast vascular imaging</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Phase Contrast:</span>
+                                <span class="spec-value">Flow quantification capability</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Contrast Enhanced:</span>
+                                <span class="spec-value">Gadolinium-based angiography</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Visualization:</span>
+                                <span class="spec-value">3D MIP, time-resolved imaging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Specifications Section -->
+        <section id="performance-specs" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Performance Specifications</h2>
+                    <p class="section-description">Field strength comparison, SNR specifications, and system reliability metrics</p>
+                </div>
+
+                <div class="performance-comparison">
+                    <div class="performance-category">
+                        <h3>1.5 Tesla Performance</h3>
+                        <div class="performance-metrics">
+                            <div class="metric-card">
+                                <h4>SNR Performance</h4>
+                                <div class="metric-value">100-200:1</div>
+                                <p>Typical signal-to-noise ratio</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Spatial Resolution</h4>
+                                <div class="metric-value">0.5-1.0 mm</div>
+                                <p>Achievable resolution</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Acquisition Speed</h4>
+                                <div class="metric-value">2-10 min</div>
+                                <p>Typical scan duration</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Patient Throughput</h4>
+                                <div class="metric-value">8-12 pts/day</div>
+                                <p>Daily capacity</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="performance-category">
+                        <h3>3.0 Tesla Performance</h3>
+                        <div class="performance-metrics">
+                            <div class="metric-card">
+                                <h4>Enhanced SNR</h4>
+                                <div class="metric-value">200-400:1</div>
+                                <p>Doubled signal strength</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>High Resolution</h4>
+                                <div class="metric-value">0.3-0.7 mm</div>
+                                <p>Superior detail capability</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Spectroscopy</h4>
+                                <div class="metric-value">Enhanced</div>
+                                <p>Improved metabolite detection</p>
+                            </div>
+                            <div class="metric-card">
+                                <h4>Functional Imaging</h4>
+                                <div class="metric-value">Improved</div>
+                                <p>Better BOLD sensitivity</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="performance-category">
+                        <h3>System Reliability</h3>
+                        <div class="reliability-metrics">
+                            <div class="reliability-spec">
+                                <h4>Mean Time Between Failures (MTBF)</h4>
+                                <div class="spec-value">&gt;2000 hours</div>
+                            </div>
+                            <div class="reliability-spec">
+                                <h4>Mean Time To Repair (MTTR)</h4>
+                                <div class="spec-value">&lt;4 hours</div>
+                            </div>
+                            <div class="reliability-spec">
+                                <h4>System Uptime Target</h4>
+                                <div class="spec-value">&gt;95%</div>
+                            </div>
+                            <div class="reliability-spec">
+                                <h4>Service Response Time</h4>
+                                <div class="spec-value">&lt;24 hours</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Maintenance & Service Section -->
+        <section id="maintenance" class="tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Maintenance & Service</h2>
+                    <p class="section-description">Preventive maintenance, corrective service, and technical support programs</p>
+                </div>
+
+                <div class="maintenance-categories">
+                    <div class="maintenance-category">
+                        <h3>Preventive Maintenance</h3>
+                        <div class="maintenance-grid">
+                            <div class="maintenance-card">
+                                <h4>Cryogenic Systems</h4>
+                                <ul>
+                                    <li>Helium level monitoring and transfers</li>
+                                    <li>Vacuum pump maintenance</li>
+                                    <li>Cold head servicing</li>
+                                    <li>Quench detection system testing</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="maintenance-card">
+                                <h4>RF Systems</h4>
+                                <ul>
+                                    <li>Power calibration and verification</li>
+                                    <li>Coil performance testing</li>
+                                    <li>Amplifier maintenance</li>
+                                    <li>SAR validation procedures</li>
+                                </ul>
+                            </div>
+
+                            <div class="maintenance-card">
+                                <h4>Gradient Systems</h4>
+                                <ul>
+                                    <li>Cooling system maintenance</li>
+                                    <li>Calibration verification</li>
+                                    <li>Acoustic panel inspection</li>
+                                    <li>Power supply testing</li>
+                                </ul>
+                            </div>
+
+                            <div class="maintenance-card">
+                                <h4>Mechanical Systems</h4>
+                                <ul>
+                                    <li>Patient table calibration</li>
+                                    <li>Positioning system maintenance</li>
+                                    <li>Safety system verification</li>
+                                    <li>Environmental monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="maintenance-category">
+                        <h3>Service Support</h3>
+                        <div class="service-components">
+                            <div class="service-component">
+                                <h4>24/7 Remote Monitoring</h4>
+                                <p>Continuous system status monitoring with predictive analytics and proactive maintenance scheduling.</p>
+                            </div>
+                            
+                            <div class="service-component">
+                                <h4>Technical Help Desk</h4>
+                                <p>Expert technical support with rapid response times and comprehensive troubleshooting assistance.</p>
+                            </div>
+
+                            <div class="service-component">
+                                <h4>Training Programs</h4>
+                                <p>Comprehensive operator training, continuing education, and certification programs for optimal system utilization.</p>
+                            </div>
+
+                            <div class="service-component">
+                                <h4>Applications Support</h4>
+                                <p>Advanced sequence development, protocol optimization, and clinical application consulting.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="maintenance-category">
+                        <h3>Upgrade Pathways</h3>
+                        <div class="upgrade-options">
+                            <div class="upgrade-option">
+                                <h4>Software Upgrades</h4>
+                                <p>Regular software updates with new features, enhanced performance, and improved workflow capabilities.</p>
+                            </div>
+                            
+                            <div class="upgrade-option">
+                                <h4>Hardware Enhancements</h4>
+                                <p>Gradient upgrades, coil technology improvements, and computing system enhancements.</p>
+                            </div>
+
+                            <div class="upgrade-option">
+                                <h4>Technology Advancement</h4>
+                                <p>Access to latest MRI technologies, research applications, and cutting-edge imaging techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Calculator Modal -->
+        <div id="calculator-modal" class="modal hidden" role="dialog" aria-labelledby="calculator-title">
+            <div class="modal-backdrop" onclick="closeModal('calculator-modal')"></div>
+            <div class="modal-content modal-content--large">
+                <div class="modal-header">
+                    <h3 id="calculator-title">MRI Technical Calculators</h3>
+                    <button class="modal-close" onclick="closeModal('calculator-modal')" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="calculator-tabs">
+                        <div class="calc-tab-nav">
+                            <button class="calc-tab-btn calc-tab-btn--active" onclick="showCalculator('sar')">SAR Calculator</button>
+                            <button class="calc-tab-btn" onclick="showCalculator('snr')">SNR Estimation</button>
+                            <button class="calc-tab-btn" onclick="showCalculator('gradient')">Gradient Performance</button>
+                            <button class="calc-tab-btn" onclick="showCalculator('frequency')">Frequency Calculator</button>
+                        </div>
+
+                        <div id="sar-calculator" class="calculator-content">
+                            <h4>SAR (Specific Absorption Rate) Calculator</h4>
+                            <div class="calc-form">
+                                <div class="calc-input-group">
+                                    <label class="calc-label">RF Power (Watts):</label>
+                                    <input type="number" id="rf-power" class="calc-input" value="1000" step="1">
+                                </div>
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Body Mass (kg):</label>
+                                    <input type="number" id="body-mass" class="calc-input" value="70" step="0.1">
+                                </div>
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Duty Cycle (%):</label>
+                                    <input type="number" id="duty-cycle" class="calc-input" value="10" step="0.1" max="100">
+                                </div>
+                                <button class="btn btn--primary" onclick="calculateSAR()">Calculate SAR</button>
+                                <div id="sar-result" class="calc-result"></div>
+                            </div>
+                        </div>
+
+                        <div id="snr-calculator" class="calculator-content hidden">
+                            <h4>SNR Estimation Calculator</h4>
+                            <div class="calc-form">
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Field Strength (Tesla):</label>
+                                    <select id="field-strength" class="calc-input">
+                                        <option value="1.5">1.5T</option>
+                                        <option value="3.0" selected>3.0T</option>
+                                        <option value="7.0">7.0T</option>
+                                    </select>
+                                </div>
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Voxel Volume (mm³):</label>
+                                    <input type="number" id="voxel-volume" class="calc-input" value="8" step="0.1">
+                                </div>
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Acquisition Time (s):</label>
+                                    <input type="number" id="acq-time" class="calc-input" value="240" step="1">
+                                </div>
+                                <button class="btn btn--primary" onclick="calculateSNR()">Estimate SNR</button>
+                                <div id="snr-result" class="calc-result"></div>
+                            </div>
+                        </div>
+
+                        <div id="gradient-calculator" class="calculator-content hidden">
+                            <h4>Gradient Performance Calculator</h4>
+                            <div class="calc-form">
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Max Gradient (mT/m):</label>
+                                    <input type="number" id="max-gradient" class="calc-input" value="40" step="1">
+                                </div>
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Slew Rate (mT/m/ms):</label>
+                                    <input type="number" id="slew-rate" class="calc-input" value="150" step="1">
+                                </div>
+                                <div class="calc-input-group">
+                                    <label class="calc-label">FOV (cm):</label>
+                                    <input type="number" id="fov" class="calc-input" value="24" step="0.1">
+                                </div>
+                                <button class="btn btn--primary" onclick="calculateGradient()">Calculate Performance</button>
+                                <div id="gradient-result" class="calc-result"></div>
+                            </div>
+                        </div>
+
+                        <div id="frequency-calculator" class="calculator-content hidden">
+                            <h4>Larmor Frequency Calculator</h4>
+                            <div class="calc-form">
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Magnetic Field (Tesla):</label>
+                                    <input type="number" id="magnetic-field" class="calc-input" value="1.5" step="0.1">
+                                </div>
+                                <div class="calc-input-group">
+                                    <label class="calc-label">Nucleus:</label>
+                                    <select id="nucleus-type" class="calc-input">
+                                        <option value="42.58">¹H (Hydrogen)</option>
+                                        <option value="10.71">¹³C (Carbon-13)</option>
+                                        <option value="17.25">³¹P (Phosphorus-31)</option>
+                                        <option value="4.31">²³Na (Sodium-23)</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn--primary" onclick="calculateFrequency()">Calculate Frequency</button>
+                                <div id="frequency-result" class="calc-result"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Diagram Modal -->
+        <div id="system-diagram-modal" class="modal hidden" role="dialog" aria-labelledby="diagram-title">
+            <div class="modal-backdrop" onclick="closeModal('system-diagram-modal')"></div>
+            <div class="modal-content modal-content--large">
+                <div class="modal-header">
+                    <h3 id="diagram-title">MRI System Architecture Diagram</h3>
+                    <button class="modal-close" onclick="closeModal('system-diagram-modal')" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="system-diagram">
+                        <div class="diagram-section magnet-section">
+                            <h4>Magnet System</h4>
+                            <div class="component-box">
+                                <p>Superconducting Magnet</p>
+                                <span class="spec">1.5T - 7T+</span>
+                            </div>
+                            <div class="component-box">
+                                <p>Cryogenic System</p>
+                                <span class="spec">Liquid Helium</span>
+                            </div>
+                        </div>
+                        
+                        <div class="diagram-section gradient-section">
+                            <h4>Gradient System</h4>
+                            <div class="component-box">
+                                <p>X, Y, Z Gradient Coils</p>
+                                <span class="spec">±80 mT/m</span>
+                            </div>
+                            <div class="component-box">
+                                <p>Gradient Amplifiers</p>
+                                <span class="spec">50-100 kVA</span>
+                            </div>
+                        </div>
+                        
+                        <div class="diagram-section rf-section">
+                            <h4>RF System</h4>
+                            <div class="component-box">
+                                <p>RF Transmitter</p>
+                                <span class="spec">35 kW Peak</span>
+                            </div>
+                            <div class="component-box">
+                                <p>Receive Coils</p>
+                                <span class="spec">32+ Channels</span>
+                            </div>
+                        </div>
+                        
+                        <div class="diagram-section computer-section">
+                            <h4>Computer System</h4>
+                            <div class="component-box">
+                                <p>Acquisition Computer</p>
+                                <span class="spec">Real-time Processing</span>
+                            </div>
+                            <div class="component-box">
+                                <p>Reconstruction Engine</p>
+                                <span class="spec">GPU Accelerated</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specification Comparison Modal -->
+        <div id="spec-comparison-modal" class="modal hidden" role="dialog" aria-labelledby="spec-comparison-title">
+            <div class="modal-backdrop" onclick="closeModal('spec-comparison-modal')"></div>
+            <div class="modal-content modal-content--large">
+                <div class="modal-header">
+                    <h3 id="spec-comparison-title">MRI System Specification Comparison</h3>
+                    <button class="modal-close" onclick="closeModal('spec-comparison-modal')" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="comparison-table-container">
+                        <table class="specs-comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>1.5T System</th>
+                                    <th>3.0T System</th>
+                                    <th>7.0T System</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>RF Frequency</strong></td>
+                                    <td>63.9 MHz</td>
+                                    <td>127.8 MHz</td>
+                                    <td>298 MHz</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SNR Performance</strong></td>
+                                    <td>100-200:1</td>
+                                    <td>200-400:1</td>
+                                    <td>400-800:1</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Spatial Resolution</strong></td>
+                                    <td>0.5-1.0 mm</td>
+                                    <td>0.3-0.7 mm</td>
+                                    <td>0.2-0.5 mm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Applications</strong></td>
+                                    <td>Clinical standard</td>
+                                    <td>Advanced clinical</td>
+                                    <td>Research</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SAR Considerations</strong></td>
+                                    <td>Standard limits</td>
+                                    <td>Increased monitoring</td>
+                                    <td>Strict limitations</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mri-tech-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Technical Resources</h4>
+                    <p>Comprehensive MRI technical documentation and engineering specifications for medical physics professionals.</p>
+                    <div class="footer-stats">
+                        <span>Last Updated: August 2024</span><br>
+                        <span>Technical Review: Dr. Michael Chen, PhD Medical Physics</span><br>
+                        <span>Engineering Review: Sarah Johnson, PE Biomedical Engineering</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Professional Standards</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" target="_blank">IEC 60601-2-33 MRI Safety</a></li>
+                        <li><a href="#" target="_blank">NEMA MS Standards</a></li>
+                        <li><a href="#" target="_blank">FDA MRI Guidelines</a></li>
+                        <li><a href="#" target="_blank">AAPM MRI Reports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Technical Sections</h4>
+                    <ul class="footer-links">
+                        <li><a href="#magnetic-field">Magnetic Field Technology</a></li>
+                        <li><a href="#rf-systems">RF Systems</a></li>
+                        <li><a href="#gradient-systems">Gradient Systems</a></li>
+                        <li><a href="#image-acquisition">Image Acquisition</a></li>
+                        <li><a href="#quality-assurance">Quality Assurance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MRI Technical Details Center. Professional technical resource for medical physics and biomedical engineering professionals. All specifications subject to manufacturer variations.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

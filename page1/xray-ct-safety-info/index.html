@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Information Center - X-Ray & CT Scan Safety</title>
+    <meta name="description" content="Comprehensive safety information for X-Ray and CT scan procedures, radiation exposure, contrast safety, and emergency procedures">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="safety-header" role="banner">
+        <nav class="container">
+            <div class="safety-header__brand">
+                <div class="safety-logo">
+                    <span class="safety-logo__icon">☢️</span>
+                    <div class="safety-logo__text">
+                        <h1 class="safety-header__title">Safety Information Center</h1>
+                        <p class="safety-header__subtitle">X-Ray & CT Scan Safety Resource</p>
+                    </div>
+                </div>
+                
+                <div class="emergency-banner">
+                    <span class="emergency-icon">🚨</span>
+                    <span class="emergency-text">Emergency: Call 911 for severe reactions</span>
+                    <span class="emergency-number">Emergency Line: (555) SAFETY</span>
+                </div>
+            </div>
+            
+            <div class="safety-stats">
+                <div class="stat-indicator stat-indicator--safe">
+                    <span class="stat-number">99.8%</span>
+                    <span class="stat-label">Safe Procedures</span>
+                </div>
+                <div class="stat-indicator stat-indicator--caution">
+                    <span class="stat-number">0.2%</span>
+                    <span class="stat-label">Mild Reactions</span>
+                </div>
+                <div class="stat-indicator stat-indicator--danger">
+                    <span class="stat-number"><0.02%</span>
+                    <span class="stat-label">Severe Reactions</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Quick Navigation -->
+    <nav class="quick-nav" role="navigation" aria-label="Quick navigation">
+        <div class="container">
+            <div class="nav-links">
+                <a href="#radiation-section" class="nav-link">Radiation Safety</a>
+                <a href="#contraindications-section" class="nav-link">Precautions</a>
+                <a href="#contrast-section" class="nav-link">Contrast Safety</a>
+                <a href="#emergency-section" class="nav-link nav-link--emergency">Emergency Info</a>
+                <a href="#calculators-section" class="nav-link">Safety Tools</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn--outline btn--sm" onclick="toggleSearch()">🔍 Search</button>
+                <button class="btn btn--primary btn--sm" onclick="showEmergencyChecklist()">Emergency Checklist</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div id="search-bar" class="search-bar hidden">
+        <div class="container">
+            <div class="search-input-container">
+                <input type="text" id="safety-search" class="search-input" placeholder="Search safety information..." aria-label="Search safety topics">
+                <button class="search-btn" onclick="performSearch()">Search</button>
+                <button class="search-close" onclick="toggleSearch()">×</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">X-Ray & CT Scan Safety Information</h1>
+                        <p class="hero-description">Comprehensive safety resource for patients, families, and healthcare providers. Understanding radiation exposure, contrast safety, and emergency procedures.</p>
+                        
+                        <div class="safety-highlights">
+                            <div class="highlight-card highlight-card--safe">
+                                <span class="highlight-icon">✅</span>
+                                <div class="highlight-content">
+                                    <h3>ALARA Principle</h3>
+                                    <p>As Low As Reasonably Achievable radiation dose</p>
+                                </div>
+                            </div>
+                            <div class="highlight-card highlight-card--caution">
+                                <span class="highlight-icon">⚠️</span>
+                                <div class="highlight-content">
+                                    <h3>Contrast Safety</h3>
+                                    <p>Monitoring for allergic reactions and kidney function</p>
+                                </div>
+                            </div>
+                            <div class="highlight-card highlight-card--info">
+                                <span class="highlight-icon">🩺</span>
+                                <div class="highlight-content">
+                                    <h3>Patient Screening</h3>
+                                    <p>Pre-procedure assessment and safety protocols</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" onclick="showRiskAssessment()">Start Safety Assessment</button>
+                        <button class="btn btn--outline btn--lg" onclick="scrollToSection('radiation-section')">View Radiation Info</button>
+                        <button class="btn btn--outline btn--lg emergency-action" onclick="showEmergencyInfo()">Emergency Information</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Radiation Exposure Section -->
+        <section id="radiation-section" class="safety-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Radiation Exposure & Safety</h2>
+                    <p class="section-description">Understanding radiation doses and implementing ALARA principles</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-panel">
+                        <h3 class="panel-title">Interactive Dose Comparison</h3>
+                        <div class="dose-calculator">
+                            <div class="calculator-controls">
+                                <select id="exam-type" class="form-control">
+                                    <option value="chest-xray">Chest X-Ray</option>
+                                    <option value="extremity-xray">Extremity X-Ray</option>
+                                    <option value="spine-xray">Spine X-Ray</option>
+                                    <option value="dental-xray">Dental X-Ray</option>
+                                    <option value="head-ct">Head CT</option>
+                                    <option value="chest-ct">Chest CT</option>
+                                    <option value="abdomen-ct">Abdomen CT</option>
+                                    <option value="pelvis-ct">Pelvis CT</option>
+                                </select>
+                                <button class="btn btn--primary" onclick="updateDoseComparison()">Compare Dose</button>
+                            </div>
+                            
+                            <div class="dose-chart-container" style="position: relative; height: 300px;">
+                                <canvas id="dose-chart"></canvas>
+                            </div>
+                            
+                            <div id="dose-info" class="dose-info">
+                                <div class="dose-detail">
+                                    <span class="dose-label">Selected Exam:</span>
+                                    <span class="dose-value" id="exam-dose">0.1 mSv</span>
+                                </div>
+                                <div class="dose-detail">
+                                    <span class="dose-label">Equivalent to:</span>
+                                    <span class="dose-value" id="dose-equivalent">10 days of background radiation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-panel">
+                        <h3 class="panel-title">ALARA Principle</h3>
+                        <div class="alara-info">
+                            <div class="alara-definition">
+                                <h4>As Low As Reasonably Achievable</h4>
+                                <p>Every radiation exposure should be justified and optimized to minimize patient dose while maintaining diagnostic quality.</p>
+                            </div>
+                            
+                            <div class="alara-implementation">
+                                <h4>Implementation Methods:</h4>
+                                <div class="implementation-list">
+                                    <div class="implementation-item">
+                                        <span class="implementation-icon">⚙️</span>
+                                        <span>Optimize technique for patient size</span>
+                                    </div>
+                                    <div class="implementation-item">
+                                        <span class="implementation-icon">🎯</span>
+                                        <span>Limit scan range to area of interest</span>
+                                    </div>
+                                    <div class="implementation-item">
+                                        <span class="implementation-icon">📊</span>
+                                        <span>Use lowest dose maintaining quality</span>
+                                    </div>
+                                    <div class="implementation-item">
+                                        <span class="implementation-icon">🔄</span>
+                                        <span>Consider alternative imaging</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-factors-panel">
+                    <h3 class="panel-title">Radiation Risk Factors</h3>
+                    <div class="risk-grid">
+                        <div class="risk-card">
+                            <h4>Age Considerations</h4>
+                            <p>Children have higher radiation sensitivity due to longer life expectancy and developing tissues.</p>
+                            <div class="risk-level risk-level--high">Higher Risk</div>
+                        </div>
+                        <div class="risk-card">
+                            <h4>Gender Factors</h4>
+                            <p>Slightly higher risk for females, especially breast and thyroid tissue exposure.</p>
+                            <div class="risk-level risk-level--moderate">Moderate Risk</div>
+                        </div>
+                        <div class="risk-card">
+                            <h4>Frequency</h4>
+                            <p>Cumulative risk increases with multiple exposures over time.</p>
+                            <div class="risk-level risk-level--moderate">Cumulative Risk</div>
+                        </div>
+                        <div class="risk-card">
+                            <h4>Genetics</h4>
+                            <p>Some individuals may have higher radiation sensitivity due to genetic factors.</p>
+                            <div class="risk-level risk-level--variable">Variable Risk</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contraindications & Precautions Section -->
+        <section id="contraindications-section" class="safety-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contraindications & Precautions</h2>
+                    <p class="section-description">Pre-procedure screening and safety considerations</p>
+                </div>
+
+                <div class="contraindications-grid">
+                    <div class="contraindication-panel contraindication-panel--absolute">
+                        <div class="panel-header">
+                            <h3 class="panel-title">
+                                <span class="severity-icon severity-icon--danger">🚫</span>
+                                Absolute Contraindications
+                            </h3>
+                        </div>
+                        
+                        <div class="contraindication-list">
+                            <div class="contraindication-item">
+                                <div class="contraindication-header">
+                                    <h4>Pregnancy (First Trimester)</h4>
+                                    <span class="risk-badge risk-badge--danger">High Risk</span>
+                                </div>
+                                <p class="contraindication-reason">Highest risk period for fetal development</p>
+                                <p class="contraindication-action"><strong>Action:</strong> Use ultrasound or MRI alternatives</p>
+                            </div>
+                            
+                            <div class="contraindication-item">
+                                <div class="contraindication-header">
+                                    <h4>Severe Contrast Allergy</h4>
+                                    <span class="risk-badge risk-badge--danger">High Risk</span>
+                                </div>
+                                <p class="contraindication-reason">Risk of anaphylactic reaction</p>
+                                <p class="contraindication-action"><strong>Action:</strong> Premedication or alternative imaging</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-panel contraindication-panel--relative">
+                        <div class="panel-header">
+                            <h3 class="panel-title">
+                                <span class="severity-icon severity-icon--warning">⚠️</span>
+                                Relative Contraindications
+                            </h3>
+                        </div>
+                        
+                        <div class="contraindication-list">
+                            <div class="contraindication-item">
+                                <div class="contraindication-header">
+                                    <h4>Pregnancy (Later Trimesters)</h4>
+                                    <span class="risk-badge risk-badge--warning">Moderate Risk</span>
+                                </div>
+                                <p class="contraindication-reason">Some risk to fetal development</p>
+                                <p class="contraindication-action"><strong>Action:</strong> Risk-benefit analysis required</p>
+                            </div>
+                            
+                            <div class="contraindication-item">
+                                <div class="contraindication-header">
+                                    <h4>Kidney Disease</h4>
+                                    <span class="risk-badge risk-badge--warning">Moderate Risk</span>
+                                </div>
+                                <p class="contraindication-reason">Contrast-induced nephropathy risk</p>
+                                <p class="contraindication-action"><strong>Action:</strong> Hydration and monitoring protocols</p>
+                            </div>
+                            
+                            <div class="contraindication-item">
+                                <div class="contraindication-header">
+                                    <h4>Diabetes with Kidney Involvement</h4>
+                                    <span class="risk-badge risk-badge--warning">Moderate Risk</span>
+                                </div>
+                                <p class="contraindication-reason">Increased nephrotoxicity risk</p>
+                                <p class="contraindication-action"><strong>Action:</strong> Blood tests and medication adjustments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screening-checklist">
+                    <h3 class="checklist-title">Interactive Patient Screening Checklist</h3>
+                    <div class="checklist-container">
+                        <div id="screening-form" class="screening-form">
+                            <div class="checklist-category">
+                                <h4>Pregnancy Status</h4>
+                                <div class="checkbox-group">
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="pregnancy" value="not-pregnant">
+                                        <span class="checkbox-custom"></span>
+                                        Not pregnant (confirmed)
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="pregnancy" value="possibly-pregnant">
+                                        <span class="checkbox-custom"></span>
+                                        Possibly pregnant (needs testing)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="checklist-category">
+                                <h4>Contrast History</h4>
+                                <div class="checkbox-group">
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="contrast-history" value="no-allergies">
+                                        <span class="checkbox-custom"></span>
+                                        No known contrast allergies
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="contrast-history" value="mild-reaction">
+                                        <span class="checkbox-custom"></span>
+                                        Previous mild reaction
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="contrast-history" value="severe-reaction">
+                                        <span class="checkbox-custom"></span>
+                                        Previous severe reaction
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="checklist-category">
+                                <h4>Medical Conditions</h4>
+                                <div class="checkbox-group">
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="conditions" value="kidney-disease">
+                                        <span class="checkbox-custom"></span>
+                                        Kidney disease
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="conditions" value="diabetes">
+                                        <span class="checkbox-custom"></span>
+                                        Diabetes
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="conditions" value="heart-failure">
+                                        <span class="checkbox-custom"></span>
+                                        Heart failure
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="conditions" value="asthma">
+                                        <span class="checkbox-custom"></span>
+                                        Asthma
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="checklist-actions">
+                                <button class="btn btn--primary" onclick="analyzeScreening()">Analyze Safety Profile</button>
+                                <button class="btn btn--outline" onclick="clearScreening()">Clear Form</button>
+                                <button class="btn btn--outline" onclick="printScreening()">Print Checklist</button>
+                            </div>
+                            
+                            <div id="screening-results" class="screening-results hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contrast Safety Section -->
+        <section id="contrast-section" class="safety-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contrast Agent Safety</h2>
+                    <p class="section-description">Types of contrast agents, side effects, and reaction management</p>
+                </div>
+
+                <div class="contrast-types">
+                    <div class="contrast-card">
+                        <div class="contrast-header">
+                            <h3>Iodinated Contrast (IV)</h3>
+                            <span class="usage-badge">Blood vessels & organs</span>
+                        </div>
+                        <div class="contrast-content">
+                            <div class="side-effects">
+                                <h4>Common Side Effects:</h4>
+                                <ul>
+                                    <li>Warm sensation</li>
+                                    <li>Metallic taste</li>
+                                    <li>Mild nausea</li>
+                                </ul>
+                            </div>
+                            <div class="allergy-rate">
+                                <h4>Allergic Reaction Rates:</h4>
+                                <p>Mild reactions: 0.2-1% | Severe: 0.02-0.04%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contrast-card">
+                        <div class="contrast-header">
+                            <h3>Barium Sulfate (Oral)</h3>
+                            <span class="usage-badge">Digestive system</span>
+                        </div>
+                        <div class="contrast-content">
+                            <div class="side-effects">
+                                <h4>Common Side Effects:</h4>
+                                <ul>
+                                    <li>Constipation</li>
+                                    <li>Chalky taste</li>
+                                </ul>
+                            </div>
+                            <div class="allergy-rate">
+                                <h4>Allergic Reaction Rates:</h4>
+                                <p>Very rare allergic reactions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reaction-matrix">
+                    <h3>Contrast Reaction Severity Matrix</h3>
+                    <div class="reaction-grid">
+                        <div class="reaction-category reaction-category--mild">
+                            <h4>
+                                <span class="reaction-icon">😐</span>
+                                Mild Reactions
+                            </h4>
+                            <ul class="reaction-symptoms">
+                                <li>Nausea</li>
+                                <li>Vomiting</li>
+                                <li>Hives</li>
+                                <li>Itching</li>
+                            </ul>
+                            <div class="reaction-treatment">
+                                <strong>Treatment:</strong> Observation, antihistamines if needed
+                            </div>
+                        </div>
+
+                        <div class="reaction-category reaction-category--moderate">
+                            <h4>
+                                <span class="reaction-icon">😟</span>
+                                Moderate Reactions
+                            </h4>
+                            <ul class="reaction-symptoms">
+                                <li>Facial swelling</li>
+                                <li>Bronchospasm</li>
+                                <li>Hypotension</li>
+                            </ul>
+                            <div class="reaction-treatment">
+                                <strong>Treatment:</strong> IV fluids, steroids, bronchodilators
+                            </div>
+                        </div>
+
+                        <div class="reaction-category reaction-category--severe">
+                            <h4>
+                                <span class="reaction-icon">😰</span>
+                                Severe Reactions
+                            </h4>
+                            <ul class="reaction-symptoms">
+                                <li>Anaphylaxis</li>
+                                <li>Cardiac arrest</li>
+                                <li>Severe bronchospasm</li>
+                            </ul>
+                            <div class="reaction-treatment">
+                                <strong>Treatment:</strong> Emergency response, epinephrine, CPR
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kidney-safety">
+                    <h3>Kidney Safety Considerations</h3>
+                    <div class="kidney-info-grid">
+                        <div class="kidney-panel">
+                            <h4>Risk Factors</h4>
+                            <ul class="risk-list">
+                                <li>Age over 70</li>
+                                <li>Diabetes</li>
+                                <li>Heart failure</li>
+                                <li>Dehydration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="kidney-panel">
+                            <h4>Prevention Measures</h4>
+                            <ul class="prevention-list">
+                                <li>Hydration before and after</li>
+                                <li>Hold nephrotoxic medications</li>
+                                <li>Monitor kidney function</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="kidney-panel kidney-panel--danger">
+                            <h4>Contraindications</h4>
+                            <ul class="contraindication-list">
+                                <li>GFR less than 30</li>
+                                <li>Acute kidney injury</li>
+                                <li>Multiple myeloma</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Information Section -->
+        <section id="emergency-section" class="safety-section emergency-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="emergency-title-icon">🚨</span>
+                        Emergency Information
+                    </h2>
+                    <p class="section-description">Immediate action guidelines for adverse reactions</p>
+                </div>
+
+                <div class="emergency-grid">
+                    <div class="emergency-panel emergency-panel--critical">
+                        <h3 class="emergency-title">
+                            <span class="emergency-icon">🆘</span>
+                            Call 911 Immediately
+                        </h3>
+                        
+                        <div class="emergency-symptoms">
+                            <div class="emergency-symptom">
+                                <h4>Severe Difficulty Breathing</h4>
+                                <p class="symptom-description">Shortness of breath, wheezing, gasping</p>
+                                <div class="treatment-actions">
+                                    <strong>Treatment:</strong> Oxygen, bronchodilators, epinephrine
+                                </div>
+                            </div>
+                            
+                            <div class="emergency-symptom">
+                                <h4>Widespread Hives with Swelling</h4>
+                                <p class="symptom-description">Facial, throat, or tongue swelling</p>
+                                <div class="treatment-actions">
+                                    <strong>Treatment:</strong> Antihistamines, steroids, epinephrine
+                                </div>
+                            </div>
+                            
+                            <div class="emergency-symptom">
+                                <h4>Loss of Consciousness</h4>
+                                <p class="symptom-description">Fainting, unresponsiveness, severe drop in blood pressure</p>
+                                <div class="treatment-actions">
+                                    <strong>Treatment:</strong> IV fluids, vasopressors, CPR if needed
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="emergency-contact">
+                            <div class="contact-info">
+                                <h4>Emergency Contacts</h4>
+                                <div class="contact-list">
+                                    <div class="contact-item">
+                                        <span class="contact-label">Emergency Services:</span>
+                                        <span class="contact-number">911</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="contact-label">Poison Control:</span>
+                                        <span class="contact-number">1-800-222-1222</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="contact-label">Facility Safety Line:</span>
+                                        <span class="contact-number">(555) SAFETY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="emergency-panel emergency-panel--urgent">
+                        <h3 class="emergency-title">
+                            <span class="emergency-icon">📞</span>
+                            Contact Healthcare Provider
+                        </h3>
+                        
+                        <div class="emergency-symptoms">
+                            <div class="emergency-symptom">
+                                <h4>Localized Hives or Itching</h4>
+                                <p class="symptom-description">Skin reactions limited to specific areas</p>
+                                <div class="treatment-actions">
+                                    <strong>Action:</strong> Contact imaging facility for guidance
+                                </div>
+                            </div>
+                            
+                            <div class="emergency-symptom">
+                                <h4>Persistent Nausea/Vomiting</h4>
+                                <p class="symptom-description">Continued symptoms after procedure</p>
+                                <div class="treatment-actions">
+                                    <strong>Action:</strong> Contact ordering physician
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="emergency-panel emergency-panel--delayed">
+                        <h3 class="emergency-title">
+                            <span class="emergency-icon">⏰</span>
+                            Delayed Reactions (1-7 Days)
+                        </h3>
+                        
+                        <div class="delayed-symptoms">
+                            <h4>Watch for These Symptoms:</h4>
+                            <ul class="symptom-list">
+                                <li>Skin rash or hives</li>
+                                <li>Joint pain or swelling</li>
+                                <li>Fever or flu-like symptoms</li>
+                                <li>Unusual fatigue</li>
+                            </ul>
+                            
+                            <div class="delayed-action">
+                                <p><strong>Frequency:</strong> Very rare (less than 1%)</p>
+                                <p><strong>Action:</strong> Contact healthcare provider if symptoms develop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emergency-checklist">
+                    <h3>Emergency Response Checklist</h3>
+                    <div class="checklist-steps">
+                        <div class="checklist-step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Assess Patient</h4>
+                                <p>Check consciousness, breathing, and vital signs</p>
+                            </div>
+                        </div>
+                        <div class="checklist-step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Call for Help</h4>
+                                <p>Activate emergency response system immediately</p>
+                            </div>
+                        </div>
+                        <div class="checklist-step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Provide Support</h4>
+                                <p>Administer oxygen, IV access, medications as needed</p>
+                            </div>
+                        </div>
+                        <div class="checklist-step">
+                            <span class="step-number">4</span>
+                            <div class="step-content">
+                                <h4>Document</h4>
+                                <p>Record all symptoms, treatments, and timeline</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Tools & Calculators Section -->
+        <section id="calculators-section" class="safety-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Safety Tools & Calculators</h2>
+                    <p class="section-description">Interactive tools for risk assessment and safety planning</p>
+                </div>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <h3>Risk Assessment Calculator</h3>
+                            <span class="tool-status tool-status--active">Interactive</span>
+                        </div>
+                        <div class="tool-content">
+                            <div class="calculator-form">
+                                <div class="form-group">
+                                    <label class="form-label">Patient Age:</label>
+                                    <input type="number" id="patient-age" class="form-control" min="0" max="120" placeholder="Enter age">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Gender:</label>
+                                    <select id="patient-gender" class="form-control">
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Previous CT scans in last year:</label>
+                                    <input type="number" id="previous-scans" class="form-control" min="0" max="50" placeholder="Number of scans">
+                                </div>
+                                <button class="btn btn--primary" onclick="calculateRisk()">Calculate Risk Level</button>
+                            </div>
+                            <div id="risk-results" class="risk-results hidden"></div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <h3>Contrast Allergy Risk</h3>
+                            <span class="tool-status tool-status--active">Assessment</span>
+                        </div>
+                        <div class="tool-content">
+                            <div class="allergy-assessment">
+                                <h4>Previous Reactions:</h4>
+                                <div class="assessment-options">
+                                    <label class="radio-option">
+                                        <input type="radio" name="allergy-history" value="none">
+                                        <span class="radio-custom"></span>
+                                        No previous reactions
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="allergy-history" value="mild">
+                                        <span class="radio-custom"></span>
+                                        Mild reaction (nausea, mild rash)
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="allergy-history" value="moderate">
+                                        <span class="radio-custom"></span>
+                                        Moderate reaction (hives, swelling)
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="allergy-history" value="severe">
+                                        <span class="radio-custom"></span>
+                                        Severe reaction (anaphylaxis)
+                                    </label>
+                                </div>
+                                <button class="btn btn--primary" onclick="assessAllergyRisk()">Assess Risk</button>
+                                <div id="allergy-results" class="allergy-results hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <h3>Emergency Symptom Checker</h3>
+                            <span class="tool-status tool-status--critical">Emergency</span>
+                        </div>
+                        <div class="tool-content">
+                            <div class="symptom-checker">
+                                <h4>Check symptoms you're experiencing:</h4>
+                                <div class="symptom-checkboxes">
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="symptoms" value="breathing">
+                                        <span class="checkbox-custom"></span>
+                                        Difficulty breathing
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="symptoms" value="swelling">
+                                        <span class="checkbox-custom"></span>
+                                        Facial or throat swelling
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="symptoms" value="hives">
+                                        <span class="checkbox-custom"></span>
+                                        Widespread hives
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="symptoms" value="consciousness">
+                                        <span class="checkbox-custom"></span>
+                                        Dizziness or fainting
+                                    </label>
+                                    <label class="safety-checkbox">
+                                        <input type="checkbox" name="symptoms" value="chest-pain">
+                                        <span class="checkbox-custom"></span>
+                                        Chest pain
+                                    </label>
+                                </div>
+                                <button class="btn btn--primary" onclick="checkSymptoms()">Check Urgency Level</button>
+                                <div id="symptom-results" class="symptom-results hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Populations Section -->
+        <section class="safety-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Special Populations</h2>
+                    <p class="section-description">Safety considerations for specific patient groups</p>
+                </div>
+
+                <div class="populations-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-btn tab-btn--active" onclick="showPopulation('children')">Children</button>
+                        <button class="tab-btn" onclick="showPopulation('elderly')">Elderly</button>
+                        <button class="tab-btn" onclick="showPopulation('chronic')">Chronic Conditions</button>
+                    </div>
+
+                    <div id="children-content" class="population-content">
+                        <div class="population-grid">
+                            <div class="consideration-card">
+                                <h3>Special Considerations</h3>
+                                <ul class="consideration-list">
+                                    <li>Higher radiation sensitivity</li>
+                                    <li>Longer life expectancy increases risk</li>
+                                    <li>Need for sedation may increase</li>
+                                    <li>Pediatric protocols reduce dose</li>
+                                </ul>
+                            </div>
+                            <div class="protection-card">
+                                <h3>Protection Measures</h3>
+                                <ul class="protection-list">
+                                    <li>Lead shielding of reproductive organs</li>
+                                    <li>Immobilization devices to prevent repeats</li>
+                                    <li>Parent/caregiver presence when possible</li>
+                                    <li>Child life specialists for comfort</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="elderly-content" class="population-content hidden">
+                        <div class="population-grid">
+                            <div class="consideration-card">
+                                <h3>Special Considerations</h3>
+                                <ul class="consideration-list">
+                                    <li>Increased kidney disease prevalence</li>
+                                    <li>Multiple medications and interactions</li>
+                                    <li>Higher dehydration risk</li>
+                                    <li>Cognitive impairment affecting cooperation</li>
+                                </ul>
+                            </div>
+                            <div class="protection-card">
+                                <h3>Precautions</h3>
+                                <ul class="protection-list">
+                                    <li>Careful medication review</li>
+                                    <li>Hydration assessment and support</li>
+                                    <li>Family involvement in consent process</li>
+                                    <li>Fall prevention during positioning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="chronic-content" class="population-content hidden">
+                        <div class="chronic-conditions">
+                            <div class="condition-panel">
+                                <h3>Diabetes</h3>
+                                <ul class="condition-precautions">
+                                    <li>Monitor blood glucose levels</li>
+                                    <li>Kidney function assessment</li>
+                                    <li>Metformin hold protocols</li>
+                                    <li>Contrast-induced nephropathy risk</li>
+                                </ul>
+                            </div>
+                            <div class="condition-panel">
+                                <h3>Heart Disease</h3>
+                                <ul class="condition-precautions">
+                                    <li>Monitor cardiac rhythm</li>
+                                    <li>Blood pressure management</li>
+                                    <li>Medication interactions</li>
+                                    <li>Fluid status assessment</li>
+                                </ul>
+                            </div>
+                            <div class="condition-panel">
+                                <h3>Asthma</h3>
+                                <ul class="condition-precautions">
+                                    <li>Increased contrast reaction risk</li>
+                                    <li>Bronchodilator availability</li>
+                                    <li>Premedication consideration</li>
+                                    <li>Emergency equipment ready</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patient Rights Section -->
+        <section class="safety-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Patient Rights & Consent</h2>
+                    <p class="section-description">Understanding your rights and the consent process</p>
+                </div>
+
+                <div class="rights-categories">
+                    <div class="rights-card">
+                        <div class="rights-header">
+                            <h3>Informed Consent</h3>
+                            <span class="rights-icon">📋</span>
+                        </div>
+                        <ul class="rights-list">
+                            <li>Right to understand procedure risks and benefits</li>
+                            <li>Right to ask questions before consent</li>
+                            <li>Right to have interpreter services</li>
+                            <li>Right to involve family in decision-making</li>
+                            <li>Right to refuse or stop procedure</li>
+                        </ul>
+                    </div>
+
+                    <div class="rights-card">
+                        <div class="rights-header">
+                            <h3>Privacy Protection</h3>
+                            <span class="rights-icon">🔒</span>
+                        </div>
+                        <ul class="rights-list">
+                            <li>HIPAA protection of medical information</li>
+                            <li>Right to confidential treatment</li>
+                            <li>Right to access your own medical records</li>
+                            <li>Right to know who has access to your information</li>
+                        </ul>
+                    </div>
+
+                    <div class="rights-card">
+                        <div class="rights-header">
+                            <h3>Safety Rights</h3>
+                            <span class="rights-icon">🛡️</span>
+                        </div>
+                        <ul class="rights-list">
+                            <li>Right to safe, quality care</li>
+                            <li>Right to report safety concerns</li>
+                            <li>Right to receive emergency treatment</li>
+                            <li>Right to second opinion</li>
+                            <li>Right to file complaints</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="consent-process">
+                    <h3>The Consent Process</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-icon">1</div>
+                            <div class="step-content">
+                                <h4>Information Disclosure</h4>
+                                <p>Healthcare provider explains the procedure, risks, benefits, and alternatives</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">2</div>
+                            <div class="step-content">
+                                <h4>Comprehension</h4>
+                                <p>Patient understands the information and has opportunity to ask questions</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">3</div>
+                            <div class="step-content">
+                                <h4>Voluntary Decision</h4>
+                                <p>Patient makes a free choice without coercion or pressure</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">4</div>
+                            <div class="step-content">
+                                <h4>Documentation</h4>
+                                <p>Consent is properly documented and signed by patient or authorized representative</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Emergency Checklist -->
+    <div id="emergency-modal" class="modal hidden" role="dialog" aria-labelledby="emergency-modal-title" aria-describedby="emergency-modal-desc">
+        <div class="modal-backdrop" onclick="closeModal('emergency-modal')"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="emergency-modal-title">Emergency Response Checklist</h3>
+                <button class="modal-close" onclick="closeModal('emergency-modal')" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body" id="emergency-modal-desc">
+                <div class="emergency-quick-checklist">
+                    <div class="quick-check-item">
+                        <label class="safety-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Patient is conscious and responsive
+                        </label>
+                    </div>
+                    <div class="quick-check-item">
+                        <label class="safety-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Airway is clear and breathing is adequate
+                        </label>
+                    </div>
+                    <div class="quick-check-item">
+                        <label class="safety-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Pulse and blood pressure are stable
+                        </label>
+                    </div>
+                    <div class="quick-check-item">
+                        <label class="safety-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Emergency equipment is readily available
+                        </label>
+                    </div>
+                    <div class="quick-check-item">
+                        <label class="safety-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Emergency personnel have been notified if needed
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn--primary" onclick="printEmergencyChecklist()">Print Checklist</button>
+                    <button class="btn btn--outline" onclick="closeModal('emergency-modal')">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Risk Assessment -->
+    <div id="risk-modal" class="modal hidden" role="dialog" aria-labelledby="risk-modal-title">
+        <div class="modal-backdrop" onclick="closeModal('risk-modal')"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="risk-modal-title">Comprehensive Risk Assessment</h3>
+                <button class="modal-close" onclick="closeModal('risk-modal')" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="risk-assessment-content">
+                    <!-- Content populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="safety-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Emergency Contacts</h4>
+                    <div class="contact-list">
+                        <p>Emergency: <strong>911</strong></p>
+                        <p>Poison Control: <strong>1-800-222-1222</strong></p>
+                        <p>Safety Hotline: <strong>(555) SAFETY</strong></p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" target="_blank">FDA Radiation Safety</a></li>
+                        <li><a href="#" target="_blank">ACR Guidelines</a></li>
+                        <li><a href="#" target="_blank">Patient Safety Network</a></li>
+                        <li><a href="#" target="_blank">Radiation Protection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Compliance</h4>
+                    <div class="compliance-info">
+                        <p>This resource complies with:</p>
+                        <ul class="compliance-list">
+                            <li>FDA 21 CFR Part 1020</li>
+                            <li>Joint Commission Standards</li>
+                            <li>ACR Quality & Safety</li>
+                            <li>HIPAA Privacy Rules</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Last Updated</h4>
+                    <p>Safety information current as of August 2024</p>
+                    <p>Medical review: Dr. Sarah Johnson, MD</p>
+                    <p>Radiation physicist: Michael Chen, PhD</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Safety Information Center. All rights reserved. This information is for educational purposes and does not replace professional medical advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Print Styles -->
+    <div class="print-only">
+        <h1>X-Ray & CT Scan Safety Information</h1>
+        <p>Printed from: Safety Information Center</p>
+        <p>Date: <span id="print-date"></span></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRI Complete Guide - Comprehensive Learning Resource</title>
+    <meta name="description" content="Complete educational resource for MRI procedures, technology, safety, and medical applications. Learn everything about Magnetic Resonance Imaging.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="mri-header" role="banner">
+        <nav class="container">
+            <div class="header-brand">
+                <div class="mri-logo">
+                    <span class="mri-logo__icon">🧲</span>
+                    <div class="mri-logo__text">
+                        <h1 class="header-title">MRI Complete Guide</h1>
+                        <p class="header-subtitle">Magnetic Resonance Imaging Education</p>
+                    </div>
+                </div>
+                
+                <div class="mri-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Radiation Exposure</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30-90</span>
+                        <span class="stat-label">Minutes Duration</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1.5-3T</span>
+                        <span class="stat-label">Magnetic Field</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Quick Navigation -->
+    <nav class="quick-nav" role="navigation" aria-label="Quick navigation">
+        <div class="container">
+            <div class="nav-links">
+                <a href="#how-it-works" class="nav-link">How MRI Works</a>
+                <a href="#applications" class="nav-link">Medical Applications</a>
+                <a href="#what-to-expect" class="nav-link">What to Expect</a>
+                <a href="#comparison" class="nav-link">MRI vs Other Imaging</a>
+                <a href="#types" class="nav-link">Types of MRI</a>
+                <a href="#safety" class="nav-link">Safety Information</a>
+                <a href="#preparation" class="nav-link">Preparation</a>
+                <a href="#results" class="nav-link">Understanding Results</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn--outline btn--sm" onclick="toggleSearch()">🔍 Search Guide</button>
+                <button class="btn btn--primary btn--sm" onclick="showPreparationChecklist()">Preparation Checklist</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div id="search-bar" class="search-bar hidden">
+        <div class="container">
+            <div class="search-input-container">
+                <input type="text" id="mri-search" class="search-input" placeholder="Search MRI information..." aria-label="Search MRI topics">
+                <button class="search-btn" onclick="performSearch()">Search</button>
+                <button class="search-close" onclick="toggleSearch()">×</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">MRI Complete Guide</h1>
+                        <p class="hero-description">Your comprehensive resource for understanding Magnetic Resonance Imaging. Learn about the technology, safety, medical applications, and what to expect during your MRI procedure.</p>
+                        
+                        <div class="mri-benefits">
+                            <div class="benefit-card">
+                                <span class="benefit-icon">✅</span>
+                                <div class="benefit-content">
+                                    <h3>No Radiation</h3>
+                                    <p>Uses magnetic fields and radio waves - completely safe</p>
+                                </div>
+                            </div>
+                            <div class="benefit-card">
+                                <span class="benefit-icon">🎯</span>
+                                <div class="benefit-content">
+                                    <h3>Superior Detail</h3>
+                                    <p>Exceptional soft tissue contrast and resolution</p>
+                                </div>
+                            </div>
+                            <div class="benefit-card">
+                                <span class="benefit-icon">🔄</span>
+                                <div class="benefit-content">
+                                    <h3>Multiple Planes</h3>
+                                    <p>Images in any direction without repositioning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('how-it-works')">Learn How MRI Works</button>
+                        <button class="btn btn--outline btn--lg" onclick="scrollToSection('applications')">See Medical Uses</button>
+                        <button class="btn btn--secondary btn--lg" onclick="showInteractiveBody()">Interactive Body Map</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How MRI Works Section -->
+        <section id="how-it-works" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How MRI Works</h2>
+                    <p class="section-description">Understanding the technology behind magnetic resonance imaging</p>
+                </div>
+
+                <div class="mri-process">
+                    <div class="process-step" data-step="1">
+                        <div class="step-visual">
+                            <div class="step-number">1</div>
+                            <div class="step-animation magnetic-field"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Magnetic Field Alignment</h3>
+                            <p>Strong magnetic field (1.5-3 Tesla) aligns hydrogen atoms (protons) in your body</p>
+                            <div class="step-detail">
+                                <p>The MRI scanner creates a powerful magnetic field thousands of times stronger than Earth's magnetic field</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="2">
+                        <div class="step-visual">
+                            <div class="step-number">2</div>
+                            <div class="step-animation radio-waves"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Radio Wave Pulse</h3>
+                            <p>Radio waves are pulsed through the body, disturbing the alignment of protons</p>
+                            <div class="step-detail">
+                                <p>These radio frequency pulses are specific to hydrogen atoms and cause them to absorb energy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="3">
+                        <div class="step-visual">
+                            <div class="step-number">3</div>
+                            <div class="step-animation signal-detection"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Signal Detection</h3>
+                            <p>As protons return to alignment, they release energy that is detected by receiver coils</p>
+                            <div class="step-detail">
+                                <p>Different tissues release energy at different rates, creating tissue-specific signals</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="4">
+                        <div class="step-visual">
+                            <div class="step-number">4</div>
+                            <div class="step-animation image-reconstruction"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Image Reconstruction</h3>
+                            <p>Computer processes signals and converts them into detailed cross-sectional images</p>
+                            <div class="step-detail">
+                                <p>Advanced algorithms create high-resolution images showing anatomy and pathology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mri-advantages">
+                    <h3>MRI Advantages</h3>
+                    <div class="advantages-grid">
+                        <div class="advantage-item">
+                            <span class="advantage-icon">🚫☢️</span>
+                            <span>No ionizing radiation exposure</span>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-icon">🎯</span>
+                            <span>Superior soft tissue contrast</span>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-icon">📐</span>
+                            <span>Multiple imaging planes</span>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-icon">🧠</span>
+                            <span>Functional imaging capabilities</span>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-icon">🔄</span>
+                            <span>Safe for repeated examinations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medical Applications Section -->
+        <section id="applications" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Medical Applications</h2>
+                    <p class="section-description">Comprehensive overview of MRI uses across medical specialties</p>
+                </div>
+
+                <div class="applications-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-btn tab-btn--active" onclick="showApplication('neurological')">🧠 Brain & Spine</button>
+                        <button class="tab-btn" onclick="showApplication('musculoskeletal')">🦴 Joints & Muscles</button>
+                        <button class="tab-btn" onclick="showApplication('abdominal')">🫁 Abdomen & Pelvis</button>
+                        <button class="tab-btn" onclick="showApplication('cardiac')">❤️ Heart & Vessels</button>
+                        <button class="tab-btn" onclick="showApplication('breast')">🎗️ Breast Imaging</button>
+                    </div>
+
+                    <div id="neurological-content" class="application-content">
+                        <div class="application-header">
+                            <h3>Brain & Spine Imaging</h3>
+                            <p>Exceptional detail of brain tissue, white matter, and spinal cord structures</p>
+                        </div>
+                        <div class="application-grid">
+                            <div class="application-list">
+                                <h4>Common Applications:</h4>
+                                <ul>
+                                    <li>Stroke diagnosis and monitoring</li>
+                                    <li>Brain tumors and masses</li>
+                                    <li>Multiple sclerosis</li>
+                                    <li>Epilepsy evaluation</li>
+                                    <li>Dementia and memory disorders</li>
+                                    <li>Spinal cord injuries</li>
+                                    <li>Herniated discs</li>
+                                    <li>Spinal stenosis</li>
+                                </ul>
+                            </div>
+                            <div class="application-visual">
+                                <div class="body-diagram brain-spine"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="musculoskeletal-content" class="application-content hidden">
+                        <div class="application-header">
+                            <h3>Joints & Soft Tissues</h3>
+                            <p>Superior visualization of cartilage, ligaments, and soft tissues not visible on X-rays</p>
+                        </div>
+                        <div class="application-grid">
+                            <div class="application-list">
+                                <h4>Common Applications:</h4>
+                                <ul>
+                                    <li>Sports injuries (ACL, rotator cuff)</li>
+                                    <li>Joint cartilage evaluation</li>
+                                    <li>Ligament and tendon tears</li>
+                                    <li>Soft tissue masses</li>
+                                    <li>Arthritis assessment</li>
+                                    <li>Bone infections</li>
+                                    <li>Muscle disorders</li>
+                                    <li>Joint replacement evaluation</li>
+                                </ul>
+                            </div>
+                            <div class="application-visual">
+                                <div class="body-diagram joints"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="abdominal-content" class="application-content hidden">
+                        <div class="application-header">
+                            <h3>Abdomen & Pelvis</h3>
+                            <p>Excellent soft tissue contrast without radiation, ideal for serial monitoring</p>
+                        </div>
+                        <div class="application-grid">
+                            <div class="application-list">
+                                <h4>Common Applications:</h4>
+                                <ul>
+                                    <li>Liver tumors and cirrhosis</li>
+                                    <li>Kidney masses and stones</li>
+                                    <li>Pancreatic disorders</li>
+                                    <li>Uterine fibroids</li>
+                                    <li>Ovarian cysts</li>
+                                    <li>Prostate evaluation</li>
+                                    <li>Inflammatory bowel disease</li>
+                                    <li>Adrenal gland disorders</li>
+                                </ul>
+                            </div>
+                            <div class="application-visual">
+                                <div class="body-diagram abdomen"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cardiac-content" class="application-content hidden">
+                        <div class="application-header">
+                            <h3>Heart & Blood Vessels</h3>
+                            <p>Comprehensive cardiac function assessment without radiation or invasive procedures</p>
+                        </div>
+                        <div class="application-grid">
+                            <div class="application-list">
+                                <h4>Common Applications:</h4>
+                                <ul>
+                                    <li>Heart muscle damage assessment</li>
+                                    <li>Congenital heart disease</li>
+                                    <li>Aortic aneurysms</li>
+                                    <li>Heart valve function</li>
+                                    <li>Cardiomyopathy</li>
+                                    <li>Cardiac masses</li>
+                                    <li>Pericardial disease</li>
+                                    <li>Vascular malformations</li>
+                                </ul>
+                            </div>
+                            <div class="application-visual">
+                                <div class="body-diagram heart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="breast-content" class="application-content hidden">
+                        <div class="application-header">
+                            <h3>Breast Imaging</h3>
+                            <p>Most sensitive method for breast cancer detection, especially in dense tissue</p>
+                        </div>
+                        <div class="application-grid">
+                            <div class="application-list">
+                                <h4>Common Applications:</h4>
+                                <ul>
+                                    <li>High-risk screening (BRCA carriers)</li>
+                                    <li>Dense breast tissue evaluation</li>
+                                    <li>Cancer extent assessment</li>
+                                    <li>Treatment response monitoring</li>
+                                    <li>Implant evaluation</li>
+                                    <li>Silicone leak detection</li>
+                                    <li>Occult primary cancer</li>
+                                    <li>Pre-surgical planning</li>
+                                </ul>
+                            </div>
+                            <div class="application-visual">
+                                <div class="body-diagram breast"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect Section -->
+        <section id="what-to-expect" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What to Expect</h2>
+                    <p class="section-description">Complete timeline and experience guide for your MRI procedure</p>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-section" data-phase="before">
+                        <div class="timeline-header">
+                            <h3>Before Your Exam</h3>
+                            <span class="timeline-duration">30 minutes</span>
+                        </div>
+                        <div class="timeline-activities">
+                            <div class="activity-item">
+                                <span class="activity-icon">📋</span>
+                                <span>Complete safety screening questionnaire</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">👔</span>
+                                <span>Change into MRI-safe gown if needed</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">💍</span>
+                                <span>Remove all metal objects and jewelry</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">🩺</span>
+                                <span>Discuss medical history and implants</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">💉</span>
+                                <span>Start IV line if contrast is needed</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">❓</span>
+                                <span>Review procedure and answer questions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-section" data-phase="during">
+                        <div class="timeline-header">
+                            <h3>During Your Exam</h3>
+                            <span class="timeline-duration">30-90 minutes</span>
+                        </div>
+                        <div class="timeline-activities">
+                            <div class="activity-item">
+                                <span class="activity-icon">🛏️</span>
+                                <span>Position comfortably on padded table</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">🎧</span>
+                                <span>Receive ear protection for noise</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">🔧</span>
+                                <span>Use positioning devices for stability</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">🗣️</span>
+                                <span>Maintain communication via intercom</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">🤐</span>
+                                <span>Hold still during image acquisition</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">💨</span>
+                                <span>Follow breathing instructions when needed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-section" data-phase="after">
+                        <div class="timeline-header">
+                            <h3>After Your Exam</h3>
+                            <span class="timeline-duration">15 minutes</span>
+                        </div>
+                        <div class="timeline-activities">
+                            <div class="activity-item">
+                                <span class="activity-icon">🚪</span>
+                                <span>Remove from scanner safely</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">✅</span>
+                                <span>Check for any immediate reactions</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">📝</span>
+                                <span>Receive post-exam instructions</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">📅</span>
+                                <span>Schedule follow-up if needed</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">💉</span>
+                                <span>Remove IV line if contrast was used</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">🏃</span>
+                                <span>Resume normal activities immediately</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comfort-measures">
+                    <h3>Comfort Measures Available</h3>
+                    <div class="comfort-grid">
+                        <div class="comfort-item">
+                            <span class="comfort-icon">🛏️</span>
+                            <h4>Padded Positioning</h4>
+                            <p>Comfortable padding and positioning devices</p>
+                        </div>
+                        <div class="comfort-item">
+                            <span class="comfort-icon">🧣</span>
+                            <h4>Warmth</h4>
+                            <p>Blankets available for temperature comfort</p>
+                        </div>
+                        <div class="comfort-item">
+                            <span class="comfort-icon">🎵</span>
+                            <h4>Sound Management</h4>
+                            <p>Music or earplugs to reduce noise</p>
+                        </div>
+                        <div class="comfort-item">
+                            <span class="comfort-icon">🆘</span>
+                            <h4>Emergency Button</h4>
+                            <p>Panic button always within reach</p>
+                        </div>
+                        <div class="comfort-item">
+                            <span class="comfort-icon">🔓</span>
+                            <h4>Open Design</h4>
+                            <p>Wide-bore scanners available</p>
+                        </div>
+                        <div class="comfort-item">
+                            <span class="comfort-icon">😌</span>
+                            <h4>Sedation Options</h4>
+                            <p>Medication for severe claustrophobia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MRI vs Other Imaging Section -->
+        <section id="comparison" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">MRI vs Other Imaging</h2>
+                    <p class="section-description">Interactive comparison of different medical imaging methods</p>
+                </div>
+
+                <div class="comparison-tool">
+                    <div class="comparison-controls">
+                        <h3>Select Imaging Methods to Compare:</h3>
+                        <div class="method-checkboxes">
+                            <label class="comparison-checkbox">
+                                <input type="checkbox" value="mri" checked>
+                                <span class="checkbox-custom"></span>
+                                MRI
+                            </label>
+                            <label class="comparison-checkbox">
+                                <input type="checkbox" value="ct" checked>
+                                <span class="checkbox-custom"></span>
+                                CT Scan
+                            </label>
+                            <label class="comparison-checkbox">
+                                <input type="checkbox" value="xray">
+                                <span class="checkbox-custom"></span>
+                                X-Ray
+                            </label>
+                            <label class="comparison-checkbox">
+                                <input type="checkbox" value="ultrasound">
+                                <span class="checkbox-custom"></span>
+                                Ultrasound
+                            </label>
+                        </div>
+                        <button class="btn btn--primary" onclick="updateComparison()">Update Comparison</button>
+                    </div>
+
+                    <div class="comparison-table-container">
+                        <table id="comparison-table" class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Radiation</th>
+                                    <th>Soft Tissue Detail</th>
+                                    <th>Bone Detail</th>
+                                    <th>Time Required</th>
+                                    <th>Cost</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody id="comparison-table-body">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="when-choose-mri">
+                    <h3>When Doctors Choose MRI</h3>
+                    <div class="choice-scenarios">
+                        <div class="scenario-card">
+                            <h4>Brain & Nervous System</h4>
+                            <p>MRI is preferred for detailed brain imaging, stroke evaluation, and neurological conditions due to superior soft tissue contrast.</p>
+                        </div>
+                        <div class="scenario-card">
+                            <h4>Joint & Muscle Problems</h4>
+                            <p>Essential for evaluating cartilage, ligaments, and soft tissue injuries that X-rays cannot detect.</p>
+                        </div>
+                        <div class="scenario-card">
+                            <h4>Repeated Monitoring</h4>
+                            <p>Safe for frequent follow-up scans due to no radiation exposure, ideal for chronic conditions.</p>
+                        </div>
+                        <div class="scenario-card">
+                            <h4>Pediatric Imaging</h4>
+                            <p>Preferred for children when possible to avoid radiation exposure during development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types of MRI Exams Section -->
+        <section id="types" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Types of MRI Exams</h2>
+                    <p class="section-description">Understanding different MRI sequences and specialized techniques</p>
+                </div>
+
+                <div class="mri-types-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-btn tab-btn--active" onclick="showMRIType('standard')">Standard Sequences</button>
+                        <button class="tab-btn" onclick="showMRIType('specialized')">Specialized Techniques</button>
+                        <button class="tab-btn" onclick="showMRIType('contrast')">Contrast Studies</button>
+                    </div>
+
+                    <div id="standard-content" class="mri-type-content">
+                        <div class="sequence-grid">
+                            <div class="sequence-card">
+                                <h3>T1-Weighted</h3>
+                                <div class="sequence-details">
+                                    <p><strong>Description:</strong> Provides excellent anatomical detail</p>
+                                    <p><strong>Appearance:</strong> Fat appears bright, fluid appears dark</p>
+                                    <p><strong>Uses:</strong> Anatomy, post-contrast enhancement</p>
+                                </div>
+                            </div>
+                            
+                            <div class="sequence-card">
+                                <h3>T2-Weighted</h3>
+                                <div class="sequence-details">
+                                    <p><strong>Description:</strong> Shows pathology and inflammation well</p>
+                                    <p><strong>Appearance:</strong> Fluid appears bright, fat appears intermediate</p>
+                                    <p><strong>Uses:</strong> Detecting edema, tumors, inflammation</p>
+                                </div>
+                            </div>
+
+                            <div class="sequence-card">
+                                <h3>FLAIR</h3>
+                                <div class="sequence-details">
+                                    <p><strong>Description:</strong> Suppresses normal fluid signals</p>
+                                    <p><strong>Appearance:</strong> Highlights abnormal areas near fluid</p>
+                                    <p><strong>Uses:</strong> Brain lesions, multiple sclerosis</p>
+                                </div>
+                            </div>
+
+                            <div class="sequence-card">
+                                <h3>Diffusion (DWI)</h3>
+                                <div class="sequence-details">
+                                    <p><strong>Description:</strong> Detects restricted water movement</p>
+                                    <p><strong>Appearance:</strong> Acute strokes appear bright</p>
+                                    <p><strong>Uses:</strong> Stroke, infections, some tumors</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="specialized-content" class="mri-type-content hidden">
+                        <div class="specialized-grid">
+                            <div class="specialized-card">
+                                <h3>MR Angiography (MRA)</h3>
+                                <div class="specialized-details">
+                                    <p><strong>Purpose:</strong> Images blood vessels without invasive procedures</p>
+                                    <p><strong>Applications:</strong> Aneurysms, stenosis, vascular malformations</p>
+                                </div>
+                            </div>
+
+                            <div class="specialized-card">
+                                <h3>Functional MRI (fMRI)</h3>
+                                <div class="specialized-details">
+                                    <p><strong>Purpose:</strong> Maps brain activity during tasks</p>
+                                    <p><strong>Applications:</strong> Pre-surgical brain mapping, research</p>
+                                </div>
+                            </div>
+
+                            <div class="specialized-card">
+                                <h3>Cardiac MRI</h3>
+                                <div class="specialized-details">
+                                    <p><strong>Purpose:</strong> Comprehensive heart structure and function</p>
+                                    <p><strong>Applications:</strong> Heart disease, function assessment</p>
+                                </div>
+                            </div>
+
+                            <div class="specialized-card">
+                                <h3>MRCP</h3>
+                                <div class="specialized-details">
+                                    <p><strong>Purpose:</strong> Images bile ducts and pancreatic ducts</p>
+                                    <p><strong>Applications:</strong> Gallstones, duct obstruction, pancreatitis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="contrast-content" class="mri-type-content hidden">
+                        <div class="contrast-info">
+                            <div class="contrast-overview">
+                                <h3>Gadolinium-Based Contrast Agents</h3>
+                                <p>MRI contrast agents help enhance the visibility of certain tissues and abnormalities.</p>
+                            </div>
+
+                            <div class="contrast-comparison">
+                                <div class="contrast-pros">
+                                    <h4>Advantages</h4>
+                                    <ul>
+                                        <li>Much safer than iodine-based CT contrast</li>
+                                        <li>Less than 0.1% severe reaction rate</li>
+                                        <li>Better tumor detection and characterization</li>
+                                        <li>Vascular imaging enhancement</li>
+                                    </ul>
+                                </div>
+
+                                <div class="contrast-considerations">
+                                    <h4>Considerations</h4>
+                                    <ul>
+                                        <li>Caution in severe kidney disease (eGFR <30)</li>
+                                        <li>Generally avoided in pregnancy</li>
+                                        <li>May cause temporary metallic taste</li>
+                                        <li>Kidney function testing may be required</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information Section -->
+        <section id="safety" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Safety Information</h2>
+                    <p class="section-description">Comprehensive MRI safety guidelines and considerations</p>
+                </div>
+
+                <div class="safety-categories">
+                    <div class="safety-card safety-card--safe">
+                        <div class="safety-header">
+                            <h3>🚫☢️ No Ionizing Radiation</h3>
+                        </div>
+                        <div class="safety-benefits">
+                            <ul>
+                                <li>Completely safe from radiation exposure</li>
+                                <li>No cumulative radiation effects</li>
+                                <li>Safe for repeated examinations</li>
+                                <li>Preferred for children and young adults</li>
+                                <li>No increased cancer risk</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="safety-card safety-card--caution">
+                        <div class="safety-header">
+                            <h3>⚠️ Metal Safety Considerations</h3>
+                        </div>
+                        <div class="safety-content">
+                            <div class="prohibited-items">
+                                <h4>Prohibited Items:</h4>
+                                <ul>
+                                    <li>Pacemakers (unless MRI-conditional)</li>
+                                    <li>Cochlear implants (older models)</li>
+                                    <li>Metallic foreign bodies in eyes</li>
+                                    <li>Some aneurysm clips</li>
+                                    <li>Insulin pumps and nerve stimulators</li>
+                                </ul>
+                            </div>
+                            <div class="conditional-items">
+                                <h4>Generally Safe (Conditional):</h4>
+                                <ul>
+                                    <li>Modern pacemakers (MRI-conditional)</li>
+                                    <li>Some cardiac devices</li>
+                                    <li>Orthopedic implants (most are safe)</li>
+                                    <li>Dental fillings and crowns</li>
+                                    <li>Surgical clips (most safe after 6 weeks)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="safety-card safety-card--info">
+                        <div class="safety-header">
+                            <h3>💉 Contrast Safety</h3>
+                        </div>
+                        <div class="contrast-safety-info">
+                            <div class="safety-stats">
+                                <div class="stat">
+                                    <span class="stat-value">Much Safer</span>
+                                    <span class="stat-label">than CT contrast</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">&lt;0.1%</span>
+                                    <span class="stat-label">severe reactions</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">eGFR &lt;30</span>
+                                    <span class="stat-label">kidney caution</span>
+                                </div>
+                            </div>
+                            <p><strong>Pregnancy:</strong> Generally avoided, especially in first trimester</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screening-importance">
+                    <h3>Pre-Procedure Screening</h3>
+                    <div class="screening-steps">
+                        <div class="screening-step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Medical History Review</h4>
+                                <p>Detailed review of surgeries, implants, and medical conditions</p>
+                            </div>
+                        </div>
+                        <div class="screening-step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Metal Detection</h4>
+                                <p>Screening for any metallic objects or implants</p>
+                            </div>
+                        </div>
+                        <div class="screening-step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Safety Clearance</h4>
+                                <p>Final safety check before entering MRI room</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparation Section -->
+        <section id="preparation" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Preparation Guide</h2>
+                    <p class="section-description">Everything you need to know to prepare for your MRI exam</p>
+                </div>
+
+                <div class="preparation-categories">
+                    <div class="prep-card">
+                        <div class="prep-header">
+                            <h3>👔 Clothing & Personal Items</h3>
+                        </div>
+                        <div class="prep-checklist">
+                            <div class="checklist-item">
+                                <span class="checklist-icon">✅</span>
+                                <span>Comfortable clothes without metal</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">✅</span>
+                                <span>No underwire bras</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">✅</span>
+                                <span>Remove all jewelry and watches</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">✅</span>
+                                <span>Avoid clothing with zippers or snaps</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">ℹ️</span>
+                                <span>Hospital gown provided if needed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prep-card">
+                        <div class="prep-header">
+                            <h3>📋 Medical History</h3>
+                        </div>
+                        <div class="prep-checklist">
+                            <div class="checklist-item">
+                                <span class="checklist-icon">📝</span>
+                                <span>Previous surgeries and implants</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">💊</span>
+                                <span>Allergies to medications</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">🫘</span>
+                                <span>Kidney problems</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">👶</span>
+                                <span>Pregnancy status</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">😰</span>
+                                <span>Claustrophobia or anxiety</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">💉</span>
+                                <span>Current medications</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prep-card">
+                        <div class="prep-header">
+                            <h3>📅 Day of Exam</h3>
+                        </div>
+                        <div class="prep-checklist">
+                            <div class="checklist-item">
+                                <span class="checklist-icon">⏰</span>
+                                <span>Arrive 30 minutes early</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">🆔</span>
+                                <span>Bring insurance cards and ID</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">📋</span>
+                                <span>Complete safety questionnaire</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">❓</span>
+                                <span>Ask questions about the procedure</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon">🗣️</span>
+                                <span>Inform staff of any concerns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-checklist">
+                    <h3>Interactive Pre-Exam Checklist</h3>
+                    <div class="checklist-form">
+                        <div class="checklist-section">
+                            <h4>Personal Preparation</h4>
+                            <label class="interactive-checkbox">
+                                <input type="checkbox" name="prep-items">
+                                <span class="checkbox-custom"></span>
+                                I have removed all jewelry and metal objects
+                            </label>
+                            <label class="interactive-checkbox">
+                                <input type="checkbox" name="prep-items">
+                                <span class="checkbox-custom"></span>
+                                I am wearing clothing without metal fasteners
+                            </label>
+                            <label class="interactive-checkbox">
+                                <input type="checkbox" name="prep-items">
+                                <span class="checkbox-custom"></span>
+                                I have my insurance cards and identification
+                            </label>
+                        </div>
+
+                        <div class="checklist-section">
+                            <h4>Medical Information</h4>
+                            <label class="interactive-checkbox">
+                                <input type="checkbox" name="prep-items">
+                                <span class="checkbox-custom"></span>
+                                I have informed staff of any implants or devices
+                            </label>
+                            <label class="interactive-checkbox">
+                                <input type="checkbox" name="prep-items">
+                                <span class="checkbox-custom"></span>
+                                I have disclosed all allergies and medications
+                            </label>
+                            <label class="interactive-checkbox">
+                                <input type="checkbox" name="prep-items">
+                                <span class="checkbox-custom"></span>
+                                I have reported any claustrophobia concerns
+                            </label>
+                        </div>
+
+                        <div class="checklist-actions">
+                            <button class="btn btn--primary" onclick="checkPreparation()">Check My Preparation</button>
+                            <button class="btn btn--outline" onclick="printChecklist()">Print Checklist</button>
+                        </div>
+                        
+                        <div id="preparation-results" class="preparation-results hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Results Section -->
+        <section id="results" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Understanding Your Results</h2>
+                    <p class="section-description">What happens after your MRI and how to understand your results</p>
+                </div>
+
+                <div class="results-process">
+                    <div class="process-card">
+                        <div class="process-icon">👨‍⚕️</div>
+                        <div class="process-content">
+                            <h3>Radiologist Review</h3>
+                            <p>Board-certified radiologist carefully examines all images and creates detailed written report</p>
+                        </div>
+                    </div>
+
+                    <div class="process-arrow">→</div>
+
+                    <div class="process-card">
+                        <div class="process-icon">📝</div>
+                        <div class="process-content">
+                            <h3>Report Generation</h3>
+                            <p>Comprehensive written report detailing findings and recommendations</p>
+                        </div>
+                    </div>
+
+                    <div class="process-arrow">→</div>
+
+                    <div class="process-card">
+                        <div class="process-icon">🩺</div>
+                        <div class="process-content">
+                            <h3>Doctor Consultation</h3>
+                            <p>Your physician explains findings and discusses next steps in your care</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-expectations">
+                    <h3>Results Timeline</h3>
+                    <div class="timeline-grid">
+                        <div class="timeline-item timeline-item--routine">
+                            <div class="timeline-badge">Routine</div>
+                            <h4>1-3 Business Days</h4>
+                            <p>Standard processing time for most MRI studies</p>
+                        </div>
+                        <div class="timeline-item timeline-item--urgent">
+                            <div class="timeline-badge">Urgent</div>
+                            <h4>Same Day or 24 Hours</h4>
+                            <p>Priority processing for urgent clinical situations</p>
+                        </div>
+                        <div class="timeline-item timeline-item--stat">
+                            <div class="timeline-badge">STAT</div>
+                            <h4>1-2 Hours</h4>
+                            <p>Immediate processing for emergency situations</p>
+                        </div>
+                        <div class="timeline-item timeline-item--complex">
+                            <div class="timeline-badge">Complex</div>
+                            <h4>Additional Time</h4>
+                            <p>Complex cases may require additional consultation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="understanding-findings">
+                    <h3>Understanding Common Terms</h3>
+                    <div class="terms-accordion">
+                        <div class="accordion-item" onclick="toggleAccordion(this)">
+                            <div class="accordion-header">
+                                <h4>Normal vs. Abnormal</h4>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>"Normal" means no significant abnormalities were detected. "Abnormal" doesn't always mean serious - it could indicate minor changes that need monitoring or are age-related.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" onclick="toggleAccordion(this)">
+                            <div class="accordion-header">
+                                <h4>Enhancement</h4>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Areas that appear brighter after contrast injection. This can help identify inflammation, tumors, or increased blood flow to tissues.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" onclick="toggleAccordion(this)">
+                            <div class="accordion-header">
+                                <h4>Signal Intensity</h4>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Describes how bright or dark tissues appear on MRI images. Different signal intensities help identify various tissue types and abnormalities.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" onclick="toggleAccordion(this)">
+                            <div class="accordion-header">
+                                <h4>Incidental Findings</h4>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Unexpected findings unrelated to the reason for your MRI. Most are benign but may require follow-up to ensure they remain stable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-description">Common questions and concerns about MRI procedures</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-category">
+                        <h3>Safety & General Questions</h3>
+                        <div class="faq-list">
+                            <div class="faq-item" onclick="toggleFAQ(this)">
+                                <div class="faq-question">
+                                    <h4>Is MRI safe?</h4>
+                                    <span class="faq-icon">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>MRI is very safe with no ionizing radiation. The magnetic fields and radio waves used have no known harmful effects. Millions of MRI scans are performed safely each year.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" onclick="toggleFAQ(this)">
+                                <div class="faq-question">
+                                    <h4>What if I'm claustrophobic?</h4>
+                                    <span class="faq-icon">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Many options are available including open-bore scanners, sedation, music, and support from our staff. Most patients complete their exam successfully even with claustrophobia.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" onclick="toggleFAQ(this)">
+                                <div class="faq-question">
+                                    <h4>Can I have an MRI with metal implants?</h4>
+                                    <span class="faq-icon">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Many implants are MRI-safe, especially newer ones. We'll review your specific implants and may need documentation from your doctor or the device manufacturer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-category">
+                        <h3>Procedure Questions</h3>
+                        <div class="faq-list">
+                            <div class="faq-item" onclick="toggleFAQ(this)">
+                                <div class="faq-question">
+                                    <h4>How long does an MRI take?</h4>
+                                    <span class="faq-icon">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Most MRI exams take 30-90 minutes, depending on the body part being imaged and the number of sequences needed. You'll know the expected time before your exam.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" onclick="toggleFAQ(this)">
+                                <div class="faq-question">
+                                    <h4>Do I need contrast for my MRI?</h4>
+                                    <span class="faq-icon">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Contrast is used in about 30% of MRI exams to enhance certain structures or detect specific conditions. Your doctor will determine if contrast is needed for your particular study.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" onclick="toggleFAQ(this)">
+                                <div class="faq-question">
+                                    <h4>Can I eat before my MRI?</h4>
+                                    <span class="faq-icon">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>For most MRI exams, you can eat normally. However, some abdominal studies may require fasting. You'll receive specific instructions when you schedule your exam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Body Map Modal -->
+    <div id="body-map-modal" class="modal hidden" role="dialog" aria-labelledby="body-map-title">
+        <div class="modal-backdrop" onclick="closeModal('body-map-modal')"></div>
+        <div class="modal-content modal-content--large">
+            <div class="modal-header">
+                <h3 id="body-map-title">Interactive Body Map - MRI Applications</h3>
+                <button class="modal-close" onclick="closeModal('body-map-modal')" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="body-map-container">
+                    <div class="body-diagram-interactive">
+                        <div class="body-region" data-region="head" onclick="showBodyRegionInfo('head')">
+                            <div class="region-label">Head</div>
+                        </div>
+                        <div class="body-region" data-region="spine" onclick="showBodyRegionInfo('spine')">
+                            <div class="region-label">Spine</div>
+                        </div>
+                        <div class="body-region" data-region="chest" onclick="showBodyRegionInfo('chest')">
+                            <div class="region-label">Chest</div>
+                        </div>
+                        <div class="body-region" data-region="abdomen" onclick="showBodyRegionInfo('abdomen')">
+                            <div class="region-label">Abdomen</div>
+                        </div>
+                        <div class="body-region" data-region="joints" onclick="showBodyRegionInfo('joints')">
+                            <div class="region-label">Joints</div>
+                        </div>
+                    </div>
+                    <div id="region-info" class="region-info">
+                        <h4>Click on a body region to learn about MRI applications</h4>
+                        <p>Select any highlighted area to see detailed information about how MRI is used for that part of the body.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preparation Checklist Modal -->
+    <div id="preparation-modal" class="modal hidden" role="dialog" aria-labelledby="prep-modal-title">
+        <div class="modal-backdrop" onclick="closeModal('preparation-modal')"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="prep-modal-title">MRI Preparation Checklist</h3>
+                <button class="modal-close" onclick="closeModal('preparation-modal')" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="quick-prep-checklist">
+                    <h4>Before Your Arrival:</h4>
+                    <div class="quick-check-item">
+                        <label class="prep-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Remove all jewelry and metal objects
+                        </label>
+                    </div>
+                    <div class="quick-check-item">
+                        <label class="prep-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Wear comfortable clothes without metal
+                        </label>
+                    </div>
+                    <div class="quick-check-item">
+                        <label class="prep-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Bring insurance cards and ID
+                        </label>
+                    </div>
+                    <div class="quick-check-item">
+                        <label class="prep-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            List all medications and implants
+                        </label>
+                    </div>
+                    <div class="quick-check-item">
+                        <label class="prep-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox-custom"></span>
+                            Arrive 30 minutes early
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn--primary" onclick="printPreparationGuide()">Print Full Guide</button>
+                    <button class="btn btn--outline" onclick="closeModal('preparation-modal')">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mri-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About This Guide</h4>
+                    <p>Comprehensive MRI education resource created for patients, families, and healthcare professionals.</p>
+                    <div class="footer-stats">
+                        <span>Updated August 2024</span><br>
+                        <span>Medical Review: Dr. Sarah Johnson, MD</span><br>
+                        <span>MRI Physicist: Dr. Michael Chen, PhD</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Additional Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" target="_blank">ACR MRI Safety Guidelines</a></li>
+                        <li><a href="#" target="_blank">FDA MRI Information</a></li>
+                        <li><a href="#" target="_blank">MRI Safety Institute</a></li>
+                        <li><a href="#" target="_blank">Patient Education Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#how-it-works">How MRI Works</a></li>
+                        <li><a href="#applications">Medical Applications</a></li>
+                        <li><a href="#safety">Safety Information</a></li>
+                        <li><a href="#preparation">Preparation Guide</a></li>
+                        <li><a href="#faq">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MRI Complete Guide. This educational resource is for informational purposes only and does not replace professional medical advice. Always consult with your healthcare provider.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

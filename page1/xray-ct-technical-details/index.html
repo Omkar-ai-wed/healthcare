@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Details Center - X-Ray & CT Scan Imaging Systems</title>
+    <meta name="description" content="Comprehensive technical resource for medical imaging professionals covering X-Ray and CT scanner specifications, performance metrics, and implementation details.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header and Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar container" aria-label="Main navigation">
+            <div class="navbar__brand">
+                <div class="navbar__icon">☢️</div>
+                <h1 class="navbar__title">Technical Details Center</h1>
+            </div>
+            <ul class="navbar__menu" role="menubar">
+                <li role="none"><a href="#xray-specs" class="navbar__link" role="menuitem">X-Ray Tech</a></li>
+                <li role="none"><a href="#ct-specs" class="navbar__link" role="menuitem">CT Systems</a></li>
+                <li role="none"><a href="#digital-imaging" class="navbar__link" role="menuitem">Digital Imaging</a></li>
+                <li role="none"><a href="#network-integration" class="navbar__link" role="menuitem">Network</a></li>
+                <li role="none"><a href="#dose-optimization" class="navbar__link" role="menuitem">Dose Control</a></li>
+                <li role="none"><a href="#quality-assurance" class="navbar__link" role="menuitem">QA/QC</a></li>
+                <li role="none"><a href="#performance" class="navbar__link" role="menuitem">Performance</a></li>
+                <li role="none"><a href="#calculators" class="navbar__link" role="menuitem">Calculators</a></li>
+            </ul>
+            <button class="navbar__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <!-- Progress Indicator -->
+        <div class="progress-indicator" id="progressIndicator">
+            <div class="progress-bar"></div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__icon">☢️</div>
+                    <h1 class="hero__title">Technical Details Center</h1>
+                    <p class="hero__subtitle">Comprehensive technical specifications and performance metrics for medical imaging systems</p>
+                    
+                    <div class="hero__stats">
+                        <div class="tech-stat-card">
+                            <div class="tech-stat__value">16-320+</div>
+                            <div class="tech-stat__label">Detector Rows</div>
+                            <div class="tech-stat__unit">CT Systems</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat__value">0.28-2.0s</div>
+                            <div class="tech-stat__label">Rotation Time</div>
+                            <div class="tech-stat__unit">Per Revolution</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat__value">40-150kVp</div>
+                            <div class="tech-stat__label">Tube Voltage</div>
+                            <div class="tech-stat__unit">X-Ray Range</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat__value">60-80%</div>
+                            <div class="tech-stat__label">DQE Efficiency</div>
+                            <div class="tech-stat__unit">Digital Detectors</div>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('xray-specs')">📊 X-Ray Specifications</button>
+                        <button class="btn btn--secondary btn--lg" onclick="scrollToSection('ct-specs')">🔬 CT Technology</button>
+                        <button class="btn btn--outline btn--lg" onclick="scrollToSection('calculators')">⚙️ Technical Calculators</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- X-Ray Technology Specifications -->
+        <section id="xray-specs" class="xray-specs-section">
+            <div class="container">
+                <h2 class="section-title">X-Ray Technology Specifications</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-card__header">
+                            <h3>X-Ray Tube Specifications</h3>
+                            <div class="tech-badge">Critical Component</div>
+                        </div>
+                        <div class="tech-specs-table">
+                            <div class="spec-row">
+                                <span class="spec-label">Target Material:</span>
+                                <span class="spec-value">Tungsten (W)</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Anode Design:</span>
+                                <span class="spec-value">Rotating anode</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Focal Spot Size:</span>
+                                <span class="spec-value">0.6mm (fine) to 1.2mm (broad)</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Heat Capacity:</span>
+                                <span class="spec-value tech-highlight">300-500 kHU</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Cooling Rate:</span>
+                                <span class="spec-value tech-highlight">50-100 kHU/minute</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card__header">
+                            <h3>Generator Specifications</h3>
+                            <div class="tech-badge tech-badge--performance">High Performance</div>
+                        </div>
+                        <div class="tech-specs-table">
+                            <div class="spec-row">
+                                <span class="spec-label">Type:</span>
+                                <span class="spec-value">High-frequency</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Frequency:</span>
+                                <span class="spec-value">20-150 kHz</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Power Rating:</span>
+                                <span class="spec-value tech-highlight">32-100 kW</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Voltage Ripple:</span>
+                                <span class="spec-value tech-success">&lt;5%</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Efficiency:</span>
+                                <span class="spec-value tech-success">&gt;95%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card__header">
+                            <h3>Detection Systems</h3>
+                            <div class="tech-badge tech-badge--digital">Digital</div>
+                        </div>
+                        <div class="tech-specs-table">
+                            <div class="spec-row">
+                                <span class="spec-label">Digital Radiography:</span>
+                                <span class="spec-value">Direct/indirect conversion</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Computed Radiography:</span>
+                                <span class="spec-value">Photostimulable phosphor</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Detector Efficiency:</span>
+                                <span class="spec-value tech-highlight">60-80% DQE</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Dynamic Range:</span>
+                                <span class="spec-value tech-success">&gt;10,000:1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technical-parameters">
+                    <h3>Technical Parameters & Applications</h3>
+                    <div class="parameter-tabs">
+                        <button class="param-tab active" onclick="showParameters('voltage')">Tube Voltage</button>
+                        <button class="param-tab" onclick="showParameters('current')">Tube Current</button>
+                        <button class="param-tab" onclick="showParameters('exposure')">Exposure Time</button>
+                        <button class="param-tab" onclick="showParameters('image-quality')">Image Quality</button>
+                    </div>
+                    
+                    <div class="parameter-content">
+                        <div class="param-panel active" id="voltage-panel">
+                            <div class="parameter-grid">
+                                <div class="param-info">
+                                    <h4>Tube Voltage (kVp) Range: 40-150 kVp</h4>
+                                    <p class="param-description">Controls beam penetration and contrast. Accuracy: ±5%</p>
+                                    <div class="applications-list">
+                                        <h5>Clinical Applications:</h5>
+                                        <ul>
+                                            <li><strong>Extremities:</strong> 40-60 kVp</li>
+                                            <li><strong>Chest:</strong> 100-125 kVp</li>
+                                            <li><strong>Abdomen:</strong> 80-110 kVp</li>
+                                            <li><strong>Bones:</strong> 60-80 kVp</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="param-panel" id="current-panel">
+                            <div class="parameter-grid">
+                                <div class="param-info">
+                                    <h4>Tube Current (mAs) Range: 1-1000 mAs</h4>
+                                    <p class="param-description">Controls exposure amount and image density. Accuracy: ±10%</p>
+                                    <div class="feature-highlight">
+                                        <h5>Automatic Exposure Control (AEC)</h5>
+                                        <p>Available on most modern systems for consistent image quality</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="param-panel" id="exposure-panel">
+                            <div class="parameter-grid">
+                                <div class="param-info">
+                                    <h4>Exposure Time Range: 0.001-10 seconds</h4>
+                                    <p class="param-description">Minimum time: 1 millisecond. Accuracy: ±10% or ±1ms</p>
+                                    <div class="technical-note">
+                                        <h5>Source-Image Distance (SID)</h5>
+                                        <ul>
+                                            <li><strong>Standard:</strong> 100-180 cm</li>
+                                            <li><strong>Chest:</strong> 180 cm (72 inches)</li>
+                                            <li><strong>Table:</strong> 100-120 cm (40-48 inches)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="param-panel" id="image-quality-panel">
+                            <div class="parameter-grid">
+                                <div class="param-info">
+                                    <h4>Image Quality Specifications</h4>
+                                    <div class="quality-metrics">
+                                        <div class="metric-card">
+                                            <h5>Spatial Resolution</h5>
+                                            <p class="metric-value">Up to 10 line pairs per mm</p>
+                                        </div>
+                                        <div class="metric-card">
+                                            <h5>Contrast Resolution</h5>
+                                            <p class="metric-value">1-2% contrast detectability</p>
+                                        </div>
+                                        <div class="metric-card">
+                                            <h5>Matrix Size</h5>
+                                            <p class="metric-value">2048×2048 to 4096×4096 pixels</p>
+                                        </div>
+                                        <div class="metric-card">
+                                            <h5>Gray Scale</h5>
+                                            <p class="metric-value">12-16 bit depth</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CT Scanner Technology -->
+        <section id="ct-specs" class="ct-specs-section">
+            <div class="container">
+                <h2 class="section-title">CT Scanner Technology</h2>
+                
+                <div class="ct-architecture">
+                    <h3>Scanner Architecture & Design</h3>
+                    <div class="architecture-grid">
+                        <div class="arch-card">
+                            <h4>Gantry System</h4>
+                            <div class="arch-specs">
+                                <div class="arch-spec">
+                                    <span class="arch-label">Design:</span>
+                                    <span class="arch-value">Slip-ring technology</span>
+                                </div>
+                                <div class="arch-spec">
+                                    <span class="arch-label">Detector Rows:</span>
+                                    <span class="arch-value tech-highlight">16-320+ rows</span>
+                                </div>
+                                <div class="arch-spec">
+                                    <span class="arch-label">Aperture:</span>
+                                    <span class="arch-value">70-80 cm diameter</span>
+                                </div>
+                                <div class="arch-spec">
+                                    <span class="arch-label">Rotation Time:</span>
+                                    <span class="arch-value tech-success">0.28-2.0 seconds</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="arch-card">
+                            <h4>X-Ray System</h4>
+                            <div class="arch-specs">
+                                <div class="arch-spec">
+                                    <span class="arch-label">Tube Type:</span>
+                                    <span class="arch-value">Rotating anode</span>
+                                </div>
+                                <div class="arch-spec">
+                                    <span class="arch-label">Heat Capacity:</span>
+                                    <span class="arch-value tech-highlight">5-8 MHU</span>
+                                </div>
+                                <div class="arch-spec">
+                                    <span class="arch-label">Power Rating:</span>
+                                    <span class="arch-value">60-100 kW</span>
+                                </div>
+                                <div class="arch-spec">
+                                    <span class="arch-label">Cooling System:</span>
+                                    <span class="arch-value">Liquid cooling</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="arch-card">
+                            <h4>Patient Table</h4>
+                            <div class="arch-specs">
+                                <div class="arch-spec">
+                                    <span class="arch-label">Max Weight:</span>
+                                    <span class="arch-value">200-300 kg</span>
+                                </div>
+                                <div class="arch-spec">
+                                    <span class="arch-label">Table Speed:</span>
+                                    <span class="arch-value tech-highlight">Up to 300 mm/second</span>
+                                </div>
+                                <div class="arch-spec">
+                                    <span class="arch-label">Vertical Range:</span>
+                                    <span class="arch-value">±25 cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ct-features">
+                    <h3>Advanced Technical Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🌀</div>
+                            <h4>Helical Scanning</h4>
+                            <ul class="feature-list">
+                                <li>Continuous table movement during rotation</li>
+                                <li>Pitch range: 0.5-2.0</li>
+                                <li>Optimized for speed and coverage</li>
+                                <li>Reduced motion artifacts</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">🔍</div>
+                            <h4>Image Reconstruction</h4>
+                            <ul class="feature-list">
+                                <li>Filtered back projection algorithms</li>
+                                <li>Iterative reconstruction methods</li>
+                                <li>Slice thickness: 0.5-10 mm</li>
+                                <li>Matrix: 512×512 to 1024×1024</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">📐</div>
+                            <h4>3D/MPR Capabilities</h4>
+                            <ul class="feature-list">
+                                <li>Multiplanar reconstruction</li>
+                                <li>Volume rendering</li>
+                                <li>Real-time processing</li>
+                                <li>Advanced visualization tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-specifications">
+                    <h3>Performance Specifications</h3>
+                    <div class="performance-table">
+                        <div class="perf-header">
+                            <div class="perf-cell">Parameter</div>
+                            <div class="perf-cell">Specification</div>
+                            <div class="perf-cell">Clinical Impact</div>
+                        </div>
+                        <div class="perf-row">
+                            <div class="perf-cell perf-label">Spatial Resolution</div>
+                            <div class="perf-cell">0.35-0.7 mm at 50% MTF</div>
+                            <div class="perf-cell">Fine detail visualization</div>
+                        </div>
+                        <div class="perf-row">
+                            <div class="perf-cell perf-label">Contrast Resolution</div>
+                            <div class="perf-cell">3-5 mm objects at 0.3-0.5% contrast</div>
+                            <div class="perf-cell">Soft tissue differentiation</div>
+                        </div>
+                        <div class="perf-row">
+                            <div class="perf-cell perf-label">Temporal Resolution</div>
+                            <div class="perf-cell">75-175 ms (cardiac)</div>
+                            <div class="perf-cell">Motion artifact reduction</div>
+                        </div>
+                        <div class="perf-row">
+                            <div class="perf-cell perf-label">Slice Accuracy</div>
+                            <div class="perf-cell">±0.5 mm for slices ≥2.5 mm</div>
+                            <div class="perf-cell">Precise localization</div>
+                        </div>
+                        <div class="perf-row">
+                            <div class="perf-cell perf-label">Noise Level</div>
+                            <div class="perf-cell">&lt;0.5% standard deviation</div>
+                            <div class="perf-cell">Image quality consistency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Imaging Technology -->
+        <section id="digital-imaging" class="digital-imaging-section">
+            <div class="container">
+                <h2 class="section-title">Digital Imaging Technology</h2>
+                
+                <div class="digital-comparison">
+                    <h3>Digital Radiography Systems</h3>
+                    <div class="detector-types">
+                        <div class="detector-card">
+                            <h4>Indirect Conversion</h4>
+                            <div class="detector-tech">
+                                <div class="tech-detail">
+                                    <span class="detail-label">Scintillator:</span>
+                                    <span class="detail-value">Cesium iodide (CsI)</span>
+                                </div>
+                                <div class="tech-detail">
+                                    <span class="detail-label">Photodiode:</span>
+                                    <span class="detail-value">Amorphous silicon (a-Si)</span>
+                                </div>
+                                <div class="tech-detail">
+                                    <span class="detail-label">Advantage:</span>
+                                    <span class="detail-value tech-success">Higher light collection</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detector-card">
+                            <h4>Direct Conversion</h4>
+                            <div class="detector-tech">
+                                <div class="tech-detail">
+                                    <span class="detail-label">Photoconductor:</span>
+                                    <span class="detail-value">Amorphous selenium (a-Se)</span>
+                                </div>
+                                <div class="tech-detail">
+                                    <span class="detail-label">Collection:</span>
+                                    <span class="detail-value">Direct electron collection</span>
+                                </div>
+                                <div class="tech-detail">
+                                    <span class="detail-label">Advantage:</span>
+                                    <span class="detail-value tech-success">Superior spatial resolution</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-metrics">
+                    <h3>Performance Metrics</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-panel">
+                            <h4>Detective Quantum Efficiency (DQE)</h4>
+                            <div class="metric-display">
+                                <span class="metric-number">60-80%</span>
+                                <span class="metric-condition">at optimal conditions</span>
+                            </div>
+                        </div>
+                        <div class="metric-panel">
+                            <h4>Dynamic Range</h4>
+                            <div class="metric-display">
+                                <span class="metric-number">&gt;10,000:1</span>
+                                <span class="metric-condition">exposure latitude</span>
+                            </div>
+                        </div>
+                        <div class="metric-panel">
+                            <h4>Linearity</h4>
+                            <div class="metric-display">
+                                <span class="metric-number">&lt;±2%</span>
+                                <span class="metric-condition">deviation</span>
+                            </div>
+                        </div>
+                        <div class="metric-panel">
+                            <h4>Pixel Size</h4>
+                            <div class="metric-display">
+                                <span class="metric-number">100-200</span>
+                                <span class="metric-condition">micrometers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-processing">
+                    <h3>Image Processing Pipeline</h3>
+                    <div class="processing-stages">
+                        <div class="stage-card">
+                            <h4>Preprocessing</h4>
+                            <ul class="stage-list">
+                                <li>Dark current subtraction</li>
+                                <li>Flat field correction</li>
+                                <li>Bad pixel correction</li>
+                                <li>Gain calibration</li>
+                            </ul>
+                        </div>
+                        <div class="stage-card">
+                            <h4>Enhancement</h4>
+                            <ul class="stage-list">
+                                <li>Edge enhancement</li>
+                                <li>Noise reduction</li>
+                                <li>Histogram optimization</li>
+                                <li>Dynamic range compression</li>
+                            </ul>
+                        </div>
+                        <div class="stage-card">
+                            <h4>Measurements</h4>
+                            <ul class="stage-list">
+                                <li>Distance measurements</li>
+                                <li>Angle calculations</li>
+                                <li>Area computations</li>
+                                <li>Density analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Network Integration -->
+        <section id="network-integration" class="network-section">
+            <div class="container">
+                <h2 class="section-title">Network & Integration Technology</h2>
+                
+                <div class="integration-overview">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <h3>PACS Integration</h3>
+                            <div class="integration-status status--success">Active</div>
+                        </div>
+                        <div class="integration-details">
+                            <div class="detail-row">
+                                <span class="detail-key">DICOM Compliance:</span>
+                                <span class="detail-value">DICOM 3.0 standard</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-key">Network Protocols:</span>
+                                <span class="detail-value">TCP/IP, HL7</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-key">Compression:</span>
+                                <span class="detail-value">JPEG 2000 lossless/lossy</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-key">Storage Capacity:</span>
+                                <span class="detail-value tech-highlight">Terabyte to petabyte scale</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <h3>Workflow Integration</h3>
+                            <div class="integration-status status--success">Optimized</div>
+                        </div>
+                        <div class="integration-details">
+                            <div class="detail-row">
+                                <span class="detail-key">HIS/RIS Integration:</span>
+                                <span class="detail-value">Hospital/Radiology Information Systems</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-key">Worklist Management:</span>
+                                <span class="detail-value">Automatic scheduling and routing</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-key">Report Generation:</span>
+                                <span class="detail-value">Integrated with voice recognition</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-key">Quality Assurance:</span>
+                                <span class="detail-value">Automated monitoring and alerts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="connectivity-standards">
+                    <h3>Communication Standards & Interoperability</h3>
+                    <div class="standards-grid">
+                        <div class="standard-card">
+                            <h4>DICOM</h4>
+                            <p>Digital Imaging and Communications in Medicine standard for medical image storage and transmission</p>
+                        </div>
+                        <div class="standard-card">
+                            <h4>HL7</h4>
+                            <p>Health Level Seven international standard for health information exchange</p>
+                        </div>
+                        <div class="standard-card">
+                            <h4>IHE Profiles</h4>
+                            <p>Integrating the Healthcare Enterprise profiles for seamless workflow integration</p>
+                        </div>
+                        <div class="standard-card">
+                            <h4>Web Services</h4>
+                            <p>RESTful APIs for modern cloud-based integration and mobile access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dose Optimization -->
+        <section id="dose-optimization" class="dose-section">
+            <div class="container">
+                <h2 class="section-title">Radiation Dose Optimization</h2>
+                
+                <div class="dose-technologies">
+                    <h3>Dose Reduction Technologies</h3>
+                    <div class="dose-tech-grid">
+                        <div class="dose-tech-card">
+                            <div class="dose-icon">⚡</div>
+                            <h4>Automatic Exposure Control</h4>
+                            <p>Real-time dose adjustment based on patient anatomy and imaging requirements</p>
+                            <div class="dose-benefit">Dose Reduction: 20-40%</div>
+                        </div>
+                        <div class="dose-tech-card">
+                            <div class="dose-icon">🔄</div>
+                            <h4>Iterative Reconstruction</h4>
+                            <p>Advanced algorithms that maintain image quality while reducing radiation dose</p>
+                            <div class="dose-benefit">Dose Reduction: 30-60%</div>
+                        </div>
+                        <div class="dose-tech-card">
+                            <div class="dose-icon">🛡️</div>
+                            <h4>Beam Filtration</h4>
+                            <p>Spectral shaping optimization removes low-energy photons to reduce patient dose</p>
+                            <div class="dose-benefit">Improved Image Quality</div>
+                        </div>
+                        <div class="dose-tech-card">
+                            <div class="dose-icon">📐</div>
+                            <h4>Precise Collimation</h4>
+                            <p>Accurate field limitation reduces unnecessary radiation exposure</p>
+                            <div class="dose-benefit">Targeted Exposure</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ct-dose-management">
+                    <h3>CT Dose Management Systems</h3>
+                    <div class="dose-management-features">
+                        <div class="dose-feature">
+                            <h4>Dose Modulation</h4>
+                            <div class="feature-details">
+                                <p>Automatic tube current modulation adjusts exposure based on patient size and anatomy</p>
+                                <ul>
+                                    <li>Angular modulation (x,y plane)</li>
+                                    <li>Longitudinal modulation (z-axis)</li>
+                                    <li>Combined 3D modulation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dose-feature">
+                            <h4>Organ-Based Dose Reduction</h4>
+                            <div class="feature-details">
+                                <p>Specialized techniques for radiation-sensitive organs</p>
+                                <ul>
+                                    <li>Bismuth shielding for superficial organs</li>
+                                    <li>ECG gating for cardiac studies</li>
+                                    <li>Pediatric-specific protocols</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dose-metrics">
+                    <h3>Dose Metrics & Monitoring</h3>
+                    <div class="metrics-dashboard">
+                        <div class="dose-metric-card">
+                            <h4>CTDIvol</h4>
+                            <p class="metric-description">CT Dose Index volume - standardized dose measurement</p>
+                            <div class="metric-range">Typical Range: 5-25 mGy</div>
+                        </div>
+                        <div class="dose-metric-card">
+                            <h4>DLP</h4>
+                            <p class="metric-description">Dose Length Product - total dose for entire exam</p>
+                            <div class="metric-range">Units: mGy·cm</div>
+                        </div>
+                        <div class="dose-metric-card">
+                            <h4>Effective Dose</h4>
+                            <p class="metric-description">Whole-body equivalent dose estimation</p>
+                            <div class="metric-range">Units: mSv</div>
+                        </div>
+                        <div class="dose-metric-card">
+                            <h4>Organ Doses</h4>
+                            <p class="metric-description">Specific organ dose estimates for risk assessment</p>
+                            <div class="metric-range">Monte Carlo calculations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Assurance -->
+        <section id="quality-assurance" class="qa-section">
+            <div class="container">
+                <h2 class="section-title">Quality Assurance & Performance Monitoring</h2>
+                
+                <div class="qa-protocols">
+                    <div class="qa-category">
+                        <h3>Daily QA Protocols</h3>
+                        <div class="qa-checklist">
+                            <div class="qa-item">
+                                <div class="qa-check">✓</div>
+                                <div class="qa-details">
+                                    <h4>Image Quality Phantoms</h4>
+                                    <p>Standard test objects for spatial resolution, contrast sensitivity, and uniformity</p>
+                                </div>
+                            </div>
+                            <div class="qa-item">
+                                <div class="qa-check">✓</div>
+                                <div class="qa-details">
+                                    <h4>Dosimetry Verification</h4>
+                                    <p>Ion chamber and TLD measurements for output consistency</p>
+                                </div>
+                            </div>
+                            <div class="qa-item">
+                                <div class="qa-check">✓</div>
+                                <div class="qa-details">
+                                    <h4>Mechanical Checks</h4>
+                                    <p>Table movement, laser alignment, and positioning accuracy</p>
+                                </div>
+                            </div>
+                            <div class="qa-item">
+                                <div class="qa-check">✓</div>
+                                <div class="qa-details">
+                                    <h4>Safety System Verification</h4>
+                                    <p>Interlocks, emergency stops, and radiation indicators</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qa-category">
+                        <h3>Periodic QA Testing</h3>
+                        <div class="periodic-tests">
+                            <div class="test-card">
+                                <h4>CT Number Accuracy</h4>
+                                <div class="test-spec">
+                                    <span class="spec-label">Tolerance:</span>
+                                    <span class="spec-value">±5 HU</span>
+                                </div>
+                                <div class="test-frequency">Monthly</div>
+                            </div>
+                            <div class="test-card">
+                                <h4>Spatial Resolution</h4>
+                                <div class="test-spec">
+                                    <span class="spec-label">Test Method:</span>
+                                    <span class="spec-value">High-contrast phantom</span>
+                                </div>
+                                <div class="test-frequency">Quarterly</div>
+                            </div>
+                            <div class="test-card">
+                                <h4>Low Contrast Detection</h4>
+                                <div class="test-spec">
+                                    <span class="spec-label">Sensitivity:</span>
+                                    <span class="spec-value">0.3-0.5% contrast</span>
+                                </div>
+                                <div class="test-frequency">Quarterly</div>
+                            </div>
+                            <div class="test-card">
+                                <h4>Uniformity Testing</h4>
+                                <div class="test-spec">
+                                    <span class="spec-label">Tolerance:</span>
+                                    <span class="spec-value">±5 HU across FOV</span>
+                                </div>
+                                <div class="test-frequency">Monthly</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-monitoring">
+                    <h3>Real-Time Performance Monitoring</h3>
+                    <div class="monitoring-dashboard">
+                        <div class="monitor-panel">
+                            <h4>System Metrics</h4>
+                            <div class="metrics-list">
+                                <div class="metric-item">
+                                    <span class="metric-name">Uptime:</span>
+                                    <span class="metric-value tech-success">&gt;95%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">MTBF:</span>
+                                    <span class="metric-value">&gt;8760 hours</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-name">MTTR:</span>
+                                    <span class="metric-value">&lt;4 hours</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="monitor-panel">
+                            <h4>Dose Tracking</h4>
+                            <div class="dose-tracking">
+                                <p>Comprehensive monitoring of patient dose metrics with automated alerts for dose level management</p>
+                                <div class="tracking-features">
+                                    <span class="tracking-feature">Real-time display</span>
+                                    <span class="tracking-feature">Historical trends</span>
+                                    <span class="tracking-feature">Registry compliance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Specifications -->
+        <section id="performance" class="performance-section">
+            <div class="container">
+                <h2 class="section-title">System Performance Specifications</h2>
+                
+                <div class="performance-comparison">
+                    <div class="perf-selector">
+                        <button class="perf-btn active" onclick="showPerformance('xray')">X-Ray Performance</button>
+                        <button class="perf-btn" onclick="showPerformance('ct')">CT Performance</button>
+                        <button class="perf-btn" onclick="showPerformance('reliability')">System Reliability</button>
+                    </div>
+
+                    <div class="performance-content">
+                        <div class="perf-panel active" id="xray-performance">
+                            <h3>X-Ray System Performance</h3>
+                            <div class="performance-grid">
+                                <div class="perf-metric">
+                                    <h4>Tube Heat Capacity</h4>
+                                    <div class="metric-bar">
+                                        <div class="bar-fill" style="width: 75%"></div>
+                                        <span class="bar-label">300-500 kHU storage</span>
+                                    </div>
+                                </div>
+                                <div class="perf-metric">
+                                    <h4>Cooling Rate</h4>
+                                    <div class="metric-bar">
+                                        <div class="bar-fill" style="width: 60%"></div>
+                                        <span class="bar-label">50-100 kHU/minute</span>
+                                    </div>
+                                </div>
+                                <div class="perf-metric">
+                                    <h4>Generator Ripple</h4>
+                                    <div class="metric-bar">
+                                        <div class="bar-fill bar-success" style="width: 95%"></div>
+                                        <span class="bar-label">&lt;5% voltage ripple</span>
+                                    </div>
+                                </div>
+                                <div class="perf-metric">
+                                    <h4>kVp Accuracy</h4>
+                                    <div class="metric-bar">
+                                        <div class="bar-fill bar-success" style="width: 95%"></div>
+                                        <span class="bar-label">±5% across all factors</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="perf-panel" id="ct-performance">
+                            <h3>CT System Performance</h3>
+                            <div class="performance-grid">
+                                <div class="perf-metric">
+                                    <h4>Spatial Resolution</h4>
+                                    <div class="metric-bar">
+                                        <div class="bar-fill bar-success" style="width: 85%"></div>
+                                        <span class="bar-label">0.35-0.7 mm at 50% MTF</span>
+                                    </div>
+                                </div>
+                                <div class="perf-metric">
+                                    <h4>Contrast Resolution</h4>
+                                    <div class="metric-bar">
+                                        <div class="bar-fill bar-success" style="width: 80%"></div>
+                                        <span class="bar-label">3-5 mm at 0.3-0.5% contrast</span>
+                                    </div>
+                                </div>
+                                <div class="perf-metric">
+                                    <h4>Temporal Resolution</h4>
+                                    <div class="metric-bar">
+                                        <div class="bar-fill" style="width: 70%"></div>
+                                        <span class="bar-label">75-175 ms cardiac</span>
+                                    </div>
+                                </div>
+                                <div class="perf-metric">
+                                    <h4>Noise Levels</h4>
+                                    <div class="metric-bar">
+                                        <div class="bar-fill bar-success" style="width: 95%"></div>
+                                        <span class="bar-label">&lt;0.5% std deviation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="perf-panel" id="reliability-performance">
+                            <h3>System Reliability & Uptime</h3>
+                            <div class="reliability-stats">
+                                <div class="reliability-card">
+                                    <div class="reliability-icon">📊</div>
+                                    <h4>System Availability</h4>
+                                    <div class="reliability-value">&gt;95%</div>
+                                    <p>Operational uptime across all systems</p>
+                                </div>
+                                <div class="reliability-card">
+                                    <div class="reliability-icon">⏱️</div>
+                                    <h4>Mean Time Between Failures</h4>
+                                    <div class="reliability-value">&gt;8760 hours</div>
+                                    <p>Average operational time before service needed</p>
+                                </div>
+                                <div class="reliability-card">
+                                    <div class="reliability-icon">🔧</div>
+                                    <h4>Mean Time To Repair</h4>
+                                    <div class="reliability-value">&lt;4 hours</div>
+                                    <p>Average time to restore system operation</p>
+                                </div>
+                                <div class="reliability-card">
+                                    <div class="reliability-icon">🛠️</div>
+                                    <h4>Preventive Maintenance</h4>
+                                    <div class="reliability-value">Every 6 months</div>
+                                    <p>Scheduled maintenance intervals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Calculators -->
+        <section id="calculators" class="calculators-section">
+            <div class="container">
+                <h2 class="section-title">Technical Calculators & Tools</h2>
+                
+                <div class="calculators-grid">
+                    <div class="calculator-card">
+                        <h3>mAs Calculator</h3>
+                        <div class="calculator-form">
+                            <div class="calc-input-group">
+                                <label for="mA-input">Tube Current (mA):</label>
+                                <input type="number" id="mA-input" class="calc-input" min="1" max="1000" value="100">
+                            </div>
+                            <div class="calc-input-group">
+                                <label for="time-input">Exposure Time (s):</label>
+                                <input type="number" id="time-input" class="calc-input" min="0.001" max="10" step="0.001" value="0.1">
+                            </div>
+                            <div class="calc-result">
+                                <span class="result-label">mAs Result:</span>
+                                <span class="result-value" id="mas-result">10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-card">
+                        <h3>Heat Unit Calculator</h3>
+                        <div class="calculator-form">
+                            <div class="calc-input-group">
+                                <label for="kvp-input">kVp:</label>
+                                <input type="number" id="kvp-input" class="calc-input" min="40" max="150" value="80">
+                            </div>
+                            <div class="calc-input-group">
+                                <label for="mas-input">mAs:</label>
+                                <input type="number" id="mas-input" class="calc-input" min="1" max="1000" value="10">
+                            </div>
+                            <div class="calc-result">
+                                <span class="result-label">Heat Units:</span>
+                                <span class="result-value" id="hu-result">800</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-card">
+                        <h3>Magnification Factor</h3>
+                        <div class="calculator-form">
+                            <div class="calc-input-group">
+                                <label for="sid-input">SID (cm):</label>
+                                <input type="number" id="sid-input" class="calc-input" min="50" max="200" value="100">
+                            </div>
+                            <div class="calc-input-group">
+                                <label for="sod-input">SOD (cm):</label>
+                                <input type="number" id="sod-input" class="calc-input" min="10" max="150" value="90">
+                            </div>
+                            <div class="calc-result">
+                                <span class="result-label">Magnification:</span>
+                                <span class="result-value" id="mag-result">1.11</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-card">
+                        <h3>CT Dose Calculator</h3>
+                        <div class="calculator-form">
+                            <div class="calc-input-group">
+                                <label for="ctdi-input">CTDIvol (mGy):</label>
+                                <input type="number" id="ctdi-input" class="calc-input" min="1" max="50" step="0.1" value="10">
+                            </div>
+                            <div class="calc-input-group">
+                                <label for="length-input">Scan Length (cm):</label>
+                                <input type="number" id="length-input" class="calc-input" min="1" max="100" value="20">
+                            </div>
+                            <div class="calc-result">
+                                <span class="result-label">DLP (mGy·cm):</span>
+                                <span class="result-value" id="dlp-result">200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specification-database">
+                    <h3>Equipment Specification Database</h3>
+                    <div class="database-search">
+                        <input type="text" id="spec-search" class="search-input" placeholder="Search specifications...">
+                        <button class="btn btn--primary" onclick="searchSpecifications()">🔍 Search</button>
+                    </div>
+                    <div class="database-results" id="database-results">
+                        <p>Enter search terms to find technical specifications...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__disclaimer">
+                    <h3>Technical Resource Disclaimer</h3>
+                    <p>This technical resource is intended for qualified healthcare professionals, medical physicists, biomedical engineers, and technical staff. All specifications are typical values and may vary by manufacturer and model.</p>
+                </div>
+                <div class="footer__actions">
+                    <button class="btn btn--outline" onclick="exportTechnicalData()">📊 Export Technical Data</button>
+                    <button class="btn btn--secondary" onclick="printSpecifications()">🖨️ Print Specifications</button>
+                    <button class="btn btn--info" onclick="downloadCalculators()">⚙️ Download Calculators</button>
+                </div>
+                <div class="footer__info">
+                    <p>&copy; 2025 Technical Details Center - Medical Imaging Systems. Professional technical resource for healthcare technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Technical Modal -->
+    <div id="techModal" class="modal hidden" role="dialog" aria-labelledby="techModalTitle" aria-hidden="true">
+        <div class="modal-overlay" onclick="closeTechModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="techModalTitle"></h3>
+                <button class="modal-close" onclick="closeTechModal()" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="techModalBody">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Processing technical data...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

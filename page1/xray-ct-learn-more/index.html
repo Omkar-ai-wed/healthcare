@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Ray & CT Scan Complete Guide - Diagnostic Imaging Education</title>
+    <meta name="description" content="Comprehensive educational resource about X-Ray and CT scan procedures, safety, preparation, and medical applications for patients and healthcare professionals.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header and Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar container" aria-label="Main navigation">
+            <div class="navbar__brand">
+                <h1 class="navbar__title">X-Ray & CT Scan Guide</h1>
+            </div>
+            <ul class="navbar__menu" role="menubar">
+                <li role="none"><a href="#overview" class="navbar__link" role="menuitem">Overview</a></li>
+                <li role="none"><a href="#applications" class="navbar__link" role="menuitem">Medical Uses</a></li>
+                <li role="none"><a href="#experience" class="navbar__link" role="menuitem">Patient Experience</a></li>
+                <li role="none"><a href="#safety" class="navbar__link" role="menuitem">Safety</a></li>
+                <li role="none"><a href="#comparison" class="navbar__link" role="menuitem">Comparison</a></li>
+                <li role="none"><a href="#preparation" class="navbar__link" role="menuitem">Preparation</a></li>
+                <li role="none"><a href="#faq" class="navbar__link" role="menuitem">FAQ</a></li>
+            </ul>
+            <button class="navbar__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <!-- Progress Indicator -->
+        <div class="progress-indicator" id="progressIndicator">
+            <div class="progress-bar"></div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">X-Ray & CT Scan Complete Guide</h1>
+                    <p class="hero__subtitle">Understanding ionizing radiation imaging for better healthcare decisions</p>
+                    
+                    <div class="hero__stats">
+                        <div class="stat-card">
+                            <div class="stat-card__number">5B+</div>
+                            <div class="stat-card__text">X-rays annually worldwide</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">80M+</div>
+                            <div class="stat-card__text">CT scans in US annually</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">95%+</div>
+                            <div class="stat-card__text">Diagnostic accuracy</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__number">99%</div>
+                            <div class="stat-card__text">Hospital availability</div>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('overview')">📚 Learn Basics</button>
+                        <button class="btn btn--secondary btn--lg" onclick="scrollToSection('comparison')">⚖️ Compare Options</button>
+                        <button class="btn btn--outline btn--lg" onclick="scrollToSection('preparation')">✅ Preparation Guide</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="overview-section">
+            <div class="container">
+                <h2 class="section-title">What Are X-Rays and CT Scans?</h2>
+                
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="overview-card__header">
+                            <div class="overview-card__icon">🦴</div>
+                            <h3>X-Ray Imaging</h3>
+                            <div class="overview-card__date">Discovered 1895</div>
+                        </div>
+                        <div class="overview-card__content">
+                            <p>X-rays use electromagnetic radiation to create 2D images of internal body structures, particularly excellent for bones and dense tissues.</p>
+                            <div class="feature-list">
+                                <div class="feature-item">⚡ Quick 5-15 minute procedures</div>
+                                <div class="feature-item">💰 Lower cost and widely available</div>
+                                <div class="feature-item">🔬 Minimal radiation exposure</div>
+                                <div class="feature-item">🦴 Excellent for bone imaging</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="overview-card__header">
+                            <div class="overview-card__icon">🧠</div>
+                            <h3>CT Scanning</h3>
+                            <div class="overview-card__date">Invented 1972</div>
+                        </div>
+                        <div class="overview-card__content">
+                            <p>Computed Tomography combines X-ray technology with computer processing to create detailed 3D cross-sectional images.</p>
+                            <div class="feature-list">
+                                <div class="feature-item">🔍 Superior image detail and quality</div>
+                                <div class="feature-item">📊 3D visualization capabilities</div>
+                                <div class="feature-item">🩺 Excellent for soft tissues</div>
+                                <div class="feature-item">⚕️ Can guide surgical procedures</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technology-explanation">
+                    <h3>How These Technologies Work</h3>
+                    <div class="explanation-tabs">
+                        <button class="explanation-tab active" onclick="showExplanation('xray')">X-Ray Process</button>
+                        <button class="explanation-tab" onclick="showExplanation('ct')">CT Process</button>
+                        <button class="explanation-tab" onclick="showExplanation('safety')">Safety Standards</button>
+                    </div>
+                    
+                    <div class="explanation-content">
+                        <div class="explanation-panel active" id="xray-explanation">
+                            <p>X-rays pass through your body, being absorbed differently by various tissues. Dense materials like bones appear white, while soft tissues appear in shades of gray, and air appears black.</p>
+                        </div>
+                        <div class="explanation-panel" id="ct-explanation">
+                            <p>CT scanners rotate around your body, taking multiple X-ray images from different angles. Computer algorithms reconstruct these into detailed cross-sectional images.</p>
+                        </div>
+                        <div class="explanation-panel" id="safety-explanation">
+                            <p>Both technologies follow ALARA principles (As Low As Reasonably Achievable) to minimize radiation exposure while maintaining diagnostic quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medical Applications Section -->
+        <section id="applications" class="applications-section">
+            <div class="container">
+                <h2 class="section-title">Medical Uses & Applications</h2>
+                
+                <div class="body-diagram-section">
+                    <h3>Interactive Body Areas</h3>
+                    <div class="body-diagram">
+                        <div class="diagram-placeholder">
+                            <p>Click on body areas to learn about imaging applications</p>
+                        </div>
+                        <div class="body-areas">
+                            <button class="body-area" data-area="head" onclick="showBodyAreaInfo('head')">🧠 Head & Neck</button>
+                            <button class="body-area" data-area="chest" onclick="showBodyAreaInfo('chest')">🫁 Chest</button>
+                            <button class="body-area" data-area="abdomen" onclick="showBodyAreaInfo('abdomen')">🏥 Abdomen</button>
+                            <button class="body-area" data-area="bones" onclick="showBodyAreaInfo('bones')">🦴 Bones & Joints</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="applications-grid">
+                    <div class="application-category">
+                        <h3>X-Ray Applications</h3>
+                        <div class="application-tabs">
+                            <button class="app-tab active" onclick="selectApplication('orthopedic')">Orthopedic</button>
+                            <button class="app-tab" onclick="selectApplication('respiratory')">Respiratory</button>
+                            <button class="app-tab" onclick="selectApplication('dental')">Dental</button>
+                        </div>
+                        
+                        <div class="application-content">
+                            <div class="app-panel active" id="orthopedic-panel">
+                                <ul class="application-list">
+                                    <li>Bone fractures and breaks</li>
+                                    <li>Joint problems and arthritis</li>
+                                    <li>Spine alignment issues</li>
+                                    <li>Sports-related injuries</li>
+                                </ul>
+                            </div>
+                            <div class="app-panel" id="respiratory-panel">
+                                <ul class="application-list">
+                                    <li>Pneumonia diagnosis</li>
+                                    <li>Lung infections</li>
+                                    <li>Tuberculosis screening</li>
+                                    <li>Chest conditions</li>
+                                </ul>
+                            </div>
+                            <div class="app-panel" id="dental-panel">
+                                <ul class="application-list">
+                                    <li>Tooth decay detection</li>
+                                    <li>Root canal problems</li>
+                                    <li>Jaw alignment issues</li>
+                                    <li>Oral health screening</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="application-category">
+                        <h3>CT Scan Applications</h3>
+                        <div class="application-tabs">
+                            <button class="app-tab active" onclick="selectCTApplication('neurological')">Neurological</button>
+                            <button class="app-tab" onclick="selectCTApplication('oncology')">Oncology</button>
+                            <button class="app-tab" onclick="selectCTApplication('trauma')">Trauma</button>
+                        </div>
+                        
+                        <div class="application-content">
+                            <div class="ct-panel active" id="neurological-panel">
+                                <ul class="application-list">
+                                    <li>Head trauma assessment</li>
+                                    <li>Brain tumor detection</li>
+                                    <li>Stroke diagnosis</li>
+                                    <li>Seizure cause investigation</li>
+                                </ul>
+                            </div>
+                            <div class="ct-panel" id="oncology-panel">
+                                <ul class="application-list">
+                                    <li>Cancer detection and staging</li>
+                                    <li>Tumor monitoring</li>
+                                    <li>Treatment planning</li>
+                                    <li>Metastasis screening</li>
+                                </ul>
+                            </div>
+                            <div class="ct-panel" id="trauma-panel">
+                                <ul class="application-list">
+                                    <li>Multiple injury assessment</li>
+                                    <li>Internal bleeding detection</li>
+                                    <li>Complex fractures</li>
+                                    <li>Emergency diagnosis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patient Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <h2 class="section-title">What to Expect During Your Procedure</h2>
+                
+                <div class="procedure-selector">
+                    <button class="procedure-btn active" onclick="showProcedure('xray')">X-Ray Procedure</button>
+                    <button class="procedure-btn" onclick="showProcedure('ct')">CT Scan Procedure</button>
+                </div>
+
+                <div class="procedure-content">
+                    <div class="procedure-timeline active" id="xray-procedure">
+                        <h3>X-Ray Step-by-Step Process</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-number">1</div>
+                                <div class="timeline-content">
+                                    <h4>Preparation</h4>
+                                    <p>Remove jewelry and metal objects from the area being examined</p>
+                                    <div class="duration">1-2 minutes</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-number">2</div>
+                                <div class="timeline-content">
+                                    <h4>Positioning</h4>
+                                    <p>Technologist positions your body part for optimal imaging</p>
+                                    <div class="duration">2-3 minutes</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-number">3</div>
+                                <div class="timeline-content">
+                                    <h4>Image Capture</h4>
+                                    <p>Hold breath and remain still for 2-3 seconds while image is taken</p>
+                                    <div class="duration">5-10 seconds</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-number">4</div>
+                                <div class="timeline-content">
+                                    <h4>Completion</h4>
+                                    <p>Multiple views may be taken, then procedure is complete</p>
+                                    <div class="duration">5-15 minutes total</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-notes">
+                            <div class="note-card note--comfort">
+                                <h4>Comfort Level</h4>
+                                <p>Painless procedure. May need to hold uncomfortable positions briefly.</p>
+                            </div>
+                            <div class="note-card note--results">
+                                <h4>Results Timeline</h4>
+                                <p>Often available immediately for emergency situations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="procedure-timeline" id="ct-procedure">
+                        <h3>CT Scan Step-by-Step Process</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-number">1</div>
+                                <div class="timeline-content">
+                                    <h4>Preparation</h4>
+                                    <p>Change into hospital gown if needed, remove metal objects</p>
+                                    <div class="duration">5-10 minutes</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-number">2</div>
+                                <div class="timeline-content">
+                                    <h4>Positioning</h4>
+                                    <p>Lie on motorized examination table that moves through scanner</p>
+                                    <div class="duration">2-3 minutes</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-number">3</div>
+                                <div class="timeline-content">
+                                    <h4>Contrast (if needed)</h4>
+                                    <p>IV contrast dye may be administered for enhanced imaging</p>
+                                    <div class="duration">2-5 minutes</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-number">4</div>
+                                <div class="timeline-content">
+                                    <h4>Scanning</h4>
+                                    <p>Scanner rotates around body, follow breathing instructions</p>
+                                    <div class="duration">10-30 minutes</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-notes">
+                            <div class="note-card note--comfort">
+                                <h4>Comfort Level</h4>
+                                <p>Painless. May hear buzzing or clicking sounds. Open design reduces claustrophobia.</p>
+                            </div>
+                            <div class="note-card note--results">
+                                <h4>Results Timeline</h4>
+                                <p>Typically 24-48 hours for detailed radiologist review and report.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Information Section -->
+        <section id="safety" class="safety-section">
+            <div class="container">
+                <h2 class="section-title">Safety Information & Precautions</h2>
+                
+                <div class="safety-overview">
+                    <div class="safety-principle">
+                        <h3>ALARA Principle</h3>
+                        <p><strong>As Low As Reasonably Achievable</strong> - Medical facilities follow strict protocols to minimize radiation exposure while maintaining diagnostic quality.</p>
+                    </div>
+                </div>
+
+                <div class="radiation-comparison">
+                    <h3>Radiation Exposure Comparison</h3>
+                    <div class="comparison-chart">
+                        <div class="exposure-item">
+                            <div class="exposure-icon">✈️</div>
+                            <div class="exposure-label">Airline Flight</div>
+                            <div class="exposure-level">0.01 mSv</div>
+                        </div>
+                        <div class="exposure-item">
+                            <div class="exposure-icon">🦴</div>
+                            <div class="exposure-label">X-Ray</div>
+                            <div class="exposure-level">0.01-10 mSv</div>
+                        </div>
+                        <div class="exposure-item">
+                            <div class="exposure-icon">🧠</div>
+                            <div class="exposure-label">CT Scan</div>
+                            <div class="exposure-level">1-20 mSv</div>
+                        </div>
+                        <div class="exposure-item">
+                            <div class="exposure-icon">🌍</div>
+                            <div class="exposure-label">Annual Background</div>
+                            <div class="exposure-level">2-3 mSv</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="precautions-section">
+                    <h3>Important Precautions</h3>
+                    <div class="precautions-grid">
+                        <div class="precaution-card precaution--pregnancy">
+                            <div class="precaution-icon">🤱</div>
+                            <h4>Pregnancy</h4>
+                            <p>Always inform your doctor if you are pregnant or might be pregnant. Alternative imaging methods may be recommended.</p>
+                        </div>
+                        <div class="precaution-card precaution--contrast">
+                            <div class="precaution-icon">💉</div>
+                            <h4>Contrast Allergies</h4>
+                            <p>Report any allergies to iodine or contrast materials. Previous reactions should be discussed with your healthcare team.</p>
+                        </div>
+                        <div class="precaution-card precaution--medications">
+                            <div class="precaution-icon">💊</div>
+                            <h4>Medications</h4>
+                            <p>List all current medications and supplements, especially diabetes medications and blood thinners.</p>
+                        </div>
+                        <div class="precaution-card precaution--conditions">
+                            <div class="precaution-icon">🏥</div>
+                            <h4>Medical Conditions</h4>
+                            <p>Report kidney problems, diabetes, heart conditions, or any implanted devices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contrast-safety">
+                    <h3>Contrast Dye Safety Information</h3>
+                    <div class="contrast-grid">
+                        <div class="contrast-types">
+                            <h4>Types of Contrast</h4>
+                            <ul>
+                                <li>Iodine-based (IV contrast)</li>
+                                <li>Barium sulfate (oral contrast)</li>
+                                <li>Gadolinium (rare for CT)</li>
+                            </ul>
+                        </div>
+                        <div class="contrast-effects">
+                            <h4>Possible Side Effects</h4>
+                            <ul>
+                                <li>Warm sensation (normal)</li>
+                                <li>Metallic taste (normal)</li>
+                                <li>Nausea (rare)</li>
+                                <li>Allergic reaction (very rare)</li>
+                            </ul>
+                        </div>
+                        <div class="contrast-preparation">
+                            <h4>Preparation Required</h4>
+                            <p>Fast 4-6 hours before contrast studies. Stay hydrated after the procedure to help eliminate contrast from your system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="comparison-section">
+            <div class="container">
+                <h2 class="section-title">X-Ray vs CT Scan Comparison</h2>
+                
+                <div class="comparison-table-container">
+                    <div class="comparison-controls">
+                        <button class="comparison-btn active" onclick="showComparison('overview')">Overview</button>
+                        <button class="comparison-btn" onclick="showComparison('technical')">Technical</button>
+                        <button class="comparison-btn" onclick="showComparison('cost')">Cost & Access</button>
+                    </div>
+
+                    <div class="comparison-content">
+                        <div class="comparison-panel active" id="overview-comparison">
+                            <div class="comparison-table">
+                                <div class="comparison-header">
+                                    <div class="comparison-cell">Feature</div>
+                                    <div class="comparison-cell">X-Ray</div>
+                                    <div class="comparison-cell">CT Scan</div>
+                                </div>
+                                <div class="comparison-row">
+                                    <div class="comparison-cell feature-cell">Image Type</div>
+                                    <div class="comparison-cell">2D flat images</div>
+                                    <div class="comparison-cell">3D cross-sectional images</div>
+                                </div>
+                                <div class="comparison-row">
+                                    <div class="comparison-cell feature-cell">Duration</div>
+                                    <div class="comparison-cell">5-15 minutes</div>
+                                    <div class="comparison-cell">10-45 minutes</div>
+                                </div>
+                                <div class="comparison-row">
+                                    <div class="comparison-cell feature-cell">Radiation Level</div>
+                                    <div class="comparison-cell">Low</div>
+                                    <div class="comparison-cell">Higher but safe</div>
+                                </div>
+                                <div class="comparison-row">
+                                    <div class="comparison-cell feature-cell">Preparation</div>
+                                    <div class="comparison-cell">Minimal</div>
+                                    <div class="comparison-cell">May require fasting/contrast</div>
+                                </div>
+                                <div class="comparison-row">
+                                    <div class="comparison-cell feature-cell">Best For</div>
+                                    <div class="comparison-cell">Bones, lungs, basic screening</div>
+                                    <div class="comparison-cell">Soft tissues, complex diagnosis</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-panel" id="technical-comparison">
+                            <div class="tech-specs">
+                                <div class="tech-card">
+                                    <h4>X-Ray Technology</h4>
+                                    <ul>
+                                        <li>Energy Range: 30-150 kV</li>
+                                        <li>Resolution: 0.1-0.2 mm detail</li>
+                                        <li>Digital advantages: Immediate viewing</li>
+                                        <li>Equipment: DR/CR systems</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-card">
+                                    <h4>CT Technology</h4>
+                                    <ul>
+                                        <li>Slice Thickness: 0.5-10 mm</li>
+                                        <li>Image Matrix: 512x512 to 1024x1024</li>
+                                        <li>Scan Speed: 0.3-2 seconds per rotation</li>
+                                        <li>Detectors: 16 to 320+ detector rows</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-panel" id="cost-comparison">
+                            <div class="cost-info">
+                                <div class="cost-card">
+                                    <h4>X-Ray Economics</h4>
+                                    <p>Lower cost, widely available in all healthcare settings, covered by most insurance plans.</p>
+                                </div>
+                                <div class="cost-card">
+                                    <h4>CT Scan Economics</h4>
+                                    <p>Higher cost but cost-effective for complex diagnoses. Available in hospitals and imaging centers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantages-section">
+                    <div class="advantages-grid">
+                        <div class="advantage-card">
+                            <h3>X-Ray Advantages</h3>
+                            <ul class="advantage-list">
+                                <li>Quick and widely available</li>
+                                <li>Low cost and minimal radiation</li>
+                                <li>Excellent for bone imaging</li>
+                                <li>No special preparation needed</li>
+                                <li>Immediate results available</li>
+                            </ul>
+                        </div>
+                        <div class="advantage-card">
+                            <h3>CT Scan Advantages</h3>
+                            <ul class="advantage-list">
+                                <li>Superior image quality and detail</li>
+                                <li>Can detect smaller abnormalities</li>
+                                <li>3D visualization capability</li>
+                                <li>Excellent for soft tissue imaging</li>
+                                <li>Can guide surgical procedures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparation Guide Section -->
+        <section id="preparation" class="preparation-section">
+            <div class="container">
+                <h2 class="section-title">Preparation Guide</h2>
+                
+                <div class="prep-selector">
+                    <button class="prep-btn active" onclick="showPreparation('xray')">X-Ray Preparation</button>
+                    <button class="prep-btn" onclick="showPreparation('ct')">CT Scan Preparation</button>
+                    <button class="prep-btn" onclick="showPreparation('contrast')">Contrast Studies</button>
+                </div>
+
+                <div class="preparation-content">
+                    <div class="prep-panel active" id="xray-prep">
+                        <div class="prep-checklist">
+                            <h3>X-Ray Preparation Checklist</h3>
+                            <div class="checklist-items">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="xray-jewelry">
+                                    <label for="xray-jewelry">Remove all jewelry and metal objects from the examination area</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="xray-clothing">
+                                    <label for="xray-clothing">Wear comfortable clothes without metal fasteners if possible</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="xray-insurance">
+                                    <label for="xray-insurance">Bring insurance cards and identification</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="xray-history">
+                                    <label for="xray-history">Inform technologist of pregnancy or potential pregnancy</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="what-to-bring">
+                            <h4>What to Bring</h4>
+                            <ul>
+                                <li>Insurance cards and photo ID</li>
+                                <li>Previous imaging studies for comparison</li>
+                                <li>List of current medications</li>
+                                <li>Comfortable clothing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="prep-panel" id="ct-prep">
+                        <div class="prep-checklist">
+                            <h3>CT Scan Preparation Checklist</h3>
+                            <div class="checklist-items">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="ct-fasting">
+                                    <label for="ct-fasting">Follow fasting instructions if contrast is required</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="ct-medications">
+                                    <label for="ct-medications">Continue regular medications unless instructed otherwise</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="ct-allergies">
+                                    <label for="ct-allergies">Report any allergies, especially to iodine or contrast</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="ct-hydration">
+                                    <label for="ct-hydration">Stay well-hydrated before and after the exam</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="ct-comfort">
+                                    <label for="ct-comfort">Arrive early for registration and preparation</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dietary-restrictions">
+                            <h4>Dietary Restrictions</h4>
+                            <p>If contrast is needed, you may be asked to avoid food and drink for 4-6 hours before your appointment. Continue taking medications with small sips of water unless told otherwise.</p>
+                        </div>
+                    </div>
+
+                    <div class="prep-panel" id="contrast-prep">
+                        <div class="contrast-instructions">
+                            <h3>Contrast Study Preparation</h3>
+                            <div class="instruction-timeline">
+                                <div class="instruction-step">
+                                    <div class="step-time">24 Hours Before</div>
+                                    <div class="step-content">
+                                        <p>Inform facility of any allergies or kidney problems</p>
+                                    </div>
+                                </div>
+                                <div class="instruction-step">
+                                    <div class="step-time">4-6 Hours Before</div>
+                                    <div class="step-content">
+                                        <p>Begin fasting (no food or drink except water and medications)</p>
+                                    </div>
+                                </div>
+                                <div class="instruction-step">
+                                    <div class="step-time">2 Hours Before</div>
+                                    <div class="step-content">
+                                        <p>Arrive at facility for pre-screening and IV placement</p>
+                                    </div>
+                                </div>
+                                <div class="instruction-step">
+                                    <div class="step-time">After Procedure</div>
+                                    <div class="step-content">
+                                        <p>Drink plenty of fluids to help eliminate contrast</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Healthcare Integration Section -->
+        <section id="integration" class="integration-section">
+            <div class="container">
+                <h2 class="section-title">Modern Healthcare Integration</h2>
+                
+                <div class="integration-grid">
+                    <div class="integration-card">
+                        <div class="integration-icon">🤖</div>
+                        <h3>AI-Assisted Analysis</h3>
+                        <ul class="integration-features">
+                            <li>Automated abnormality detection</li>
+                            <li>Image quality optimization</li>
+                            <li>Dose reduction algorithms</li>
+                            <li>Faster diagnosis and reporting</li>
+                            <li>Pattern recognition for diseases</li>
+                        </ul>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-icon">💾</div>
+                        <h3>Digital Benefits</h3>
+                        <ul class="integration-features">
+                            <li>PACS (Picture Archiving Systems)</li>
+                            <li>Instant access across network</li>
+                            <li>Telemedicine compatibility</li>
+                            <li>Electronic Health Record integration</li>
+                            <li>Cloud-based storage and backup</li>
+                        </ul>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-icon">⭐</div>
+                        <h3>Quality Standards</h3>
+                        <ul class="integration-features">
+                            <li>ACR accreditation required</li>
+                            <li>FDA equipment approval</li>
+                            <li>Regular quality control testing</li>
+                            <li>Board-certified radiologist interpretation</li>
+                            <li>Technologist certification requirements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Is the radiation from X-rays and CT scans dangerous?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The radiation doses used are carefully controlled and considered safe for diagnostic purposes. The medical benefits far outweigh the minimal risks. Modern equipment uses the lowest possible doses while maintaining image quality.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can I have these scans if I'm pregnant?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Always inform your doctor if you're pregnant or might be pregnant. X-rays and CT scans are generally avoided during pregnancy unless absolutely necessary for diagnosis. Alternative imaging like ultrasound may be recommended.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How should I prepare for my scan?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Preparation varies by exam type. For basic X-rays, no preparation is needed. For CT scans, you may need to fast and drink contrast solution. Your healthcare team will provide specific instructions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>When will I get my results?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>X-ray results are often available immediately for emergency situations. CT scan results typically take 24-48 hours as they require detailed review by a radiologist. Your doctor will discuss results and next steps.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What if I'm claustrophobic?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>CT scanners have an open design and are much less confining than MRI machines. You can communicate with the technologist throughout the procedure. Mild sedation may be available if needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__disclaimer">
+                    <h3>Important Medical Disclaimer</h3>
+                    <p>This educational resource is for informational purposes only and should not replace professional medical advice. Always consult with qualified healthcare professionals regarding your specific medical needs and diagnostic imaging decisions.</p>
+                </div>
+                <div class="footer__actions">
+                    <button class="btn btn--outline" onclick="printGuide()">🖨️ Print Guide</button>
+                    <button class="btn btn--secondary" onclick="shareGuide()">📤 Share Guide</button>
+                    <button class="btn btn--info" onclick="bookmarkGuide()">🔖 Bookmark</button>
+                </div>
+                <div class="footer__info">
+                    <p>&copy; 2025 X-Ray & CT Scan Complete Guide. Educational resource for better healthcare decisions.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Body Area Info Modal -->
+    <div id="bodyAreaModal" class="modal hidden" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading information...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

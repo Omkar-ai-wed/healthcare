@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurveda Dosha Assessment - Discover Your Constitution</title>
+    <meta name="description" content="Complete Ayurvedic constitutional assessment to discover your unique dosha type through comprehensive questionnaire and personalized analysis">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Ayurvedic Header -->
+    <header class="ayurveda-header" role="banner">
+        <nav class="container">
+            <div class="header-brand">
+                <div class="ayurveda-logo">
+                    <span class="om-symbol">🕉️</span>
+                    <div class="logo-text">
+                        <h1 class="header-title">Ayurveda Dosha Assessment</h1>
+                        <p class="header-subtitle">प्रकृति निर्धारण • Constitutional Analysis • Ancient Wisdom</p>
+                    </div>
+                </div>
+                
+                <div class="assessment-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">55</span>
+                        <span class="stat-label">Assessment Questions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Analysis Sections</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">15-20</span>
+                        <span class="stat-label">Minutes Duration</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Progress Navigation -->
+    <nav class="progress-nav hidden" role="navigation" aria-label="Assessment progress">
+        <div class="container">
+            <div class="progress-sections">
+                <button class="progress-section active" data-section="physical">
+                    <span class="section-icon">💪</span>
+                    <span class="section-name">Physical</span>
+                    <span class="section-progress">0/15</span>
+                </button>
+                <button class="progress-section" data-section="mental">
+                    <span class="section-icon">🧠</span>
+                    <span class="section-name">Mental</span>
+                    <span class="section-progress">0/15</span>
+                </button>
+                <button class="progress-section" data-section="digestive">
+                    <span class="section-icon">🍽️</span>
+                    <span class="section-name">Digestive</span>
+                    <span class="section-progress">0/10</span>
+                </button>
+                <button class="progress-section" data-section="sleep">
+                    <span class="section-icon">💤</span>
+                    <span class="section-name">Sleep</span>
+                    <span class="section-progress">0/8</span>
+                </button>
+                <button class="progress-section" data-section="lifestyle">
+                    <span class="section-icon">🧘</span>
+                    <span class="section-name">Lifestyle</span>
+                    <span class="section-progress">0/7</span>
+                </button>
+            </div>
+            
+            <div class="overall-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0 / 55 Complete</span>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section active-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="om-symbol-large">🕉️</div>
+                    <h1 class="hero-title">Discover Your Ayurvedic Constitution</h1>
+                    <p class="hero-description">Embark on a journey of self-discovery through comprehensive dosha analysis. This ancient wisdom-based assessment will guide you toward optimal health and harmony by understanding your unique constitutional type.</p>
+                    
+                    <div class="dosha-intro">
+                        <div class="dosha-card">
+                            <div class="dosha-symbol">💨</div>
+                            <h3>Vata</h3>
+                            <p>Air + Space<br>Movement & Communication</p>
+                        </div>
+                        <div class="dosha-card">
+                            <div class="dosha-symbol">🔥</div>
+                            <h3>Pitta</h3>
+                            <p>Fire + Water<br>Transformation & Metabolism</p>
+                        </div>
+                        <div class="dosha-card">
+                            <div class="dosha-symbol">🌍</div>
+                            <h3>Kapha</h3>
+                            <p>Earth + Water<br>Structure & Stability</p>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-info">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-icon">🎯</span>
+                                <div class="info-content">
+                                    <h4>Comprehensive Analysis</h4>
+                                    <p>55 carefully crafted questions across 5 key areas of your constitution</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">📊</span>
+                                <div class="info-content">
+                                    <h4>Real-time Results</h4>
+                                    <p>Live dosha scoring with detailed percentage breakdown and analysis</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">🌱</span>
+                                <div class="info-content">
+                                    <h4>Personalized Guidance</h4>
+                                    <p>Custom recommendations for diet, lifestyle, and wellness practices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="instructions-section">
+                        <h3>Assessment Instructions</h3>
+                        <div class="instructions-grid">
+                            <div class="instruction-item">
+                                <span class="instruction-number">1</span>
+                                <div class="instruction-content">
+                                    <h4>Answer Based on Lifelong Patterns</h4>
+                                    <p>Consider your natural tendencies from childhood and throughout your life, not temporary states</p>
+                                </div>
+                            </div>
+                            <div class="instruction-item">
+                                <span class="instruction-number">2</span>
+                                <div class="instruction-content">
+                                    <h4>Choose Most Accurate Option</h4>
+                                    <p>Select the option that describes you most of the time, even if other options sometimes apply</p>
+                                </div>
+                            </div>
+                            <div class="instruction-item">
+                                <span class="instruction-number">3</span>
+                                <div class="instruction-content">
+                                    <h4>Be Honest and Reflective</h4>
+                                    <p>Take your time with each question - there are no right or wrong answers, only authentic ones</p>
+                                </div>
+                            </div>
+                            <div class="instruction-item">
+                                <span class="instruction-number">4</span>
+                                <div class="instruction-content">
+                                    <h4>Trust Your Intuition</h4>
+                                    <p>If unsure, go with your first instinct - it often reflects your true constitution</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" onclick="startAssessment()">
+                            🕉️ Begin Assessment
+                        </button>
+                        <div class="assessment-benefits">
+                            <span>✨ Discover your unique constitution</span>
+                            <span>🍽️ Get personalized diet recommendations</span>
+                            <span>💪 Learn optimal exercise for your type</span>
+                            <span>🧘 Understand your stress patterns</span>
+                            <span>📱 Save and share results</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Section -->
+        <section id="assessment" class="assessment-section">
+            <div class="container">
+                <div class="assessment-container">
+                    <!-- Question Display -->
+                    <div class="question-container">
+                        <div class="question-header">
+                            <div class="section-info">
+                                <span class="section-title">Physical Characteristics</span>
+                                <span class="section-description">Questions about your body type, appearance, and physical traits</span>
+                            </div>
+                            <div class="question-counter">
+                                Question <span class="current-q">1</span> of <span class="total-q">15</span>
+                            </div>
+                        </div>
+                        
+                        <div class="question-content">
+                            <h3 class="question-text">Loading question...</h3>
+                            <div class="options-container">
+                                <div class="option" data-dosha="vata">
+                                    <input type="radio" name="current-question" value="vata" id="option-vata">
+                                    <label for="option-vata">
+                                        <span class="option-symbol">💨</span>
+                                        <span class="option-text">Loading...</span>
+                                    </label>
+                                </div>
+                                <div class="option" data-dosha="pitta">
+                                    <input type="radio" name="current-question" value="pitta" id="option-pitta">
+                                    <label for="option-pitta">
+                                        <span class="option-symbol">🔥</span>
+                                        <span class="option-text">Loading...</span>
+                                    </label>
+                                </div>
+                                <div class="option" data-dosha="kapha">
+                                    <input type="radio" name="current-question" value="kapha" id="option-kapha">
+                                    <label for="option-kapha">
+                                        <span class="option-symbol">🌍</span>
+                                        <span class="option-text">Loading...</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="question-navigation">
+                            <button class="btn btn--outline" onclick="previousQuestion()" id="prev-btn" disabled>
+                                ← Previous
+                            </button>
+                            <button class="btn btn--primary" onclick="nextQuestion()" id="next-btn" disabled>
+                                Next →
+                            </button>
+                            <button class="btn btn--primary btn--lg hidden" onclick="completeAssessment()" id="complete-btn">
+                                🎯 View Results
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Live Scoring Panel -->
+                    <div class="scoring-panel">
+                        <h3>🕉️ Live Dosha Analysis</h3>
+                        
+                        <div class="dosha-scores">
+                            <div class="dosha-score" data-dosha="vata">
+                                <div class="dosha-info">
+                                    <span class="dosha-symbol">💨</span>
+                                    <span class="dosha-name">Vata</span>
+                                </div>
+                                <div class="score-display">
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 33%"></div>
+                                    </div>
+                                    <span class="score-percentage">33%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="dosha-score" data-dosha="pitta">
+                                <div class="dosha-info">
+                                    <span class="dosha-symbol">🔥</span>
+                                    <span class="dosha-name">Pitta</span>
+                                </div>
+                                <div class="score-display">
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 33%"></div>
+                                    </div>
+                                    <span class="score-percentage">33%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="dosha-score" data-dosha="kapha">
+                                <div class="dosha-info">
+                                    <span class="dosha-symbol">🌍</span>
+                                    <span class="dosha-name">Kapha</span>
+                                </div>
+                                <div class="score-display">
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 34%"></div>
+                                    </div>
+                                    <span class="score-percentage">34%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="current-primary">
+                            <h4>Primary Dosha</h4>
+                            <div class="primary-display">
+                                <span class="primary-symbol">🌍</span>
+                                <span class="primary-name">Kapha</span>
+                                <span class="primary-percentage">34%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="section-breakdown">
+                            <h4>Section Progress</h4>
+                            <div class="section-scores">
+                                <div class="section-score">
+                                    <span class="section-name">Physical</span>
+                                    <span class="section-status">0/15</span>
+                                </div>
+                                <div class="section-score">
+                                    <span class="section-name">Mental</span>
+                                    <span class="section-status">0/15</span>
+                                </div>
+                                <div class="section-score">
+                                    <span class="section-name">Digestive</span>
+                                    <span class="section-status">0/10</span>
+                                </div>
+                                <div class="section-score">
+                                    <span class="section-name">Sleep</span>
+                                    <span class="section-status">0/8</span>
+                                </div>
+                                <div class="section-score">
+                                    <span class="section-name">Lifestyle</span>
+                                    <span class="section-status">0/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="results-section">
+            <div class="container">
+                <div class="results-header">
+                    <div class="om-symbol-large">🕉️</div>
+                    <h2>Your Ayurvedic Constitution Results</h2>
+                    <p class="results-intro">Based on your responses, here is your detailed constitutional analysis and personalized recommendations</p>
+                </div>
+
+                <div class="results-content">
+                    <!-- Dosha Chart -->
+                    <div class="results-chart-section">
+                        <h3>Constitutional Analysis</h3>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <canvas id="doshaChart"></canvas>
+                        </div>
+                        
+                        <div class="primary-constitution">
+                            <div class="constitution-card">
+                                <div class="constitution-header">
+                                    <span class="constitution-symbol">🌍</span>
+                                    <h4 class="constitution-name">Primary: Kapha</h4>
+                                    <span class="constitution-percentage">34%</span>
+                                </div>
+                                <div class="constitution-description">
+                                    <p><strong>Elements:</strong> Earth + Water</p>
+                                    <p><strong>Energy:</strong> Structure & Stability</p>
+                                    <p>You have a predominantly Kapha constitution, giving you natural strength, endurance, and a calm, steady nature.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Characteristics -->
+                    <div class="characteristics-section">
+                        <h3>Your Constitutional Characteristics</h3>
+                        <div class="characteristics-tabs">
+                            <div class="tab-navigation">
+                                <button class="tab-btn active" onclick="showCharacteristicTab('balanced')">When Balanced</button>
+                                <button class="tab-btn" onclick="showCharacteristicTab('imbalanced')">When Imbalanced</button>
+                                <button class="tab-btn" onclick="showCharacteristicTab('qualities')">Natural Qualities</button>
+                            </div>
+                            
+                            <div class="tab-content">
+                                <div id="balanced-tab" class="tab-panel active">
+                                    <div class="characteristics-list">
+                                        <div class="characteristic-item">
+                                            <span class="characteristic-icon">💪</span>
+                                            <span class="characteristic-text">Strong immunity and rarely gets sick</span>
+                                        </div>
+                                        <div class="characteristic-item">
+                                            <span class="characteristic-icon">❤️</span>
+                                            <span class="characteristic-text">Loving, compassionate, and supportive nature</span>
+                                        </div>
+                                        <div class="characteristic-item">
+                                            <span class="characteristic-icon">⚡</span>
+                                            <span class="characteristic-text">Steady energy and endurance</span>
+                                        </div>
+                                        <div class="characteristic-item">
+                                            <span class="characteristic-icon">🧠</span>
+                                            <span class="characteristic-text">Excellent long-term memory</span>
+                                        </div>
+                                        <div class="characteristic-item">
+                                            <span class="characteristic-icon">🏔️</span>
+                                            <span class="characteristic-text">Natural strength and stability</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="imbalanced-tab" class="tab-panel">
+                                    <div class="characteristics-list">
+                                        <div class="characteristic-item warning">
+                                            <span class="characteristic-icon">⚠️</span>
+                                            <span class="characteristic-text">Weight gain, sluggish metabolism</span>
+                                        </div>
+                                        <div class="characteristic-item warning">
+                                            <span class="characteristic-icon">🤧</span>
+                                            <span class="characteristic-text">Congestion, excessive mucus</span>
+                                        </div>
+                                        <div class="characteristic-item warning">
+                                            <span class="characteristic-icon">😴</span>
+                                            <span class="characteristic-text">Mental fog, depression, lethargy</span>
+                                        </div>
+                                        <div class="characteristic-item warning">
+                                            <span class="characteristic-icon">🔗</span>
+                                            <span class="characteristic-text">Attachment, possessiveness</span>
+                                        </div>
+                                        <div class="characteristic-item warning">
+                                            <span class="characteristic-icon">🚫</span>
+                                            <span class="characteristic-text">Resistance to change, stubbornness</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="qualities-tab" class="tab-panel">
+                                    <div class="qualities-grid">
+                                        <div class="quality-item">Heavy</div>
+                                        <div class="quality-item">Cold</div>
+                                        <div class="quality-item">Moist</div>
+                                        <div class="quality-item">Oily</div>
+                                        <div class="quality-item">Smooth</div>
+                                        <div class="quality-item">Static</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations-section">
+                        <h3>Personalized Recommendations</h3>
+                        <div class="recommendations-tabs">
+                            <div class="tab-navigation">
+                                <button class="tab-btn active" onclick="showRecommendationTab('dietary')">🍽️ Dietary</button>
+                                <button class="tab-btn" onclick="showRecommendationTab('lifestyle')">🧘 Lifestyle</button>
+                                <button class="tab-btn" onclick="showRecommendationTab('exercise')">💪 Exercise</button>
+                            </div>
+                            
+                            <div class="tab-content">
+                                <div id="dietary-tab" class="tab-panel active">
+                                    <div class="recommendation-list">
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">✅</span>
+                                            <span class="rec-text">Favor light, warm, spicy foods</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">✅</span>
+                                            <span class="rec-text">Include pungent, bitter, and astringent tastes</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">✅</span>
+                                            <span class="rec-text">Eat smaller, more frequent meals</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">✅</span>
+                                            <span class="rec-text">Use heating spices like black pepper, ginger, turmeric</span>
+                                        </div>
+                                        <div class="recommendation-item avoid">
+                                            <span class="rec-icon">❌</span>
+                                            <span class="rec-text">Avoid heavy, cold, and oily foods</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="lifestyle-tab" class="tab-panel">
+                                    <div class="recommendation-list">
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">✅</span>
+                                            <span class="rec-text">Stay active and avoid sedentary lifestyle</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">✅</span>
+                                            <span class="rec-text">Wake up early and avoid oversleeping</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">✅</span>
+                                            <span class="rec-text">Seek stimulating and varied activities</span>
+                                        </div>
+                                        <div class="recommendation-item avoid">
+                                            <span class="rec-icon">❌</span>
+                                            <span class="rec-text">Avoid heavy, cold, and damp environments</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="exercise-tab" class="tab-panel">
+                                    <div class="recommendation-list">
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">🏃</span>
+                                            <span class="rec-text">Running, aerobics, weight training</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">💪</span>
+                                            <span class="rec-text">Vigorous, energizing activities</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">🏆</span>
+                                            <span class="rec-text">Competitive sports for motivation</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">🌅</span>
+                                            <span class="rec-text">Morning exercise preferred</span>
+                                        </div>
+                                        <div class="recommendation-item">
+                                            <span class="rec-icon">🔄</span>
+                                            <span class="rec-text">Vary routine to maintain interest</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="results-actions">
+                        <button class="btn btn--primary btn--lg" onclick="downloadResults()">📄 Download Report</button>
+                        <button class="btn btn--outline btn--lg" onclick="emailResults()">📧 Email Results</button>
+                        <button class="btn btn--secondary btn--lg" onclick="startNewAssessment()">🔄 Take Again</button>
+                        <button class="btn btn--outline btn--lg" onclick="findPractitioner()">👩‍⚕️ Find Practitioner</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Guidance Section -->
+        <section class="guidance-section">
+            <div class="container">
+                <div class="guidance-content">
+                    <h3>Professional Guidance & Next Steps</h3>
+                    <div class="guidance-grid">
+                        <div class="guidance-card">
+                            <div class="guidance-icon">👩‍⚕️</div>
+                            <h4>Consult a Practitioner</h4>
+                            <p>For personalized treatment plans and deeper constitutional analysis, consult with a qualified Ayurvedic practitioner.</p>
+                            <button class="btn btn--outline" onclick="findPractitioner()">Find Practitioners</button>
+                        </div>
+                        <div class="guidance-card">
+                            <div class="guidance-icon">📚</div>
+                            <h4>Learn More</h4>
+                            <p>Deepen your understanding of Ayurveda and your constitution through educational resources and courses.</p>
+                            <button class="btn btn--outline" onclick="showResources()">Educational Resources</button>
+                        </div>
+                        <div class="guidance-card">
+                            <div class="guidance-icon">🛒</div>
+                            <h4>Recommended Products</h4>
+                            <p>Discover herbs, oils, and products specifically recommended for your constitutional type.</p>
+                            <button class="btn btn--outline" onclick="showProducts()">View Products</button>
+                        </div>
+                    </div>
+                    
+                    <div class="safety-notice">
+                        <div class="notice-icon">⚠️</div>
+                        <div class="notice-content">
+                            <h4>Important Notice</h4>
+                            <p>This assessment provides general educational information only. Results should not replace professional medical advice. Always consult qualified healthcare providers for medical concerns and before making significant health changes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="ayurveda-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🕉️ Ayurveda Dosha Assessment</h4>
+                    <p>Ancient wisdom meets modern technology. Discover your constitutional type through comprehensive analysis and receive personalized recommendations for optimal health and wellbeing.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Assessment</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">About Assessment</a></li>
+                        <li><a href="javascript:startAssessment()">Take Assessment</a></li>
+                        <li><a href="#results">View Results</a></li>
+                        <li><a href="javascript:startNewAssessment()">Retake Assessment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:findPractitioner()">Find Practitioners</a></li>
+                        <li><a href="javascript:showResources()">Educational Materials</a></li>
+                        <li><a href="javascript:showProducts()">Recommended Products</a></li>
+                        <li><a href="javascript:downloadResults()">Download Report</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#guidance">Professional Guidance</a></li>
+                        <li><a href="#safety">Safety Information</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#contact">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>🕉️ Ayurveda Dosha Assessment. Educational tool for constitutional analysis. Individual results may vary. Consult qualified practitioners for personalized guidance. Honor ancient wisdom with modern understanding.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book TCM Consultation - Professional Traditional Chinese Medicine Consultations</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Book professional Traditional Chinese Medicine consultations with certified practitioners. Comprehensive TCM services including pattern recognition, herbal medicine, and acupuncture planning.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-brand">
+                    <div class="yin-yang-symbol">☯</div>
+                    <div class="site-info">
+                        <h1 class="site-title">TCM Pattern Recognition</h1>
+                        <p class="site-subtitle">Professional Traditional Chinese Medicine Consultations</p>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#practitioners" class="nav-link">Practitioners</a>
+                    <a href="#consultation-types" class="nav-link">Consultation Types</a>
+                    <a href="#schedule" class="nav-link">Schedule</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeToggle" class="btn btn--sm btn--outline" aria-label="Toggle theme">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="yin-yang-large">☯</div>
+                        <h1>Professional TCM Consultations</h1>
+                        <p class="hero-subtitle">Expert Traditional Chinese Medicine practitioners offering personalized constitutional analysis, herbal medicine guidance, and holistic wellness consultations</p>
+                        <div class="trust-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">4+</div>
+                                <div class="stat-label">Certified Practitioners</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">6</div>
+                                <div class="stat-label">Consultation Options</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary btn--lg cta-button" id="scheduleNowBtn">
+                            Schedule Consultation Now
+                        </button>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="five-elements-circle">
+                            <div class="element-symbol wood">🌳</div>
+                            <div class="element-symbol fire">🔥</div>
+                            <div class="element-symbol earth">🏔️</div>
+                            <div class="element-symbol metal">⚡</div>
+                            <div class="element-symbol water">🌊</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Types Section -->
+        <section id="consultation-types" class="consultation-types">
+            <div class="container">
+                <h2 class="section-title">Consultation Types</h2>
+                <div class="consultation-grid">
+                    <div class="consultation-card" data-type="initial">
+                        <div class="card-header">
+                            <h3>Initial Comprehensive</h3>
+                            <div class="duration">90-120 minutes</div>
+                            <div class="price">$180-$280</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="features-list">
+                                <li>Complete constitutional assessment</li>
+                                <li>Traditional diagnostic evaluation</li>
+                                <li>Personalized treatment plan</li>
+                                <li>Lifestyle and dietary recommendations</li>
+                                <li>Follow-up scheduling</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn--primary consultation-select-btn" data-type="initial">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="consultation-card" data-type="pattern-specific">
+                        <div class="card-header">
+                            <h3>Pattern-Specific</h3>
+                            <div class="duration">60-75 minutes</div>
+                            <div class="price">$120-$200</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="features-list">
+                                <li>Focused pattern analysis</li>
+                                <li>Specific condition assessment</li>
+                                <li>Targeted treatment approach</li>
+                                <li>Symptom-based evaluation</li>
+                                <li>Specialized recommendations</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn--primary consultation-select-btn" data-type="pattern-specific">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="consultation-card" data-type="herbal">
+                        <div class="card-header">
+                            <h3>Herbal Medicine</h3>
+                            <div class="duration">45-60 minutes</div>
+                            <div class="price">$100-$180</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="features-list">
+                                <li>Herbal formula consultation</li>
+                                <li>Custom herbal prescriptions</li>
+                                <li>Herb-drug interaction review</li>
+                                <li>Preparation instructions</li>
+                                <li>Dosage optimization</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn--primary consultation-select-btn" data-type="herbal">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="consultation-card" data-type="acupuncture">
+                        <div class="card-header">
+                            <h3>Acupuncture Planning</h3>
+                            <div class="duration">60 minutes</div>
+                            <div class="price">$150-$220</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="features-list">
+                                <li>Acupuncture treatment planning</li>
+                                <li>Point prescription consultation</li>
+                                <li>Treatment frequency planning</li>
+                                <li>Integration with other therapies</li>
+                                <li>Progress monitoring plan</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn--primary consultation-select-btn" data-type="acupuncture">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="consultation-card" data-type="follow-up">
+                        <div class="card-header">
+                            <h3>Follow-Up</h3>
+                            <div class="duration">30-45 minutes</div>
+                            <div class="price">$80-$140</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="features-list">
+                                <li>Progress evaluation</li>
+                                <li>Treatment adjustments</li>
+                                <li>Ongoing support</li>
+                                <li>Refined recommendations</li>
+                                <li>Next steps planning</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn--primary consultation-select-btn" data-type="follow-up">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="consultation-card" data-type="telehealth">
+                        <div class="card-header">
+                            <h3>Telehealth</h3>
+                            <div class="duration">60-90 minutes</div>
+                            <div class="price">$100-$200</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="features-list">
+                                <li>Remote consultation</li>
+                                <li>Video assessment</li>
+                                <li>Digital health forms</li>
+                                <li>Electronic recommendations</li>
+                                <li>Follow-up scheduling</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn--primary consultation-select-btn" data-type="telehealth">Select</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practitioners Section -->
+        <section id="practitioners" class="practitioners">
+            <div class="container">
+                <h2 class="section-title">Our TCM Practitioners</h2>
+                <div class="practitioners-grid">
+                    <div class="practitioner-card" data-id="dr-li">
+                        <div class="practitioner-avatar">
+                            <div class="avatar-placeholder">👨‍⚕️</div>
+                        </div>
+                        <div class="practitioner-info">
+                            <h3>Dr. Li Wei Chen</h3>
+                            <p class="title">Senior TCM Practitioner</p>
+                            <div class="specialties">
+                                <span class="specialty">Constitutional Analysis</span>
+                                <span class="specialty">Herbal Medicine</span>
+                            </div>
+                            <div class="languages">Languages: English, Mandarin</div>
+                            <div class="rating">★★★★★ (4.9/5)</div>
+                        </div>
+                    </div>
+
+                    <div class="practitioner-card" data-id="dr-wang">
+                        <div class="practitioner-avatar">
+                            <div class="avatar-placeholder">👩‍⚕️</div>
+                        </div>
+                        <div class="practitioner-info">
+                            <h3>Dr. Sarah Wang</h3>
+                            <p class="title">Acupuncture & Pattern Specialist</p>
+                            <div class="specialties">
+                                <span class="specialty">Acupuncture</span>
+                                <span class="specialty">Five Elements</span>
+                            </div>
+                            <div class="languages">Languages: English, Cantonese</div>
+                            <div class="rating">★★★★★ (4.8/5)</div>
+                        </div>
+                    </div>
+
+                    <div class="practitioner-card" data-id="dr-liu">
+                        <div class="practitioner-avatar">
+                            <div class="avatar-placeholder">👨‍⚕️</div>
+                        </div>
+                        <div class="practitioner-info">
+                            <h3>Dr. James Liu</h3>
+                            <p class="title">Herbal Medicine Expert</p>
+                            <div class="specialties">
+                                <span class="specialty">Herbal Formulas</span>
+                                <span class="specialty">Telehealth</span>
+                            </div>
+                            <div class="languages">Languages: English</div>
+                            <div class="rating">★★★★★ (4.9/5)</div>
+                        </div>
+                    </div>
+
+                    <div class="practitioner-card" data-id="dr-zhang">
+                        <div class="practitioner-avatar">
+                            <div class="avatar-placeholder">👩‍⚕️</div>
+                        </div>
+                        <div class="practitioner-info">
+                            <h3>Dr. Mei Zhang</h3>
+                            <p class="title">Women's Health & Qi Specialist</p>
+                            <div class="specialties">
+                                <span class="specialty">Women's Health</span>
+                                <span class="specialty">Qi Circulation</span>
+                            </div>
+                            <div class="languages">Languages: English, Mandarin</div>
+                            <div class="rating">★★★★★ (5.0/5)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="schedule" class="booking-section">
+            <div class="container">
+                <div class="booking-layout">
+                    <div class="booking-sidebar">
+                        <div class="info-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="preparation">Preparation</button>
+                                <button class="tab-btn" data-tab="pricing">Pricing</button>
+                                <button class="tab-btn" data-tab="standards">Standards</button>
+                            </div>
+                            <div class="tab-content">
+                                <div id="preparation" class="tab-panel active">
+                                    <h4>Consultation Preparation</h4>
+                                    <ul>
+                                        <li>Complete health history form</li>
+                                        <li>List current medications</li>
+                                        <li>Note specific symptoms</li>
+                                        <li>Prepare health questions</li>
+                                        <li>Ensure quiet environment (telehealth)</li>
+                                    </ul>
+                                </div>
+                                <div id="pricing" class="tab-panel">
+                                    <h4>Pricing & Packages</h4>
+                                    <div class="pricing-table">
+                                        <div class="pricing-row">
+                                            <span>Initial Comprehensive</span>
+                                            <span>$180-$280</span>
+                                        </div>
+                                        <div class="pricing-row">
+                                            <span>Pattern-Specific</span>
+                                            <span>$120-$200</span>
+                                        </div>
+                                        <div class="pricing-row">
+                                            <span>Herbal Medicine</span>
+                                            <span>$100-$180</span>
+                                        </div>
+                                        <div class="pricing-row">
+                                            <span>Follow-Up</span>
+                                            <span>$80-$140</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="standards" class="tab-panel">
+                                    <h4>Safety & Standards</h4>
+                                    <ul>
+                                        <li>Licensed TCM practitioners</li>
+                                        <li>HIPAA compliant platform</li>
+                                        <li>Evidence-based approaches</li>
+                                        <li>Continuing education certified</li>
+                                        <li>Professional insurance coverage</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-widget">
+                        <div class="booking-header">
+                            <h2>Schedule Your Consultation</h2>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="bookingProgress"></div>
+                            </div>
+                            <div class="step-indicator" id="stepIndicator">Step 1 of 6: Choose Consultation Type</div>
+                        </div>
+
+                        <div class="booking-content" id="bookingContent">
+                            <!-- Booking steps will be dynamically inserted here -->
+                        </div>
+
+                        <div class="booking-navigation">
+                            <button class="btn btn--outline" id="prevStepBtn" style="display: none;">Previous</button>
+                            <button class="btn btn--primary" id="nextStepBtn" style="display: none;">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact & Support</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <h3>Phone Support</h3>
+                        <p>(555) 123-4567</p>
+                        <p class="hours">Mon-Fri 9AM-6PM EST</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email Support</h3>
+                        <p>support@tcmpattern.com</p>
+                        <p class="hours">Response within 24 hours</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <h3>Live Chat</h3>
+                        <button class="btn btn--primary" id="liveChatBtn">Start Chat</button>
+                        <p class="hours">Available during business hours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal hidden" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Book Consultation</h3>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Booking wizard content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal hidden" role="dialog" aria-labelledby="confirmationTitle">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="confirmationTitle">Consultation Confirmed!</h3>
+                <button class="modal-close" id="confirmationClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="confirmationBody">
+                <!-- Confirmation content -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="downloadPrepBtn">Download Prep Guide</button>
+                <button class="btn btn--primary" id="returnDashboardBtn">Return to Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="yin-yang-symbol">☯</div>
+                    <p>&copy; 2025 TCM Pattern Recognition. Traditional wisdom for modern wellness.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#assessment" class="footer-link">Take Assessment</a>
+                    <a href="#learning" class="footer-link">Learning Center</a>
+                    <a href="#privacy" class="footer-link">Privacy Policy</a>
+                    <a href="#terms" class="footer-link">Terms of Service</a>
+                </div>
+                <div class="footer-disclaimer">
+                    <p>Professional consultations are for educational and complementary health purposes. Always consult with qualified healthcare providers for medical conditions.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="app.js"></script>
+</body>
+</html>

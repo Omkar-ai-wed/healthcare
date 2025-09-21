@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn TCM Patterns - Traditional Chinese Medicine Diagnostic Patterns</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Comprehensive guide to Traditional Chinese Medicine diagnostic patterns. Learn Yin-Yang theory, Five Elements, Qi & Blood patterns, and practical TCM applications.">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="yinyang-symbol">☯</div>
+                <nav class="main-nav">
+                    <a href="#overview" class="nav-link">Overview</a>
+                    <a href="#yinyang" class="nav-link">Yin-Yang Theory</a>
+                    <a href="#elements" class="nav-link">Five Elements</a>
+                    <a href="#qi-blood" class="nav-link">Qi & Blood</a>
+                    <a href="#pathogenic" class="nav-link">Pathogenic Factors</a>
+                    <a href="#organs" class="nav-link">Organ Patterns</a>
+                    <a href="#diagnostic" class="nav-link">Diagnostic Methods</a>
+                    <a href="#applications" class="nav-link">Practical Applications</a>
+                </nav>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="overview" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-header">
+                        <div class="yinyang-large">☯</div>
+                        <h1>Learn TCM Patterns</h1>
+                        <p class="hero-subtitle">Traditional Chinese Medicine • Diagnostic Patterns • Ancient Wisdom</p>
+                    </div>
+                    <div class="hero-description">
+                        <p>Master the foundational diagnostic patterns of Traditional Chinese Medicine through comprehensive understanding of Yin-Yang theory, Five Elements, Qi-Blood patterns, and organ systems. Learn to identify and treat imbalances using time-tested TCM principles.</p>
+                    </div>
+                    <div class="pattern-symbols">
+                        <div class="pattern-symbol wood">
+                            <div class="symbol-icon">🌱</div>
+                            <h3>Wood</h3>
+                            <p>Growth & Movement</p>
+                        </div>
+                        <div class="pattern-symbol fire">
+                            <div class="symbol-icon">🔥</div>
+                            <h3>Fire</h3>
+                            <p>Joy & Circulation</p>
+                        </div>
+                        <div class="pattern-symbol earth">
+                            <div class="symbol-icon">🏔️</div>
+                            <h3>Earth</h3>
+                            <p>Stability & Nourishment</p>
+                        </div>
+                        <div class="pattern-symbol metal">
+                            <div class="symbol-icon">⚪</div>
+                            <h3>Metal</h3>
+                            <p>Structure & Refinement</p>
+                        </div>
+                        <div class="pattern-symbol water">
+                            <div class="symbol-icon">💧</div>
+                            <h3>Water</h3>
+                            <p>Essence & Storage</p>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#assessment" class="btn btn--primary">Take Assessment</a>
+                        <a href="#consultation" class="btn btn--outline">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yin-Yang Theory Section -->
+        <section id="yinyang" class="yinyang-theory">
+            <div class="container">
+                <h2 class="section-title">Yin-Yang Theory</h2>
+                
+                <div class="theory-content">
+                    <div class="definition-card card">
+                        <div class="card__body">
+                            <h3>The Foundation of TCM</h3>
+                            <p>Yin and Yang represent complementary opposites that exist in dynamic balance. Understanding this fundamental principle is essential for diagnosing patterns of disharmony and restoring health through TCM treatment methods.</p>
+                        </div>
+                    </div>
+
+                    <div class="yinyang-patterns">
+                        <div class="pattern-selector">
+                            <button class="pattern-btn active" data-pattern="balanced">Balanced</button>
+                            <button class="pattern-btn" data-pattern="yin-deficient">Yin Deficient</button>
+                            <button class="pattern-btn" data-pattern="yang-deficient">Yang Deficient</button>
+                            <button class="pattern-btn" data-pattern="yin-excess">Yin Excess</button>
+                            <button class="pattern-btn" data-pattern="yang-excess">Yang Excess</button>
+                        </div>
+
+                        <div class="pattern-content">
+                            <div id="balanced-pattern" class="pattern-panel active">
+                                <h3>Balanced Yin-Yang</h3>
+                                <div class="symptoms-table">
+                                    <div class="symptom-category">
+                                        <h4>Physical Signs</h4>
+                                        <ul>
+                                            <li>Stable body temperature</li>
+                                            <li>Regular sleep patterns</li>
+                                            <li>Good energy levels throughout day</li>
+                                            <li>Healthy digestion</li>
+                                            <li>Clear complexion</li>
+                                        </ul>
+                                    </div>
+                                    <div class="symptom-category">
+                                        <h4>Mental-Emotional</h4>
+                                        <ul>
+                                            <li>Emotional stability</li>
+                                            <li>Clear thinking</li>
+                                            <li>Appropriate responses to stress</li>
+                                            <li>Good memory and concentration</li>
+                                            <li>Balanced mood</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="yin-deficient-pattern" class="pattern-panel">
+                                <h3>Yin Deficiency Pattern</h3>
+                                <div class="symptoms-table">
+                                    <div class="symptom-category">
+                                        <h4>Physical Signs</h4>
+                                        <ul>
+                                            <li>Night sweats and hot flashes</li>
+                                            <li>Dry mouth and throat</li>
+                                            <li>Insomnia and restless sleep</li>
+                                            <li>Dry skin and hair</li>
+                                            <li>Low back pain and weakness</li>
+                                        </ul>
+                                    </div>
+                                    <div class="symptom-category">
+                                        <h4>Mental-Emotional</h4>
+                                        <ul>
+                                            <li>Anxiety and restlessness</li>
+                                            <li>Irritability and mood swings</li>
+                                            <li>Mental agitation</li>
+                                            <li>Feeling overwhelmed</li>
+                                            <li>Poor memory</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="treatment-overview">
+                                    <h4>Treatment Approach</h4>
+                                    <p>Nourish Yin, clear deficiency heat, calm the spirit. Use cooling, moistening herbs and foods.</p>
+                                </div>
+                            </div>
+
+                            <div id="yang-deficient-pattern" class="pattern-panel">
+                                <h3>Yang Deficiency Pattern</h3>
+                                <div class="symptoms-table">
+                                    <div class="symptom-category">
+                                        <h4>Physical Signs</h4>
+                                        <ul>
+                                            <li>Cold hands and feet</li>
+                                            <li>Fatigue and low energy</li>
+                                            <li>Pale complexion</li>
+                                            <li>Loose stools and poor digestion</li>
+                                            <li>Frequent urination</li>
+                                        </ul>
+                                    </div>
+                                    <div class="symptom-category">
+                                        <h4>Mental-Emotional</h4>
+                                        <ul>
+                                            <li>Depression and low mood</li>
+                                            <li>Lack of motivation</li>
+                                            <li>Mental sluggishness</li>
+                                            <li>Withdrawal and isolation</li>
+                                            <li>Fear and timidity</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="treatment-overview">
+                                    <h4>Treatment Approach</h4>
+                                    <p>Warm and tonify Yang Qi, strengthen the kidneys and spleen. Use warming herbs and foods.</p>
+                                </div>
+                            </div>
+
+                            <div id="yin-excess-pattern" class="pattern-panel">
+                                <h3>Yin Excess Pattern</h3>
+                                <div class="symptoms-table">
+                                    <div class="symptom-category">
+                                        <h4>Physical Signs</h4>
+                                        <ul>
+                                            <li>Feeling heavy and sluggish</li>
+                                            <li>Excessive sleep and drowsiness</li>
+                                            <li>Fluid retention and swelling</li>
+                                            <li>Slow metabolism</li>
+                                            <li>Cold constitution</li>
+                                        </ul>
+                                    </div>
+                                    <div class="symptom-category">
+                                        <h4>Mental-Emotional</h4>
+                                        <ul>
+                                            <li>Mental dullness</li>
+                                            <li>Excessive contemplation</li>
+                                            <li>Resistance to change</li>
+                                            <li>Overthinking patterns</li>
+                                            <li>Withdrawn behavior</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="treatment-overview">
+                                    <h4>Treatment Approach</h4>
+                                    <p>Transform dampness, warm Yang, promote circulation and movement.</p>
+                                </div>
+                            </div>
+
+                            <div id="yang-excess-pattern" class="pattern-panel">
+                                <h3>Yang Excess Pattern</h3>
+                                <div class="symptoms-table">
+                                    <div class="symptom-category">
+                                        <h4>Physical Signs</h4>
+                                        <ul>
+                                            <li>High fever and inflammation</li>
+                                            <li>Red face and eyes</li>
+                                            <li>Hypertension</li>
+                                            <li>Rapid pulse</li>
+                                            <li>Constipation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="symptom-category">
+                                        <h4>Mental-Emotional</h4>
+                                        <ul>
+                                            <li>Agitation and hyperactivity</li>
+                                            <li>Anger and irritability</li>
+                                            <li>Mania or hyperexcitation</li>
+                                            <li>Insomnia from overstimulation</li>
+                                            <li>Aggressive behavior</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="treatment-overview">
+                                    <h4>Treatment Approach</h4>
+                                    <p>Clear heat, sedate Yang, calm the spirit. Use cooling, sedating methods.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Five Elements Section -->
+        <section id="elements" class="five-elements">
+            <div class="container">
+                <h2 class="section-title">Five Element Theory</h2>
+                
+                <div class="element-wheel-container">
+                    <div class="element-wheel" id="element-wheel">
+                        <div class="wheel-center">
+                            <div class="selected-element" id="selected-element">
+                                <div class="element-icon">🌱</div>
+                                <h3>Wood</h3>
+                            </div>
+                        </div>
+                        <div class="wheel-segments">
+                            <div class="segment wood active" data-element="wood">
+                                <div class="segment-content">
+                                    <div class="segment-icon">🌱</div>
+                                    <span>Wood</span>
+                                </div>
+                            </div>
+                            <div class="segment fire" data-element="fire">
+                                <div class="segment-content">
+                                    <div class="segment-icon">🔥</div>
+                                    <span>Fire</span>
+                                </div>
+                            </div>
+                            <div class="segment earth" data-element="earth">
+                                <div class="segment-content">
+                                    <div class="segment-icon">🏔️</div>
+                                    <span>Earth</span>
+                                </div>
+                            </div>
+                            <div class="segment metal" data-element="metal">
+                                <div class="segment-content">
+                                    <div class="segment-icon">⚪</div>
+                                    <span>Metal</span>
+                                </div>
+                            </div>
+                            <div class="segment water" data-element="water">
+                                <div class="segment-content">
+                                    <div class="segment-icon">💧</div>
+                                    <span>Water</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="element-details" id="element-details">
+                    <div id="wood-details" class="element-content active">
+                        <h3>Wood Element</h3>
+                        <div class="element-info-grid">
+                            <div class="info-section">
+                                <h4>Organ Systems</h4>
+                                <p><strong>Liver (Zang)</strong> - Stores blood, ensures smooth flow of Qi</p>
+                                <p><strong>Gallbladder (Fu)</strong> - Stores and secretes bile, decision making</p>
+                            </div>
+                            <div class="info-section">
+                                <h4>Balanced State</h4>
+                                <ul>
+                                    <li>Flexible and adaptable</li>
+                                    <li>Good planning and vision</li>
+                                    <li>Smooth emotional flow</li>
+                                    <li>Decisive action</li>
+                                    <li>Creative expression</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Excess Pattern</h4>
+                                <ul>
+                                    <li>Anger and irritability</li>
+                                    <li>Hypertension</li>
+                                    <li>Headaches and migraines</li>
+                                    <li>Muscle tension</li>
+                                    <li>Emotional volatility</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Deficiency Pattern</h4>
+                                <ul>
+                                    <li>Lack of direction</li>
+                                    <li>Indecisiveness</li>
+                                    <li>Depression</li>
+                                    <li>Muscle weakness</li>
+                                    <li>Vision problems</li>
+                                </ul>
+                            </div>
+                            <div class="info-section full-width">
+                                <h4>Treatment Overview</h4>
+                                <p><strong>For Excess:</strong> Smooth Liver Qi, clear heat, calm the mind. Use herbs like Chai Hu (Bupleurum) and lifestyle modifications to reduce stress.</p>
+                                <p><strong>For Deficiency:</strong> Nourish Liver blood and Yin, support vision and tendons. Use herbs like Dang Gui (Angelica) and gentle exercise.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="fire-details" class="element-content">
+                        <h3>Fire Element</h3>
+                        <div class="element-info-grid">
+                            <div class="info-section">
+                                <h4>Organ Systems</h4>
+                                <p><strong>Heart (Zang)</strong> - Governs blood circulation, houses the spirit</p>
+                                <p><strong>Small Intestine (Fu)</strong> - Separates pure from turbid</p>
+                            </div>
+                            <div class="info-section">
+                                <h4>Balanced State</h4>
+                                <ul>
+                                    <li>Joy and appropriate laughter</li>
+                                    <li>Clear speech and communication</li>
+                                    <li>Strong circulation</li>
+                                    <li>Mental clarity</li>
+                                    <li>Emotional warmth</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Excess Pattern</h4>
+                                <ul>
+                                    <li>Excessive excitement</li>
+                                    <li>Insomnia and restlessness</li>
+                                    <li>Palpitations</li>
+                                    <li>Manic behavior</li>
+                                    <li>High blood pressure</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Deficiency Pattern</h4>
+                                <ul>
+                                    <li>Depression and sadness</li>
+                                    <li>Poor circulation</li>
+                                    <li>Fatigue</li>
+                                    <li>Memory problems</li>
+                                    <li>Cold hands and feet</li>
+                                </ul>
+                            </div>
+                            <div class="info-section full-width">
+                                <h4>Treatment Overview</h4>
+                                <p><strong>For Excess:</strong> Clear heart fire, calm the spirit, promote peaceful sleep. Use cooling herbs and meditation practices.</p>
+                                <p><strong>For Deficiency:</strong> Tonify heart Qi and blood, warm Yang, nourish the spirit. Use gentle tonifying herbs and avoid overstimulation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="earth-details" class="element-content">
+                        <h3>Earth Element</h3>
+                        <div class="element-info-grid">
+                            <div class="info-section">
+                                <h4>Organ Systems</h4>
+                                <p><strong>Spleen (Zang)</strong> - Transforms food, controls blood</p>
+                                <p><strong>Stomach (Fu)</strong> - Receives and processes food</p>
+                            </div>
+                            <div class="info-section">
+                                <h4>Balanced State</h4>
+                                <ul>
+                                    <li>Good digestion and appetite</li>
+                                    <li>Stable energy levels</li>
+                                    <li>Clear thinking</li>
+                                    <li>Empathy and caring</li>
+                                    <li>Strong immune system</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Excess Pattern</h4>
+                                <ul>
+                                    <li>Excessive worry</li>
+                                    <li>Overthinking</li>
+                                    <li>Weight gain</li>
+                                    <li>Sluggish digestion</li>
+                                    <li>Mental obsession</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Deficiency Pattern</h4>
+                                <ul>
+                                    <li>Poor appetite</li>
+                                    <li>Chronic fatigue</li>
+                                    <li>Loose stools</li>
+                                    <li>Weak limbs</li>
+                                    <li>Mental fog</li>
+                                </ul>
+                            </div>
+                            <div class="info-section full-width">
+                                <h4>Treatment Overview</h4>
+                                <p><strong>For Excess:</strong> Resolve dampness, regulate Qi, calm the mind. Reduce sweet foods and excessive thinking.</p>
+                                <p><strong>For Deficiency:</strong> Strengthen spleen Qi, warm the center, support digestion. Use warming, sweet herbs and regular meal times.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="metal-details" class="element-content">
+                        <h3>Metal Element</h3>
+                        <div class="element-info-grid">
+                            <div class="info-section">
+                                <h4>Organ Systems</h4>
+                                <p><strong>Lung (Zang)</strong> - Controls breathing and skin</p>
+                                <p><strong>Large Intestine (Fu)</strong> - Eliminates waste</p>
+                            </div>
+                            <div class="info-section">
+                                <h4>Balanced State</h4>
+                                <ul>
+                                    <li>Clear breathing</li>
+                                    <li>Healthy skin</li>
+                                    <li>Strong immune system</li>
+                                    <li>Ability to let go</li>
+                                    <li>Good boundaries</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Excess Pattern</h4>
+                                <ul>
+                                    <li>Cough with yellow phlegm</li>
+                                    <li>Skin inflammation</li>
+                                    <li>Constipation</li>
+                                    <li>Rigid thinking</li>
+                                    <li>Excessive grief</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Deficiency Pattern</h4>
+                                <ul>
+                                    <li>Weak voice</li>
+                                    <li>Shortness of breath</li>
+                                    <li>Pale complexion</li>
+                                    <li>Weak immunity</li>
+                                    <li>Difficulty letting go</li>
+                                </ul>
+                            </div>
+                            <div class="info-section full-width">
+                                <h4>Treatment Overview</h4>
+                                <p><strong>For Excess:</strong> Clear lung heat, resolve phlegm, promote elimination. Use cooling, descending herbs.</p>
+                                <p><strong>For Deficiency:</strong> Tonify lung Qi, strengthen immunity, nourish skin. Use gentle tonifying and moistening herbs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="water-details" class="element-content">
+                        <h3>Water Element</h3>
+                        <div class="element-info-grid">
+                            <div class="info-section">
+                                <h4>Organ Systems</h4>
+                                <p><strong>Kidney (Zang)</strong> - Stores essence, controls water</p>
+                                <p><strong>Bladder (Fu)</strong> - Transforms and excretes fluids</p>
+                            </div>
+                            <div class="info-section">
+                                <h4>Balanced State</h4>
+                                <ul>
+                                    <li>Strong willpower</li>
+                                    <li>Good memory</li>
+                                    <li>Healthy bones and teeth</li>
+                                    <li>Normal urination</li>
+                                    <li>Sexual vitality</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Excess Pattern</h4>
+                                <ul>
+                                    <li>Hypertension</li>
+                                    <li>Kidney stones</li>
+                                    <li>Excessive sexual desire</li>
+                                    <li>Aggressive behavior</li>
+                                    <li>Dark urine</li>
+                                </ul>
+                            </div>
+                            <div class="info-section">
+                                <h4>Deficiency Pattern</h4>
+                                <ul>
+                                    <li>Lower back pain</li>
+                                    <li>Fatigue and weakness</li>
+                                    <li>Poor memory</li>
+                                    <li>Frequent urination</li>
+                                    <li>Fear and anxiety</li>
+                                </ul>
+                            </div>
+                            <div class="info-section full-width">
+                                <h4>Treatment Overview</h4>
+                                <p><strong>For Excess:</strong> Clear kidney heat, drain dampness, calm the spirit. Reduce salty foods and stress.</p>
+                                <p><strong>For Deficiency:</strong> Tonify kidney Yin and Yang, strengthen essence, warm the lower burner. Use nourishing herbs and avoid overexertion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qi & Blood Section -->
+        <section id="qi-blood" class="qi-blood">
+            <div class="container">
+                <h2 class="section-title">Qi & Blood Patterns</h2>
+                
+                <div class="qi-blood-content">
+                    <div class="pattern-cards">
+                        <div class="qi-blood-card qi-deficiency">
+                            <h3>Qi Deficiency</h3>
+                            <div class="pattern-details">
+                                <div class="symptoms">
+                                    <h4>Key Symptoms</h4>
+                                    <ul>
+                                        <li>Chronic fatigue and weakness</li>
+                                        <li>Shortness of breath</li>
+                                        <li>Low voice and reluctance to speak</li>
+                                        <li>Poor digestion</li>
+                                        <li>Frequent infections</li>
+                                        <li>Depression and low mood</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment">
+                                    <h4>Treatment Strategy</h4>
+                                    <p>Tonify Qi, strengthen the spleen and lungs, boost energy with herbs like Ginseng and lifestyle modifications.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qi-blood-card qi-stagnation">
+                            <h3>Qi Stagnation</h3>
+                            <div class="pattern-details">
+                                <div class="symptoms">
+                                    <h4>Key Symptoms</h4>
+                                    <ul>
+                                        <li>Emotional frustration and irritability</li>
+                                        <li>Chest and rib area tightness</li>
+                                        <li>Irregular menstruation</li>
+                                        <li>Digestive irregularity</li>
+                                        <li>Tension headaches</li>
+                                        <li>Sighing and feeling stuck</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment">
+                                    <h4>Treatment Strategy</h4>
+                                    <p>Move and regulate Qi, smooth emotional flow, reduce stress with herbs like Chai Hu and regular exercise.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qi-blood-card blood-deficiency">
+                            <h3>Blood Deficiency</h3>
+                            <div class="pattern-details">
+                                <div class="symptoms">
+                                    <h4>Key Symptoms</h4>
+                                    <ul>
+                                        <li>Pale complexion and lips</li>
+                                        <li>Dizziness and lightheadedness</li>
+                                        <li>Dry skin and hair</li>
+                                        <li>Insomnia and vivid dreams</li>
+                                        <li>Irregular or scanty menstruation</li>
+                                        <li>Poor memory and concentration</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment">
+                                    <h4>Treatment Strategy</h4>
+                                    <p>Nourish and tonify blood, support liver and heart, use herbs like Dang Gui and iron-rich foods.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qi-blood-card blood-stasis">
+                            <h3>Blood Stasis</h3>
+                            <div class="pattern-details">
+                                <div class="symptoms">
+                                    <h4>Key Symptoms</h4>
+                                    <ul>
+                                        <li>Fixed, stabbing pains</li>
+                                        <li>Dark complexion</li>
+                                        <li>Purple lips and tongue</li>
+                                        <li>Painful menstruation with clots</li>
+                                        <li>Varicose veins</li>
+                                        <li>Chronic inflammation</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment">
+                                    <h4>Treatment Strategy</h4>
+                                    <p>Invigorate blood circulation, dissolve stasis, promote flow with herbs like Hong Hua and regular movement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qi-blood-chart">
+                        <h3>Qi & Blood Relationship Chart</h3>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <canvas id="qiBloodChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pathogenic Factors Section -->
+        <section id="pathogenic" class="pathogenic-factors">
+            <div class="container">
+                <h2 class="section-title">Pathogenic Factors</h2>
+                
+                <div class="pathogenic-content">
+                    <div class="factor-tabs">
+                        <button class="factor-tab active" data-factor="heat-cold">Heat & Cold</button>
+                        <button class="factor-tab" data-factor="dampness">Dampness</button>
+                        <button class="factor-tab" data-factor="wind">Wind</button>
+                        <button class="factor-tab" data-factor="dryness">Dryness</button>
+                    </div>
+
+                    <div class="factor-content">
+                        <div id="heat-cold-content" class="factor-panel active">
+                            <div class="dual-patterns">
+                                <div class="pattern-half heat-pattern">
+                                    <h3>Heat Patterns</h3>
+                                    <div class="pattern-info">
+                                        <h4>Characteristics</h4>
+                                        <ul>
+                                            <li>Fever and feeling hot</li>
+                                            <li>Red face and eyes</li>
+                                            <li>Thirst for cold drinks</li>
+                                            <li>Yellow tongue coating</li>
+                                            <li>Rapid pulse</li>
+                                            <li>Irritability and restlessness</li>
+                                        </ul>
+                                        <h4>Treatment</h4>
+                                        <p>Clear heat, cool the blood, calm the spirit. Use cooling herbs and foods, avoid spicy and warming substances.</p>
+                                    </div>
+                                </div>
+                                <div class="pattern-half cold-pattern">
+                                    <h3>Cold Patterns</h3>
+                                    <div class="pattern-info">
+                                        <h4>Characteristics</h4>
+                                        <ul>
+                                            <li>Feeling cold and chilled</li>
+                                            <li>Pale complexion</li>
+                                            <li>Preference for warm drinks</li>
+                                            <li>White tongue coating</li>
+                                            <li>Slow pulse</li>
+                                            <li>Fatigue and withdrawal</li>
+                                        </ul>
+                                        <h4>Treatment</h4>
+                                        <p>Warm the interior, dispel cold, strengthen Yang Qi. Use warming herbs and foods, avoid cold and raw foods.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="dampness-content" class="factor-panel">
+                            <h3>Dampness Patterns</h3>
+                            <div class="pattern-info">
+                                <h4>Characteristics</h4>
+                                <ul>
+                                    <li>Heavy, sluggish feeling</li>
+                                    <li>Sticky or greasy tongue coating</li>
+                                    <li>Loose stools or diarrhea</li>
+                                    <li>Edema and water retention</li>
+                                    <li>Cloudy urination</li>
+                                    <li>Mental fogginess</li>
+                                    <li>Joint stiffness and heaviness</li>
+                                    <li>Skin eruptions and eczema</li>
+                                </ul>
+                                <h4>Types of Dampness</h4>
+                                <div class="dampness-types">
+                                    <div class="dampness-type">
+                                        <h5>External Dampness</h5>
+                                        <p>Caused by environmental factors like humid weather, damp living conditions, or getting caught in rain.</p>
+                                    </div>
+                                    <div class="dampness-type">
+                                        <h5>Internal Dampness</h5>
+                                        <p>Generated by spleen Qi deficiency, poor diet, or emotional stress affecting digestive function.</p>
+                                    </div>
+                                </div>
+                                <h4>Treatment</h4>
+                                <p>Transform dampness, strengthen spleen Qi, promote urination and sweating. Use aromatic herbs, avoid greasy foods.</p>
+                            </div>
+                        </div>
+
+                        <div id="wind-content" class="factor-panel">
+                            <h3>Wind Patterns</h3>
+                            <div class="pattern-info">
+                                <h4>Characteristics</h4>
+                                <ul>
+                                    <li>Rapid onset of symptoms</li>
+                                    <li>Moving or migrating pains</li>
+                                    <li>Tremors or muscle twitches</li>
+                                    <li>Sudden dizziness</li>
+                                    <li>Skin rashes that move</li>
+                                    <li>Aversion to wind</li>
+                                    <li>Sudden emotional changes</li>
+                                    <li>Headaches that move</li>
+                                </ul>
+                                <h4>Types of Wind</h4>
+                                <div class="wind-types">
+                                    <div class="wind-type">
+                                        <h5>External Wind</h5>
+                                        <p>Invasion of environmental wind causing common cold, flu, or allergic reactions.</p>
+                                    </div>
+                                    <div class="wind-type">
+                                        <h5>Internal Wind</h5>
+                                        <p>Generated by liver yang rising, blood deficiency, or extreme heat causing tremors and spasms.</p>
+                                    </div>
+                                </div>
+                                <h4>Treatment</h4>
+                                <p>Expel wind, calm the liver, nourish blood and Yin. Use wind-expelling herbs and avoid exposure to wind.</p>
+                            </div>
+                        </div>
+
+                        <div id="dryness-content" class="factor-panel">
+                            <h3>Dryness Patterns</h3>
+                            <div class="pattern-info">
+                                <h4>Characteristics</h4>
+                                <ul>
+                                    <li>Dry mouth and throat</li>
+                                    <li>Dry cough with little phlegm</li>
+                                    <li>Dry skin and hair</li>
+                                    <li>Constipation</li>
+                                    <li>Dry eyes</li>
+                                    <li>Thirst but little desire to drink</li>
+                                    <li>Cracked lips</li>
+                                    <li>Scanty urination</li>
+                                </ul>
+                                <h4>Types of Dryness</h4>
+                                <div class="dryness-types">
+                                    <div class="dryness-type">
+                                        <h5>External Dryness</h5>
+                                        <p>Caused by dry climate conditions, especially in autumn, affecting the lungs primarily.</p>
+                                    </div>
+                                    <div class="dryness-type">
+                                        <h5>Internal Dryness</h5>
+                                        <p>Result of body fluid deficiency due to chronic illness, aging, or excessive sweating.</p>
+                                    </div>
+                                </div>
+                                <h4>Treatment</h4>
+                                <p>Moisten dryness, nourish Yin and body fluids, protect the lungs. Use moistening herbs and increase fluid intake.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organ Patterns Section -->
+        <section id="organs" class="organ-patterns">
+            <div class="container">
+                <h2 class="section-title">Organ Pattern Cards</h2>
+                
+                <div class="organs-grid">
+                    <div class="organ-card heart">
+                        <div class="organ-header">
+                            <div class="organ-icon">❤️</div>
+                            <h3>Heart Patterns</h3>
+                        </div>
+                        <div class="organ-patterns-list">
+                            <div class="pattern-item">
+                                <h4>Heart Qi Deficiency</h4>
+                                <p>Palpitations, shortness of breath, fatigue, pale complexion</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Heart Blood Deficiency</h4>
+                                <p>Insomnia, vivid dreams, poor memory, pale lips and nails</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Heart Fire</h4>
+                                <p>Restlessness, insomnia, mouth ulcers, red tongue tip</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="organ-card liver">
+                        <div class="organ-header">
+                            <div class="organ-icon">🫀</div>
+                            <h3>Liver Patterns</h3>
+                        </div>
+                        <div class="organ-patterns-list">
+                            <div class="pattern-item">
+                                <h4>Liver Qi Stagnation</h4>
+                                <p>Irritability, chest tightness, irregular menstruation, sighing</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Liver Blood Deficiency</h4>
+                                <p>Dry eyes, muscle cramps, scanty menstruation, dizziness</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Liver Yang Rising</h4>
+                                <p>Hypertension, headaches, red eyes, irritability</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="organ-card spleen">
+                        <div class="organ-header">
+                            <div class="organ-icon">🟤</div>
+                            <h3>Spleen Patterns</h3>
+                        </div>
+                        <div class="organ-patterns-list">
+                            <div class="pattern-item">
+                                <h4>Spleen Qi Deficiency</h4>
+                                <p>Poor appetite, fatigue, loose stools, abdominal distension</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Spleen Yang Deficiency</h4>
+                                <p>Cold limbs, edema, chronic diarrhea, poor digestion</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Dampness in Spleen</h4>
+                                <p>Heavy limbs, sticky stools, mental fogginess, nausea</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="organ-card lung">
+                        <div class="organ-header">
+                            <div class="organ-icon">🫁</div>
+                            <h3>Lung Patterns</h3>
+                        </div>
+                        <div class="organ-patterns-list">
+                            <div class="pattern-item">
+                                <h4>Lung Qi Deficiency</h4>
+                                <p>Weak voice, shortness of breath, frequent infections, fatigue</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Lung Yin Deficiency</h4>
+                                <p>Dry cough, afternoon fever, dry throat, night sweats</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Lung Heat</h4>
+                                <p>Cough with yellow phlegm, fever, thirst, constipation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="organ-card kidney">
+                        <div class="organ-header">
+                            <div class="organ-icon">🔵</div>
+                            <h3>Kidney Patterns</h3>
+                        </div>
+                        <div class="organ-patterns-list">
+                            <div class="pattern-item">
+                                <h4>Kidney Yin Deficiency</h4>
+                                <p>Night sweats, hot flashes, tinnitus, lower back pain</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Kidney Yang Deficiency</h4>
+                                <p>Cold limbs, impotence, frequent urination, fatigue</p>
+                            </div>
+                            <div class="pattern-item">
+                                <h4>Kidney Essence Deficiency</h4>
+                                <p>Poor memory, premature aging, weak bones, infertility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diagnostic Methods Section -->
+        <section id="diagnostic" class="diagnostic-methods">
+            <div class="container">
+                <h2 class="section-title">Four Examinations</h2>
+                
+                <div class="diagnostic-content">
+                    <div class="examination-accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" data-target="looking">
+                                <h3>Looking (Wang) 👁️</h3>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content" id="looking">
+                                <div class="examination-details">
+                                    <div class="method-section">
+                                        <h4>Overall Appearance</h4>
+                                        <ul>
+                                            <li><strong>Shen (Spirit):</strong> Assess vitality and consciousness level</li>
+                                            <li><strong>Complexion:</strong> Color, luster, and clarity of skin</li>
+                                            <li><strong>Body type:</strong> Build, posture, and movement quality</li>
+                                            <li><strong>Behavior:</strong> Mental state and emotional expression</li>
+                                        </ul>
+                                    </div>
+                                    <div class="method-section">
+                                        <h4>Tongue Diagnosis</h4>
+                                        <ul>
+                                            <li><strong>Tongue body:</strong> Color, shape, texture, and mobility</li>
+                                            <li><strong>Tongue coating:</strong> Color, thickness, moisture, and distribution</li>
+                                            <li><strong>Tongue indicators:</strong> Pale (Yang deficiency), Red (Heat), Purple (Blood stasis)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="method-section">
+                                        <h4>Eyes and Face</h4>
+                                        <ul>
+                                            <li><strong>Eyes:</strong> Brightness, color, moisture, and expression</li>
+                                            <li><strong>Facial features:</strong> Symmetry, color changes, and expressions</li>
+                                            <li><strong>Hair and nails:</strong> Luster, strength, and growth patterns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" data-target="listening">
+                                <h3>Listening & Smelling (Wen) 👂</h3>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content" id="listening">
+                                <div class="examination-details">
+                                    <div class="method-section">
+                                        <h4>Voice and Speech</h4>
+                                        <ul>
+                                            <li><strong>Voice quality:</strong> Strength, clarity, and resonance</li>
+                                            <li><strong>Speech patterns:</strong> Rapid (Heat), Slow (Cold), Unclear (Phlegm)</li>
+                                            <li><strong>Breathing:</strong> Deep, shallow, labored, or irregular patterns</li>
+                                        </ul>
+                                    </div>
+                                    <div class="method-section">
+                                        <h4>Cough and Sounds</h4>
+                                        <ul>
+                                            <li><strong>Cough type:</strong> Dry, productive, timing, and sound quality</li>
+                                            <li><strong>Other sounds:</strong> Sighing, groaning, or unusual vocalizations</li>
+                                            <li><strong>Breathing sounds:</strong> Wheezing, shortness of breath</li>
+                                        </ul>
+                                    </div>
+                                    <div class="method-section">
+                                        <h4>Body Odors</h4>
+                                        <ul>
+                                            <li><strong>Breath odor:</strong> Sweet (Diabetes), Sour (Heat), Fishy (Kidney)</li>
+                                            <li><strong>Body odor:</strong> Strength and quality of natural scents</li>
+                                            <li><strong>Discharge odors:</strong> Urine, stool, and other excretions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" data-target="asking">
+                                <h3>Asking (Wen) 💬</h3>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content" id="asking">
+                                <div class="examination-details">
+                                    <div class="method-section">
+                                        <h4>Chief Complaint</h4>
+                                        <ul>
+                                            <li><strong>Main symptoms:</strong> Primary concerns and their characteristics</li>
+                                            <li><strong>Duration:</strong> When symptoms began and progression</li>
+                                            <li><strong>Severity:</strong> Impact on daily life and functional capacity</li>
+                                        </ul>
+                                    </div>
+                                    <div class="method-section">
+                                        <h4>Ten Questions</h4>
+                                        <ul>
+                                            <li><strong>Chills & Fever:</strong> Temperature sensations and preferences</li>
+                                            <li><strong>Perspiration:</strong> Timing, location, and quality of sweating</li>
+                                            <li><strong>Head & Body:</strong> Headaches, dizziness, body aches</li>
+                                            <li><strong>Urination & Defecation:</strong> Frequency, quality, and comfort</li>
+                                            <li><strong>Diet & Appetite:</strong> Food preferences, digestion, taste</li>
+                                            <li><strong>Chest & Abdomen:</strong> Breathing, tightness, distension</li>
+                                            <li><strong>Sleep:</strong> Quality, patterns, dreams</li>
+                                            <li><strong>Emotions:</strong> Mood, stress, mental state</li>
+                                            <li><strong>Hearing & Thirst:</strong> Sensory changes, fluid needs</li>
+                                            <li><strong>Previous Illness:</strong> Medical history, treatments</li>
+                                        </ul>
+                                    </div>
+                                    <div class="method-section">
+                                        <h4>Women's Health</h4>
+                                        <ul>
+                                            <li><strong>Menstruation:</strong> Cycle, flow, color, pain, clots</li>
+                                            <li><strong>Pregnancy:</strong> History, current status, complications</li>
+                                            <li><strong>Discharge:</strong> Color, odor, quantity, timing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" data-target="touching">
+                                <h3>Touching (Qie) ✋</h3>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content" id="touching">
+                                <div class="examination-details">
+                                    <div class="method-section">
+                                        <h4>Pulse Diagnosis</h4>
+                                        <ul>
+                                            <li><strong>Pulse positions:</strong> Cun (inch), Guan (bar), Chi (cubit)</li>
+                                            <li><strong>Pulse qualities:</strong> Rate, rhythm, strength, and depth</li>
+                                            <li><strong>Common pulses:</strong> Floating (Wind), Sinking (Interior), Rapid (Heat), Slow (Cold)</li>
+                                            <li><strong>Pulse interpretation:</strong> Each position corresponds to different organs</li>
+                                        </ul>
+                                    </div>
+                                    <div class="method-section">
+                                        <h4>Palpation</h4>
+                                        <ul>
+                                            <li><strong>Abdomen:</strong> Temperature, tension, masses, pain</li>
+                                            <li><strong>Chest:</strong> Breathing quality, tenderness, lumps</li>
+                                            <li><strong>Limbs:</strong> Temperature, swelling, muscle tone</li>
+                                            <li><strong>Acupoints:</strong> Sensitivity, temperature, reactions</li>
+                                        </ul>
+                                    </div>
+                                    <div class="method-section">
+                                        <h4>Temperature</h4>
+                                        <ul>
+                                            <li><strong>Body temperature:</strong> Overall warmth or coolness</li>
+                                            <li><strong>Regional differences:</strong> Hot/cold areas indicating imbalances</li>
+                                            <li><strong>Skin texture:</strong> Moisture, roughness, elasticity</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Applications Section -->
+        <section id="applications" class="practical-applications">
+            <div class="container">
+                <h2 class="section-title">Practical Applications</h2>
+                
+                <div class="applications-content">
+                    <div class="application-tabs">
+                        <button class="app-tab active" data-app="diet">Dietary Therapy</button>
+                        <button class="app-tab" data-app="lifestyle">Lifestyle</button>
+                        <button class="app-tab" data-app="acupoints">Acupoints</button>
+                        <button class="app-tab" data-app="herbal">Herbal Strategies</button>
+                    </div>
+
+                    <div class="application-content">
+                        <div id="diet-content" class="app-panel active">
+                            <h3>Dietary Therapy by Constitution</h3>
+                            <div class="diet-recommendations">
+                                <div class="diet-section yin-deficiency">
+                                    <h4>For Yin Deficiency</h4>
+                                    <div class="food-lists">
+                                        <div class="recommended">
+                                            <h5>Recommended Foods</h5>
+                                            <ul>
+                                                <li>Pears, apples, watermelon</li>
+                                                <li>Spinach, cucumber, celery</li>
+                                                <li>Tofu, soy milk</li>
+                                                <li>Duck, fish, eggs</li>
+                                                <li>Sesame seeds, walnuts</li>
+                                                <li>Herbal teas: chrysanthemum, mint</li>
+                                            </ul>
+                                        </div>
+                                        <div class="avoid">
+                                            <h5>Foods to Avoid</h5>
+                                            <ul>
+                                                <li>Spicy, hot foods</li>
+                                                <li>Alcohol and coffee</li>
+                                                <li>Deep-fried foods</li>
+                                                <li>Excessive garlic and ginger</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diet-section yang-deficiency">
+                                    <h4>For Yang Deficiency</h4>
+                                    <div class="food-lists">
+                                        <div class="recommended">
+                                            <h5>Recommended Foods</h5>
+                                            <ul>
+                                                <li>Ginger, cinnamon, cloves</li>
+                                                <li>Lamb, chicken, beef</li>
+                                                <li>Walnuts, chestnuts</li>
+                                                <li>Sweet potato, pumpkin</li>
+                                                <li>Warm porridge and soups</li>
+                                                <li>Herbal teas: ginger, fennel</li>
+                                            </ul>
+                                        </div>
+                                        <div class="avoid">
+                                            <h5>Foods to Avoid</h5>
+                                            <ul>
+                                                <li>Cold, raw foods</li>
+                                                <li>Ice cream and cold drinks</li>
+                                                <li>Excessive fruits</li>
+                                                <li>Dairy products</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="lifestyle-content" class="app-panel">
+                            <h3>Lifestyle Recommendations</h3>
+                            <div class="lifestyle-grid">
+                                <div class="lifestyle-card">
+                                    <h4>Daily Routine</h4>
+                                    <ul>
+                                        <li>Rise with the sun (6-7 AM)</li>
+                                        <li>Morning meditation or Qi Gong</li>
+                                        <li>Eat largest meal at midday</li>
+                                        <li>Wind down activities after sunset</li>
+                                        <li>Sleep by 10-11 PM for optimal rest</li>
+                                    </ul>
+                                </div>
+                                <div class="lifestyle-card">
+                                    <h4>Exercise & Movement</h4>
+                                    <ul>
+                                        <li>Tai Chi for gentle, flowing movement</li>
+                                        <li>Qi Gong for energy cultivation</li>
+                                        <li>Walking in nature for grounding</li>
+                                        <li>Swimming for cooling constitution</li>
+                                        <li>Yoga for flexibility and balance</li>
+                                    </ul>
+                                </div>
+                                <div class="lifestyle-card">
+                                    <h4>Emotional Wellness</h4>
+                                    <ul>
+                                        <li>Practice emotional regulation</li>
+                                        <li>Cultivate gratitude and joy</li>
+                                        <li>Manage stress through meditation</li>
+                                        <li>Express emotions appropriately</li>
+                                        <li>Maintain social connections</li>
+                                    </ul>
+                                </div>
+                                <div class="lifestyle-card">
+                                    <h4>Seasonal Adjustments</h4>
+                                    <ul>
+                                        <li>Spring: Cleanse and detoxify</li>
+                                        <li>Summer: Stay cool and hydrated</li>
+                                        <li>Late Summer: Nourish spleen/stomach</li>
+                                        <li>Autumn: Moisten lungs, prevent dryness</li>
+                                        <li>Winter: Preserve kidney essence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="acupoints-content" class="app-panel">
+                            <h3>Essential Acupoints</h3>
+                            <div class="acupoint-categories">
+                                <div class="acupoint-group">
+                                    <h4>General Wellness Points</h4>
+                                    <div class="acupoint-list">
+                                        <div class="acupoint-item">
+                                            <h5>Yintang (EX-HN3)</h5>
+                                            <p><strong>Location:</strong> Between the eyebrows</p>
+                                            <p><strong>Function:</strong> Calms the mind, treats insomnia and anxiety</p>
+                                        </div>
+                                        <div class="acupoint-item">
+                                            <h5>Baihui (GV20)</h5>
+                                            <p><strong>Location:</strong> Top of the head</p>
+                                            <p><strong>Function:</strong> Lifts Yang Qi, treats dizziness and mental clarity</p>
+                                        </div>
+                                        <div class="acupoint-item">
+                                            <h5>Shenmen (HE7)</h5>
+                                            <p><strong>Location:</strong> Wrist crease, pinky side</p>
+                                            <p><strong>Function:</strong> Calms the heart, treats insomnia and palpitations</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acupoint-group">
+                                    <h4>Digestive Health Points</h4>
+                                    <div class="acupoint-list">
+                                        <div class="acupoint-item">
+                                            <h5>Zusanli (ST36)</h5>
+                                            <p><strong>Location:</strong> Below the kneecap, outer edge</p>
+                                            <p><strong>Function:</strong> Tonifies Qi and blood, strengthens digestion</p>
+                                        </div>
+                                        <div class="acupoint-item">
+                                            <h5>Zhongwan (CV12)</h5>
+                                            <p><strong>Location:</strong> Upper abdomen, midline</p>
+                                            <p><strong>Function:</strong> Regulates stomach, treats digestive disorders</p>
+                                        </div>
+                                        <div class="acupoint-item">
+                                            <h5>Taichong (LR3)</h5>
+                                            <p><strong>Location:</strong> Top of foot between big and second toe</p>
+                                            <p><strong>Function:</strong> Smooths liver Qi, reduces stress</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="herbal-content" class="app-panel">
+                            <h3>Herbal Strategies</h3>
+                            <div class="herbal-strategies">
+                                <div class="strategy-section">
+                                    <h4>Treatment Principles</h4>
+                                    <div class="principles-grid">
+                                        <div class="principle-card">
+                                            <h5>Tonifying (Bu)</h5>
+                                            <p>Strengthen and nourish deficient conditions using herbs like Ginseng, Dang Gui, and Huang Qi.</p>
+                                        </div>
+                                        <div class="principle-card">
+                                            <h5>Sedating (Xie)</h5>
+                                            <p>Clear excess conditions and reduce hyperactivity using herbs like Huang Lian and Long Dan Cao.</p>
+                                        </div>
+                                        <div class="principle-card">
+                                            <h5>Regulating (Tiao)</h5>
+                                            <p>Harmonize and balance organ functions using formulas like Xiao Yao San and Gan Mai Da Zao Tang.</p>
+                                        </div>
+                                        <div class="principle-card">
+                                            <h5>Transforming (Hua)</h5>
+                                            <p>Transform pathogenic factors like phlegm and blood stasis using Chen Pi and Hong Hua.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="strategy-section">
+                                    <h4>Common Formula Categories</h4>
+                                    <div class="formula-categories">
+                                        <div class="formula-category">
+                                            <h5>Qi Tonifying Formulas</h5>
+                                            <ul>
+                                                <li><strong>Si Jun Zi Tang:</strong> Four Gentlemen Decoction for spleen Qi deficiency</li>
+                                                <li><strong>Bu Zhong Yi Qi Tang:</strong> Tonify Center & Raise Qi for prolapse conditions</li>
+                                            </ul>
+                                        </div>
+                                        <div class="formula-category">
+                                            <h5>Blood Tonifying Formulas</h5>
+                                            <ul>
+                                                <li><strong>Si Wu Tang:</strong> Four Substances Decoction for blood deficiency</li>
+                                                <li><strong>Ba Zhen Tang:</strong> Eight Treasures for Qi and blood deficiency</li>
+                                            </ul>
+                                        </div>
+                                        <div class="formula-category">
+                                            <h5>Qi Regulating Formulas</h5>
+                                            <ul>
+                                                <li><strong>Xiao Yao San:</strong> Free and Easy Wanderer for liver Qi stagnation</li>
+                                                <li><strong>Gan Mai Da Zao Tang:</strong> For emotional instability and restlessness</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <div class="faq-question" data-target="faq1">
+                                <h4>How long does it take to see results with TCM treatment?</h4>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer" id="faq1">
+                                <p>Results vary depending on the condition and constitution. Acute conditions may improve within days to weeks, while chronic conditions often require 3-6 months of consistent treatment. TCM focuses on root causes, so sustainable healing takes time but provides lasting benefits.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" data-target="faq2">
+                                <h4>Can TCM be used alongside Western medicine?</h4>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer" id="faq2">
+                                <p>Yes, TCM can complement Western medicine very effectively. Many patients use integrative approaches combining both systems. However, it's important to inform all healthcare providers about treatments you're receiving to ensure safe interactions and optimal care coordination.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" data-target="faq3">
+                                <h4>What should I expect during my first TCM consultation?</h4>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer" id="faq3">
+                                <p>Your first consultation will include the Four Examinations: looking at your appearance and tongue, listening to your voice and breathing, asking detailed questions about symptoms and lifestyle, and feeling your pulse. This comprehensive assessment typically takes 60-90 minutes and forms the basis for your personalized treatment plan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="yinyang-symbol">☯</div>
+                <p>&copy; 2025 Learn TCM Patterns. Traditional wisdom for modern wellness.</p>
+                <div class="footer-links">
+                    <a href="#assessment" class="btn btn--secondary">Take Assessment</a>
+                    <a href="#consultation" class="btn btn--secondary">Book Consultation</a>
+                </div>
+                <p class="footer-disclaimer">This educational content is not intended to replace professional medical advice. Please consult qualified TCM practitioners for personalized guidance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

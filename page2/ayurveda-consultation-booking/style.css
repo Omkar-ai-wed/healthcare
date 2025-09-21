@@ -1,0 +1,2397 @@
+:root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
+  --color-bg-2: rgba(245, 158, 11, 0.08); /* Light yellow */
+  --color-bg-3: rgba(34, 197, 94, 0.08); /* Light green */
+  --color-bg-4: rgba(239, 68, 68, 0.08); /* Light red */
+  --color-bg-5: rgba(147, 51, 234, 0.08); /* Light purple */
+  --color-bg-6: rgba(249, 115, 22, 0.08); /* Light orange */
+  --color-bg-7: rgba(236, 72, 153, 0.08); /* Light pink */
+  --color-bg-8: rgba(6, 182, 212, 0.08); /* Light cyan */
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* RGB versions for opacity control (Dark Mode) */
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    /* Background color tokens (Dark Mode) */
+    --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+    --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+    --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+    --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+    --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+    --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+    --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+    --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+    
+    /* Semantic Color Tokens (Dark Mode) */
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    /* Common style patterns - updated for dark mode */
+    --focus-ring: 0 0 0 3px var(--color-focus-ring);
+    --focus-outline: 2px solid var(--color-primary);
+    --status-bg-opacity: 0.15;
+    --status-border-opacity: 0.25;
+    --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+    /* RGB versions for dark mode */
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+/* Data attribute for manual theme switching */
+[data-color-scheme="dark"] {
+  /* RGB versions for opacity control (dark mode) */
+  --color-gray-400-rgb: 119, 124, 124;
+  --color-teal-300-rgb: 50, 184, 198;
+  --color-gray-300-rgb: 167, 169, 169;
+  --color-gray-200-rgb: 245, 245, 245;
+
+  /* Colorful background palette - Dark Mode */
+  --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+  --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+  --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+  --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+  --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+  --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+  --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+  --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+  
+  /* Semantic Color Tokens (Dark Mode) */
+  --color-background: var(--color-charcoal-700);
+  --color-surface: var(--color-charcoal-800);
+  --color-text: var(--color-gray-200);
+  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-primary: var(--color-teal-300);
+  --color-primary-hover: var(--color-teal-400);
+  --color-primary-active: var(--color-teal-800);
+  --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+  --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-error: var(--color-red-400);
+  --color-success: var(--color-teal-300);
+  --color-warning: var(--color-orange-400);
+  --color-info: var(--color-gray-300);
+  --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+  --color-btn-primary-text: var(--color-slate-900);
+  --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+  --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+  /* Common style patterns - updated for dark mode */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for dark mode */
+  --color-success-rgb: var(--color-teal-300-rgb);
+  --color-error-rgb: var(--color-red-400-rgb);
+  --color-warning-rgb: var(--color-orange-400-rgb);
+  --color-info-rgb: var(--color-gray-300-rgb);
+}
+
+[data-color-scheme="light"] {
+  /* RGB versions for opacity control (light mode) */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+
+  /* RGB versions for light mode */
+  --color-success-rgb: var(--color-teal-500-rgb);
+  --color-error-rgb: var(--color-red-500-rgb);
+  --color-warning-rgb: var(--color-orange-500-rgb);
+  --color-info-rgb: var(--color-slate-500-rgb);
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+h2 {
+  font-size: var(--font-size-3xl);
+}
+h3 {
+  font-size: var(--font-size-2xl);
+}
+h4 {
+  font-size: var(--font-size-xl);
+}
+h5 {
+  font-size: var(--font-size-lg);
+}
+h6 {
+  font-size: var(--font-size-md);
+}
+
+p {
+  margin: 0 0 var(--space-16) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+code,
+pre {
+  font-family: var(--font-family-mono);
+  font-size: calc(var(--font-size-base) * 0.95);
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-sm);
+}
+
+code {
+  padding: var(--space-1) var(--space-4);
+}
+
+pre {
+  padding: var(--space-16);
+  margin: var(--space-16) 0;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--primary:active {
+  background: var(--color-primary-active);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn--secondary:active {
+  background: var(--color-secondary-active);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  background: var(--color-secondary);
+}
+
+.btn--sm {
+  padding: var(--space-4) var(--space-12);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+}
+
+.btn--lg {
+  padding: var(--space-10) var(--space-20);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-md);
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form elements */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+textarea.form-control {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+
+select.form-control {
+  padding: var(--space-8) var(--space-12);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: var(--select-caret-light);
+  background-repeat: no-repeat;
+  background-position: right var(--space-12) center;
+  background-size: 16px;
+  padding-right: var(--space-32);
+}
+
+/* Add a dark mode specific caret */
+@media (prefers-color-scheme: dark) {
+  select.form-control {
+    background-image: var(--select-caret-dark);
+  }
+}
+
+/* Also handle data-color-scheme */
+[data-color-scheme="dark"] select.form-control {
+  background-image: var(--select-caret-dark);
+}
+
+[data-color-scheme="light"] select.form-control {
+  background-image: var(--select-caret-light);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: var(--focus-outline);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+/* Card component */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card__body {
+  padding: var(--space-16);
+}
+
+.card__header,
+.card__footer {
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-card-border-inner);
+}
+
+/* Status indicators - simplified with CSS variables */
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.status--success {
+  background-color: rgba(
+    var(--color-success-rgb, 33, 128, 141),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-success);
+  border: 1px solid
+    rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
+}
+
+.status--error {
+  background-color: rgba(
+    var(--color-error-rgb, 192, 21, 47),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-error);
+  border: 1px solid
+    rgba(var(--color-error-rgb, 192, 21, 47), var(--status-border-opacity));
+}
+
+.status--warning {
+  background-color: rgba(
+    var(--color-warning-rgb, 168, 75, 47),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-warning);
+  border: 1px solid
+    rgba(var(--color-warning-rgb, 168, 75, 47), var(--status-border-opacity));
+}
+
+.status--info {
+  background-color: rgba(
+    var(--color-info-rgb, 98, 108, 113),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-info);
+  border: 1px solid
+    rgba(var(--color-info-rgb, 98, 108, 113), var(--status-border-opacity));
+}
+
+/* Container layout */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--space-16);
+  padding-left: var(--space-16);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-4 {
+  gap: var(--space-4);
+}
+.gap-8 {
+  gap: var(--space-8);
+}
+.gap-16 {
+  gap: var(--space-16);
+}
+
+.m-0 {
+  margin: 0;
+}
+.mt-8 {
+  margin-top: var(--space-8);
+}
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+.mx-8 {
+  margin-left: var(--space-8);
+  margin-right: var(--space-8);
+}
+.my-8 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.p-0 {
+  padding: 0;
+}
+.py-8 {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+.px-8 {
+  padding-left: var(--space-8);
+  padding-right: var(--space-8);
+}
+.py-16 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+.px-16 {
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
+}
+
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Dark mode specifics */
+[data-color-scheme="dark"] .btn--outline {
+  border: 1px solid var(--color-border-secondary);
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+
+/* END PERPLEXITY DESIGN SYSTEM */
+/* Ayurvedic Consultation Booking Styles */
+
+/* Override design system colors for Ayurvedic consultation booking theme */
+:root {
+  /* Ayurvedic Colors */
+  --color-saffron: #FF9933;
+  --color-saffron-light: #FFAD5C;
+  --color-saffron-dark: #E6751A;
+  --color-turmeric: #E2A852;
+  --color-turmeric-light: #F4C976;
+  --color-turmeric-dark: #C8903A;
+  --color-earth-brown: #8B4513;
+  --color-earth-brown-light: #A0522D;
+  --color-earth-brown-dark: #654321;
+  --color-forest-green: #228B22;
+  --color-forest-green-light: #32CD32;
+  --color-forest-green-dark: #006400;
+  --color-sacred-gold: #DAA520;
+  --color-sacred-gold-light: #F0E68C;
+  --color-sacred-gold-dark: #B8860B;
+  --color-om-orange: #FF6B35;
+  --color-om-orange-light: #FF8C61;
+  --color-om-orange-dark: #E54D20;
+  --color-sandalwood: #F4A460;
+  --color-sandalwood-light: #F5DEB3;
+  --color-sandalwood-dark: #DEB887;
+  
+  /* Traditional gradients */
+  --gradient-saffron: linear-gradient(135deg, #FF9933 0%, #E2A852 50%, #DAA520 100%);
+  --gradient-earth: linear-gradient(145deg, #8B4513 0%, #A0522D 50%, #DEB887 100%);
+  --gradient-forest: linear-gradient(180deg, #228B22 0%, #32CD32 100%);
+  --gradient-sacred: linear-gradient(225deg, #DAA520 0%, #F0E68C 50%, #B8860B 100%);
+  --gradient-om: linear-gradient(315deg, #FF6B35 0%, #FF9933 100%);
+  
+  /* Override design system colors for Ayurvedic theme */
+  --color-primary: var(--color-saffron);
+  --color-primary-hover: var(--color-saffron-dark);
+  --color-primary-active: #CC5200;
+  --color-secondary: var(--color-earth-brown);
+  --color-success: var(--color-forest-green);
+  --color-warning: var(--color-turmeric);
+  
+  /* Ayurvedic background colors */
+  --color-ayurveda-bg-1: rgba(255, 153, 51, 0.08);
+  --color-ayurveda-bg-2: rgba(139, 69, 19, 0.05);
+  --color-ayurveda-bg-3: rgba(34, 139, 34, 0.08);
+  --color-ayurveda-bg-4: rgba(218, 165, 32, 0.08);
+  
+  /* Ayurvedic specifications */
+  --ayurveda-border-radius: 12px;
+  --ayurveda-shadow: 0 4px 20px rgba(139, 69, 19, 0.15);
+  --ayurveda-shadow-hover: 0 8px 30px rgba(139, 69, 19, 0.25);
+  --ayurveda-shadow-deep: 0 12px 40px rgba(0, 0, 0, 0.15);
+  
+  /* Animation timing for spiritual interfaces */
+  --duration-ayurveda: 400ms;
+  --ease-ayurveda: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Dark mode Ayurvedic colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-saffron: #FFB366;
+    --color-saffron-light: #FFC999;
+    --color-saffron-dark: #FF9933;
+    --color-earth-brown: #A0522D;
+    --color-earth-brown-light: #BC7A4A;
+    --color-earth-brown-dark: #8B4513;
+    --color-sacred-gold: #F0E68C;
+    --color-sacred-gold-light: #FFFACD;
+    --color-sacred-gold-dark: #DAA520;
+  }
+}
+
+[data-color-scheme="dark"] {
+  --color-saffron: #FFB366;
+  --color-saffron-light: #FFC999;
+  --color-saffron-dark: #FF9933;
+  --color-earth-brown: #A0522D;
+  --color-earth-brown-light: #BC7A4A;
+  --color-earth-brown-dark: #8B4513;
+  --color-sacred-gold: #F0E68C;
+  --color-sacred-gold-light: #FFFACD;
+  --color-sacred-gold-dark: #DAA520;
+}
+
+/* Ayurvedic Header */
+.ayurveda-header {
+  background: var(--gradient-saffron);
+  color: white;
+  padding: var(--space-32) 0;
+  box-shadow: var(--ayurveda-shadow-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.ayurveda-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="om-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><text x="10" y="15" text-anchor="middle" fill="rgba(255,255,255,0.1)" font-size="12">🕉</text></pattern></defs><rect width="100" height="100" fill="url(%23om-pattern)"/></svg>');
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.header-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-32);
+  position: relative;
+  z-index: 1;
+}
+
+.ayurveda-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-24);
+}
+
+.om-symbol {
+  font-size: 5rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: var(--space-24);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  animation: om-glow 4s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(218, 165, 32, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes om-glow {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(218, 165, 32, 0.6);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(218, 165, 32, 0.8);
+  }
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.header-title {
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.header-subtitle {
+  font-size: var(--font-size-lg);
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+}
+
+.booking-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-16);
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: var(--ayurveda-border-radius);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all var(--duration-ayurveda) var(--ease-ayurveda);
+}
+
+.stat-item:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-sacred-gold-light);
+  line-height: 1;
+  font-family: var(--font-family-mono);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  margin-top: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Quick Booking Bar */
+.quick-booking-bar {
+  background: var(--color-ayurveda-bg-4);
+  border-bottom: 2px solid var(--color-saffron);
+  padding: var(--space-20) 0;
+}
+
+.quick-booking-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-24);
+  flex-wrap: wrap;
+}
+
+.quick-booking-text h3 {
+  margin: 0 0 var(--space-8) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-xl);
+}
+
+.quick-booking-text p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+}
+
+/* Sections */
+.hero-section, .consultation-types-section, .booking-section, 
+.consultation-process-section, .pricing-section, .safety-standards-section {
+  display: none;
+  padding: var(--space-32) 0;
+}
+
+.active-section {
+  display: block;
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--color-ayurveda-bg-gradient, var(--color-ayurveda-bg-1));
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><radialGradient id="ayurveda-gradient" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,153,51,0.12)"/><stop offset="50%" stop-color="rgba(139,69,19,0.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="150" fill="url(%23ayurveda-gradient)"/></svg>');
+  background-size: 600px 600px;
+  animation: float-ayurveda 25s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float-ayurveda {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(40px, -30px) rotate(90deg); }
+  50% { transform: translate(-30px, 40px) rotate(180deg); }
+  75% { transform: translate(30px, -25px) rotate(270deg); }
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.om-symbol-large {
+  font-size: 4rem;
+  margin-bottom: var(--space-24);
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.hero-title {
+  font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-4xl));
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-24);
+  line-height: var(--line-height-tight);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.02em;
+}
+
+.hero-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-32);
+  line-height: var(--line-height-normal);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-20);
+  margin-bottom: var(--space-32);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  background: var(--color-surface);
+  padding: var(--space-20);
+  border-radius: var(--ayurveda-border-radius);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-saffron);
+  transition: all var(--duration-ayurveda) var(--ease-ayurveda);
+}
+
+.benefit-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ayurveda-shadow);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.benefit-content h4 {
+  margin: 0 0 var(--space-8) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.benefit-content p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.consultation-overview-card {
+  background: var(--color-surface);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-32);
+  margin-bottom: var(--space-32);
+  box-shadow: var(--ayurveda-shadow);
+  border: 2px solid var(--color-saffron);
+  text-align: left;
+}
+
+.consultation-overview-card h3 {
+  color: var(--color-saffron);
+  margin-bottom: var(--space-16);
+  font-size: var(--font-size-2xl);
+  text-align: center;
+}
+
+.consultation-overview-card p {
+  margin-bottom: var(--space-20);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+}
+
+.overview-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.overview-benefit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  color: var(--color-text);
+}
+
+.overview-icon {
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-32);
+}
+
+.section-header h2 {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-16);
+}
+
+.section-header p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Consultation Types Section */
+.consultation-types-section {
+  background: var(--color-ayurveda-bg-2);
+}
+
+.consultation-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-24);
+}
+
+.consultation-type-card {
+  background: var(--color-surface);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-24);
+  box-shadow: var(--ayurveda-shadow);
+  border: 1px solid var(--color-card-border);
+  transition: all var(--duration-ayurveda) var(--ease-ayurveda);
+  display: flex;
+  flex-direction: column;
+}
+
+.consultation-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ayurveda-shadow-hover);
+}
+
+.consultation-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  margin-bottom: var(--space-16);
+}
+
+.consultation-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.consultation-title h3 {
+  margin: 0 0 var(--space-8) 0;
+  color: var(--color-saffron);
+  font-size: var(--font-size-xl);
+}
+
+.consultation-meta {
+  display: flex;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.duration, .price {
+  background: var(--color-ayurveda-bg-4);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.consultation-description {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-20);
+  line-height: var(--line-height-normal);
+}
+
+.consultation-includes, .consultation-best-for {
+  margin-bottom: var(--space-20);
+}
+
+.consultation-includes h4, .consultation-best-for h4 {
+  margin: 0 0 var(--space-12) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.consultation-includes ul, .consultation-best-for ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.consultation-includes li, .consultation-best-for li {
+  margin-bottom: var(--space-8);
+  padding-left: var(--space-20);
+  position: relative;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.consultation-includes li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.consultation-best-for li::before {
+  content: '🎯';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.consultation-type-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Booking Section */
+.booking-section {
+  background: var(--color-ayurveda-bg-1);
+}
+
+.booking-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-32);
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-16);
+  border-radius: var(--ayurveda-border-radius);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  transition: all var(--duration-ayurveda) var(--ease-ayurveda);
+  min-width: 120px;
+}
+
+.step.active {
+  border-color: var(--color-saffron);
+  background: var(--color-ayurveda-bg-4);
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+}
+
+.step.active .step-number {
+  background: var(--color-saffron);
+  color: white;
+}
+
+.step-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+}
+
+.step.active .step-label {
+  color: var(--color-text);
+}
+
+.booking-steps {
+  background: var(--color-surface);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-32);
+  box-shadow: var(--ayurveda-shadow);
+  margin-bottom: var(--space-24);
+}
+
+.booking-step {
+  display: none;
+}
+
+.booking-step.active {
+  display: block;
+}
+
+.booking-step h3 {
+  color: var(--color-saffron);
+  margin-bottom: var(--space-24);
+  font-size: var(--font-size-2xl);
+}
+
+.selected-consultation {
+  background: var(--color-ayurveda-bg-1);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-20);
+  border: 2px dashed var(--color-border);
+}
+
+.select-consultation-prompt {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Practitioner Selection */
+.practitioners-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.practitioner-card {
+  background: var(--color-ayurveda-bg-1);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-24);
+  border: 2px solid var(--color-border);
+  transition: all var(--duration-ayurveda) var(--ease-ayurveda);
+}
+
+.practitioner-card:hover {
+  border-color: var(--color-saffron);
+  background: var(--color-ayurveda-bg-4);
+}
+
+.practitioner-card.selected {
+  border-color: var(--color-saffron);
+  background: var(--color-ayurveda-bg-4);
+  box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.2);
+}
+
+.practitioner-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  margin-bottom: var(--space-16);
+}
+
+.practitioner-avatar {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.practitioner-info {
+  flex: 1;
+}
+
+.practitioner-info h4 {
+  margin: 0 0 var(--space-4) 0;
+  color: var(--color-saffron);
+  font-size: var(--font-size-xl);
+}
+
+.practitioner-credentials, .practitioner-experience {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.practitioner-rating {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.rating {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+}
+
+.reviews {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.practitioner-specializations {
+  margin-bottom: var(--space-16);
+}
+
+.practitioner-specializations h5 {
+  margin: 0 0 var(--space-8) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.practitioner-specializations ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.practitioner-specializations li {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-16);
+  position: relative;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.practitioner-specializations li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-saffron);
+}
+
+.practitioner-languages, .practitioner-approach {
+  margin-bottom: var(--space-16);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.practitioner-approach p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Scheduling */
+.scheduling-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-32);
+  margin-bottom: var(--space-24);
+}
+
+.calendar-container {
+  background: var(--color-ayurveda-bg-1);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-20);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-16);
+}
+
+.current-month {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-4);
+}
+
+.calendar-day-header {
+  text-align: center;
+  padding: var(--space-8);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.calendar-day:hover {
+  background: var(--color-ayurveda-bg-4);
+}
+
+.calendar-day.available {
+  background: var(--color-ayurveda-bg-3);
+  border: 1px solid var(--color-forest-green);
+}
+
+.calendar-day.selected {
+  background: var(--color-saffron);
+  color: white;
+}
+
+.calendar-day.disabled {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.time-slots-container {
+  background: var(--color-ayurveda-bg-1);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-20);
+}
+
+.time-slots-container h4 {
+  margin: 0 0 var(--space-16) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+}
+
+.select-date-prompt {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-8);
+}
+
+.time-slot {
+  padding: var(--space-10);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.time-slot:hover {
+  background: var(--color-ayurveda-bg-4);
+  border-color: var(--color-saffron);
+}
+
+.time-slot.selected {
+  background: var(--color-saffron);
+  color: white;
+  border-color: var(--color-saffron);
+}
+
+.appointment-format {
+  margin-top: var(--space-24);
+}
+
+.appointment-format h4 {
+  margin: 0 0 var(--space-16) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+}
+
+.format-options {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.format-option {
+  flex: 1;
+  cursor: pointer;
+}
+
+.format-option input[type="radio"] {
+  display: none;
+}
+
+.format-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-16);
+  border: 2px solid var(--color-border);
+  border-radius: var(--ayurveda-border-radius);
+  background: var(--color-surface);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.format-option input[type="radio"]:checked + .format-label {
+  border-color: var(--color-saffron);
+  background: var(--color-ayurveda-bg-4);
+}
+
+.format-icon {
+  font-size: 2rem;
+}
+
+.format-text {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+/* Booking Summary */
+.booking-summary {
+  background: var(--color-ayurveda-bg-4);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-24);
+  margin-bottom: var(--space-24);
+  border: 2px solid var(--color-saffron);
+}
+
+.booking-summary h4 {
+  margin: 0 0 var(--space-16) 0;
+  color: var(--color-saffron);
+  font-size: var(--font-size-xl);
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-8) 0;
+}
+
+.summary-item.total {
+  border-top: 2px solid var(--color-saffron);
+  padding-top: var(--space-12);
+  margin-top: var(--space-8);
+  font-weight: var(--font-weight-bold);
+}
+
+.summary-label {
+  color: var(--color-text-secondary);
+}
+
+.summary-value {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Contact Form */
+.contact-form {
+  margin-bottom: var(--space-32);
+}
+
+.contact-form h4 {
+  margin: 0 0 var(--space-20) 0;
+  color: var(--color-saffron);
+  font-size: var(--font-size-xl);
+}
+
+.contact-form .form-group {
+  margin-bottom: var(--space-20);
+}
+
+/* Payment Section */
+.payment-section {
+  margin-bottom: var(--space-32);
+}
+
+.payment-section h4 {
+  margin: 0 0 var(--space-20) 0;
+  color: var(--color-saffron);
+  font-size: var(--font-size-xl);
+}
+
+.payment-methods {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin-bottom: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.payment-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.payment-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.payment-icon {
+  font-size: var(--font-size-lg);
+}
+
+.payment-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.payment-info {
+  background: var(--color-ayurveda-bg-1);
+  border-radius: var(--radius-base);
+  padding: var(--space-16);
+}
+
+.payment-note, .payment-policy {
+  margin: 0 0 var(--space-12) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+.payment-note:last-child, .payment-policy:last-child {
+  margin-bottom: 0;
+}
+
+/* Booking Actions */
+.booking-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+/* Consultation Process */
+.consultation-process-section {
+  background: var(--color-ayurveda-bg-3);
+}
+
+.process-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-24);
+  background: var(--color-surface);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-24);
+  box-shadow: var(--shadow-sm);
+}
+
+.process-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+  background: var(--color-ayurveda-bg-4);
+  padding: var(--space-16);
+  border-radius: 50%;
+}
+
+.process-content h3 {
+  margin: 0 0 var(--space-8) 0;
+  color: var(--color-saffron);
+  font-size: var(--font-size-xl);
+}
+
+.process-timeframe {
+  margin: 0 0 var(--space-16) 0;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+}
+
+.process-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.process-list li {
+  margin-bottom: var(--space-8);
+  padding-left: var(--space-20);
+  position: relative;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.process-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-forest-green);
+  font-weight: var(--font-weight-bold);
+}
+
+.consultation-phases {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.phase {
+  background: var(--color-ayurveda-bg-1);
+  border-radius: var(--radius-base);
+  padding: var(--space-16);
+  border-left: 4px solid var(--color-saffron);
+}
+
+.phase h4 {
+  margin: 0 0 var(--space-8) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.phase p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Pricing Section */
+.pricing-section {
+  background: var(--color-ayurveda-bg-2);
+}
+
+.pricing-tabs {
+  margin-bottom: var(--space-32);
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-24);
+  gap: var(--space-16);
+}
+
+.tab-btn {
+  padding: var(--space-12) var(--space-24);
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border-radius: var(--ayurveda-border-radius);
+}
+
+.tab-btn:hover {
+  background: var(--color-ayurveda-bg-1);
+  border-color: var(--color-saffron);
+}
+
+.tab-btn.active {
+  background: var(--color-saffron);
+  color: white;
+  border-color: var(--color-saffron);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.pricing-note {
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-24);
+  font-style: italic;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-20);
+}
+
+.pricing-item {
+  background: var(--color-surface);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-20);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.pricing-item h4 {
+  margin: 0 0 var(--space-12) 0;
+  color: var(--color-saffron);
+  font-size: var(--font-size-lg);
+}
+
+.price-range {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+}
+
+.duration {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Packages */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-24);
+}
+
+.package-card {
+  background: var(--color-surface);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-24);
+  box-shadow: var(--ayurveda-shadow);
+  border: 2px solid var(--color-card-border);
+  position: relative;
+  transition: all var(--duration-ayurveda) var(--ease-ayurveda);
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ayurveda-shadow-hover);
+}
+
+.package-card.featured {
+  border-color: var(--color-saffron);
+  transform: scale(1.05);
+}
+
+.package-ribbon {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-saffron);
+  color: white;
+  padding: var(--space-6) var(--space-16);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.package-header {
+  text-align: center;
+  margin-bottom: var(--space-20);
+}
+
+.package-header h3 {
+  margin: 0 0 var(--space-12) 0;
+  color: var(--color-saffron);
+  font-size: var(--font-size-xl);
+}
+
+.package-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.package-price {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.package-savings {
+  color: var(--color-forest-green);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.package-includes h4 {
+  margin: 0 0 var(--space-12) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.package-includes ul {
+  list-style: none;
+  margin: 0 0 var(--space-16) 0;
+  padding: 0;
+}
+
+.package-includes li {
+  margin-bottom: var(--space-8);
+  padding-left: var(--space-20);
+  position: relative;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.package-includes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-forest-green);
+  font-weight: var(--font-weight-bold);
+}
+
+.package-best-for {
+  margin-bottom: var(--space-20);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+/* Payment Info */
+.payment-info-section {
+  background: var(--color-surface);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-32);
+  box-shadow: var(--ayurveda-shadow);
+}
+
+.payment-info-section h3 {
+  color: var(--color-saffron);
+  margin-bottom: var(--space-24);
+  font-size: var(--font-size-2xl);
+  text-align: center;
+}
+
+.payment-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-20);
+}
+
+.payment-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  background: var(--color-ayurveda-bg-1);
+  padding: var(--space-20);
+  border-radius: var(--ayurveda-border-radius);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.info-content h4 {
+  margin: 0 0 var(--space-8) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.info-content p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Safety Standards */
+.safety-standards-section {
+  background: var(--color-ayurveda-bg-1);
+}
+
+.safety-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-24);
+  margin-bottom: var(--space-32);
+}
+
+.safety-category {
+  background: var(--color-surface);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-24);
+  box-shadow: var(--ayurveda-shadow);
+  text-align: center;
+}
+
+.safety-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-16);
+}
+
+.safety-category h3 {
+  color: var(--color-saffron);
+  margin-bottom: var(--space-16);
+  font-size: var(--font-size-xl);
+}
+
+.safety-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.safety-list li {
+  margin-bottom: var(--space-12);
+  padding-left: var(--space-20);
+  position: relative;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.safety-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-forest-green);
+  font-weight: var(--font-weight-bold);
+}
+
+.safety-notice {
+  background: rgba(255, 107, 53, 0.1);
+  border: 2px solid var(--color-warning);
+  border-radius: var(--ayurveda-border-radius);
+  padding: var(--space-24);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+}
+
+.notice-icon {
+  font-size: 2.5rem;
+  color: var(--color-warning);
+  flex-shrink: 0;
+}
+
+.notice-content h4 {
+  margin: 0 0 var(--space-12) 0;
+  color: var(--color-warning);
+  font-size: var(--font-size-lg);
+}
+
+.notice-content p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+/* Footer */
+.ayurveda-footer {
+  background: var(--color-slate-900);
+  color: var(--color-gray-200);
+  padding: var(--space-32) 0 var(--space-20);
+  position: relative;
+}
+
+.ayurveda-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--gradient-saffron);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-32);
+  margin-bottom: var(--space-24);
+}
+
+.footer-section h4 {
+  color: var(--color-saffron-light);
+  margin-bottom: var(--space-16);
+  font-size: var(--font-size-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.footer-section p {
+  color: var(--color-gray-300);
+  margin: var(--space-8) 0;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+.contact-info {
+  margin-top: var(--space-16);
+}
+
+.contact-info p {
+  margin: var(--space-8) 0;
+  font-size: var(--font-size-sm);
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-12);
+}
+
+.footer-links a {
+  color: var(--color-gray-300);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.footer-links a:hover {
+  color: var(--color-saffron-light);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-gray-400);
+  padding-top: var(--space-20);
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0 0 var(--space-12) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  line-height: var(--line-height-normal);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-brand {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-20);
+  }
+  
+  .booking-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-12);
+  }
+  
+  .quick-booking-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .consultation-types-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .step-indicator {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .scheduling-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-20);
+  }
+  
+  .booking-actions {
+    flex-direction: column;
+  }
+  
+  .process-step {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .payment-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .safety-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ayurveda-logo {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-16);
+  }
+  
+  .om-symbol {
+    width: 80px;
+    height: 80px;
+    font-size: 4rem;
+    padding: var(--space-16);
+  }
+  
+  .header-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .booking-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .consultation-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .step-indicator {
+    flex-direction: column;
+  }
+  
+  .practitioner-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .format-options {
+    flex-direction: column;
+  }
+  
+  .safety-notice {
+    flex-direction: column;
+    text-align: center;
+  }
+}

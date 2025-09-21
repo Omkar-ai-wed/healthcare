@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28 Traditional Pulse Types - Complete TCM Pulse Diagnosis Reference</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Comprehensive reference guide to the 28 Traditional Chinese Medicine pulse types with interactive features, audio simulations, and detailed clinical information.">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-brand">
+                    <div class="pulse-icon">📈</div>
+                    <div class="site-info">
+                        <h1 class="site-title">28 Traditional Pulse Types</h1>
+                        <p class="site-subtitle">Complete classification system for traditional pulse diagnosis</p>
+                    </div>
+                </div>
+                <div class="header-controls">
+                    <div class="search-container">
+                        <input type="search" id="pulseSearch" class="search-input" placeholder="Search pulse types..." aria-label="Search pulse types">
+                        <button class="search-btn" id="searchBtn" aria-label="Search">🔍</button>
+                    </div>
+                    <button class="view-toggle" id="viewToggle" aria-label="Toggle compact view">
+                        <span id="viewIcon">📋</span>
+                    </button>
+                    <button id="themeToggle" class="btn btn--sm btn--outline" aria-label="Toggle theme">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>28 Traditional Pulse Types</h1>
+                        <h2 class="chinese-title">二十八脉</h2>
+                        <p class="hero-subtitle">Master the ancient art of pulse diagnosis with our comprehensive interactive reference guide</p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Major Categories</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">28</div>
+                                <div class="stat-label">Distinct Types</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">3,000+</div>
+                                <div class="stat-label">Years Tradition</div>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-actions">
+                            <button class="btn btn--primary btn--lg" id="searchPulsesBtn">Search Pulses</button>
+                            <button class="btn btn--outline btn--lg" id="filterCategoryBtn">Filter by Category</button>
+                            <button class="btn btn--secondary btn--lg" id="audioGuideBtn">Audio Guide</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="pulse-visualization">
+                            <div class="pulse-wave"></div>
+                            <div class="pulse-indicators">
+                                <div class="indicator floating">浮</div>
+                                <div class="indicator deep">沉</div>
+                                <div class="indicator rapid">数</div>
+                                <div class="indicator slow">迟</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filters -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-header">
+                    <h3>Filter by Category</h3>
+                    <button class="clear-filters" id="clearFilters">Clear All</button>
+                </div>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All Types</button>
+                    <button class="filter-btn" data-category="rateRhythm">Rate & Rhythm<br><span class="chinese">频率脉</span></button>
+                    <button class="filter-btn" data-category="depthStrength">Depth & Strength<br><span class="chinese">深浅脉</span></button>
+                    <button class="filter-btn" data-category="qualityTexture">Quality & Texture<br><span class="chinese">质地脉</span></button>
+                    <button class="filter-btn" data-category="specialized">Specialized<br><span class="chinese">特殊脉</span></button>
+                    <button class="filter-btn" data-category="combined">Combined<br><span class="chinese">复合脉</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pulse Types Grid -->
+        <section class="pulse-types-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Traditional Pulse Types</h2>
+                    <div class="results-count">
+                        <span id="resultsCount">Showing all pulse types</span>
+                    </div>
+                </div>
+                
+                <div class="pulse-grid" id="pulseGrid">
+                    <!-- Pulse cards will be dynamically inserted here -->
+                </div>
+                
+                <div id="noResults" class="no-results hidden">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>No pulse types found</h3>
+                    <p>Try adjusting your search terms or category filters</p>
+                    <button class="btn btn--primary" id="resetSearch">Reset Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reference Materials Section -->
+        <section class="reference-section">
+            <div class="container">
+                <h2 class="section-title">Reference Materials</h2>
+                <div class="reference-grid">
+                    <div class="reference-card">
+                        <div class="reference-icon">📊</div>
+                        <h3>Pulse Chart Table</h3>
+                        <p>Comprehensive comparison table of all 28 pulse types</p>
+                        <button class="btn btn--outline" id="viewChartBtn">View Chart</button>
+                    </div>
+                    <div class="reference-card">
+                        <div class="reference-icon">📜</div>
+                        <h3>Classical Texts</h3>
+                        <p>Excerpts and translations from traditional TCM literature</p>
+                        <button class="btn btn--outline" id="viewTextsBtn">View Texts</button>
+                    </div>
+                    <div class="reference-card">
+                        <div class="reference-icon">🔬</div>
+                        <h3>Modern Research</h3>
+                        <p>Contemporary studies and clinical correlations</p>
+                        <button class="btn btn--outline" id="viewResearchBtn">View Research</button>
+                    </div>
+                    <div class="reference-card">
+                        <div class="reference-icon">📝</div>
+                        <h3>Practice Quiz</h3>
+                        <p>Test your pulse identification skills</p>
+                        <button class="btn btn--primary" id="startQuizBtn">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pulse Detail Modal - MUST BE HIDDEN BY DEFAULT -->
+    <div id="pulseModal" class="modal hidden" role="dialog" aria-labelledby="pulseModalTitle" aria-hidden="true" style="display: none;">
+        <div class="modal-overlay" id="pulseModalOverlay"></div>
+        <div class="modal-content modal-content--large">
+            <div class="modal-header">
+                <h3 id="pulseModalTitle">Pulse Details</h3>
+                <button class="modal-close" id="pulseModalClose" aria-label="Close modal" type="button">&times;</button>
+            </div>
+            <div class="modal-body" id="pulseModalBody">
+                <!-- Pulse details will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="bookmarkBtn" type="button">Bookmark</button>
+                <button class="btn btn--secondary" id="audioSimBtn" type="button">🎵 Audio Simulation</button>
+                <button class="btn btn--primary" id="compareBtn" type="button">Compare</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Modal - MUST BE HIDDEN BY DEFAULT -->
+    <div id="comparisonModal" class="modal hidden" role="dialog" aria-labelledby="comparisonModalTitle" aria-hidden="true" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-content--wide">
+            <div class="modal-header">
+                <h3 id="comparisonModalTitle">Pulse Comparison</h3>
+                <button class="modal-close" id="comparisonModalClose" aria-label="Close modal" type="button">&times;</button>
+            </div>
+            <div class="modal-body" id="comparisonModalBody">
+                <!-- Comparison content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessibility Live Region -->
+    <div id="ariaLive" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="pulse-icon">📈</div>
+                    <div>
+                        <h4>28 Traditional Pulse Types</h4>
+                        <p>&copy; 2025 TCM Pulse Reference. Preserving ancient wisdom for modern practice.</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h5>Learning</h5>
+                        <a href="#" class="footer-link">Practice Quiz</a>
+                        <a href="#" class="footer-link">Audio Guide</a>
+                        <a href="#" class="footer-link">Study Materials</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>Reference</h5>
+                        <a href="#" class="footer-link">Pulse Chart</a>
+                        <a href="#" class="footer-link">Classical Texts</a>
+                        <a href="#" class="footer-link">Modern Research</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>Support</h5>
+                        <a href="#" class="footer-link">Contact</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Terms</a>
+                    </div>
+                </div>
+                <div class="footer-disclaimer">
+                    <p>This reference guide is for educational purposes. Clinical diagnosis should always be performed by qualified practitioners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
